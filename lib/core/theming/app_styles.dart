@@ -9,14 +9,26 @@ class AppStyles {
     fontSize: 16.sp,
     color: AppColors.primaryColor,
     fontWeight: FontWeightHelper.bold,
+  );static TextStyle font16MediumBold = TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.primaryColor,
+    fontWeight: FontWeightHelper.medium,
+  );static TextStyle font16WhiteBold = TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.whiteColor,
+    fontWeight: FontWeightHelper.bold,
   );
   static TextStyle font16DarkGrayLight = TextStyle(
     fontSize: 16.sp,
     color: AppColors.darkGrayColor,
     fontWeight: FontWeightHelper.light,
+  );  static TextStyle font16greenLight = TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.primaryColor,
+    fontWeight: FontWeightHelper.light,
   ); static TextStyle font15GrayRegular = TextStyle(
     fontSize: 15.sp,
-    color: AppColors.grayColor,
+    color: AppColors.textFormGrayColor,
     fontWeight: FontWeightHelper.regular,
   );
 }

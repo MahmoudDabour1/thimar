@@ -5,7 +5,7 @@ import '../theming/app_styles.dart';
 import 'get_common_input_decoration.dart';
 
 class AppTextFormField extends StatelessWidget {
-  final String labelText;
+  final String hintText;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
   final bool? isObscureText;
@@ -24,7 +24,7 @@ class AppTextFormField extends StatelessWidget {
 
   const AppTextFormField({
     super.key,
-    required this.labelText,
+    required this.hintText,
     this.suffixIcon,
     this.isObscureText,
     this.controller,
@@ -38,7 +38,8 @@ class AppTextFormField extends StatelessWidget {
     this.enabled = true,
     this.onChanged,
     this.onTap,
-    this.readOnly = false, this.onFieldSubmitted,
+    this.readOnly = false,
+    this.onFieldSubmitted,
   });
 
   @override
@@ -55,15 +56,22 @@ class AppTextFormField extends StatelessWidget {
       textInputAction: TextInputAction.next,
       decoration: decoration ??
           getCommonInputDecoration(
-            labelText: labelText,
+            hintText: hintText,
             suffixIcon: Padding(
               padding: EdgeInsetsDirectional.only(end: 12.w),
               child: suffixIcon,
             ),
+            prefixIcon: Padding(
+              padding: EdgeInsetsDirectional.only(
+                start: 12.w,
+                end: 12.w,
+              ),
+              child: prefixIcon,
+            ),
           ),
       obscureText: isObscureText ?? false,
       onFieldSubmitted: onFieldSubmitted,
-      readOnly: readOnly??false,
+      readOnly: readOnly ?? false,
       style: AppStyles.font16GreenBold,
       validator: (value) {
         return validator(value!);

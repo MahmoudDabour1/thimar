@@ -40,7 +40,7 @@ class AppCustomButton extends StatelessWidget {
           fixedSize: WidgetStateProperty.all<Size>(
             Size(
               btnWidth ?? MediaQuery.sizeOf(context).width.w,
-              btnHeight ?? 50.h,
+              btnHeight ?? 60.h,
             ),
           ),
         ),
@@ -49,7 +49,7 @@ class AppCustomButton extends StatelessWidget {
             ? CircularProgressIndicator()
             : Text(
                 textButton,
-                style: AppStyles.font16GreenBold.copyWith(
+                style: AppStyles.font16WhiteBold.copyWith(
                   color: textColor,
                 ),
                 textAlign: TextAlign.center,
