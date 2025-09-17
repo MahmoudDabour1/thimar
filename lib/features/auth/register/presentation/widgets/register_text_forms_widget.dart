@@ -87,6 +87,16 @@ class RegisterTextFormsWidget extends StatelessWidget {
         ),
         verticalSpace(16),
         AppTextFormField(
+          hintText: "المدينة",
+          validator: (value) {},
+          prefixIcon: Image.asset(
+            AppAssets.flagImage,
+            width: 22.w,
+            height: 22.h,
+          ),
+        ),
+        verticalSpace(16),
+        AppTextFormField(
           hintText: "كلمة المرور",
           validator: (value) {},
           prefixIcon: Image.asset(
@@ -109,6 +119,7 @@ class RegisterTextFormsWidget extends StatelessWidget {
       ],
     );
   }
+
   void _onCountryChange(CountryCode countryCode) {
     print("New Country selected: " + countryCode.toString());
   }
