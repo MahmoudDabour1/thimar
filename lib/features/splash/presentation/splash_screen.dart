@@ -1,5 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:thimar/core/extensions/navigation_extension.dart';
+import 'package:thimar/core/routing/routes.dart';
 
 import '../../../core/theming/app_assets.dart';
 
@@ -33,6 +37,10 @@ class _SplashScreenState extends State<SplashScreen>
     ));
 
     _controller.forward();
+
+    Timer(const Duration(seconds: 3), () {
+      context.pushNamed(Routes.loginScreen);
+    });
   }
 
   @override

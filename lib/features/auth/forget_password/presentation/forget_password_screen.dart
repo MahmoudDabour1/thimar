@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/utils/spacing.dart';
 import 'package:thimar/core/widgets/app_custom_button.dart';
 import 'package:thimar/core/widgets/auth_header_widget.dart';
 import 'package:thimar/features/auth/widgets/auth_text_and_button_row_widget.dart';
 
+import '../../../../core/routing/routes.dart';
 import '../../widgets/auth_phone_and_country_widget.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
@@ -27,12 +29,17 @@ class ForgetPasswordScreen extends StatelessWidget {
                 verticalSpace(24),
                 AppCustomButton(
                   textButton: "تأكيد رقم الجوال",
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushNamed(Routes.verifiedScreen);
+                  },
                 ),
                 verticalSpace(45),
                 AuthTextAndButtonRowWidget(
                   text: "لديك حساب بالفعل ؟",
                   buttonText: "تسجيل الدخول",
+                  onPressed: () {
+                    context.pushNamed(Routes.loginScreen);
+                  },
                 ),
               ],
             ),

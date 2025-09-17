@@ -1,6 +1,7 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/theming/app_styles.dart';
 import 'package:thimar/core/utils/spacing.dart';
 import 'package:thimar/core/widgets/app_custom_button.dart';
@@ -8,6 +9,7 @@ import 'package:thimar/core/widgets/auth_header_widget.dart';
 import 'package:thimar/features/auth/verifi_code/presentation/widgets/otp_fields_widget.dart';
 import 'package:thimar/features/auth/widgets/auth_text_and_button_row_widget.dart';
 
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_colors.dart';
 
 class VerifiedScreen extends StatefulWidget {
@@ -43,7 +45,9 @@ class _VerifiedScreenState extends State<VerifiedScreen> {
                 verticalSpace(28),
                 AppCustomButton(
                   textButton: "تأكيد الكود",
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushNamed(Routes.newPasswordScreen);
+                  },
                 ),
                 verticalSpace(28),
                 Text(
@@ -113,7 +117,9 @@ class _VerifiedScreenState extends State<VerifiedScreen> {
                 AuthTextAndButtonRowWidget(
                   text: "لديك حساب بالفعل ؟",
                   buttonText: "تسجيل الدخول",
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushNamed(Routes.loginScreen);
+                  },
                 ),
               ],
             ),
