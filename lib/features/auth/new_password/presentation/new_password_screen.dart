@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/widgets/app_custom_button.dart';
 import 'package:thimar/core/widgets/auth_header_widget.dart';
 
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_assets.dart';
 import '../../../../core/utils/spacing.dart';
 import '../../../../core/widgets/app_text_form_field.dart';
@@ -51,7 +53,9 @@ class NewPasswordScreen extends StatelessWidget {
               AuthTextAndButtonRowWidget(
                 buttonText: "تسجيل الدخول",
                 text: "لديك حساب بالفعل ؟",
-                onPressed: () {},
+                onPressed: () {
+                  context.pushNamed(Routes.loginScreen);
+                },
               ),
             ],
           ),

@@ -21,7 +21,7 @@ class AuthTextAndButtonRowWidget extends StatelessWidget {
       children: [
         Text(text, style: AppStyles.font16greenLight),
         TextButton(
-          onPressed: () {},
+          onPressed: onPressed,
           child: Text(
             buttonText,
             style: AppStyles.font16GreenBold,

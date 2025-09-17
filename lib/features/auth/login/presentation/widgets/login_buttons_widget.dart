@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:thimar/core/extensions/navigation_extension.dart';
+import 'package:thimar/core/routing/routes.dart';
 
 import '../../../../../core/theming/app_styles.dart';
 import '../../../../../core/utils/spacing.dart';
@@ -14,7 +16,9 @@ class LoginButtonsWidget extends StatelessWidget {
         Align(
           alignment: Alignment.centerLeft,
           child: TextButton(
-            onPressed: () {},
+            onPressed: () {
+              context.pushNamed(Routes.forgetPasswordScreen);
+            },
             child: Text(
               "نسيت كلمة المرور؟",
               style: AppStyles.font16DarkGrayLight,
@@ -23,7 +27,10 @@ class LoginButtonsWidget extends StatelessWidget {
         ),
         verticalSpace(30),
         AppCustomButton(
-          onPressed: () {},
+          onPressed: () {
+            context.pushNamed(Routes.registerScreen);
+
+          },
           textButton: "تسجيل الدخول",
         ),
       ],
