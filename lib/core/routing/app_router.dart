@@ -3,6 +3,8 @@ import 'package:thimar/core/routing/routes.dart';
 import 'package:thimar/features/auth/login/presentation/login_screen.dart';
 import 'package:thimar/features/splash/presentation/splash_screen.dart';
 
+import '../../features/auth/register/presentation/register_screen.dart';
+
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -13,6 +15,9 @@ class AppRouter {
       case Routes.loginScreen:
         return MaterialPageRoute(
           builder: (_) => LoginScreen(),
+        );case Routes.registerScreen:
+        return MaterialPageRoute(
+          builder: (_) => RegisterScreen(),
         );
     }
     return null;
