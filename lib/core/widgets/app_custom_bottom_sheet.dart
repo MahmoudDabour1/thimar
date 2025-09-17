@@ -24,7 +24,7 @@ class AppCustomBottomSheet<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppTextFormField(
       controller: controller,
-      labelText: "اختر $label",
+      hintText: "اختر $label",
       readOnly: true,
       validator: (value) {
         if (value.isEmpty) {
