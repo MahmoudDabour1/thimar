@@ -5,6 +5,7 @@ import 'package:thimar/features/splash/presentation/splash_screen.dart';
 
 import '../../features/auth/forget_password/presentation/forget_password_screen.dart';
 import '../../features/auth/register/presentation/register_screen.dart';
+import '../../features/auth/verifi_code/presentation/verified_screen.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -22,6 +23,9 @@ class AppRouter {
         );case Routes.forgetPasswordScreen:
         return MaterialPageRoute(
           builder: (_) => ForgetPasswordScreen(),
+        );case Routes.verifiedScreen:
+        return MaterialPageRoute(
+          builder: (_) => VerifiedScreen(),
         );
     }
     return null;
