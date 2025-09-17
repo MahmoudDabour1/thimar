@@ -8,7 +8,20 @@ import '../utils/spacing.dart';
 class AuthHeaderWidget extends StatelessWidget {
   final String? title;
   final String? subTitle;
-  const AuthHeaderWidget({super.key, this.title, this.subTitle});
+  final bool? isHasButton;
+  final String? buttonText;
+  final VoidCallback? onPressed;
+  final String? phoneNumber;
+
+  const AuthHeaderWidget({
+    super.key,
+    this.title,
+    this.subTitle,
+    this.isHasButton,
+    this.buttonText,
+    this.onPressed,
+    this.phoneNumber,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +37,33 @@ class AuthHeaderWidget extends StatelessWidget {
           ),
         ),
         Text(
-          title??"مرحبا بك مرة أخرى",
+          title ?? "مرحبا بك مرة أخرى",
           style: AppStyles.font16GreenBold,
         ),
         verticalSpace(8),
         Text(
-          subTitle??"يمكنك تسجيل الدخول الأن",
+          subTitle ?? "يمكنك تسجيل الدخول الأن",
           style: AppStyles.font16DarkGrayLight,
         ),
+        isHasButton == true
+            ? Row(
+                children: [
+                  Text(
+                    phoneNumber ?? "",
+                    style: AppStyles.font16DarkGrayLight,
+                  ),
+                  TextButton(
+                    onPressed: onPressed,
+                    child: Text(
+                      "تغيير رقم الجوال",
+                      style: AppStyles.font16GreenBold.copyWith(
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            : verticalSpace(16),
         verticalSpace(26),
       ],
     );

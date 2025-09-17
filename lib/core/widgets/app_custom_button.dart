@@ -8,7 +8,7 @@ class AppCustomButton extends StatelessWidget {
   final String textButton;
   final double? btnWidth;
   final double? btnHeight;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final bool isLoading;
   final double radius;
   final bool isBorder;
@@ -33,7 +33,13 @@ class AppCustomButton extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(radius.r),
-        color: backgroundColor ?? AppColors.primaryColor,
+        color: isBorder ? AppColors.whiteColor : AppColors.primaryColor,
+        border: isBorder
+            ? Border.all(
+                color: AppColors.primaryColor,
+                width: 2,
+              )
+            : null,
       ),
       child: TextButton(
         style: ButtonStyle(
@@ -49,9 +55,11 @@ class AppCustomButton extends StatelessWidget {
             ? CircularProgressIndicator()
             : Text(
                 textButton,
-                style: AppStyles.font16WhiteBold.copyWith(
-                  color: textColor,
-                ),
+                style: isBorder
+                    ? AppStyles.font16GreenBold
+                    : AppStyles.font16WhiteBold.copyWith(
+                        color: textColor,
+                      ),
                 textAlign: TextAlign.center,
               ),
       ),
