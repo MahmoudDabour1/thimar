@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
 import 'core/theming/app_theme.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -39,8 +38,8 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
         theme: appTheme,
-        initialRoute: Routes.registerScreen,
         onGenerateRoute: AppRouter().generateRoute,
+        initialRoute: Routes.forgetPasswordScreen,
       ),
     );
   }

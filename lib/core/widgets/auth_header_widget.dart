@@ -6,7 +6,9 @@ import '../theming/app_styles.dart';
 import '../utils/spacing.dart';
 
 class AuthHeaderWidget extends StatelessWidget {
-  const AuthHeaderWidget({super.key});
+  final String? title;
+  final String? subTitle;
+  const AuthHeaderWidget({super.key, this.title, this.subTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +24,12 @@ class AuthHeaderWidget extends StatelessWidget {
           ),
         ),
         Text(
-          "مرحبا بك مرة أخرى",
+          title??"مرحبا بك مرة أخرى",
           style: AppStyles.font16GreenBold,
         ),
         verticalSpace(8),
         Text(
-          "يمكنك تسجيل الدخول الأن",
+          subTitle??"يمكنك تسجيل الدخول الأن",
           style: AppStyles.font16DarkGrayLight,
         ),
         verticalSpace(26),
