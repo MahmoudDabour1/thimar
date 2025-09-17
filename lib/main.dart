@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
             Locale("en"),
           ],
           title: 'Flutter Demo',
+          debugShowCheckedModeBanner: false,
           theme: appTheme,
           initialRoute: Routes.homeScreen,
           onGenerateRoute: AppRouter().generateRoute,
