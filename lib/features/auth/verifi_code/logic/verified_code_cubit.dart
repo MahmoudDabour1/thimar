@@ -18,8 +18,7 @@ class VerifiedCodeCubit extends Cubit<VerifiedCodeState> {
 
   final formKey = GlobalKey<FormState>();
 
-  Future<void> checkCode(
-      String? phone, BuildContext context) async {
+  Future<void> checkCode(String? phone, BuildContext context) async {
     emit(VerifiedCodeState.loading());
     final response = await verifiedCodeRepos.checkOtpCode(
       CheckOtpRequestBody(
@@ -30,7 +29,13 @@ class VerifiedCodeCubit extends Cubit<VerifiedCodeState> {
     response.when(success: (data) {
       emit(VerifiedCodeState.success(data));
       showToast(message: data.message.toString());
-      context.pushNamed(Routes.newPasswordScreen);
+      context.pushNamed(
+        Routes.newPasswordScreen,
+        arguments: {
+          "phone": phone,
+          "code": codeController.text,
+        },
+      );
     }, failure: (error) {
       showToast(message: error.message.toString());
 

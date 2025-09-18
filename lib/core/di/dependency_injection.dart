@@ -4,9 +4,13 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:thimar/features/auth/forget_password/data/data_sources/forget_password_remote_data_source.dart';
 import 'package:thimar/features/auth/forget_password/data/repos/forget_password_repo.dart';
 import 'package:thimar/features/auth/forget_password/logic/forget_password_cubit.dart';
+import 'package:thimar/features/auth/new_password/data/data_sources/new_password_remote_data_source.dart';
+import 'package:thimar/features/auth/new_password/data/repos/new_password_repo.dart';
+import 'package:thimar/features/auth/new_password/logic/new_password_cubit.dart';
 import 'package:thimar/features/auth/verifi_code/data/data_sources/verified_code_remote_data_source.dart';
 import 'package:thimar/features/auth/verifi_code/data/repos/verified_code_repos.dart';
 import 'package:thimar/features/auth/verifi_code/logic/verified_code_cubit.dart';
+
 import '../../features/auth/login/data/data_source/login_remote_data_source.dart';
 import '../../features/auth/login/data/repos/login_repo.dart';
 import '../../features/auth/login/logic/login_cubit.dart';
@@ -35,8 +39,15 @@ Future<void> setupGetIt() async {
 
   //verified code
   sl.registerLazySingleton<VerifiedCodeRemoteDataSource>(
-          () => VerifiedCodeRemoteDataSource(dio));
+      () => VerifiedCodeRemoteDataSource(dio));
   sl.registerLazySingleton<VerifiedCodeRepos>(
-          () => VerifiedCodeReposImpl(verifiedCodeRemoteDataSource: sl()));
+      () => VerifiedCodeReposImpl(verifiedCodeRemoteDataSource: sl()));
   sl.registerFactory<VerifiedCodeCubit>(() => VerifiedCodeCubit(sl()));
+
+  //new Password
+  sl.registerLazySingleton<NewPasswordRemoteDataSource>(
+      () => NewPasswordRemoteDataSource(dio));
+  sl.registerLazySingleton<NewPasswordRepo>(
+      () => NewPasswordRepoImpl(newPasswordRemoteDataSource: sl()));
+  sl.registerFactory<NewPasswordCubit>(() => NewPasswordCubit(sl()));
 }
