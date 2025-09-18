@@ -15,6 +15,7 @@ import 'package:thimar/features/auth/widgets/auth_text_and_button_row_widget.dar
 
 import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/routing/routes.dart';
+import '../../../../core/widgets/auth_background_custom_image.dart';
 
 class VerifiedScreen extends StatefulWidget {
   final String phone;
@@ -33,55 +34,59 @@ class _VerifiedScreenState extends State<VerifiedScreen> {
     return BlocProvider(
       create: (context) => VerifiedCodeCubit(sl()),
       child: Scaffold(
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24.w),
-              child: Column(
-                children: [
-                  AuthHeaderWidget(
-                    title: "نسيت كلمة المرور",
-                    subTitle:
-                        "أدخل الكود المكون من 4 أرقام المرسل علي رقم الجوال",
-                    isHasButton: true,
-                    phoneNumber: widget.phone,
-                    onPressed: () {
-                      context.pushNamed(Routes.forgetPasswordScreen);
-                    },
-                  ),
-                  OtpFieldsWidget(phone: widget.phone,),
-                  verticalSpace(28),
-                  BlocBuilder<VerifiedCodeCubit, VerifiedCodeState>(
-                    builder: (context, state) {
-                      final cubit = context.read<VerifiedCodeCubit>();
-                      return AppCustomButton(
-                        isLoading: state is VerifiedCodeLoading,
-                        textButton: "تأكيد الكود",
-                        onPressed: () {
-                          cubit.checkCode(widget.phone, context);
-                        },
-                      );
-                    },
-                  ),
-                  BlocProvider(
-                    create: (context) => ForgetPasswordCubit(sl()),
-                    child: Builder(
-                      builder: (context) => CounterDownAndSendButtonWidget(
-                        controller: _controller,
-                        forgetPasswordCubit:
-                            context.read<ForgetPasswordCubit>(),
-                        phone: widget.phone,
+        body: AuthBackgroundCustomImage(
+          child: SafeArea(
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24.w),
+                child: Column(
+                  children: [
+                    AuthHeaderWidget(
+                      title: "نسيت كلمة المرور",
+                      subTitle:
+                          "أدخل الكود المكون من 4 أرقام المرسل علي رقم الجوال",
+                      isHasButton: true,
+                      phoneNumber: widget.phone,
+                      onPressed: () {
+                        context.pushNamed(Routes.forgetPasswordScreen);
+                      },
+                    ),
+                    OtpFieldsWidget(
+                      phone: widget.phone,
+                    ),
+                    verticalSpace(28),
+                    BlocBuilder<VerifiedCodeCubit, VerifiedCodeState>(
+                      builder: (context, state) {
+                        final cubit = context.read<VerifiedCodeCubit>();
+                        return AppCustomButton(
+                          isLoading: state is VerifiedCodeLoading,
+                          textButton: "تأكيد الكود",
+                          onPressed: () {
+                            cubit.checkCode(widget.phone, context);
+                          },
+                        );
+                      },
+                    ),
+                    BlocProvider(
+                      create: (context) => ForgetPasswordCubit(sl()),
+                      child: Builder(
+                        builder: (context) => CounterDownAndSendButtonWidget(
+                          controller: _controller,
+                          forgetPasswordCubit:
+                              context.read<ForgetPasswordCubit>(),
+                          phone: widget.phone,
+                        ),
                       ),
                     ),
-                  ),
-                  AuthTextAndButtonRowWidget(
-                    text: "لديك حساب بالفعل ؟",
-                    buttonText: "تسجيل الدخول",
-                    onPressed: () {
-                      context.pushNamed(Routes.loginScreen);
-                    },
-                  ),
-                ],
+                    AuthTextAndButtonRowWidget(
+                      text: "لديك حساب بالفعل ؟",
+                      buttonText: "تسجيل الدخول",
+                      onPressed: () {
+                        context.pushNamed(Routes.loginScreen);
+                      },
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

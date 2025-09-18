@@ -28,13 +28,19 @@ class AppRouter {
           builder: (_) => ForgetPasswordScreen(),
         );
       case Routes.verifiedScreen:
-        final  String phone = settings.arguments as String;
+        final String phone = settings.arguments as String;
         return MaterialPageRoute(
           builder: (_) => VerifiedScreen(phone: phone),
         );
       case Routes.newPasswordScreen:
+        final args = settings.arguments as Map<String, String?>;
+        final phone = args["phone"]??"";
+        final code = args["code"]??"";
         return MaterialPageRoute(
-          builder: (_) => NewPasswordScreen(),
+          builder: (_) => NewPasswordScreen(
+            phone: phone,
+            code: code,
+          ),
         );
     }
     return null;
