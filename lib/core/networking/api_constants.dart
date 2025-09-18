@@ -2,6 +2,7 @@ class ApiConstants {
   static const String apiBaseUrl = "https://thimar.amr.aait-d.com/public/api";
   static const String loginEndPoint = "/login";
   static const String forgetPasswordEndPoint = "/forget_password";
+  static const String checkCodeEndPoint = "/check_code";
 }
 
 class ApiErrors {

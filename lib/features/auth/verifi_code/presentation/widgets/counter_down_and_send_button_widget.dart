@@ -6,17 +6,25 @@ import 'package:thimar/core/utils/spacing.dart';
 import '../../../../../core/theming/app_colors.dart';
 import '../../../../../core/theming/app_styles.dart';
 import '../../../../../core/widgets/app_custom_button.dart';
+import '../../../forget_password/logic/forget_password_cubit.dart';
 
-class CounterDownWidget extends StatefulWidget {
-  const CounterDownWidget({super.key});
+class CounterDownAndSendButtonWidget extends StatefulWidget {
+  final CountDownController controller;
+  final ForgetPasswordCubit forgetPasswordCubit;
+  final String phone;
+
+  const CounterDownAndSendButtonWidget(
+      {super.key,
+      required this.controller,
+      required this.forgetPasswordCubit,
+      required this.phone});
 
   @override
-  State<CounterDownWidget> createState() => _CounterDownWidgetState();
+  State<CounterDownAndSendButtonWidget> createState() =>
+      _CounterDownWidgetState();
 }
 
-class _CounterDownWidgetState extends State<CounterDownWidget> {
-  final CountDownController _controller = CountDownController();
-
+class _CounterDownWidgetState extends State<CounterDownAndSendButtonWidget> {
   final int _duration = 30;
   bool _isButtonEnabled = false;
 
@@ -24,6 +32,13 @@ class _CounterDownWidgetState extends State<CounterDownWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        verticalSpace(28),
+        Text(
+          "لم تستلم الكود ؟\nيمكنك إعادة إرسال الكود بعد",
+          style: AppStyles.font16DarkGrayLight,
+          textAlign: TextAlign.center,
+        ),
+        verticalSpace(20),
         CircularCountDownTimer(
           width: 66.w,
           height: 66.h,
@@ -32,7 +47,7 @@ class _CounterDownWidgetState extends State<CounterDownWidget> {
           isReverse: true,
           textFormat: CountdownTextFormat.MM_SS,
           strokeWidth: 3.w,
-          // controller: _controller,
+          controller: widget.controller,
           ringColor: AppColors.primaryColor,
           fillColor: AppColors.lightGrayColor,
           strokeCap: StrokeCap.round,
@@ -41,19 +56,22 @@ class _CounterDownWidgetState extends State<CounterDownWidget> {
           isTimerTextShown: true,
           autoStart: true,
           onStart: () {
-            debugPrint('Countdown Started');
-            setState(() {
-              _isButtonEnabled = false;
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              if (mounted) {
+                setState(() {
+                  _isButtonEnabled = false;
+                });
+              }
             });
           },
           onComplete: () {
-            debugPrint('Countdown Ended');
-            setState(() {
-              _isButtonEnabled = true;
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              if (mounted) {
+                setState(() {
+                  _isButtonEnabled = true;
+                });
+              }
             });
-          },
-          onChange: (String timeStamp) {
-            debugPrint('Countdown Changed $timeStamp');
           },
           timeFormatterFunction: (defaultFormatterFunction, duration) {
             if (duration.inSeconds == 0) {
@@ -68,11 +86,17 @@ class _CounterDownWidgetState extends State<CounterDownWidget> {
           textButton: "إعادة الإرسال",
           onPressed: _isButtonEnabled
               ? () {
-            _controller.restart(duration: _duration);
-            setState(() {
-              _isButtonEnabled = false;
-            });
-          }
+                  widget.controller.restart(duration: _duration);
+                  widget.forgetPasswordCubit.sendCode(context, widget.phone);
+
+                  WidgetsBinding.instance.addPostFrameCallback((_) {
+                    if (mounted) {
+                      setState(() {
+                        _isButtonEnabled = false;
+                      });
+                    }
+                  });
+                }
               : null,
           isBorder: true,
           btnWidth: 133.w,
@@ -80,6 +104,7 @@ class _CounterDownWidgetState extends State<CounterDownWidget> {
           radius: 16.r,
           textColor: AppColors.primaryColor,
         ),
+        verticalSpace(45),
       ],
     );
   }

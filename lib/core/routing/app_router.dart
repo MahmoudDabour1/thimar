@@ -28,9 +28,9 @@ class AppRouter {
           builder: (_) => ForgetPasswordScreen(),
         );
       case Routes.verifiedScreen:
-        final  String phone = settings.arguments as String? ?? '';
+        final  String phone = settings.arguments as String;
         return MaterialPageRoute(
-          builder: (_) => VerifiedScreen(phone: phone,),
+          builder: (_) => VerifiedScreen(phone: phone),
         );
       case Routes.newPasswordScreen:
         return MaterialPageRoute(
