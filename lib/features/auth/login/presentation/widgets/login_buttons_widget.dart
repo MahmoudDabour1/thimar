@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/routing/routes.dart';
 
 import '../../../../../core/theming/app_styles.dart';
 import '../../../../../core/utils/spacing.dart';
 import '../../../../../core/widgets/app_custom_button.dart';
+import '../../logic/login_cubit.dart';
+import '../../logic/login_state.dart';
 
 class LoginButtonsWidget extends StatelessWidget {
   const LoginButtonsWidget({super.key});
@@ -26,12 +29,22 @@ class LoginButtonsWidget extends StatelessWidget {
           ),
         ),
         verticalSpace(30),
-        AppCustomButton(
-          onPressed: () {
-            context.pushNamed(Routes.registerScreen);
-
+        BlocBuilder<LoginCubit, LoginState>(
+          builder: (context, state) {
+            return AppCustomButton(
+              isLoading: state is LoginLoading,
+              onPressed: () {
+                if (context
+                    .read<LoginCubit>()
+                    .formKey
+                    .currentState!
+                    .validate()) {
+                  context.read<LoginCubit>().login();
+                }
+              },
+              textButton: "تسجيل الدخول",
+            );
           },
-          textButton: "تسجيل الدخول",
         ),
       ],
     );

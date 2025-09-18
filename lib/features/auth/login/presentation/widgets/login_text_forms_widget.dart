@@ -1,36 +1,44 @@
-import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/theming/app_assets.dart';
-import '../../../../../core/theming/app_colors.dart';
-import '../../../../../core/theming/app_styles.dart';
 import '../../../../../core/utils/spacing.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 import '../../../widgets/auth_phone_and_country_widget.dart';
+import '../../logic/login_cubit.dart';
 
 class LoginTextFormsWidget extends StatelessWidget {
   const LoginTextFormsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        AuthPhoneAndCountryWidget(),
-        verticalSpace(16),
-        AppTextFormField(
-          hintText: "كلمة المرور",
-          validator: (value) {},
-          prefixIcon: Image.asset(
-            AppAssets.lockImage,
-            width: 22.w,
-            height: 22.h,
+    final loginCubit = context.read<LoginCubit>();
+    return Form(
+      key: loginCubit.formKey,
+      child: Column(
+        children: [
+          AuthPhoneAndCountryWidget(
+            phoneController: loginCubit.phoneController,
           ),
-        ),
-        verticalSpace(10),
-      ],
+          verticalSpace(16),
+          AppTextFormField(
+            hintText: "كلمة المرور",
+            controller: loginCubit.passwordController,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'يرجى إدخال كلمة المرور';
+              }
+            },
+            prefixIcon: Image.asset(
+              AppAssets.lockImage,
+              width: 22.w,
+              height: 22.h,
+            ),
+          ),
+          verticalSpace(10),
+        ],
+      ),
     );
   }
-
-
 }

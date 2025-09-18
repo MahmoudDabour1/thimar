@@ -52,7 +52,9 @@ class AppCustomButton extends StatelessWidget {
         ),
         onPressed: onPressed,
         child: isLoading
-            ? CircularProgressIndicator()
+            ? CircularProgressIndicator(
+                color: AppColors.whiteColor,
+              )
             : Text(
                 textButton,
                 style: isBorder
