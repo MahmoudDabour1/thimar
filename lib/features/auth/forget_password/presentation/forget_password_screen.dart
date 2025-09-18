@@ -49,7 +49,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                               if (cubit.formKey.currentState!.validate()) {
                                 context
                                     .read<ForgetPasswordCubit>()
-                                    .sendCode(context);
+                                    .sendCode(context,null);
                               }
                             },
                           );

@@ -17,11 +17,11 @@ class ForgetPasswordCubit extends Cubit<ForgetPasswordState> {
   final formKey = GlobalKey<FormState>();
   final phoneController = TextEditingController();
 
-  void sendCode(BuildContext context) async {
+  void sendCode(BuildContext context,String? phone) async {
     emit(ForgetPasswordState.loading());
     final response = await forgetPasswordRepo.forgetPassword(
       ForgetPasswordRequestBody(
-        phone: phoneController.text,
+        phone:phone?? phoneController.text,
       ),
     );
     response.when(success: (data) {
