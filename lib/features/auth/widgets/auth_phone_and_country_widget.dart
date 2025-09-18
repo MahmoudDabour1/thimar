@@ -9,11 +9,13 @@ import '../../../core/utils/spacing.dart';
 import '../../../core/widgets/app_text_form_field.dart';
 
 class AuthPhoneAndCountryWidget extends StatelessWidget {
-  const AuthPhoneAndCountryWidget({super.key});
+  final TextEditingController? phoneController;
+
+  const AuthPhoneAndCountryWidget({super.key, this.phoneController});
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       children: [
         Flexible(
           flex: 1,
@@ -62,8 +64,13 @@ class AuthPhoneAndCountryWidget extends StatelessWidget {
         Flexible(
           flex: 4,
           child: AppTextFormField(
+            controller: phoneController,
             hintText: "رقم الجوال",
-            validator: (value) {},
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'يرجى إدخال رقم الجوال';
+              }
+            },
             prefixIcon: Image.asset(
               AppAssets.phoneImage,
               width: 22.w,
@@ -74,6 +81,7 @@ class AuthPhoneAndCountryWidget extends StatelessWidget {
       ],
     );
   }
+
   void _onCountryChange(CountryCode countryCode) {
     print("New Country selected: " + countryCode.toString());
   }

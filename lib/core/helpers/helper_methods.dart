@@ -10,9 +10,9 @@ showToast({required String message, bool isError = false}) {
   Fluttertoast.showToast(
     msg: message,
     toastLength: Toast.LENGTH_SHORT,
-    gravity: ToastGravity.CENTER,
+    gravity: ToastGravity.BOTTOM,
     timeInSecForIosWeb: 1,
-    backgroundColor: AppColors.blackColor,
+    backgroundColor: isError ? Colors.red : AppColors.primaryColor,
     textColor: AppColors.whiteColor,
     fontSize: 16.0.sp,
   );
