@@ -2,13 +2,13 @@ import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:thimar/features/auth/login/presentation/data/models/login_request_body.dart';
-import 'package:thimar/features/auth/login/presentation/data/repos/login_repo.dart';
 
 import '../../../../../core/helpers/helper_methods.dart';
 import '../../../../../core/helpers/shared_pref_helper.dart';
 import '../../../../../core/helpers/shared_pref_keys.dart';
 import '../../../../../core/networking/dio_factory.dart';
+import '../data/models/login_request_body.dart';
+import '../data/repos/login_repo.dart';
 import 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {

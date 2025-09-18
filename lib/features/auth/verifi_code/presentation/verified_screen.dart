@@ -13,7 +13,8 @@ import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_colors.dart';
 
 class VerifiedScreen extends StatefulWidget {
-  const VerifiedScreen({super.key});
+  final String phone;
+  const VerifiedScreen({super.key, required this.phone});
 
   @override
   State<VerifiedScreen> createState() => _VerifiedScreenState();

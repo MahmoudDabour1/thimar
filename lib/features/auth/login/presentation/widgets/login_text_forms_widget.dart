@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:thimar/features/auth/login/presentation/logic/login_cubit.dart';
 
 import '../../../../../core/theming/app_assets.dart';
 import '../../../../../core/utils/spacing.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
 import '../../../widgets/auth_phone_and_country_widget.dart';
+import '../../logic/login_cubit.dart';
 
 class LoginTextFormsWidget extends StatelessWidget {
   const LoginTextFormsWidget({super.key});

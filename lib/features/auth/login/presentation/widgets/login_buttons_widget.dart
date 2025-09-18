@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/routing/routes.dart';
-import 'package:thimar/features/auth/login/presentation/logic/login_cubit.dart';
 
 import '../../../../../core/theming/app_styles.dart';
 import '../../../../../core/utils/spacing.dart';
 import '../../../../../core/widgets/app_custom_button.dart';
-import '../logic/login_state.dart';
+import '../../logic/login_cubit.dart';
+import '../../logic/login_state.dart';
 
 class LoginButtonsWidget extends StatelessWidget {
   const LoginButtonsWidget({super.key});

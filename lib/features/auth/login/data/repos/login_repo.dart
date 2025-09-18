@@ -1,10 +1,9 @@
-import 'package:thimar/features/auth/login/presentation/data/models/login_response_model.dart';
-
 import '../../../../../../core/networking/api_error_handler.dart';
 import '../../../../../../core/networking/api_result.dart';
 import '../../../../../../core/routing/router_observer.dart';
 import '../data_source/login_remote_data_source.dart';
 import '../models/login_request_body.dart';
+import '../models/login_response_model.dart';
 
 abstract class LoginRepo {
   Future<ApiResult<LoginResponseModel>> login(
