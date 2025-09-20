@@ -11,4 +11,11 @@ class HomeState<T> with _$HomeState {
   const factory HomeState.sliderSuccess(T data) = SliderSuccess;
 
   const factory HomeState.sliderFailure(String errorMessage) = SliderFailure;
+
+  const factory HomeState.getCategoriesLoading() = GetCategoriesLoading;
+
+  const factory HomeState.getCategoriesSuccess(T data) = GetCategoriesSuccess;
+
+  const factory HomeState.getCategoriesFailure(String errorMessage) =
+      GetCategoriesFailure;
 }

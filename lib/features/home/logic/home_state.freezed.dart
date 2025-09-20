@@ -22,6 +22,9 @@ mixin _$HomeState<T> {
     required TResult Function() sliderLoading,
     required TResult Function(T data) sliderSuccess,
     required TResult Function(String errorMessage) sliderFailure,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function(T data) getCategoriesSuccess,
+    required TResult Function(String errorMessage) getCategoriesFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,9 @@ mixin _$HomeState<T> {
     TResult? Function()? sliderLoading,
     TResult? Function(T data)? sliderSuccess,
     TResult? Function(String errorMessage)? sliderFailure,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function(T data)? getCategoriesSuccess,
+    TResult? Function(String errorMessage)? getCategoriesFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +44,9 @@ mixin _$HomeState<T> {
     TResult Function()? sliderLoading,
     TResult Function(T data)? sliderSuccess,
     TResult Function(String errorMessage)? sliderFailure,
+    TResult Function()? getCategoriesLoading,
+    TResult Function(T data)? getCategoriesSuccess,
+    TResult Function(String errorMessage)? getCategoriesFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +56,12 @@ mixin _$HomeState<T> {
     required TResult Function(SliderLoading<T> value) sliderLoading,
     required TResult Function(SliderSuccess<T> value) sliderSuccess,
     required TResult Function(SliderFailure<T> value) sliderFailure,
+    required TResult Function(GetCategoriesLoading<T> value)
+        getCategoriesLoading,
+    required TResult Function(GetCategoriesSuccess<T> value)
+        getCategoriesSuccess,
+    required TResult Function(GetCategoriesFailure<T> value)
+        getCategoriesFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +70,9 @@ mixin _$HomeState<T> {
     TResult? Function(SliderLoading<T> value)? sliderLoading,
     TResult? Function(SliderSuccess<T> value)? sliderSuccess,
     TResult? Function(SliderFailure<T> value)? sliderFailure,
+    TResult? Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult? Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult? Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +81,9 @@ mixin _$HomeState<T> {
     TResult Function(SliderLoading<T> value)? sliderLoading,
     TResult Function(SliderSuccess<T> value)? sliderSuccess,
     TResult Function(SliderFailure<T> value)? sliderFailure,
+    TResult Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +155,9 @@ class _$HomeInitialImpl<T> implements HomeInitial<T> {
     required TResult Function() sliderLoading,
     required TResult Function(T data) sliderSuccess,
     required TResult Function(String errorMessage) sliderFailure,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function(T data) getCategoriesSuccess,
+    required TResult Function(String errorMessage) getCategoriesFailure,
   }) {
     return initial();
   }
@@ -145,6 +169,9 @@ class _$HomeInitialImpl<T> implements HomeInitial<T> {
     TResult? Function()? sliderLoading,
     TResult? Function(T data)? sliderSuccess,
     TResult? Function(String errorMessage)? sliderFailure,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function(T data)? getCategoriesSuccess,
+    TResult? Function(String errorMessage)? getCategoriesFailure,
   }) {
     return initial?.call();
   }
@@ -156,6 +183,9 @@ class _$HomeInitialImpl<T> implements HomeInitial<T> {
     TResult Function()? sliderLoading,
     TResult Function(T data)? sliderSuccess,
     TResult Function(String errorMessage)? sliderFailure,
+    TResult Function()? getCategoriesLoading,
+    TResult Function(T data)? getCategoriesSuccess,
+    TResult Function(String errorMessage)? getCategoriesFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -171,6 +201,12 @@ class _$HomeInitialImpl<T> implements HomeInitial<T> {
     required TResult Function(SliderLoading<T> value) sliderLoading,
     required TResult Function(SliderSuccess<T> value) sliderSuccess,
     required TResult Function(SliderFailure<T> value) sliderFailure,
+    required TResult Function(GetCategoriesLoading<T> value)
+        getCategoriesLoading,
+    required TResult Function(GetCategoriesSuccess<T> value)
+        getCategoriesSuccess,
+    required TResult Function(GetCategoriesFailure<T> value)
+        getCategoriesFailure,
   }) {
     return initial(this);
   }
@@ -182,6 +218,9 @@ class _$HomeInitialImpl<T> implements HomeInitial<T> {
     TResult? Function(SliderLoading<T> value)? sliderLoading,
     TResult? Function(SliderSuccess<T> value)? sliderSuccess,
     TResult? Function(SliderFailure<T> value)? sliderFailure,
+    TResult? Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult? Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult? Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
   }) {
     return initial?.call(this);
   }
@@ -193,6 +232,9 @@ class _$HomeInitialImpl<T> implements HomeInitial<T> {
     TResult Function(SliderLoading<T> value)? sliderLoading,
     TResult Function(SliderSuccess<T> value)? sliderSuccess,
     TResult Function(SliderFailure<T> value)? sliderFailure,
+    TResult Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -251,6 +293,9 @@ class _$SliderLoadingImpl<T> implements SliderLoading<T> {
     required TResult Function() sliderLoading,
     required TResult Function(T data) sliderSuccess,
     required TResult Function(String errorMessage) sliderFailure,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function(T data) getCategoriesSuccess,
+    required TResult Function(String errorMessage) getCategoriesFailure,
   }) {
     return sliderLoading();
   }
@@ -262,6 +307,9 @@ class _$SliderLoadingImpl<T> implements SliderLoading<T> {
     TResult? Function()? sliderLoading,
     TResult? Function(T data)? sliderSuccess,
     TResult? Function(String errorMessage)? sliderFailure,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function(T data)? getCategoriesSuccess,
+    TResult? Function(String errorMessage)? getCategoriesFailure,
   }) {
     return sliderLoading?.call();
   }
@@ -273,6 +321,9 @@ class _$SliderLoadingImpl<T> implements SliderLoading<T> {
     TResult Function()? sliderLoading,
     TResult Function(T data)? sliderSuccess,
     TResult Function(String errorMessage)? sliderFailure,
+    TResult Function()? getCategoriesLoading,
+    TResult Function(T data)? getCategoriesSuccess,
+    TResult Function(String errorMessage)? getCategoriesFailure,
     required TResult orElse(),
   }) {
     if (sliderLoading != null) {
@@ -288,6 +339,12 @@ class _$SliderLoadingImpl<T> implements SliderLoading<T> {
     required TResult Function(SliderLoading<T> value) sliderLoading,
     required TResult Function(SliderSuccess<T> value) sliderSuccess,
     required TResult Function(SliderFailure<T> value) sliderFailure,
+    required TResult Function(GetCategoriesLoading<T> value)
+        getCategoriesLoading,
+    required TResult Function(GetCategoriesSuccess<T> value)
+        getCategoriesSuccess,
+    required TResult Function(GetCategoriesFailure<T> value)
+        getCategoriesFailure,
   }) {
     return sliderLoading(this);
   }
@@ -299,6 +356,9 @@ class _$SliderLoadingImpl<T> implements SliderLoading<T> {
     TResult? Function(SliderLoading<T> value)? sliderLoading,
     TResult? Function(SliderSuccess<T> value)? sliderSuccess,
     TResult? Function(SliderFailure<T> value)? sliderFailure,
+    TResult? Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult? Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult? Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
   }) {
     return sliderLoading?.call(this);
   }
@@ -310,6 +370,9 @@ class _$SliderLoadingImpl<T> implements SliderLoading<T> {
     TResult Function(SliderLoading<T> value)? sliderLoading,
     TResult Function(SliderSuccess<T> value)? sliderSuccess,
     TResult Function(SliderFailure<T> value)? sliderFailure,
+    TResult Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
     required TResult orElse(),
   }) {
     if (sliderLoading != null) {
@@ -397,6 +460,9 @@ class _$SliderSuccessImpl<T> implements SliderSuccess<T> {
     required TResult Function() sliderLoading,
     required TResult Function(T data) sliderSuccess,
     required TResult Function(String errorMessage) sliderFailure,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function(T data) getCategoriesSuccess,
+    required TResult Function(String errorMessage) getCategoriesFailure,
   }) {
     return sliderSuccess(data);
   }
@@ -408,6 +474,9 @@ class _$SliderSuccessImpl<T> implements SliderSuccess<T> {
     TResult? Function()? sliderLoading,
     TResult? Function(T data)? sliderSuccess,
     TResult? Function(String errorMessage)? sliderFailure,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function(T data)? getCategoriesSuccess,
+    TResult? Function(String errorMessage)? getCategoriesFailure,
   }) {
     return sliderSuccess?.call(data);
   }
@@ -419,6 +488,9 @@ class _$SliderSuccessImpl<T> implements SliderSuccess<T> {
     TResult Function()? sliderLoading,
     TResult Function(T data)? sliderSuccess,
     TResult Function(String errorMessage)? sliderFailure,
+    TResult Function()? getCategoriesLoading,
+    TResult Function(T data)? getCategoriesSuccess,
+    TResult Function(String errorMessage)? getCategoriesFailure,
     required TResult orElse(),
   }) {
     if (sliderSuccess != null) {
@@ -434,6 +506,12 @@ class _$SliderSuccessImpl<T> implements SliderSuccess<T> {
     required TResult Function(SliderLoading<T> value) sliderLoading,
     required TResult Function(SliderSuccess<T> value) sliderSuccess,
     required TResult Function(SliderFailure<T> value) sliderFailure,
+    required TResult Function(GetCategoriesLoading<T> value)
+        getCategoriesLoading,
+    required TResult Function(GetCategoriesSuccess<T> value)
+        getCategoriesSuccess,
+    required TResult Function(GetCategoriesFailure<T> value)
+        getCategoriesFailure,
   }) {
     return sliderSuccess(this);
   }
@@ -445,6 +523,9 @@ class _$SliderSuccessImpl<T> implements SliderSuccess<T> {
     TResult? Function(SliderLoading<T> value)? sliderLoading,
     TResult? Function(SliderSuccess<T> value)? sliderSuccess,
     TResult? Function(SliderFailure<T> value)? sliderFailure,
+    TResult? Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult? Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult? Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
   }) {
     return sliderSuccess?.call(this);
   }
@@ -456,6 +537,9 @@ class _$SliderSuccessImpl<T> implements SliderSuccess<T> {
     TResult Function(SliderLoading<T> value)? sliderLoading,
     TResult Function(SliderSuccess<T> value)? sliderSuccess,
     TResult Function(SliderFailure<T> value)? sliderFailure,
+    TResult Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
     required TResult orElse(),
   }) {
     if (sliderSuccess != null) {
@@ -551,6 +635,9 @@ class _$SliderFailureImpl<T> implements SliderFailure<T> {
     required TResult Function() sliderLoading,
     required TResult Function(T data) sliderSuccess,
     required TResult Function(String errorMessage) sliderFailure,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function(T data) getCategoriesSuccess,
+    required TResult Function(String errorMessage) getCategoriesFailure,
   }) {
     return sliderFailure(errorMessage);
   }
@@ -562,6 +649,9 @@ class _$SliderFailureImpl<T> implements SliderFailure<T> {
     TResult? Function()? sliderLoading,
     TResult? Function(T data)? sliderSuccess,
     TResult? Function(String errorMessage)? sliderFailure,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function(T data)? getCategoriesSuccess,
+    TResult? Function(String errorMessage)? getCategoriesFailure,
   }) {
     return sliderFailure?.call(errorMessage);
   }
@@ -573,6 +663,9 @@ class _$SliderFailureImpl<T> implements SliderFailure<T> {
     TResult Function()? sliderLoading,
     TResult Function(T data)? sliderSuccess,
     TResult Function(String errorMessage)? sliderFailure,
+    TResult Function()? getCategoriesLoading,
+    TResult Function(T data)? getCategoriesSuccess,
+    TResult Function(String errorMessage)? getCategoriesFailure,
     required TResult orElse(),
   }) {
     if (sliderFailure != null) {
@@ -588,6 +681,12 @@ class _$SliderFailureImpl<T> implements SliderFailure<T> {
     required TResult Function(SliderLoading<T> value) sliderLoading,
     required TResult Function(SliderSuccess<T> value) sliderSuccess,
     required TResult Function(SliderFailure<T> value) sliderFailure,
+    required TResult Function(GetCategoriesLoading<T> value)
+        getCategoriesLoading,
+    required TResult Function(GetCategoriesSuccess<T> value)
+        getCategoriesSuccess,
+    required TResult Function(GetCategoriesFailure<T> value)
+        getCategoriesFailure,
   }) {
     return sliderFailure(this);
   }
@@ -599,6 +698,9 @@ class _$SliderFailureImpl<T> implements SliderFailure<T> {
     TResult? Function(SliderLoading<T> value)? sliderLoading,
     TResult? Function(SliderSuccess<T> value)? sliderSuccess,
     TResult? Function(SliderFailure<T> value)? sliderFailure,
+    TResult? Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult? Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult? Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
   }) {
     return sliderFailure?.call(this);
   }
@@ -610,6 +712,9 @@ class _$SliderFailureImpl<T> implements SliderFailure<T> {
     TResult Function(SliderLoading<T> value)? sliderLoading,
     TResult Function(SliderSuccess<T> value)? sliderSuccess,
     TResult Function(SliderFailure<T> value)? sliderFailure,
+    TResult Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
     required TResult orElse(),
   }) {
     if (sliderFailure != null) {
@@ -630,4 +735,498 @@ abstract class SliderFailure<T> implements HomeState<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SliderFailureImplCopyWith<T, _$SliderFailureImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetCategoriesLoadingImplCopyWith<T, $Res> {
+  factory _$$GetCategoriesLoadingImplCopyWith(
+          _$GetCategoriesLoadingImpl<T> value,
+          $Res Function(_$GetCategoriesLoadingImpl<T>) then) =
+      __$$GetCategoriesLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetCategoriesLoadingImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$GetCategoriesLoadingImpl<T>>
+    implements _$$GetCategoriesLoadingImplCopyWith<T, $Res> {
+  __$$GetCategoriesLoadingImplCopyWithImpl(_$GetCategoriesLoadingImpl<T> _value,
+      $Res Function(_$GetCategoriesLoadingImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$GetCategoriesLoadingImpl<T> implements GetCategoriesLoading<T> {
+  const _$GetCategoriesLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.getCategoriesLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCategoriesLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() sliderLoading,
+    required TResult Function(T data) sliderSuccess,
+    required TResult Function(String errorMessage) sliderFailure,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function(T data) getCategoriesSuccess,
+    required TResult Function(String errorMessage) getCategoriesFailure,
+  }) {
+    return getCategoriesLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? sliderLoading,
+    TResult? Function(T data)? sliderSuccess,
+    TResult? Function(String errorMessage)? sliderFailure,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function(T data)? getCategoriesSuccess,
+    TResult? Function(String errorMessage)? getCategoriesFailure,
+  }) {
+    return getCategoriesLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? sliderLoading,
+    TResult Function(T data)? sliderSuccess,
+    TResult Function(String errorMessage)? sliderFailure,
+    TResult Function()? getCategoriesLoading,
+    TResult Function(T data)? getCategoriesSuccess,
+    TResult Function(String errorMessage)? getCategoriesFailure,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesLoading != null) {
+      return getCategoriesLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeInitial<T> value) initial,
+    required TResult Function(SliderLoading<T> value) sliderLoading,
+    required TResult Function(SliderSuccess<T> value) sliderSuccess,
+    required TResult Function(SliderFailure<T> value) sliderFailure,
+    required TResult Function(GetCategoriesLoading<T> value)
+        getCategoriesLoading,
+    required TResult Function(GetCategoriesSuccess<T> value)
+        getCategoriesSuccess,
+    required TResult Function(GetCategoriesFailure<T> value)
+        getCategoriesFailure,
+  }) {
+    return getCategoriesLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HomeInitial<T> value)? initial,
+    TResult? Function(SliderLoading<T> value)? sliderLoading,
+    TResult? Function(SliderSuccess<T> value)? sliderSuccess,
+    TResult? Function(SliderFailure<T> value)? sliderFailure,
+    TResult? Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult? Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult? Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
+  }) {
+    return getCategoriesLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeInitial<T> value)? initial,
+    TResult Function(SliderLoading<T> value)? sliderLoading,
+    TResult Function(SliderSuccess<T> value)? sliderSuccess,
+    TResult Function(SliderFailure<T> value)? sliderFailure,
+    TResult Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesLoading != null) {
+      return getCategoriesLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCategoriesLoading<T> implements HomeState<T> {
+  const factory GetCategoriesLoading() = _$GetCategoriesLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetCategoriesSuccessImplCopyWith<T, $Res> {
+  factory _$$GetCategoriesSuccessImplCopyWith(
+          _$GetCategoriesSuccessImpl<T> value,
+          $Res Function(_$GetCategoriesSuccessImpl<T>) then) =
+      __$$GetCategoriesSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$GetCategoriesSuccessImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$GetCategoriesSuccessImpl<T>>
+    implements _$$GetCategoriesSuccessImplCopyWith<T, $Res> {
+  __$$GetCategoriesSuccessImplCopyWithImpl(_$GetCategoriesSuccessImpl<T> _value,
+      $Res Function(_$GetCategoriesSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetCategoriesSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetCategoriesSuccessImpl<T> implements GetCategoriesSuccess<T> {
+  const _$GetCategoriesSuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.getCategoriesSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCategoriesSuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetCategoriesSuccessImplCopyWith<T, _$GetCategoriesSuccessImpl<T>>
+      get copyWith => __$$GetCategoriesSuccessImplCopyWithImpl<T,
+          _$GetCategoriesSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() sliderLoading,
+    required TResult Function(T data) sliderSuccess,
+    required TResult Function(String errorMessage) sliderFailure,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function(T data) getCategoriesSuccess,
+    required TResult Function(String errorMessage) getCategoriesFailure,
+  }) {
+    return getCategoriesSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? sliderLoading,
+    TResult? Function(T data)? sliderSuccess,
+    TResult? Function(String errorMessage)? sliderFailure,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function(T data)? getCategoriesSuccess,
+    TResult? Function(String errorMessage)? getCategoriesFailure,
+  }) {
+    return getCategoriesSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? sliderLoading,
+    TResult Function(T data)? sliderSuccess,
+    TResult Function(String errorMessage)? sliderFailure,
+    TResult Function()? getCategoriesLoading,
+    TResult Function(T data)? getCategoriesSuccess,
+    TResult Function(String errorMessage)? getCategoriesFailure,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesSuccess != null) {
+      return getCategoriesSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeInitial<T> value) initial,
+    required TResult Function(SliderLoading<T> value) sliderLoading,
+    required TResult Function(SliderSuccess<T> value) sliderSuccess,
+    required TResult Function(SliderFailure<T> value) sliderFailure,
+    required TResult Function(GetCategoriesLoading<T> value)
+        getCategoriesLoading,
+    required TResult Function(GetCategoriesSuccess<T> value)
+        getCategoriesSuccess,
+    required TResult Function(GetCategoriesFailure<T> value)
+        getCategoriesFailure,
+  }) {
+    return getCategoriesSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HomeInitial<T> value)? initial,
+    TResult? Function(SliderLoading<T> value)? sliderLoading,
+    TResult? Function(SliderSuccess<T> value)? sliderSuccess,
+    TResult? Function(SliderFailure<T> value)? sliderFailure,
+    TResult? Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult? Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult? Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
+  }) {
+    return getCategoriesSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeInitial<T> value)? initial,
+    TResult Function(SliderLoading<T> value)? sliderLoading,
+    TResult Function(SliderSuccess<T> value)? sliderSuccess,
+    TResult Function(SliderFailure<T> value)? sliderFailure,
+    TResult Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesSuccess != null) {
+      return getCategoriesSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCategoriesSuccess<T> implements HomeState<T> {
+  const factory GetCategoriesSuccess(final T data) =
+      _$GetCategoriesSuccessImpl<T>;
+
+  T get data;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetCategoriesSuccessImplCopyWith<T, _$GetCategoriesSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetCategoriesFailureImplCopyWith<T, $Res> {
+  factory _$$GetCategoriesFailureImplCopyWith(
+          _$GetCategoriesFailureImpl<T> value,
+          $Res Function(_$GetCategoriesFailureImpl<T>) then) =
+      __$$GetCategoriesFailureImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String errorMessage});
+}
+
+/// @nodoc
+class __$$GetCategoriesFailureImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$GetCategoriesFailureImpl<T>>
+    implements _$$GetCategoriesFailureImplCopyWith<T, $Res> {
+  __$$GetCategoriesFailureImplCopyWithImpl(_$GetCategoriesFailureImpl<T> _value,
+      $Res Function(_$GetCategoriesFailureImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorMessage = null,
+  }) {
+    return _then(_$GetCategoriesFailureImpl<T>(
+      null == errorMessage
+          ? _value.errorMessage
+          : errorMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetCategoriesFailureImpl<T> implements GetCategoriesFailure<T> {
+  const _$GetCategoriesFailureImpl(this.errorMessage);
+
+  @override
+  final String errorMessage;
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.getCategoriesFailure(errorMessage: $errorMessage)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCategoriesFailureImpl<T> &&
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorMessage);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetCategoriesFailureImplCopyWith<T, _$GetCategoriesFailureImpl<T>>
+      get copyWith => __$$GetCategoriesFailureImplCopyWithImpl<T,
+          _$GetCategoriesFailureImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() sliderLoading,
+    required TResult Function(T data) sliderSuccess,
+    required TResult Function(String errorMessage) sliderFailure,
+    required TResult Function() getCategoriesLoading,
+    required TResult Function(T data) getCategoriesSuccess,
+    required TResult Function(String errorMessage) getCategoriesFailure,
+  }) {
+    return getCategoriesFailure(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? sliderLoading,
+    TResult? Function(T data)? sliderSuccess,
+    TResult? Function(String errorMessage)? sliderFailure,
+    TResult? Function()? getCategoriesLoading,
+    TResult? Function(T data)? getCategoriesSuccess,
+    TResult? Function(String errorMessage)? getCategoriesFailure,
+  }) {
+    return getCategoriesFailure?.call(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? sliderLoading,
+    TResult Function(T data)? sliderSuccess,
+    TResult Function(String errorMessage)? sliderFailure,
+    TResult Function()? getCategoriesLoading,
+    TResult Function(T data)? getCategoriesSuccess,
+    TResult Function(String errorMessage)? getCategoriesFailure,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesFailure != null) {
+      return getCategoriesFailure(errorMessage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeInitial<T> value) initial,
+    required TResult Function(SliderLoading<T> value) sliderLoading,
+    required TResult Function(SliderSuccess<T> value) sliderSuccess,
+    required TResult Function(SliderFailure<T> value) sliderFailure,
+    required TResult Function(GetCategoriesLoading<T> value)
+        getCategoriesLoading,
+    required TResult Function(GetCategoriesSuccess<T> value)
+        getCategoriesSuccess,
+    required TResult Function(GetCategoriesFailure<T> value)
+        getCategoriesFailure,
+  }) {
+    return getCategoriesFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HomeInitial<T> value)? initial,
+    TResult? Function(SliderLoading<T> value)? sliderLoading,
+    TResult? Function(SliderSuccess<T> value)? sliderSuccess,
+    TResult? Function(SliderFailure<T> value)? sliderFailure,
+    TResult? Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult? Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult? Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
+  }) {
+    return getCategoriesFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeInitial<T> value)? initial,
+    TResult Function(SliderLoading<T> value)? sliderLoading,
+    TResult Function(SliderSuccess<T> value)? sliderSuccess,
+    TResult Function(SliderFailure<T> value)? sliderFailure,
+    TResult Function(GetCategoriesLoading<T> value)? getCategoriesLoading,
+    TResult Function(GetCategoriesSuccess<T> value)? getCategoriesSuccess,
+    TResult Function(GetCategoriesFailure<T> value)? getCategoriesFailure,
+    required TResult orElse(),
+  }) {
+    if (getCategoriesFailure != null) {
+      return getCategoriesFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCategoriesFailure<T> implements HomeState<T> {
+  const factory GetCategoriesFailure(final String errorMessage) =
+      _$GetCategoriesFailureImpl<T>;
+
+  String get errorMessage;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetCategoriesFailureImplCopyWith<T, _$GetCategoriesFailureImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }

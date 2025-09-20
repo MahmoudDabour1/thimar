@@ -19,4 +19,17 @@ class HomeCubit extends Cubit<HomeState> {
       },
     );
   }
+
+  Future<void> getCategories() async {
+    emit(HomeState.getCategoriesLoading());
+    final response = await homeRepos.getCategories();
+    response.when(
+      success: (data) {
+        emit(HomeState.getCategoriesSuccess(data));
+      },
+      failure: (error) {
+        emit(HomeState.getCategoriesFailure(error.message.toString()));
+      },
+    );
+  }
 }

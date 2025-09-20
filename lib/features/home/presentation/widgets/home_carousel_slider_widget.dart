@@ -24,6 +24,11 @@ class _HomeCarouselSliderWidgetState extends State<HomeCarouselSliderWidget> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
+      buildWhen: (previous, current) =>
+          previous != current &&
+          (current is SliderLoading ||
+              current is SliderSuccess ||
+              current is SliderFailure),
       builder: (context, state) {
         return state.maybeWhen(
           sliderLoading: () => setupLoading(),

@@ -40,4 +40,14 @@ class AppStyles {
     color: AppColors.whiteColor,
     fontWeight: FontWeightHelper.bold,
   );
+  static TextStyle font16BlackExtraBold = TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeightHelper.extraBold,
+  );
+  static TextStyle font16BlackMedium = TextStyle(
+    fontSize: 20.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeightHelper.medium,
+  );
 }
