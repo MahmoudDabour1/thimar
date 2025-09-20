@@ -13,6 +13,9 @@ import 'package:thimar/features/auth/register/presentation/logic/register_cubit.
 import 'package:thimar/features/auth/verifi_code/data/data_sources/verified_code_remote_data_source.dart';
 import 'package:thimar/features/auth/verifi_code/data/repos/verified_code_repos.dart';
 import 'package:thimar/features/auth/verifi_code/logic/verified_code_cubit.dart';
+import 'package:thimar/features/home/data/data_sources/home_remote_data_source.dart';
+import 'package:thimar/features/home/data/repos/home_repos.dart';
+import 'package:thimar/features/home/logic/home_cubit.dart';
 
 import '../../features/auth/login/data/data_source/login_remote_data_source.dart';
 import '../../features/auth/login/data/repos/login_repo.dart';
@@ -60,4 +63,11 @@ Future<void> setupGetIt() async {
   sl.registerLazySingleton<RegisterRepo>(
       () => RegisterRepoImpl(registerRemoteDataSource: sl()));
   sl.registerFactory<RegisterCubit>(() => RegisterCubit(sl()));
+
+  //home
+  sl.registerLazySingleton<HomeRemoteDataSource>(
+      () => HomeRemoteDataSource(dio));
+  sl.registerLazySingleton<HomeRepos>(
+      () => HomeReposImpl(remoteDataSource: sl()));
+  sl.registerFactory<HomeCubit>(() => HomeCubit(sl()));
 }

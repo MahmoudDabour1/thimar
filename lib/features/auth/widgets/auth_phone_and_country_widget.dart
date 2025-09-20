@@ -51,7 +51,7 @@ class AuthPhoneAndCountryWidget extends StatelessWidget {
                       horizontalSpace(6),
                       Text(
                         countryCode.dialCode ?? "",
-                        style: AppStyles.font16MediumBold,
+                        style: AppStyles.font16GreenMedium,
                       ),
                     ],
                   );

@@ -26,14 +26,15 @@ class BottomNavBarLayout extends StatelessWidget {
               type: BottomNavigationBarType.fixed,
               backgroundColor: AppColors.primaryColor,
               currentIndex: bottomNavCubit.currentIndex,
-              iconSize: 21.r,
+              iconSize: 25.r,
               selectedFontSize: 16.sp,
               unselectedFontSize: 16.sp,
               unselectedIconTheme: IconThemeData(
-                size: 21.r,
+                size: 25.r,
               ),
               selectedIconTheme: IconThemeData(
                 color: AppColors.whiteColor,
+                size: 25.r,
               ),
               selectedItemColor: Colors.white,
               selectedLabelStyle: AppStyles.font16WhiteBold,
@@ -50,6 +51,7 @@ class BottomNavBarLayout extends StatelessWidget {
                 (index) => BottomNavigationBarItem(
                   icon: Column(
                     children: [
+                      verticalSpace(8),
                       SvgPicture.asset(
                         bottomNavCubit.unSelectedIcons[index],
                         color: AppColors.lightGreenColor,
@@ -59,6 +61,7 @@ class BottomNavBarLayout extends StatelessWidget {
                   ),
                   activeIcon: Column(
                     children: [
+                      verticalSpace(8),
                       SvgPicture.asset(
                         bottomNavCubit.selectedIcons[index],
                         color: AppColors.whiteColor,
