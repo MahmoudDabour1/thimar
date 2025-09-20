@@ -19,8 +19,9 @@ import '../../../../core/widgets/auth_background_custom_image.dart';
 
 class VerifiedScreen extends StatefulWidget {
   final String phone;
+  final bool isActiveAccount;
 
-  const VerifiedScreen({super.key, required this.phone});
+  const VerifiedScreen({super.key, required this.phone, required this.isActiveAccount});
 
   @override
   State<VerifiedScreen> createState() => _VerifiedScreenState();

@@ -7,6 +7,9 @@ import 'package:thimar/features/auth/forget_password/logic/forget_password_cubit
 import 'package:thimar/features/auth/new_password/data/data_sources/new_password_remote_data_source.dart';
 import 'package:thimar/features/auth/new_password/data/repos/new_password_repo.dart';
 import 'package:thimar/features/auth/new_password/logic/new_password_cubit.dart';
+import 'package:thimar/features/auth/register/presentation/data/data_sources/register_remote_data_source.dart';
+import 'package:thimar/features/auth/register/presentation/data/repos/register_repo.dart';
+import 'package:thimar/features/auth/register/presentation/logic/register_cubit.dart';
 import 'package:thimar/features/auth/verifi_code/data/data_sources/verified_code_remote_data_source.dart';
 import 'package:thimar/features/auth/verifi_code/data/repos/verified_code_repos.dart';
 import 'package:thimar/features/auth/verifi_code/logic/verified_code_cubit.dart';
@@ -50,4 +53,11 @@ Future<void> setupGetIt() async {
   sl.registerLazySingleton<NewPasswordRepo>(
       () => NewPasswordRepoImpl(newPasswordRemoteDataSource: sl()));
   sl.registerFactory<NewPasswordCubit>(() => NewPasswordCubit(sl()));
+
+  //register
+  sl.registerLazySingleton<RegisterRemoteDataSource>(
+      () => RegisterRemoteDataSource(dio));
+  sl.registerLazySingleton<RegisterRepo>(
+      () => RegisterRepoImpl(registerRemoteDataSource: sl()));
+  sl.registerFactory<RegisterCubit>(() => RegisterCubit(sl()));
 }

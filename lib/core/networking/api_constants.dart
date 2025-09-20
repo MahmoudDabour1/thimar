@@ -4,6 +4,7 @@ class ApiConstants {
   static const String forgetPasswordEndPoint = "/forget_password";
   static const String checkCodeEndPoint = "/check_code";
   static const String newPasswordPoint = "/reset_password";
+  static const String clientRegisterEndPoint = "/client_register";
 }
 
 class ApiErrors {
