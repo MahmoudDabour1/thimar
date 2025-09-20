@@ -9,7 +9,7 @@ class AppStyles {
     fontSize: 16.sp,
     color: AppColors.primaryColor,
     fontWeight: FontWeightHelper.bold,
-  );static TextStyle font16MediumBold = TextStyle(
+  );static TextStyle font16GreenMedium = TextStyle(
     fontSize: 16.sp,
     color: AppColors.primaryColor,
     fontWeight: FontWeightHelper.medium,
@@ -30,5 +30,14 @@ class AppStyles {
     fontSize: 15.sp,
     color: AppColors.textFormGrayColor,
     fontWeight: FontWeightHelper.regular,
+  );
+  static TextStyle font14greenBold = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.primaryColor,
+    fontWeight: FontWeightHelper.bold,
+  ); static TextStyle font14WhiteBold = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.whiteColor,
+    fontWeight: FontWeightHelper.bold,
   );
 }

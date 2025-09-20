@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:thimar/features/home/logic/home_cubit.dart';
+import 'package:thimar/features/home/presentation/widgets/home_carousel_slider_widget.dart';
+import 'package:thimar/features/home/presentation/widgets/home_custom_header_widget.dart';
+
+import '../../../core/di/dependency_injection.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,9 +12,17 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Home Screen'),
+        body: SafeArea(
+      child: BlocProvider(
+        create: (context) => HomeCubit(sl())..fetchSliders(),
+        child: ListView(
+          physics: const BouncingScrollPhysics(),
+          children: [
+            HomeCustomHeaderWidget(),
+            HomeCarouselSliderWidget(),
+          ],
+        ),
       ),
-    );
+    ));
   }
 }
