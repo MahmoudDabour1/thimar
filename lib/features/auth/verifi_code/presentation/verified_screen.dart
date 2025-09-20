@@ -19,8 +19,10 @@ import '../../../../core/widgets/auth_background_custom_image.dart';
 
 class VerifiedScreen extends StatefulWidget {
   final String phone;
+  final bool isActiveAccount;
 
-  const VerifiedScreen({super.key, required this.phone});
+  const VerifiedScreen(
+      {super.key, required this.phone, required this.isActiveAccount});
 
   @override
   State<VerifiedScreen> createState() => _VerifiedScreenState();
@@ -42,17 +44,24 @@ class _VerifiedScreenState extends State<VerifiedScreen> {
                 child: Column(
                   children: [
                     AuthHeaderWidget(
-                      title: "نسيت كلمة المرور",
+                      title: widget.isActiveAccount
+                          ? "تفعيل الحساب"
+                          : "نسيت كلمة المرور",
                       subTitle:
                           "أدخل الكود المكون من 4 أرقام المرسل علي رقم الجوال",
                       isHasButton: true,
                       phoneNumber: widget.phone,
                       onPressed: () {
-                        context.pushNamed(Routes.forgetPasswordScreen);
+                        context.pushNamed(
+                          widget.isActiveAccount
+                              ? Routes.registerScreen
+                              : Routes.forgetPasswordScreen,
+                        );
                       },
                     ),
                     OtpFieldsWidget(
                       phone: widget.phone,
+                      isActiveAccount: widget.isActiveAccount,
                     ),
                     verticalSpace(28),
                     BlocBuilder<VerifiedCodeCubit, VerifiedCodeState>(
@@ -62,7 +71,9 @@ class _VerifiedScreenState extends State<VerifiedScreen> {
                           isLoading: state is VerifiedCodeLoading,
                           textButton: "تأكيد الكود",
                           onPressed: () {
-                            cubit.checkCode(widget.phone, context);
+                            widget.isActiveAccount
+                                ? cubit.verifiedAccount(widget.phone, context)
+                                : cubit.checkCode(widget.phone, context);
                           },
                         );
                       },

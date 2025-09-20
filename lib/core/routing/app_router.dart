@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:thimar/core/routing/routes.dart';
 import 'package:thimar/features/auth/login/presentation/login_screen.dart';
+import 'package:thimar/features/layout/presentation/bottom_nav_bar_layout.dart';
 import 'package:thimar/features/splash/presentation/splash_screen.dart';
 
 import '../../features/auth/forget_password/presentation/forget_password_screen.dart';
@@ -28,19 +29,29 @@ class AppRouter {
           builder: (_) => ForgetPasswordScreen(),
         );
       case Routes.verifiedScreen:
-        final String phone = settings.arguments as String;
+        final args = settings.arguments as Map<String, dynamic>;
+        final phone = args["phone"] as String? ?? "";
+        final isActiveAccount = args["isActiveAccount"] as bool? ?? false;
         return MaterialPageRoute(
-          builder: (_) => VerifiedScreen(phone: phone),
+          builder: (_) => VerifiedScreen(
+            phone: phone,
+            isActiveAccount: isActiveAccount,
+          ),
         );
       case Routes.newPasswordScreen:
         final args = settings.arguments as Map<String, String?>;
-        final phone = args["phone"]??"";
-        final code = args["code"]??"";
+        final phone = args["phone"] ?? "";
+        final code = args["code"] ?? "";
         return MaterialPageRoute(
           builder: (_) => NewPasswordScreen(
             phone: phone,
             code: code,
           ),
+        );
+
+      case Routes.bottomNavBarLayout:
+        return MaterialPageRoute(
+          builder: (_) => BottomNavBarLayout(),
         );
     }
     return null;
