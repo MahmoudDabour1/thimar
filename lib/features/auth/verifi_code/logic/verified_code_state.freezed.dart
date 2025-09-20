@@ -22,6 +22,9 @@ mixin _$VerifiedCodeState<T> {
     required TResult Function() loading,
     required TResult Function(T response) success,
     required TResult Function(String error) error,
+    required TResult Function() resendCodeLoading,
+    required TResult Function(T response) resendCodeSuccess,
+    required TResult Function(String error) resendCodeError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,9 @@ mixin _$VerifiedCodeState<T> {
     TResult? Function()? loading,
     TResult? Function(T response)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? resendCodeLoading,
+    TResult? Function(T response)? resendCodeSuccess,
+    TResult? Function(String error)? resendCodeError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +44,9 @@ mixin _$VerifiedCodeState<T> {
     TResult Function()? loading,
     TResult Function(T response)? success,
     TResult Function(String error)? error,
+    TResult Function()? resendCodeLoading,
+    TResult Function(T response)? resendCodeSuccess,
+    TResult Function(String error)? resendCodeError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +56,9 @@ mixin _$VerifiedCodeState<T> {
     required TResult Function(VerifiedCodeLoading<T> value) loading,
     required TResult Function(VerifiedCodeSuccess<T> value) success,
     required TResult Function(VerifiedCodeError<T> value) error,
+    required TResult Function(ResendCodeLoading<T> value) resendCodeLoading,
+    required TResult Function(ResendCodeSuccess<T> value) resendCodeSuccess,
+    required TResult Function(ResendCodeError<T> value) resendCodeError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +67,9 @@ mixin _$VerifiedCodeState<T> {
     TResult? Function(VerifiedCodeLoading<T> value)? loading,
     TResult? Function(VerifiedCodeSuccess<T> value)? success,
     TResult? Function(VerifiedCodeError<T> value)? error,
+    TResult? Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult? Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult? Function(ResendCodeError<T> value)? resendCodeError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +78,9 @@ mixin _$VerifiedCodeState<T> {
     TResult Function(VerifiedCodeLoading<T> value)? loading,
     TResult Function(VerifiedCodeSuccess<T> value)? success,
     TResult Function(VerifiedCodeError<T> value)? error,
+    TResult Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult Function(ResendCodeError<T> value)? resendCodeError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -137,6 +155,9 @@ class _$VerifiedCodeInitialImpl<T> implements VerifiedCodeInitial<T> {
     required TResult Function() loading,
     required TResult Function(T response) success,
     required TResult Function(String error) error,
+    required TResult Function() resendCodeLoading,
+    required TResult Function(T response) resendCodeSuccess,
+    required TResult Function(String error) resendCodeError,
   }) {
     return initial();
   }
@@ -148,6 +169,9 @@ class _$VerifiedCodeInitialImpl<T> implements VerifiedCodeInitial<T> {
     TResult? Function()? loading,
     TResult? Function(T response)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? resendCodeLoading,
+    TResult? Function(T response)? resendCodeSuccess,
+    TResult? Function(String error)? resendCodeError,
   }) {
     return initial?.call();
   }
@@ -159,6 +183,9 @@ class _$VerifiedCodeInitialImpl<T> implements VerifiedCodeInitial<T> {
     TResult Function()? loading,
     TResult Function(T response)? success,
     TResult Function(String error)? error,
+    TResult Function()? resendCodeLoading,
+    TResult Function(T response)? resendCodeSuccess,
+    TResult Function(String error)? resendCodeError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -174,6 +201,9 @@ class _$VerifiedCodeInitialImpl<T> implements VerifiedCodeInitial<T> {
     required TResult Function(VerifiedCodeLoading<T> value) loading,
     required TResult Function(VerifiedCodeSuccess<T> value) success,
     required TResult Function(VerifiedCodeError<T> value) error,
+    required TResult Function(ResendCodeLoading<T> value) resendCodeLoading,
+    required TResult Function(ResendCodeSuccess<T> value) resendCodeSuccess,
+    required TResult Function(ResendCodeError<T> value) resendCodeError,
   }) {
     return initial(this);
   }
@@ -185,6 +215,9 @@ class _$VerifiedCodeInitialImpl<T> implements VerifiedCodeInitial<T> {
     TResult? Function(VerifiedCodeLoading<T> value)? loading,
     TResult? Function(VerifiedCodeSuccess<T> value)? success,
     TResult? Function(VerifiedCodeError<T> value)? error,
+    TResult? Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult? Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult? Function(ResendCodeError<T> value)? resendCodeError,
   }) {
     return initial?.call(this);
   }
@@ -196,6 +229,9 @@ class _$VerifiedCodeInitialImpl<T> implements VerifiedCodeInitial<T> {
     TResult Function(VerifiedCodeLoading<T> value)? loading,
     TResult Function(VerifiedCodeSuccess<T> value)? success,
     TResult Function(VerifiedCodeError<T> value)? error,
+    TResult Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult Function(ResendCodeError<T> value)? resendCodeError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -256,6 +292,9 @@ class _$VerifiedCodeLoadingImpl<T> implements VerifiedCodeLoading<T> {
     required TResult Function() loading,
     required TResult Function(T response) success,
     required TResult Function(String error) error,
+    required TResult Function() resendCodeLoading,
+    required TResult Function(T response) resendCodeSuccess,
+    required TResult Function(String error) resendCodeError,
   }) {
     return loading();
   }
@@ -267,6 +306,9 @@ class _$VerifiedCodeLoadingImpl<T> implements VerifiedCodeLoading<T> {
     TResult? Function()? loading,
     TResult? Function(T response)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? resendCodeLoading,
+    TResult? Function(T response)? resendCodeSuccess,
+    TResult? Function(String error)? resendCodeError,
   }) {
     return loading?.call();
   }
@@ -278,6 +320,9 @@ class _$VerifiedCodeLoadingImpl<T> implements VerifiedCodeLoading<T> {
     TResult Function()? loading,
     TResult Function(T response)? success,
     TResult Function(String error)? error,
+    TResult Function()? resendCodeLoading,
+    TResult Function(T response)? resendCodeSuccess,
+    TResult Function(String error)? resendCodeError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -293,6 +338,9 @@ class _$VerifiedCodeLoadingImpl<T> implements VerifiedCodeLoading<T> {
     required TResult Function(VerifiedCodeLoading<T> value) loading,
     required TResult Function(VerifiedCodeSuccess<T> value) success,
     required TResult Function(VerifiedCodeError<T> value) error,
+    required TResult Function(ResendCodeLoading<T> value) resendCodeLoading,
+    required TResult Function(ResendCodeSuccess<T> value) resendCodeSuccess,
+    required TResult Function(ResendCodeError<T> value) resendCodeError,
   }) {
     return loading(this);
   }
@@ -304,6 +352,9 @@ class _$VerifiedCodeLoadingImpl<T> implements VerifiedCodeLoading<T> {
     TResult? Function(VerifiedCodeLoading<T> value)? loading,
     TResult? Function(VerifiedCodeSuccess<T> value)? success,
     TResult? Function(VerifiedCodeError<T> value)? error,
+    TResult? Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult? Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult? Function(ResendCodeError<T> value)? resendCodeError,
   }) {
     return loading?.call(this);
   }
@@ -315,6 +366,9 @@ class _$VerifiedCodeLoadingImpl<T> implements VerifiedCodeLoading<T> {
     TResult Function(VerifiedCodeLoading<T> value)? loading,
     TResult Function(VerifiedCodeSuccess<T> value)? success,
     TResult Function(VerifiedCodeError<T> value)? error,
+    TResult Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult Function(ResendCodeError<T> value)? resendCodeError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -403,6 +457,9 @@ class _$VerifiedCodeSuccessImpl<T> implements VerifiedCodeSuccess<T> {
     required TResult Function() loading,
     required TResult Function(T response) success,
     required TResult Function(String error) error,
+    required TResult Function() resendCodeLoading,
+    required TResult Function(T response) resendCodeSuccess,
+    required TResult Function(String error) resendCodeError,
   }) {
     return success(response);
   }
@@ -414,6 +471,9 @@ class _$VerifiedCodeSuccessImpl<T> implements VerifiedCodeSuccess<T> {
     TResult? Function()? loading,
     TResult? Function(T response)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? resendCodeLoading,
+    TResult? Function(T response)? resendCodeSuccess,
+    TResult? Function(String error)? resendCodeError,
   }) {
     return success?.call(response);
   }
@@ -425,6 +485,9 @@ class _$VerifiedCodeSuccessImpl<T> implements VerifiedCodeSuccess<T> {
     TResult Function()? loading,
     TResult Function(T response)? success,
     TResult Function(String error)? error,
+    TResult Function()? resendCodeLoading,
+    TResult Function(T response)? resendCodeSuccess,
+    TResult Function(String error)? resendCodeError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -440,6 +503,9 @@ class _$VerifiedCodeSuccessImpl<T> implements VerifiedCodeSuccess<T> {
     required TResult Function(VerifiedCodeLoading<T> value) loading,
     required TResult Function(VerifiedCodeSuccess<T> value) success,
     required TResult Function(VerifiedCodeError<T> value) error,
+    required TResult Function(ResendCodeLoading<T> value) resendCodeLoading,
+    required TResult Function(ResendCodeSuccess<T> value) resendCodeSuccess,
+    required TResult Function(ResendCodeError<T> value) resendCodeError,
   }) {
     return success(this);
   }
@@ -451,6 +517,9 @@ class _$VerifiedCodeSuccessImpl<T> implements VerifiedCodeSuccess<T> {
     TResult? Function(VerifiedCodeLoading<T> value)? loading,
     TResult? Function(VerifiedCodeSuccess<T> value)? success,
     TResult? Function(VerifiedCodeError<T> value)? error,
+    TResult? Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult? Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult? Function(ResendCodeError<T> value)? resendCodeError,
   }) {
     return success?.call(this);
   }
@@ -462,6 +531,9 @@ class _$VerifiedCodeSuccessImpl<T> implements VerifiedCodeSuccess<T> {
     TResult Function(VerifiedCodeLoading<T> value)? loading,
     TResult Function(VerifiedCodeSuccess<T> value)? success,
     TResult Function(VerifiedCodeError<T> value)? error,
+    TResult Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult Function(ResendCodeError<T> value)? resendCodeError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -558,6 +630,9 @@ class _$VerifiedCodeErrorImpl<T> implements VerifiedCodeError<T> {
     required TResult Function() loading,
     required TResult Function(T response) success,
     required TResult Function(String error) error,
+    required TResult Function() resendCodeLoading,
+    required TResult Function(T response) resendCodeSuccess,
+    required TResult Function(String error) resendCodeError,
   }) {
     return error(this.error);
   }
@@ -569,6 +644,9 @@ class _$VerifiedCodeErrorImpl<T> implements VerifiedCodeError<T> {
     TResult? Function()? loading,
     TResult? Function(T response)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? resendCodeLoading,
+    TResult? Function(T response)? resendCodeSuccess,
+    TResult? Function(String error)? resendCodeError,
   }) {
     return error?.call(this.error);
   }
@@ -580,6 +658,9 @@ class _$VerifiedCodeErrorImpl<T> implements VerifiedCodeError<T> {
     TResult Function()? loading,
     TResult Function(T response)? success,
     TResult Function(String error)? error,
+    TResult Function()? resendCodeLoading,
+    TResult Function(T response)? resendCodeSuccess,
+    TResult Function(String error)? resendCodeError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -595,6 +676,9 @@ class _$VerifiedCodeErrorImpl<T> implements VerifiedCodeError<T> {
     required TResult Function(VerifiedCodeLoading<T> value) loading,
     required TResult Function(VerifiedCodeSuccess<T> value) success,
     required TResult Function(VerifiedCodeError<T> value) error,
+    required TResult Function(ResendCodeLoading<T> value) resendCodeLoading,
+    required TResult Function(ResendCodeSuccess<T> value) resendCodeSuccess,
+    required TResult Function(ResendCodeError<T> value) resendCodeError,
   }) {
     return error(this);
   }
@@ -606,6 +690,9 @@ class _$VerifiedCodeErrorImpl<T> implements VerifiedCodeError<T> {
     TResult? Function(VerifiedCodeLoading<T> value)? loading,
     TResult? Function(VerifiedCodeSuccess<T> value)? success,
     TResult? Function(VerifiedCodeError<T> value)? error,
+    TResult? Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult? Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult? Function(ResendCodeError<T> value)? resendCodeError,
   }) {
     return error?.call(this);
   }
@@ -617,6 +704,9 @@ class _$VerifiedCodeErrorImpl<T> implements VerifiedCodeError<T> {
     TResult Function(VerifiedCodeLoading<T> value)? loading,
     TResult Function(VerifiedCodeSuccess<T> value)? success,
     TResult Function(VerifiedCodeError<T> value)? error,
+    TResult Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult Function(ResendCodeError<T> value)? resendCodeError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -637,4 +727,486 @@ abstract class VerifiedCodeError<T> implements VerifiedCodeState<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VerifiedCodeErrorImplCopyWith<T, _$VerifiedCodeErrorImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ResendCodeLoadingImplCopyWith<T, $Res> {
+  factory _$$ResendCodeLoadingImplCopyWith(_$ResendCodeLoadingImpl<T> value,
+          $Res Function(_$ResendCodeLoadingImpl<T>) then) =
+      __$$ResendCodeLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$ResendCodeLoadingImplCopyWithImpl<T, $Res>
+    extends _$VerifiedCodeStateCopyWithImpl<T, $Res, _$ResendCodeLoadingImpl<T>>
+    implements _$$ResendCodeLoadingImplCopyWith<T, $Res> {
+  __$$ResendCodeLoadingImplCopyWithImpl(_$ResendCodeLoadingImpl<T> _value,
+      $Res Function(_$ResendCodeLoadingImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of VerifiedCodeState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ResendCodeLoadingImpl<T> implements ResendCodeLoading<T> {
+  const _$ResendCodeLoadingImpl();
+
+  @override
+  String toString() {
+    return 'VerifiedCodeState<$T>.resendCodeLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResendCodeLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T response) success,
+    required TResult Function(String error) error,
+    required TResult Function() resendCodeLoading,
+    required TResult Function(T response) resendCodeSuccess,
+    required TResult Function(String error) resendCodeError,
+  }) {
+    return resendCodeLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T response)? success,
+    TResult? Function(String error)? error,
+    TResult? Function()? resendCodeLoading,
+    TResult? Function(T response)? resendCodeSuccess,
+    TResult? Function(String error)? resendCodeError,
+  }) {
+    return resendCodeLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T response)? success,
+    TResult Function(String error)? error,
+    TResult Function()? resendCodeLoading,
+    TResult Function(T response)? resendCodeSuccess,
+    TResult Function(String error)? resendCodeError,
+    required TResult orElse(),
+  }) {
+    if (resendCodeLoading != null) {
+      return resendCodeLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(VerifiedCodeInitial<T> value) initial,
+    required TResult Function(VerifiedCodeLoading<T> value) loading,
+    required TResult Function(VerifiedCodeSuccess<T> value) success,
+    required TResult Function(VerifiedCodeError<T> value) error,
+    required TResult Function(ResendCodeLoading<T> value) resendCodeLoading,
+    required TResult Function(ResendCodeSuccess<T> value) resendCodeSuccess,
+    required TResult Function(ResendCodeError<T> value) resendCodeError,
+  }) {
+    return resendCodeLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(VerifiedCodeInitial<T> value)? initial,
+    TResult? Function(VerifiedCodeLoading<T> value)? loading,
+    TResult? Function(VerifiedCodeSuccess<T> value)? success,
+    TResult? Function(VerifiedCodeError<T> value)? error,
+    TResult? Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult? Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult? Function(ResendCodeError<T> value)? resendCodeError,
+  }) {
+    return resendCodeLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(VerifiedCodeInitial<T> value)? initial,
+    TResult Function(VerifiedCodeLoading<T> value)? loading,
+    TResult Function(VerifiedCodeSuccess<T> value)? success,
+    TResult Function(VerifiedCodeError<T> value)? error,
+    TResult Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult Function(ResendCodeError<T> value)? resendCodeError,
+    required TResult orElse(),
+  }) {
+    if (resendCodeLoading != null) {
+      return resendCodeLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ResendCodeLoading<T> implements VerifiedCodeState<T> {
+  const factory ResendCodeLoading() = _$ResendCodeLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$ResendCodeSuccessImplCopyWith<T, $Res> {
+  factory _$$ResendCodeSuccessImplCopyWith(_$ResendCodeSuccessImpl<T> value,
+          $Res Function(_$ResendCodeSuccessImpl<T>) then) =
+      __$$ResendCodeSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T response});
+}
+
+/// @nodoc
+class __$$ResendCodeSuccessImplCopyWithImpl<T, $Res>
+    extends _$VerifiedCodeStateCopyWithImpl<T, $Res, _$ResendCodeSuccessImpl<T>>
+    implements _$$ResendCodeSuccessImplCopyWith<T, $Res> {
+  __$$ResendCodeSuccessImplCopyWithImpl(_$ResendCodeSuccessImpl<T> _value,
+      $Res Function(_$ResendCodeSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of VerifiedCodeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? response = freezed,
+  }) {
+    return _then(_$ResendCodeSuccessImpl<T>(
+      freezed == response
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ResendCodeSuccessImpl<T> implements ResendCodeSuccess<T> {
+  const _$ResendCodeSuccessImpl(this.response);
+
+  @override
+  final T response;
+
+  @override
+  String toString() {
+    return 'VerifiedCodeState<$T>.resendCodeSuccess(response: $response)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResendCodeSuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.response, response));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(response));
+
+  /// Create a copy of VerifiedCodeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResendCodeSuccessImplCopyWith<T, _$ResendCodeSuccessImpl<T>>
+      get copyWith =>
+          __$$ResendCodeSuccessImplCopyWithImpl<T, _$ResendCodeSuccessImpl<T>>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T response) success,
+    required TResult Function(String error) error,
+    required TResult Function() resendCodeLoading,
+    required TResult Function(T response) resendCodeSuccess,
+    required TResult Function(String error) resendCodeError,
+  }) {
+    return resendCodeSuccess(response);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T response)? success,
+    TResult? Function(String error)? error,
+    TResult? Function()? resendCodeLoading,
+    TResult? Function(T response)? resendCodeSuccess,
+    TResult? Function(String error)? resendCodeError,
+  }) {
+    return resendCodeSuccess?.call(response);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T response)? success,
+    TResult Function(String error)? error,
+    TResult Function()? resendCodeLoading,
+    TResult Function(T response)? resendCodeSuccess,
+    TResult Function(String error)? resendCodeError,
+    required TResult orElse(),
+  }) {
+    if (resendCodeSuccess != null) {
+      return resendCodeSuccess(response);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(VerifiedCodeInitial<T> value) initial,
+    required TResult Function(VerifiedCodeLoading<T> value) loading,
+    required TResult Function(VerifiedCodeSuccess<T> value) success,
+    required TResult Function(VerifiedCodeError<T> value) error,
+    required TResult Function(ResendCodeLoading<T> value) resendCodeLoading,
+    required TResult Function(ResendCodeSuccess<T> value) resendCodeSuccess,
+    required TResult Function(ResendCodeError<T> value) resendCodeError,
+  }) {
+    return resendCodeSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(VerifiedCodeInitial<T> value)? initial,
+    TResult? Function(VerifiedCodeLoading<T> value)? loading,
+    TResult? Function(VerifiedCodeSuccess<T> value)? success,
+    TResult? Function(VerifiedCodeError<T> value)? error,
+    TResult? Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult? Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult? Function(ResendCodeError<T> value)? resendCodeError,
+  }) {
+    return resendCodeSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(VerifiedCodeInitial<T> value)? initial,
+    TResult Function(VerifiedCodeLoading<T> value)? loading,
+    TResult Function(VerifiedCodeSuccess<T> value)? success,
+    TResult Function(VerifiedCodeError<T> value)? error,
+    TResult Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult Function(ResendCodeError<T> value)? resendCodeError,
+    required TResult orElse(),
+  }) {
+    if (resendCodeSuccess != null) {
+      return resendCodeSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ResendCodeSuccess<T> implements VerifiedCodeState<T> {
+  const factory ResendCodeSuccess(final T response) =
+      _$ResendCodeSuccessImpl<T>;
+
+  T get response;
+
+  /// Create a copy of VerifiedCodeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ResendCodeSuccessImplCopyWith<T, _$ResendCodeSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ResendCodeErrorImplCopyWith<T, $Res> {
+  factory _$$ResendCodeErrorImplCopyWith(_$ResendCodeErrorImpl<T> value,
+          $Res Function(_$ResendCodeErrorImpl<T>) then) =
+      __$$ResendCodeErrorImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$ResendCodeErrorImplCopyWithImpl<T, $Res>
+    extends _$VerifiedCodeStateCopyWithImpl<T, $Res, _$ResendCodeErrorImpl<T>>
+    implements _$$ResendCodeErrorImplCopyWith<T, $Res> {
+  __$$ResendCodeErrorImplCopyWithImpl(_$ResendCodeErrorImpl<T> _value,
+      $Res Function(_$ResendCodeErrorImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of VerifiedCodeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$ResendCodeErrorImpl<T>(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ResendCodeErrorImpl<T> implements ResendCodeError<T> {
+  const _$ResendCodeErrorImpl({required this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'VerifiedCodeState<$T>.resendCodeError(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResendCodeErrorImpl<T> &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  /// Create a copy of VerifiedCodeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResendCodeErrorImplCopyWith<T, _$ResendCodeErrorImpl<T>> get copyWith =>
+      __$$ResendCodeErrorImplCopyWithImpl<T, _$ResendCodeErrorImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T response) success,
+    required TResult Function(String error) error,
+    required TResult Function() resendCodeLoading,
+    required TResult Function(T response) resendCodeSuccess,
+    required TResult Function(String error) resendCodeError,
+  }) {
+    return resendCodeError(this.error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T response)? success,
+    TResult? Function(String error)? error,
+    TResult? Function()? resendCodeLoading,
+    TResult? Function(T response)? resendCodeSuccess,
+    TResult? Function(String error)? resendCodeError,
+  }) {
+    return resendCodeError?.call(this.error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T response)? success,
+    TResult Function(String error)? error,
+    TResult Function()? resendCodeLoading,
+    TResult Function(T response)? resendCodeSuccess,
+    TResult Function(String error)? resendCodeError,
+    required TResult orElse(),
+  }) {
+    if (resendCodeError != null) {
+      return resendCodeError(this.error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(VerifiedCodeInitial<T> value) initial,
+    required TResult Function(VerifiedCodeLoading<T> value) loading,
+    required TResult Function(VerifiedCodeSuccess<T> value) success,
+    required TResult Function(VerifiedCodeError<T> value) error,
+    required TResult Function(ResendCodeLoading<T> value) resendCodeLoading,
+    required TResult Function(ResendCodeSuccess<T> value) resendCodeSuccess,
+    required TResult Function(ResendCodeError<T> value) resendCodeError,
+  }) {
+    return resendCodeError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(VerifiedCodeInitial<T> value)? initial,
+    TResult? Function(VerifiedCodeLoading<T> value)? loading,
+    TResult? Function(VerifiedCodeSuccess<T> value)? success,
+    TResult? Function(VerifiedCodeError<T> value)? error,
+    TResult? Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult? Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult? Function(ResendCodeError<T> value)? resendCodeError,
+  }) {
+    return resendCodeError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(VerifiedCodeInitial<T> value)? initial,
+    TResult Function(VerifiedCodeLoading<T> value)? loading,
+    TResult Function(VerifiedCodeSuccess<T> value)? success,
+    TResult Function(VerifiedCodeError<T> value)? error,
+    TResult Function(ResendCodeLoading<T> value)? resendCodeLoading,
+    TResult Function(ResendCodeSuccess<T> value)? resendCodeSuccess,
+    TResult Function(ResendCodeError<T> value)? resendCodeError,
+    required TResult orElse(),
+  }) {
+    if (resendCodeError != null) {
+      return resendCodeError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ResendCodeError<T> implements VerifiedCodeState<T> {
+  const factory ResendCodeError({required final String error}) =
+      _$ResendCodeErrorImpl<T>;
+
+  String get error;
+
+  /// Create a copy of VerifiedCodeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ResendCodeErrorImplCopyWith<T, _$ResendCodeErrorImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }

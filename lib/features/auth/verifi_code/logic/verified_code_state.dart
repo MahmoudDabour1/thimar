@@ -12,4 +12,10 @@ class VerifiedCodeState<T> with _$VerifiedCodeState<T> {
 
   const factory VerifiedCodeState.error({required String error}) =
       VerifiedCodeError;
+
+
+  const factory VerifiedCodeState.resendCodeLoading() = ResendCodeLoading;
+  const factory VerifiedCodeState.resendCodeSuccess(T response) = ResendCodeSuccess<T>;
+  const factory VerifiedCodeState.resendCodeError({required String error}) =
+  ResendCodeError;
 }

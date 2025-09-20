@@ -1,7 +1,9 @@
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/utils/spacing.dart';
+import 'package:thimar/features/auth/verifi_code/logic/verified_code_cubit.dart';
 
 import '../../../../../core/theming/app_colors.dart';
 import '../../../../../core/theming/app_styles.dart';
@@ -13,11 +15,12 @@ class CounterDownAndSendButtonWidget extends StatefulWidget {
   final ForgetPasswordCubit forgetPasswordCubit;
   final String phone;
 
-  const CounterDownAndSendButtonWidget(
-      {super.key,
-      required this.controller,
-      required this.forgetPasswordCubit,
-      required this.phone});
+  const CounterDownAndSendButtonWidget({
+    super.key,
+    required this.controller,
+    required this.forgetPasswordCubit,
+    required this.phone,
+  });
 
   @override
   State<CounterDownAndSendButtonWidget> createState() =>
@@ -87,8 +90,8 @@ class _CounterDownWidgetState extends State<CounterDownAndSendButtonWidget> {
           onPressed: _isButtonEnabled
               ? () {
                   widget.controller.restart(duration: _duration);
-                  widget.forgetPasswordCubit.sendCode(context, widget.phone);
-
+                  // widget.forgetPasswordCubit.sendCode(context, widget.phone);
+                  context.read<VerifiedCodeCubit>().resendCode(widget.phone);
                   WidgetsBinding.instance.addPostFrameCallback((_) {
                     if (mounted) {
                       setState(() {

@@ -7,7 +7,10 @@ import 'package:thimar/features/auth/verifi_code/logic/verified_code_cubit.dart'
 
 class OtpFieldsWidget extends StatelessWidget {
   final String phone;
-  const OtpFieldsWidget({super.key, required this.phone});
+  final bool isActiveAccount;
+
+  const OtpFieldsWidget(
+      {super.key, required this.phone, required this.isActiveAccount});
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +32,16 @@ class OtpFieldsWidget extends StatelessWidget {
       onChanged: (value) {
         if (value.length == 4) {
           FocusScope.of(context).unfocus();
-          cubit.checkCode(phone, context);
+          isActiveAccount
+              ? cubit.verifiedAccount(phone, context)
+              : cubit.checkCode(phone, context);
         }
       },
       onEditingComplete: () {
         FocusScope.of(context).unfocus();
-        cubit.checkCode(phone, context);
-
+        isActiveAccount
+            ? cubit.verifiedAccount(phone, context)
+            : cubit.checkCode(phone, context);
       },
       pinTheme: PinTheme(
         shape: PinCodeFieldShape.box,
