@@ -8,6 +8,7 @@ import '../../features/auth/forget_password/presentation/forget_password_screen.
 import '../../features/auth/new_password/presentation/new_password_screen.dart';
 import '../../features/auth/register/presentation/register_screen.dart';
 import '../../features/auth/verifi_code/presentation/verified_screen.dart';
+import '../../features/home/presentation/category_products_screen.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -52,6 +53,17 @@ class AppRouter {
       case Routes.bottomNavBarLayout:
         return MaterialPageRoute(
           builder: (_) => BottomNavBarLayout(),
+        );
+      case Routes.categoryProductsScreen:
+        final args = settings.arguments as Map<String, dynamic>?;
+        final categoryId = args?["categoryId"] as int? ?? 0;
+        final categoryName = args?["categoryName"] as String? ?? "";
+
+        return MaterialPageRoute(
+          builder: (_) => CategoryProductsScreen(
+            categoryId: categoryId,
+            categoryName: categoryName,
+          ),
         );
     }
     return null;

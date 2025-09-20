@@ -9,6 +9,7 @@ class ApiConstants {
   static const String resendCodeEndPoint = "/resend_code";
   static const String sliderEndPoint = "/sliders";
   static const String categoriesEndPoint = "/categories";
+  static const String categoryProductsEndPoint = "/categories/{id}";
 }
 
 class ApiErrors {

@@ -51,7 +51,7 @@ class HomeCustomHeaderWidget extends StatelessWidget {
                 height: 40.h,
                 width: 40.w,
                 decoration: BoxDecoration(
-                  color: AppColors.lightGreenColor,
+                  color: AppColors.lighterGreenColor,
                   borderRadius: BorderRadius.circular(16.r),
                 ),
                 child: Padding(

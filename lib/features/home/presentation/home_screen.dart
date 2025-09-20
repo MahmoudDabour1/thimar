@@ -7,6 +7,7 @@ import 'package:thimar/features/home/presentation/widgets/home_custom_header_wid
 import 'package:thimar/features/home/presentation/widgets/home_custom_search_bar.dart';
 
 import '../../../core/di/dependency_injection.dart';
+import '../../../core/widgets/app_custom_search_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

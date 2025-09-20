@@ -45,9 +45,13 @@ class AppStyles {
     color: AppColors.blackColor,
     fontWeight: FontWeightHelper.extraBold,
   );
-  static TextStyle font16BlackMedium = TextStyle(
+  static TextStyle font20BlackMedium = TextStyle(
     fontSize: 20.sp,
     color: AppColors.blackColor,
     fontWeight: FontWeightHelper.medium,
+  );static TextStyle font20GreenBold = TextStyle(
+    fontSize: 20.sp,
+    color: AppColors.primaryColor,
+    fontWeight: FontWeightHelper.bold,
   );
 }
