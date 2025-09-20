@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:thimar/core/routing/routes.dart';
 import 'package:thimar/features/auth/login/presentation/login_screen.dart';
+import 'package:thimar/features/layout/presentation/bottom_nav_bar_layout.dart';
 import 'package:thimar/features/splash/presentation/splash_screen.dart';
 
 import '../../features/auth/forget_password/presentation/forget_password_screen.dart';
@@ -46,6 +47,11 @@ class AppRouter {
             phone: phone,
             code: code,
           ),
+        );
+
+      case Routes.bottomNavBarLayout:
+        return MaterialPageRoute(
+          builder: (_) => BottomNavBarLayout(),
         );
     }
     return null;
