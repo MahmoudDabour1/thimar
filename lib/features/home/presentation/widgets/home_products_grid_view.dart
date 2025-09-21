@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/routing/routes.dart';
+import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/features/home/data/models/get_home_products_response_model.dart';
 
+import '../../../cart/logic/cart_cubit.dart';
 import 'category_product_single_item.dart';
 
 class HomeProductsGridView extends StatelessWidget {
@@ -38,7 +41,18 @@ class HomeProductsGridView extends StatelessWidget {
             currentPrice: (data.data?[index].price ?? 0).toDouble(),
             oldPrice: (data.data?[index].priceBeforeDiscount ?? 0).toDouble(),
             discountPercentage: (data.data?[index].discount)! * 100 ?? 0,
-            onAddPressed: () {},
+            onAddPressed: () {
+              context.read<CartCubit>().addToCart(
+                data.data?[index].id ?? 0,
+                1,
+              );
+            },
+            onAddToCartPressed: () {
+              context.read<CartCubit>().addToCart(
+                data.data?[index].id ?? 0,
+                1,
+              );
+            },
             isHadAddToCartButton: true,
           ),
         );

@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
+import 'package:thimar/core/helpers/shared_pref_helper.dart';
+import 'package:thimar/core/helpers/shared_pref_keys.dart';
 import 'package:thimar/core/routing/routes.dart';
 
 import '../../../core/theming/app_assets.dart';
@@ -41,8 +43,22 @@ class _SplashScreenState extends State<SplashScreen>
     Timer(const Duration(seconds: 3), () {
       context.pushNamed(Routes.loginScreen);
     });
-  }
 
+    _navigate();
+  }
+  Future<void> _navigate() async {
+    await Future.delayed(const Duration(seconds: 3));
+    final token =
+    await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
+
+    if (mounted) {
+      if (token.isNotEmpty) {
+        context.pushNamed(Routes.bottomNavBarLayout);
+      } else {
+        context.pushNamed(Routes.loginScreen);
+      }
+    }
+  }
   @override
   void dispose() {
     _controller.dispose();

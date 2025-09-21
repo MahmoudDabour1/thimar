@@ -13,6 +13,9 @@ import 'package:thimar/features/auth/register/presentation/logic/register_cubit.
 import 'package:thimar/features/auth/verifi_code/data/data_sources/verified_code_remote_data_source.dart';
 import 'package:thimar/features/auth/verifi_code/data/repos/verified_code_repos.dart';
 import 'package:thimar/features/auth/verifi_code/logic/verified_code_cubit.dart';
+import 'package:thimar/features/cart/data/data_sources/cart_remote_data_source.dart';
+import 'package:thimar/features/cart/data/repos/cart_repo.dart';
+import 'package:thimar/features/cart/logic/cart_cubit.dart';
 import 'package:thimar/features/home/data/data_sources/home_remote_data_source.dart';
 import 'package:thimar/features/home/data/repos/home_repos.dart';
 import 'package:thimar/features/home/logic/home_cubit.dart';
@@ -80,4 +83,14 @@ Future<void> setupGetIt() async {
   sl.registerLazySingleton<ProductDetailsRepos>(
       () => ProductDetailsReposImpl(remoteDataSource: sl()));
   sl.registerFactory<ProductDetailsCubit>(() => ProductDetailsCubit(sl()));
+//cart
+  sl.registerLazySingleton<CartRemoteDataSource>(
+          () => CartRemoteDataSource(dio));
+  sl.registerLazySingleton<CartRepo>(
+          () => CartRepoImpl(remoteDataSource: sl()));
+  sl.registerFactory<CartCubit>(() => CartCubit(sl()));
+
+
+
+
 }
