@@ -5,6 +5,7 @@ import 'package:thimar/features/product_details/logic/product_details_cubit.dart
 import 'package:thimar/features/product_details/presentation/widgets/details_bottom_nav_bar.dart';
 import 'package:thimar/features/product_details/presentation/widgets/details_image_and_buttons_widget.dart';
 import 'package:thimar/features/product_details/presentation/widgets/details_texts_widget.dart';
+import 'package:thimar/features/product_details/presentation/widgets/product_rates_widget.dart';
 
 import '../../../core/di/dependency_injection.dart';
 import '../logic/product_details_state.dart';
@@ -26,36 +27,31 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     return BlocProvider(
       create: (context) =>
           ProductDetailsCubit(sl())..productDetails(widget.productId),
-      child: Scaffold(
-        bottomNavigationBar:
-            BlocBuilder<ProductDetailsCubit, ProductDetailsState>(
-          builder: (context, state) {
-            return state.maybeWhen(
+      child: BlocBuilder<ProductDetailsCubit, ProductDetailsState>(
+        buildWhen: (previous, current) =>
+            previous != current &&
+            (current is ProductDetailsLoading ||
+                current is ProductDetailsSuccess ||
+                current is ProductDetailsFailure),
+        builder: (context, state) {
+          return Scaffold(
+            bottomNavigationBar: state.maybeWhen(
               productDetailsSuccess: (data) => DetailsBottomNavBar(
                 data: data,
                 quantity: quantity,
               ),
               orElse: () => SizedBox.shrink(),
-            );
-          },
-        ),
-        body: SafeArea(
-          child: BlocBuilder<ProductDetailsCubit, ProductDetailsState>(
-            buildWhen: (previous, current) =>
-                previous != current &&
-                (current is ProductDetailsLoading ||
-                    current is ProductDetailsSuccess ||
-                    current is ProductDetailsFailure),
-            builder: (context, state) {
-              return state.maybeWhen(
+            ),
+            body: SafeArea(
+              child: state.maybeWhen(
                 productDetailsLoading: () => setupLoading(context),
                 productDetailsSuccess: (data) => setupSuccess(data, quantity),
                 productDetailsFailure: (error) => setupError(error),
                 orElse: () => SizedBox.shrink(),
-              );
-            },
-          ),
-        ),
+              ),
+            ),
+          );
+        },
       ),
     );
   }
@@ -98,6 +94,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               });
             },
           ),
+          ProductRatesWidget(),
         ],
       ),
     );

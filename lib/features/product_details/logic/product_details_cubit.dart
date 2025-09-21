@@ -14,10 +14,24 @@ class ProductDetailsCubit extends Cubit<ProductDetailsState> {
     response.when(
       success: (data) {
         emit(ProductDetailsState.productDetailsSuccess(data));
+        productRates(data.data?.id ?? 0);
       },
       failure: (error) {
         emit(ProductDetailsState.productDetailsFailure(
             error.message.toString()));
+      },
+    );
+  }
+
+  Future<void> productRates(int productId) async {
+    emit(ProductDetailsState.productRatesLoading());
+    final response = await productDetailsRepos.productRates(productId);
+    response.when(
+      success: (data) {
+        emit(ProductDetailsState.productRatesSuccess(data));
+      },
+      failure: (error) {
+        emit(ProductDetailsState.productRatesFailure(error.message.toString()));
       },
     );
   }

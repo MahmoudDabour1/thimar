@@ -4,6 +4,7 @@ import 'package:retrofit/http.dart';
 import 'package:thimar/features/product_details/data/models/get_product_details_response_model.dart';
 
 import '../../../../core/networking/api_constants.dart';
+import '../models/get_product_rates_response_model.dart';
 
 part 'product_details_remote_data_source.g.dart';
 
@@ -14,6 +15,11 @@ abstract class ProductDetailsRemoteDataSource {
 
   @GET(ApiConstants.productDetailsEndPoint)
   Future<GetProductDetailsResponseModel> getProductDetails(
+    @Path("id") int productId,
+  );
+
+  @GET(ApiConstants.productRatesEndPoint)
+  Future<GetProductRatesResponseModel> getProductRates(
     @Path("id") int productId,
   );
 }
