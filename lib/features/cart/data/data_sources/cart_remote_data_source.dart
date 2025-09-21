@@ -3,6 +3,7 @@ import 'package:retrofit/retrofit.dart';
 import 'package:thimar/features/cart/data/models/add_to_cart_response_model.dart';
 import 'package:thimar/features/cart/data/models/delete_cart_response_model.dart';
 import 'package:thimar/features/cart/data/models/get_cart_response_model.dart';
+import 'package:thimar/features/cart/data/models/update_cart_response_model.dart';
 
 import '../../../../core/networking/api_constants.dart';
 import '../models/add_to_cart_request_body.dart';
@@ -26,4 +27,8 @@ abstract class CartRemoteDataSource {
   Future<DeleteCartResponseModel> deleteCartData(
     @Path("id") int id,
   );
+
+  @PUT(ApiConstants.updateCartEndPoint)
+  Future<UpdateCartResponseModel> updateCartData(
+      @Path("id") int id, @Query("amount") int amount);
 }

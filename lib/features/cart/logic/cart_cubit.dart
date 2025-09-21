@@ -59,4 +59,18 @@ class CartCubit extends Cubit<CartState> {
       },
     );
   }
+  Future<void> updateCartData(int id, int amount) async {
+    emit(CartState.updateCartLoading());
+    final response = await cartRepo.updateCartData(id, amount);
+    response.when(
+      success: (data) async{
+        showToast(message: data.message ?? "تم التعديل بنجاح");
+        emit(CartState.updateCartSuccess(data));
+        await getCartData();
+      },
+      failure: (error) {
+        emit(CartState.updateCartFailure(error.message.toString()));
+      },
+    );
+  }
 }

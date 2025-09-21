@@ -39,7 +39,7 @@ class LoginButtonsWidget extends StatelessWidget {
                     .formKey
                     .currentState!
                     .validate()) {
-                  context.read<LoginCubit>().login();
+                  context.read<LoginCubit>().login(context);
                 }
               },
               textButton: "تسجيل الدخول",

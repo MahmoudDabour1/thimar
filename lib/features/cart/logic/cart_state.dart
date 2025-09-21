@@ -25,4 +25,11 @@ class CartState<T> with _$CartState {
 
   const factory CartState.deleteCartFailure(String errorMessage) =
       DeleteCartFailure;
+
+  const factory CartState.updateCartLoading() = UpdateCartLoading;
+
+  const factory CartState.updateCartSuccess(T data) = UpdateCartSuccess;
+
+  const factory CartState.updateCartFailure(String errorMessage) =
+      UpdateCartFailure;
 }

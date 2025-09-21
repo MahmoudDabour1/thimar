@@ -2,11 +2,13 @@ import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:thimar/core/extensions/navigation_extension.dart';
 
 import '../../../../../core/helpers/helper_methods.dart';
 import '../../../../../core/helpers/shared_pref_helper.dart';
 import '../../../../../core/helpers/shared_pref_keys.dart';
 import '../../../../../core/networking/dio_factory.dart';
+import '../../../../core/routing/routes.dart';
 import '../data/models/login_request_body.dart';
 import '../data/repos/login_repo.dart';
 import 'login_state.dart';
@@ -20,7 +22,7 @@ class LoginCubit extends Cubit<LoginState> {
 
   final formKey = GlobalKey<FormState>();
 
-  Future<void> login() async {
+  Future<void> login(BuildContext context) async {
     emit(LoginState.loading());
     final response = await loginRepo.login(
       LoginRequestBody(
@@ -35,7 +37,8 @@ class LoginCubit extends Cubit<LoginState> {
       await saveUserToken(data.data?.token ?? "");
       phoneController.clear();
       passwordController.clear();
-      // context.pushNamed(Routes.bottomNavBarLayout);
+
+      context.pushNamed(Routes.bottomNavBarLayout);
       showToast(message: "تم تسجيل الدخول بنجاح");
     }, failure: (error) {
       emit(LoginState.error(error: error.message.toString()));

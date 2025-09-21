@@ -15,6 +15,7 @@ import '../../logic/cart_cubit.dart';
 
 class CartProductsListView extends StatelessWidget {
   final GetCartResponseModel data;
+
   const CartProductsListView({super.key, required this.data});
 
   @override
@@ -49,9 +50,9 @@ class CartProductsListView extends StatelessWidget {
                     height: 78.h,
                     fit: BoxFit.fill,
                     placeholder: (context, url) =>
-                    const Center(child: CircularProgressIndicator()),
+                        const Center(child: CircularProgressIndicator()),
                     errorWidget: (context, url, error) =>
-                    const Icon(Icons.error),
+                        const Icon(Icons.error),
                   ),
                 ),
                 horizontalSpace(10),
@@ -71,9 +72,10 @@ class CartProductsListView extends StatelessWidget {
                       ),
                       verticalSpace(4),
                       AppCustomQuantityWidget(
-                        quantity: 1,
+                        quantity: data.data?[index].amount ?? 1,
                         onQuantityChanged: (newQuantity) {
-                          // Handle quantity change
+                          context.read<CartCubit>().updateCartData(
+                              data.data?[index].id ?? 0, newQuantity);
                         },
                         width: 50.w,
                       ),
