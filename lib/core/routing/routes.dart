@@ -7,4 +7,5 @@ abstract class Routes{
   static const String newPasswordScreen = '/NewPasswordScreen';
   static const String bottomNavBarLayout = '/BottomNavBarLayout';
   static const String categoryProductsScreen = '/CategoryProductsScreen';
+  static const String productDetailsScreen = '/ProductDetailsScreen';
 }

@@ -19,4 +19,5 @@ abstract class AppAssets {
   static const String notificationWhiteIconSvg = 'assets/svgs/notification_white.svg';
   static const String bagIconSvg = 'assets/images/bagIcon.png';
   static const String searchIconSvg = 'assets/images/search_icon.png';
+  static const String cartIcon = 'assets/images/cart_icon.png';
 }

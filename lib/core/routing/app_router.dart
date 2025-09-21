@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:thimar/core/routing/routes.dart';
 import 'package:thimar/features/auth/login/presentation/login_screen.dart';
 import 'package:thimar/features/layout/presentation/bottom_nav_bar_layout.dart';
+import 'package:thimar/features/product_details/presentation/product_details_screen.dart';
 import 'package:thimar/features/splash/presentation/splash_screen.dart';
 
 import '../../features/auth/forget_password/presentation/forget_password_screen.dart';
@@ -63,6 +64,13 @@ class AppRouter {
           builder: (_) => CategoryProductsScreen(
             categoryId: categoryId,
             categoryName: categoryName,
+          ),
+        );
+      case Routes.productDetailsScreen:
+        final productId = settings.arguments as int? ?? 0;
+        return MaterialPageRoute(
+          builder: (_) => ProductDetailsScreen(
+            productId: productId,
           ),
         );
     }

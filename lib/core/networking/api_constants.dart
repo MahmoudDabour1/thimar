@@ -11,6 +11,7 @@ class ApiConstants {
   static const String categoriesEndPoint = "/categories";
   static const String categoryProductsEndPoint = "/categories/{id}";
   static const String homeProductsEndPoint = "/products";
+  static const String productDetailsEndPoint = "/products/{id}";
 }
 
 class ApiErrors {
