@@ -4,6 +4,7 @@ import 'package:thimar/core/extensions/navigation_extension.dart';
 
 import '../theming/app_colors.dart';
 import '../theming/app_styles.dart';
+import 'app_custom_back_button.dart';
 
 class AppCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String appBarTitle;
@@ -18,26 +19,7 @@ class AppCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: isHaveBackButton == true
           ? Padding(
               padding: EdgeInsets.only(right: 8.w, bottom: 6.h),
-              child: GestureDetector(
-                onTap: () {
-                  context.pop();
-                },
-                child: Container(
-                  height: 32.h,
-                  width: 32.w,
-                  decoration: BoxDecoration(
-                    color: AppColors.lighterGreenColor,
-                    borderRadius: BorderRadius.circular(8.r),
-                  ),
-                  child: Center(
-                    child: Icon(
-                      Icons.arrow_back_ios,
-                      color: AppColors.primaryColor,
-                      size: 20.r,
-                    ),
-                  ),
-                ),
-              ),
+              child: AppCustomBackButton(),
             )
           : null,
       backgroundColor: AppColors.whiteColor,
