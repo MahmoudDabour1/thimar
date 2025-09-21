@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:thimar/core/utils/spacing.dart';
 import 'package:thimar/features/home/logic/home_cubit.dart';
 import 'package:thimar/features/home/presentation/widgets/home_carousel_slider_widget.dart';
 import 'package:thimar/features/home/presentation/widgets/home_categories_widget.dart';
@@ -23,6 +24,7 @@ class HomeScreen extends StatelessWidget {
           child: ListView(
             physics: const BouncingScrollPhysics(),
             children: [
+              verticalSpace(8),
               HomeCustomHeaderWidget(),
               HomeCustomSearchBar(),
               HomeCarouselSliderWidget(),

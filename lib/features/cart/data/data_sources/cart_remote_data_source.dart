@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:thimar/features/cart/data/models/add_to_cart_response_model.dart';
+import 'package:thimar/features/cart/data/models/delete_cart_response_model.dart';
+import 'package:thimar/features/cart/data/models/get_cart_response_model.dart';
 
 import '../../../../core/networking/api_constants.dart';
 import '../models/add_to_cart_request_body.dart';
@@ -15,5 +17,13 @@ abstract class CartRemoteDataSource {
   @POST(ApiConstants.addRoCartEndPoint)
   Future<AddToCartResponseModel> addToCart(
     @Body() AddToCartRequestBody addToCartRequestBody,
+  );
+
+  @GET(ApiConstants.addRoCartEndPoint)
+  Future<GetCartResponseModel> getCartData();
+
+  @DELETE(ApiConstants.deleteCartEndPoint)
+  Future<DeleteCartResponseModel> deleteCartData(
+    @Path("id") int id,
   );
 }

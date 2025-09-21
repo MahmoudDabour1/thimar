@@ -9,6 +9,7 @@ class CartCubit extends Cubit<CartState> {
   final CartRepo cartRepo;
 
   CartCubit(this.cartRepo) : super(CartState.initial());
+  int cartCount = 0;
 
   Future<void> addToCart(int productId, int amount) async {
     emit(CartState.addToCartLoading());
@@ -19,12 +20,42 @@ class CartCubit extends Cubit<CartState> {
       ),
     );
     response.when(
-      success: (data) {
+      success: (data)async {
         showToast(message: data.message.toString());
         emit(CartState.addToCartSuccess(data));
+        await getCartData();
       },
       failure: (error) {
         emit(CartState.addToCartFailure(error.message.toString()));
+      },
+    );
+  }
+
+  Future<void> getCartData() async {
+    emit(CartState.getCartLoading());
+    final response = await cartRepo.getCartData();
+    response.when(
+      success: (data) {
+        cartCount = data.data?.length ?? 0;
+        emit(CartState.getCartSuccess(data));
+      },
+      failure: (error) {
+        emit(CartState.getCartFailure(error.message.toString()));
+      },
+    );
+  }
+
+  Future<void> deleteCartData(int id) async {
+    emit(CartState.deleteCartLoading());
+    final response = await cartRepo.deleteCartData(id);
+    response.when(
+      success: (data) async{
+        showToast(message: data.message.toString());
+        emit(CartState.deleteCartSuccess(data));
+        await getCartData();
+      },
+      failure: (error) {
+        emit(CartState.deleteCartFailure(error.message.toString()));
       },
     );
   }

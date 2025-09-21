@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/widgets/app_text_form_field.dart';
+import 'package:thimar/features/cart/data/models/get_cart_response_model.dart';
+import 'package:thimar/features/cart/logic/cart_cubit.dart';
 
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/utils/spacing.dart';
 import '../../../../core/widgets/app_custom_button.dart';
+import '../../logic/cart_state.dart';
 
 class CartPricesAndButtonWidget extends StatelessWidget {
   const CartPricesAndButtonWidget({super.key});
@@ -46,45 +50,17 @@ class CartPricesAndButtonWidget extends StatelessWidget {
             ),
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 16.w),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Text("إجمالي المنتجات",
-                          style: AppStyles.font16GreenMedium),
-                      Spacer(),
-                      Text("180 ر.س", style: AppStyles.font16GreenMedium)
-                    ],
-                  ),
-                  verticalSpace(10),
-                  Row(
-                    children: [
-                      Text("الخصم", style: AppStyles.font16GreenMedium),
-                      Spacer(),
-                      Text("180 ر.س", style: AppStyles.font16GreenMedium)
-                    ],
-                  ),
-                  verticalSpace(10),
-                  Divider(),
-                  verticalSpace(10),
-                  Row(
-                    children: [
-                      Text(
-                        "المجموع",
-                        style: AppStyles.font16BlackExtraBold.copyWith(
-                          color: AppColors.primaryColor,
-                        ),
-                      ),
-                      Spacer(),
-                      Text(
-                        "180 ر.س",
-                        style: AppStyles.font16BlackExtraBold.copyWith(
-                          color: AppColors.primaryColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+              child: BlocBuilder<CartCubit, CartState>(
+                builder: (context, state) {
+                  return state.maybeWhen(
+                      getCartLoading: () => Center(
+                            child: CircularProgressIndicator(
+                              color: AppColors.primaryColor,
+                            ),
+                          ),
+                      getCartSuccess: (data) => setupSuccess(data),
+                      orElse: () => SizedBox.shrink());
+                },
               ),
             ),
           ),
@@ -96,6 +72,50 @@ class CartPricesAndButtonWidget extends StatelessWidget {
           verticalSpace(32),
         ],
       ),
+    );
+  }
+
+  Widget setupSuccess(GetCartResponseModel data) {
+    return Column(
+      children: [
+        Row(
+          children: [
+            Text("إجمالي المنتجات", style: AppStyles.font16GreenMedium),
+            Spacer(),
+            Text("${data.totalPriceBeforeDiscount} ر.س",
+                style: AppStyles.font16GreenMedium)
+          ],
+        ),
+        verticalSpace(10),
+        Row(
+          children: [
+            Text("الخصم", style: AppStyles.font16GreenMedium),
+            Spacer(),
+            Text("${data.totalDiscount} ر.س",
+                style: AppStyles.font16GreenMedium)
+          ],
+        ),
+        verticalSpace(10),
+        Divider(),
+        verticalSpace(10),
+        Row(
+          children: [
+            Text(
+              "المجموع",
+              style: AppStyles.font16BlackExtraBold.copyWith(
+                color: AppColors.primaryColor,
+              ),
+            ),
+            Spacer(),
+            Text(
+              "${data.totalPriceWithVat} ر.س",
+              style: AppStyles.font16BlackExtraBold.copyWith(
+                color: AppColors.primaryColor,
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

@@ -14,6 +14,7 @@ class ApiConstants {
   static const String productDetailsEndPoint = "/products/{id}";
   static const String productRatesEndPoint = "/products/{id}/rates";
   static const String addRoCartEndPoint = "/client/cart";
+  static const String deleteCartEndPoint = "/client/cart/delete_item/{id}";
 }
 
 class ApiErrors {
