@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:thimar/features/home/data/models/categories_response_model.dart';
 import 'package:thimar/features/home/data/models/get_category_products_response_model.dart';
+import 'package:thimar/features/home/data/models/get_home_products_response_model.dart';
 import 'package:thimar/features/home/data/models/slider_response_model.dart';
 
 import '../../../../core/networking/api_constants.dart';
@@ -23,4 +24,7 @@ abstract class HomeRemoteDataSource {
   Future<GetCategoryProductsResponseModel> getCategoryProducts(
     @Path("id") int categoryId,
   );
+
+  @GET(ApiConstants.homeProductsEndPoint)
+  Future<GetHomeProductsResponseModel> getHomeProducts();
 }

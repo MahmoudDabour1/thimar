@@ -1,6 +1,7 @@
 import 'package:thimar/core/networking/api_result.dart';
 import 'package:thimar/features/home/data/models/categories_response_model.dart';
 import 'package:thimar/features/home/data/models/get_category_products_response_model.dart';
+import 'package:thimar/features/home/data/models/get_home_products_response_model.dart';
 import 'package:thimar/features/home/data/models/slider_response_model.dart';
 
 import '../../../../core/networking/api_error_handler.dart';
@@ -11,7 +12,10 @@ abstract class HomeRepos {
 
   Future<ApiResult<CategoriesResponseModel>> getCategories();
 
-  Future<ApiResult<GetCategoryProductsResponseModel>> getCategoryProduct(int id);
+  Future<ApiResult<GetCategoryProductsResponseModel>> getCategoryProduct(
+      int id);
+
+  Future<ApiResult<GetHomeProductsResponseModel>> getHomeProducts();
 }
 
 class HomeReposImpl implements HomeRepos {
@@ -42,10 +46,20 @@ class HomeReposImpl implements HomeRepos {
   }
 
   @override
-  Future<ApiResult<GetCategoryProductsResponseModel>>
-      getCategoryProduct(int id) async {
+  Future<ApiResult<GetCategoryProductsResponseModel>> getCategoryProduct(
+      int id) async {
     try {
       final response = await remoteDataSource.getCategoryProducts(id);
+      return ApiResult.success(response);
+    } catch (error) {
+      return ApiResult.failure(ApiErrorHandler.handle(error));
+    }
+  }
+
+  @override
+  Future<ApiResult<GetHomeProductsResponseModel>> getHomeProducts() async {
+    try {
+      final response = await remoteDataSource.getHomeProducts();
       return ApiResult.success(response);
     } catch (error) {
       return ApiResult.failure(ApiErrorHandler.handle(error));
