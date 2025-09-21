@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:thimar/core/routing/routes.dart';
 import 'package:thimar/features/auth/login/presentation/login_screen.dart';
+import 'package:thimar/features/cart/presentation/cart_screen.dart';
 import 'package:thimar/features/layout/presentation/bottom_nav_bar_layout.dart';
 import 'package:thimar/features/product_details/presentation/product_details_screen.dart';
 import 'package:thimar/features/splash/presentation/splash_screen.dart';
@@ -72,6 +73,10 @@ class AppRouter {
           builder: (_) => ProductDetailsScreen(
             productId: productId,
           ),
+        );
+      case Routes.cartScreen:
+        return MaterialPageRoute(
+          builder: (_) => CartScreen(),
         );
     }
     return null;

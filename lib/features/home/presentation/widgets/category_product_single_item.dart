@@ -1,11 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/core/utils/spacing.dart';
+import 'package:thimar/features/cart/logic/cart_cubit.dart';
 
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/app_custom_button.dart';
+import '../../../cart/logic/cart_state.dart';
 
 class CategoryProductSingleItem extends StatelessWidget {
   final String imageUrl;
@@ -138,21 +141,25 @@ class CategoryProductSingleItem extends StatelessWidget {
                     Spacer(),
                     Row(
                       children: [
-                        GestureDetector(
-                          onTap: onAddPressed,
-                          child: Container(
-                            width: 28.w,
-                            height: 28.h,
-                            decoration: BoxDecoration(
-                              color: AppColors.mediumGreenColor,
-                              borderRadius: BorderRadius.circular(8.r),
-                            ),
-                            child: Icon(
-                              Icons.add,
-                              color: AppColors.whiteColor,
-                              size: 23.r,
-                            ),
-                          ),
+                        BlocBuilder<CartCubit, CartState>(
+                          builder: (context, state) {
+                            return GestureDetector(
+                              onTap: onAddPressed,
+                              child: Container(
+                                width: 28.w,
+                                height: 28.h,
+                                decoration: BoxDecoration(
+                                  color: AppColors.mediumGreenColor,
+                                  borderRadius: BorderRadius.circular(8.r),
+                                ),
+                                child: Icon(
+                                  Icons.add,
+                                  color: AppColors.whiteColor,
+                                  size: 23.r,
+                                ),
+                              ),
+                            );
+                          },
                         ),
                       ],
                     )

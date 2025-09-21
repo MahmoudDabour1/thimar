@@ -1,0 +1,29 @@
+import 'package:thimar/core/networking/api_error_handler.dart';
+import 'package:thimar/core/networking/api_result.dart';
+import 'package:thimar/features/cart/data/data_sources/cart_remote_data_source.dart';
+import 'package:thimar/features/cart/data/models/add_to_cart_request_body.dart';
+import 'package:thimar/features/cart/data/models/add_to_cart_response_model.dart';
+
+abstract class CartRepo {
+  Future<ApiResult<AddToCartResponseModel>> addToCart(
+      AddToCartRequestBody requestBody);
+}
+
+class CartRepoImpl implements CartRepo {
+  final CartRemoteDataSource remoteDataSource;
+
+  CartRepoImpl({
+    required this.remoteDataSource,
+  });
+
+  @override
+  Future<ApiResult<AddToCartResponseModel>> addToCart(
+      AddToCartRequestBody requestBody) async {
+    try {
+      final response = await remoteDataSource.addToCart(requestBody);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+}

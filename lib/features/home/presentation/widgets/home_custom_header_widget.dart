@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:thimar/core/extensions/navigation_extension.dart';
+import 'package:thimar/core/routing/routes.dart';
 
 import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_colors.dart';
@@ -41,7 +43,9 @@ class HomeCustomHeaderWidget extends StatelessWidget {
             ],
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(Routes.cartScreen);
+            },
             child: Badge(
               label: Text('3', style: AppStyles.font14WhiteBold),
               backgroundColor: AppColors.primaryColor,
