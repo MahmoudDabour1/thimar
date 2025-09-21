@@ -5,9 +5,9 @@ import 'package:thimar/features/home/presentation/widgets/home_carousel_slider_w
 import 'package:thimar/features/home/presentation/widgets/home_categories_widget.dart';
 import 'package:thimar/features/home/presentation/widgets/home_custom_header_widget.dart';
 import 'package:thimar/features/home/presentation/widgets/home_custom_search_bar.dart';
+import 'package:thimar/features/home/presentation/widgets/home_products_widget.dart';
 
 import '../../../core/di/dependency_injection.dart';
-import '../../../core/widgets/app_custom_search_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
         child: BlocProvider(
           create: (context) => HomeCubit(sl())
             ..fetchSliders()
-            ..getCategories(),
+            ..getCategories()..getHomeProducts(),
           child: ListView(
             physics: const BouncingScrollPhysics(),
             children: [
@@ -27,6 +27,7 @@ class HomeScreen extends StatelessWidget {
               HomeCustomSearchBar(),
               HomeCarouselSliderWidget(),
               HomeCategoriesWidget(),
+              HomeProductsWidget(),
             ],
           ),
         ),

@@ -5,6 +5,7 @@ import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/core/utils/spacing.dart';
 
 import '../../../../core/theming/app_styles.dart';
+import '../../../../core/widgets/app_custom_button.dart';
 
 class CategoryProductSingleItem extends StatelessWidget {
   final String imageUrl;
@@ -14,16 +15,21 @@ class CategoryProductSingleItem extends StatelessWidget {
   final double oldPrice;
   final double discountPercentage;
   final VoidCallback onAddPressed;
+  final bool? isHadAddToCartButton;
+  final VoidCallback? onAddToCartPressed;
 
-  const CategoryProductSingleItem(
-      {super.key,
-      required this.imageUrl,
-      required this.productName,
-      required this.productUnit,
-      required this.currentPrice,
-      required this.oldPrice,
-      required this.discountPercentage,
-      required this.onAddPressed});
+  const CategoryProductSingleItem({
+    super.key,
+    required this.imageUrl,
+    required this.productName,
+    required this.productUnit,
+    required this.currentPrice,
+    required this.oldPrice,
+    required this.discountPercentage,
+    required this.onAddPressed,
+    this.isHadAddToCartButton = false,
+    this.onAddToCartPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -152,7 +158,18 @@ class CategoryProductSingleItem extends StatelessWidget {
                     )
                   ],
                 ),
-                verticalSpace(8),
+                verticalSpace(isHadAddToCartButton == true ? 4 : 8),
+                isHadAddToCartButton == true
+                    ? Center(
+                        child: AppCustomButton(
+                          textButton: "أضف للسلة",
+                          onPressed: onAddToCartPressed,
+                          btnHeight: 30.h,
+                          btnWidth: 110.w,
+                        ),
+                      )
+                    : SizedBox.shrink(),
+                verticalSpace(isHadAddToCartButton == true ? 4 : 0),
               ],
             ),
           ),

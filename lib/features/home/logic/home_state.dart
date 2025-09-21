@@ -27,4 +27,13 @@ class HomeState<T> with _$HomeState {
 
   const factory HomeState.getCategoryProductsFailure(String errorMessage) =
       GetCategoryProductFailure;
+
+  const factory HomeState.getHomeProductsLoading() =
+      GetHomeProductLoading;
+
+  const factory HomeState.getHomeProductsSuccess(T data) =
+      GetHomeProductSuccess;
+
+  const factory HomeState.getHomeProductsFailure(String errorMessage) =
+      GetHomeProductFailure;
 }

@@ -10,6 +10,7 @@ class ApiConstants {
   static const String sliderEndPoint = "/sliders";
   static const String categoriesEndPoint = "/categories";
   static const String categoryProductsEndPoint = "/categories/{id}";
+  static const String homeProductsEndPoint = "/products";
 }
 
 class ApiErrors {
