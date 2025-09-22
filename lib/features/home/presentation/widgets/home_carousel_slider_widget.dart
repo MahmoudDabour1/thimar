@@ -6,9 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/features/home/data/models/slider_response_model.dart';
-
-import '../../logic/home_cubit.dart';
-import '../../logic/home_state.dart';
+import 'package:thimar/features/home/logic/slider_cubit.dart';
+import 'package:thimar/features/home/logic/slider_state.dart';
 
 class HomeCarouselSliderWidget extends StatefulWidget {
   const HomeCarouselSliderWidget({super.key});
@@ -23,7 +22,7 @@ class _HomeCarouselSliderWidgetState extends State<HomeCarouselSliderWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HomeCubit, HomeState>(
+    return BlocBuilder<SliderCubit, SliderState>(
       buildWhen: (previous, current) =>
           previous != current &&
           (current is SliderLoading ||

@@ -17,4 +17,5 @@ abstract class AppColors {
   static const fillColorFive = Color(0xFFFAEAFF);
   static const lighterGreenColor = Color(0xFFE5ECDD);
   static const darkerGrayColor = Color(0xFF808080);
+  static const fillGrayColor = Color(0xFFF9FBF7);
 }

@@ -10,6 +10,7 @@ import '../../features/auth/forget_password/presentation/forget_password_screen.
 import '../../features/auth/new_password/presentation/new_password_screen.dart';
 import '../../features/auth/register/presentation/register_screen.dart';
 import '../../features/auth/verifi_code/presentation/verified_screen.dart';
+import '../../features/checkout/presentation/checkout_screen.dart';
 import '../../features/home/presentation/category_products_screen.dart';
 
 class AppRouter {
@@ -77,6 +78,10 @@ class AppRouter {
       case Routes.cartScreen:
         return MaterialPageRoute(
           builder: (_) => CartScreen(),
+        );
+      case Routes.checkoutScreen:
+        return MaterialPageRoute(
+          builder: (_) => CheckoutScreen(),
         );
     }
     return null;

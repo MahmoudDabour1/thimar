@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/widgets/app_custom_search_bar.dart';
-import 'package:thimar/features/home/logic/home_cubit.dart';
+import 'package:thimar/features/home/logic/category_cubit.dart';
 import 'package:thimar/features/home/presentation/widgets/category_product_bloc_builder.dart';
-import 'package:thimar/features/home/presentation/widgets/category_product_grid_view.dart';
 
 import '../../../core/di/dependency_injection.dart';
 import '../../../core/widgets/app_custom_app_bar.dart';
@@ -18,8 +17,10 @@ class CategoryProductsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => HomeCubit(sl())..getCategoryProducts(categoryId),
+    final categoryCubit = sl<CategoryCubit>();
+
+    return BlocProvider.value(
+      value: categoryCubit..getCategoryProducts(categoryId),
       child: Scaffold(
         appBar: AppCustomAppBar(
           appBarTitle: categoryName,

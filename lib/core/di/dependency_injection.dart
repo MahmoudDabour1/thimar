@@ -26,6 +26,8 @@ import 'package:thimar/features/product_details/logic/product_details_cubit.dart
 import '../../features/auth/login/data/data_source/login_remote_data_source.dart';
 import '../../features/auth/login/data/repos/login_repo.dart';
 import '../../features/auth/login/logic/login_cubit.dart';
+import '../../features/home/logic/category_cubit.dart';
+import '../../features/home/logic/slider_cubit.dart';
 import '../networking/dio_factory.dart';
 
 final sl = GetIt.instance;
@@ -76,6 +78,8 @@ Future<void> setupGetIt() async {
   sl.registerLazySingleton<HomeRepos>(
       () => HomeReposImpl(remoteDataSource: sl()));
   sl.registerFactory<HomeCubit>(() => HomeCubit(sl()));
+  sl.registerFactory<CategoryCubit>(() => CategoryCubit(sl()));
+  sl.registerFactory<SliderCubit>(() => SliderCubit(sl()));
 
   //product details
   sl.registerLazySingleton<ProductDetailsRemoteDataSource>(
@@ -85,12 +89,8 @@ Future<void> setupGetIt() async {
   sl.registerFactory<ProductDetailsCubit>(() => ProductDetailsCubit(sl()));
 //cart
   sl.registerLazySingleton<CartRemoteDataSource>(
-          () => CartRemoteDataSource(dio));
+      () => CartRemoteDataSource(dio));
   sl.registerLazySingleton<CartRepo>(
-          () => CartRepoImpl(remoteDataSource: sl()));
+      () => CartRepoImpl(remoteDataSource: sl()));
   sl.registerFactory<CartCubit>(() => CartCubit(sl()));
-
-
-
-
 }

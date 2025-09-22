@@ -21,4 +21,9 @@ abstract class AppAssets {
   static const String searchIconSvg = 'assets/images/search_icon.png';
   static const String cartIcon = 'assets/images/cart_icon.png';
   static const String deleteIcon = 'assets/images/delete_icon.png';
+  static const String timeIcon = 'assets/images/time_icon.png';
+  static const String calenderIcon = 'assets/images/calendar_icon.png';
+  static const String moneyIcon = 'assets/images/money.png';
+  static const String visaIcon = 'assets/images/visa.png';
+  static const String masterIcon = 'assets/images/master_card.png';
 }
