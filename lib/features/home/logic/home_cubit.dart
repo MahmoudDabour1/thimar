@@ -7,45 +7,6 @@ class HomeCubit extends Cubit<HomeState> {
 
   HomeCubit(this.homeRepos) : super(HomeState.initial());
 
-  Future<void> fetchSliders() async {
-    emit(HomeState.sliderLoading());
-    final response = await homeRepos.getSliders();
-    response.when(
-      success: (data) {
-        emit(HomeState.sliderSuccess(data));
-      },
-      failure: (error) {
-        emit(HomeState.sliderFailure(error.message.toString()));
-      },
-    );
-  }
-
-  Future<void> getCategories() async {
-    emit(HomeState.getCategoriesLoading());
-    final response = await homeRepos.getCategories();
-    response.when(
-      success: (data) {
-        emit(HomeState.getCategoriesSuccess(data));
-      },
-      failure: (error) {
-        emit(HomeState.getCategoriesFailure(error.message.toString()));
-      },
-    );
-  }
-
-  Future<void> getCategoryProducts(int id) async {
-    emit(HomeState.getCategoryProductsLoading());
-    final response = await homeRepos.getCategoryProduct(id);
-    response.when(
-      success: (data) {
-        emit(HomeState.getCategoryProductsSuccess(data));
-      },
-      failure: (error) {
-        emit(HomeState.getCategoryProductsFailure(error.message.toString()));
-      },
-    );
-  }
-
   Future<void> getHomeProducts() async {
     emit(HomeState.getHomeProductsLoading());
     final response = await homeRepos.getHomeProducts();

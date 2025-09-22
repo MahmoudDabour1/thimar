@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/widgets/app_text_form_field.dart';
 import 'package:thimar/features/cart/data/models/get_cart_response_model.dart';
 import 'package:thimar/features/cart/logic/cart_cubit.dart';
 
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/utils/spacing.dart';
@@ -67,7 +69,9 @@ class CartPricesAndButtonWidget extends StatelessWidget {
           verticalSpace(10),
           AppCustomButton(
             textButton: "الانتقال لإتمام الطلب",
-            onPressed: () {},
+            onPressed: () {
+              context.pushNamed(Routes.checkoutScreen);
+            },
           ),
           verticalSpace(32),
         ],

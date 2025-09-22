@@ -21,6 +21,7 @@ class AppTextFormField extends StatelessWidget {
   final void Function(String)? onFieldSubmitted;
   final void Function()? onTap;
   final bool? readOnly;
+  final Color? fillColor;
 
   const AppTextFormField({
     super.key,
@@ -40,6 +41,7 @@ class AppTextFormField extends StatelessWidget {
     this.onTap,
     this.readOnly = false,
     this.onFieldSubmitted,
+    this.fillColor,
   });
 
   @override
@@ -57,6 +59,7 @@ class AppTextFormField extends StatelessWidget {
       decoration: decoration ??
           getCommonInputDecoration(
             hintText: hintText,
+            fillColor: fillColor,
             suffixIcon: Padding(
               padding: EdgeInsetsDirectional.only(end: 12.w),
               child: suffixIcon,

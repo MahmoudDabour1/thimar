@@ -9,6 +9,10 @@ class AppStyles {
     fontSize: 16.sp,
     color: AppColors.primaryColor,
     fontWeight: FontWeightHelper.bold,
+  );static TextStyle font16GreenExtraBold = TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.primaryColor,
+    fontWeight: FontWeightHelper.extraBold,
   );static TextStyle font16GreenMedium = TextStyle(
     fontSize: 16.sp,
     color: AppColors.primaryColor,

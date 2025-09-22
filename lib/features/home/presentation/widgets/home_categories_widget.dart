@@ -7,6 +7,8 @@ import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/routing/routes.dart';
 import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/features/home/data/models/categories_response_model.dart';
+import 'package:thimar/features/home/logic/category_cubit.dart';
+import 'package:thimar/features/home/logic/category_state.dart';
 import 'package:thimar/features/home/logic/home_cubit.dart';
 
 import '../../../../core/theming/app_styles.dart';
@@ -49,7 +51,7 @@ class HomeCategoriesWidget extends StatelessWidget {
             ],
           ),
           verticalSpace(16),
-          BlocBuilder<HomeCubit, HomeState>(
+          BlocBuilder<CategoryCubit, CategoryState>(
             buildWhen: (previous, current) =>
                 previous != current &&
                 (current is GetCategoriesLoading ||
