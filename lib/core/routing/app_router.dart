@@ -4,6 +4,7 @@ import 'package:thimar/features/auth/login/presentation/login_screen.dart';
 import 'package:thimar/features/cart/presentation/cart_screen.dart';
 import 'package:thimar/features/layout/presentation/bottom_nav_bar_layout.dart';
 import 'package:thimar/features/product_details/presentation/product_details_screen.dart';
+import 'package:thimar/features/profile/presentation/about_app_screen.dart';
 import 'package:thimar/features/splash/presentation/splash_screen.dart';
 
 import '../../features/auth/forget_password/presentation/forget_password_screen.dart';
@@ -12,6 +13,10 @@ import '../../features/auth/register/presentation/register_screen.dart';
 import '../../features/auth/verifi_code/presentation/verified_screen.dart';
 import '../../features/checkout/presentation/checkout_screen.dart';
 import '../../features/home/presentation/category_products_screen.dart';
+import '../../features/profile/presentation/profile_data_screen.dart';
+import '../../features/profile/presentation/terms_screen.dart';
+import '../../features/walltet/presentation/wallet_screen.dart';
+import '../../features/walltet/presentation/charge_wallet_screen.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -82,6 +87,26 @@ class AppRouter {
       case Routes.checkoutScreen:
         return MaterialPageRoute(
           builder: (_) => CheckoutScreen(),
+        );
+      case Routes.profileDataScreen:
+        return MaterialPageRoute(
+          builder: (_) => ProfileDataScreen(),
+        );
+      case Routes.aboutAppScreen:
+        return MaterialPageRoute(
+          builder: (_) => AboutAppScreen(),
+        );
+      case Routes.termsScreen:
+        return MaterialPageRoute(
+          builder: (_) => TermsScreen(),
+        );
+      case Routes.walletScreen:
+        return MaterialPageRoute(
+          builder: (_) => WalletScreen(),
+        );
+      case Routes.chargeWalletScreen:
+        return MaterialPageRoute(
+          builder: (_) => ChargeWalletScreen(),
         );
     }
     return null;

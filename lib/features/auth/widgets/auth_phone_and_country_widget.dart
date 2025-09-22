@@ -10,8 +10,10 @@ import '../../../core/widgets/app_text_form_field.dart';
 
 class AuthPhoneAndCountryWidget extends StatelessWidget {
   final TextEditingController? phoneController;
+  final Color? fillColor;
 
-  const AuthPhoneAndCountryWidget({super.key, this.phoneController});
+  const AuthPhoneAndCountryWidget(
+      {super.key, this.phoneController, this.fillColor});
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +30,7 @@ class AuthPhoneAndCountryWidget extends StatelessWidget {
                 width: 1.w,
               ),
               borderRadius: BorderRadius.circular(16.r),
+              color: fillColor ?? AppColors.whiteColor,
             ),
             child: Center(
               child: CountryCodePicker(
@@ -76,6 +79,7 @@ class AuthPhoneAndCountryWidget extends StatelessWidget {
               width: 22.w,
               height: 22.h,
             ),
+            fillColor: fillColor ?? AppColors.whiteColor,
           ),
         ),
       ],

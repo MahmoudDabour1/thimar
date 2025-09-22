@@ -16,6 +16,12 @@ class ApiConstants {
   static const String addRoCartEndPoint = "/client/cart";
   static const String deleteCartEndPoint = "/client/cart/delete_item/{id}";
   static const String updateCartEndPoint = "/client/cart/{id}";
+  static const String getProfileEndPoint = "/client/profile";
+  static const String updateProfileDataEndPoint = "/client/profile";
+  static const String aboutAppEndPoint = "/about";
+  static const String termsEndPoint = "/terms";
+  static const String getWalletEndPoint = "/wallet";
+  static const String chargeWalletEndPoint = "/wallet/charge";
 }
 
 class ApiErrors {

@@ -10,4 +10,9 @@ abstract class Routes{
   static const String productDetailsScreen = '/ProductDetailsScreen';
   static const String cartScreen = '/CartScreen';
   static const String checkoutScreen = '/CheckoutScreen';
+  static const String profileDataScreen = '/ProfileDataScreen';
+  static const String aboutAppScreen = '/AboutAppScreen';
+  static const String termsScreen = '/TermsScreen';
+  static const String walletScreen = '/WalletScreen';
+  static const String chargeWalletScreen = '/ChargeWalletScreen';
 }
