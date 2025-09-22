@@ -1,0 +1,70 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'update_profile_data_response_model.g.dart';
+
+@JsonSerializable()
+class UpdateProfileDataResponseModel {
+  @JsonKey(name: "status")
+  final String? status;
+  @JsonKey(name: "message")
+  final String? message;
+  @JsonKey(name: "data")
+  final Data? data;
+
+  UpdateProfileDataResponseModel({
+    this.status,
+    this.message,
+    this.data,
+  });
+
+  factory UpdateProfileDataResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$UpdateProfileDataResponseModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UpdateProfileDataResponseModelToJson(this);
+}
+
+@JsonSerializable()
+class Data {
+  @JsonKey(name: "id")
+  final int? id;
+  @JsonKey(name: "fullname")
+  final String? fullname;
+  @JsonKey(name: "phone")
+  final String? phone;
+  @JsonKey(name: "image")
+  final String? image;
+  @JsonKey(name: "city")
+  final City? city;
+  @JsonKey(name: "is_vip")
+  final int? isVip;
+
+  Data({
+    this.id,
+    this.fullname,
+    this.phone,
+    this.image,
+    this.city,
+    this.isVip,
+  });
+
+  factory Data.fromJson(Map<String, dynamic> json) => _$DataFromJson(json);
+
+  Map<String, dynamic> toJson() => _$DataToJson(this);
+}
+
+@JsonSerializable()
+class City {
+  @JsonKey(name: "id")
+  final int? id;
+  @JsonKey(name: "name")
+  final String? name;
+
+  City({
+    this.id,
+    this.name,
+  });
+
+  factory City.fromJson(Map<String, dynamic> json) => _$CityFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CityToJson(this);
+}

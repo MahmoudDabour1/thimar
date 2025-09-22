@@ -4,6 +4,7 @@ import 'package:thimar/features/layout/logic/bottom_nav_bar_state.dart';
 
 import '../../../core/theming/app_assets.dart';
 import '../../home/presentation/home_screen.dart';
+import '../../profile/presentation/profile_screen.dart';
 
 class BottomNavBarCubit extends Cubit<BottomNavBarState> {
   BottomNavBarCubit() : super(BottomNavBarState.initial());
@@ -19,7 +20,7 @@ class BottomNavBarCubit extends Cubit<BottomNavBarState> {
     Center(child: Text("طلباتي")),
     Center(child: Text("الإشعارات")),
     Center(child: Text("المفضلة")),
-    Center(child: Text("حسابي")),
+    ProfileScreen(),
   ];
 
   List<String> labels = [

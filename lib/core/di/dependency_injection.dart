@@ -22,6 +22,9 @@ import 'package:thimar/features/home/logic/home_cubit.dart';
 import 'package:thimar/features/product_details/data/data_sources/product_details_remote_data_source.dart';
 import 'package:thimar/features/product_details/data/repos/product_details_repos.dart';
 import 'package:thimar/features/product_details/logic/product_details_cubit.dart';
+import 'package:thimar/features/profile/data/data_sources/profile_remote_data_source.dart';
+import 'package:thimar/features/profile/data/repos/profile_repo.dart';
+import 'package:thimar/features/profile/logic/profile_cubit.dart';
 
 import '../../features/auth/login/data/data_source/login_remote_data_source.dart';
 import '../../features/auth/login/data/repos/login_repo.dart';
@@ -93,4 +96,11 @@ Future<void> setupGetIt() async {
   sl.registerLazySingleton<CartRepo>(
       () => CartRepoImpl(remoteDataSource: sl()));
   sl.registerFactory<CartCubit>(() => CartCubit(sl()));
+
+  //profile
+  sl.registerLazySingleton<ProfileRemoteDataSource>(
+      () => ProfileRemoteDataSource(dio));
+  sl.registerLazySingleton<ProfileRepo>(
+      () => ProfileRepoImpl(profileRemoteDataSource: sl()));
+  sl.registerFactory<ProfileCubit>(() => ProfileCubit(sl()));
 }
