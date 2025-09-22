@@ -35,4 +35,6 @@ class ProfileState<T> with _$ProfileState {
   const factory ProfileState.termsSuccess(T data) = TermsSuccess;
 
   const factory ProfileState.termsFailure(String errorMessage) = TermsFailure;
+
+
 }

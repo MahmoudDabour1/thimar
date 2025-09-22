@@ -17,6 +17,7 @@ abstract class ProfileRepo {
       UpdateProfileDataRequestModel request);
 
   Future<ApiResult<AboutAppResponseModel>> getAboutApp();
+
   Future<ApiResult<TermsResponseModel>> getTerms();
 }
 
@@ -74,7 +75,7 @@ class ProfileRepoImpl implements ProfileRepo {
   }
 
   @override
-  Future<ApiResult<TermsResponseModel>> getTerms() async{
+  Future<ApiResult<TermsResponseModel>> getTerms() async {
     try {
       final response = await profileRemoteDataSource.getTerms();
       return ApiResult.success(response);

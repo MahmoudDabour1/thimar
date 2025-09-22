@@ -20,6 +20,8 @@ class ApiConstants {
   static const String updateProfileDataEndPoint = "/client/profile";
   static const String aboutAppEndPoint = "/about";
   static const String termsEndPoint = "/terms";
+  static const String getWalletEndPoint = "/wallet";
+  static const String chargeWalletEndPoint = "/wallet/charge";
 }
 
 class ApiErrors {

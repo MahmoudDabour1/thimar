@@ -27,7 +27,9 @@ class ProfileListWidget extends StatelessWidget {
           ProfileCustomRowWidget(
             title: "المحفظة",
             iconPath: AppAssets.walletImage,
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(Routes.walletScreen);
+            },
           ),
           ProfileCustomRowWidget(
             title: "العناوين",

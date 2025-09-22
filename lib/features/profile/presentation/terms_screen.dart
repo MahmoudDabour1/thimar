@@ -6,6 +6,7 @@ import 'package:thimar/features/profile/data/models/terms_response_model.dart';
 import 'package:thimar/features/profile/logic/profile_cubit.dart';
 
 import '../../../core/di/dependency_injection.dart';
+import '../../../core/theming/app_colors.dart';
 import '../logic/profile_state.dart';
 
 class TermsScreen extends StatefulWidget {
@@ -17,6 +18,7 @@ class TermsScreen extends StatefulWidget {
 
 class _TermsScreenState extends State<TermsScreen> {
   final cubit = sl<ProfileCubit>();
+
   @override
   void initState() {
     super.initState();
@@ -35,7 +37,9 @@ class _TermsScreenState extends State<TermsScreen> {
           builder: (context, state) {
             return state.maybeWhen(
                 termsLoading: () => const Center(
-                      child: CircularProgressIndicator(),
+                      child: CircularProgressIndicator(
+                        color: AppColors.primaryColor,
+                      ),
                     ),
                 termsSuccess: (data) => setupSuccess(data),
                 termsFailure: (error) => Center(

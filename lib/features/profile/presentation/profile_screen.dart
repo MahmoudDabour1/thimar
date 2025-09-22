@@ -7,31 +7,20 @@ import 'package:thimar/features/profile/presentation/widgets/profile_list_widget
 
 import '../../../core/di/dependency_injection.dart';
 
-class ProfileScreen extends StatefulWidget {
+class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
-}
-
-class _ProfileScreenState extends State<ProfileScreen> {
-  final profileCubit = sl<ProfileCubit>();
-
-  @override
-  void initState() {
-    super.initState();
-    profileCubit.getProfileData();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    final profileCubit = sl<ProfileCubit>();
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
               BlocProvider.value(
-                value: profileCubit,
+                value: profileCubit..getProfileData(),
                 child: ProfileHeaderWidget(),
               ),
               verticalSpace(34),

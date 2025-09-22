@@ -45,4 +45,6 @@ abstract class AppAssets {
   static const String starImage = 'assets/images/star.png';
   static const String walletImage = 'assets/images/wallet.png';
   static const String shareImage = 'assets/images/share.png';
+  static const String arrowTopImage = 'assets/images/arrow_top.png';
+  static const String arrowDownImage = 'assets/images/arrow_down.png';
 }

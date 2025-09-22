@@ -26,9 +26,15 @@ class ProfileHeaderWidget extends StatelessWidget {
         BlocBuilder<ProfileCubit, ProfileState>(
           builder: (context, state) {
             return state.maybeWhen(
-              getProfileLoading: () => const Center(
-                child: CircularProgressIndicator(
-                  color: AppColors.whiteColor,
+              getProfileLoading: () => Positioned(
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                child: const Center(
+                  child: CircularProgressIndicator(
+                    color: AppColors.whiteColor,
+                  ),
                 ),
               ),
               getProfileSuccess: (data) => setupSuccess(data),
@@ -67,6 +73,7 @@ class ProfileHeaderWidget extends StatelessWidget {
             imageUrl: data.data?.image ?? "",
             height: 71.h,
             width: 76.w,
+            fit: BoxFit.cover,
           ),
         ),
         verticalSpace(8),

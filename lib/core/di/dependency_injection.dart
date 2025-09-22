@@ -25,6 +25,9 @@ import 'package:thimar/features/product_details/logic/product_details_cubit.dart
 import 'package:thimar/features/profile/data/data_sources/profile_remote_data_source.dart';
 import 'package:thimar/features/profile/data/repos/profile_repo.dart';
 import 'package:thimar/features/profile/logic/profile_cubit.dart';
+import 'package:thimar/features/walltet/data/data_sources/wallet_remote_data_source.dart';
+import 'package:thimar/features/walltet/data/repos/wallet_repo.dart';
+import 'package:thimar/features/walltet/logic/wallet_cubit.dart';
 
 import '../../features/auth/login/data/data_source/login_remote_data_source.dart';
 import '../../features/auth/login/data/repos/login_repo.dart';
@@ -103,4 +106,10 @@ Future<void> setupGetIt() async {
   sl.registerLazySingleton<ProfileRepo>(
       () => ProfileRepoImpl(profileRemoteDataSource: sl()));
   sl.registerFactory<ProfileCubit>(() => ProfileCubit(sl()));
+//wallet
+  sl.registerLazySingleton<WalletRemoteDataSource>(
+      () => WalletRemoteDataSource(dio));
+  sl.registerLazySingleton<WalletRepo>(
+      () => WalletRepoImpl(walletRemoteDataSource: sl()));
+  sl.registerFactory<WalletCubit>(() => WalletCubit(sl()));
 }

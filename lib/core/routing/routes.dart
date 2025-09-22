@@ -13,4 +13,6 @@ abstract class Routes{
   static const String profileDataScreen = '/ProfileDataScreen';
   static const String aboutAppScreen = '/AboutAppScreen';
   static const String termsScreen = '/TermsScreen';
+  static const String walletScreen = '/WalletScreen';
+  static const String chargeWalletScreen = '/ChargeWalletScreen';
 }

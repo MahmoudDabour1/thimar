@@ -20,6 +20,7 @@ class ProfileCubit extends Cubit<ProfileState> {
   final cityController = TextEditingController();
 
   Future<void> getProfileData() async {
+    emit(ProfileState.getProfileLoading());
     final response = await profileRepo.getProfileData();
     response.when(
       success: (data) {
@@ -81,4 +82,6 @@ class ProfileCubit extends Cubit<ProfileState> {
       emit(ProfileState.termsFailure(error.message.toString()));
     });
   }
+
+
 }

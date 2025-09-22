@@ -15,6 +15,8 @@ import '../../features/checkout/presentation/checkout_screen.dart';
 import '../../features/home/presentation/category_products_screen.dart';
 import '../../features/profile/presentation/profile_data_screen.dart';
 import '../../features/profile/presentation/terms_screen.dart';
+import '../../features/walltet/presentation/wallet_screen.dart';
+import '../../features/walltet/presentation/charge_wallet_screen.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -89,12 +91,22 @@ class AppRouter {
       case Routes.profileDataScreen:
         return MaterialPageRoute(
           builder: (_) => ProfileDataScreen(),
-        );case Routes.aboutAppScreen:
+        );
+      case Routes.aboutAppScreen:
         return MaterialPageRoute(
           builder: (_) => AboutAppScreen(),
-        );case Routes.termsScreen:
+        );
+      case Routes.termsScreen:
         return MaterialPageRoute(
           builder: (_) => TermsScreen(),
+        );
+      case Routes.walletScreen:
+        return MaterialPageRoute(
+          builder: (_) => WalletScreen(),
+        );
+      case Routes.chargeWalletScreen:
+        return MaterialPageRoute(
+          builder: (_) => ChargeWalletScreen(),
         );
     }
     return null;
