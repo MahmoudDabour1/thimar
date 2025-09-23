@@ -26,6 +26,8 @@ class ApiConstants {
   static const String policyEndPoint = "/policy";
   static const String suggestionsAndComplaintsEndPoint = "/contact";
   static const String getContactEndPoint = "/contact";
+  static const String getAddressEndPoint = "/client/addresses";
+  static const String deleteAndUpdateAddressEndPoint = "/client/addresses/{id}";
 }
 
 class ApiErrors {

@@ -53,4 +53,5 @@ abstract class AppAssets {
   static const String locationMarkImage = 'assets/images/location_mark.png';
   static const String messageIconImage = 'assets/images/Message.png';
   static const String callingIconImage = 'assets/images/calling_icon.png';
+  static const String editIconImage = 'assets/images/edit_image.png';
 }

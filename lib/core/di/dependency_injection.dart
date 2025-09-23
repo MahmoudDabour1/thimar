@@ -4,6 +4,9 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:thimar/features/about_app/data/data_sources/about_app_remote_data_source.dart';
 import 'package:thimar/features/about_app/data/repos/about_app_repos.dart';
 import 'package:thimar/features/about_app/logic/about_app_cubit.dart';
+import 'package:thimar/features/address/data/data_source/address_remote_data_source.dart';
+import 'package:thimar/features/address/data/repos/address_repo.dart';
+import 'package:thimar/features/address/logic/address_cubit.dart';
 import 'package:thimar/features/auth/forget_password/data/data_sources/forget_password_remote_data_source.dart';
 import 'package:thimar/features/auth/forget_password/data/repos/forget_password_repo.dart';
 import 'package:thimar/features/auth/forget_password/logic/forget_password_cubit.dart';
@@ -122,4 +125,10 @@ Future<void> setupGetIt() async {
   sl.registerLazySingleton<AboutAppRepos>(
       () => AboutAppReposImpl(aboutAppRemoteDataSource: sl()));
   sl.registerFactory<AboutAppCubit>(() => AboutAppCubit(sl()));
+//address
+  sl.registerLazySingleton<AddressRemoteDataSource>(
+      () => AddressRemoteDataSource(dio));
+  sl.registerLazySingleton<AddressRepo>(
+      () => AddressRepoImpl(addressRemoteDataSource: sl()));
+  sl.registerFactory<AddressCubit>(() => AddressCubit(sl()));
 }
