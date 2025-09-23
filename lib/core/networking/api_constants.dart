@@ -24,6 +24,7 @@ class ApiConstants {
   static const String chargeWalletEndPoint = "/wallet/charge";
   static const String faqsEndPoint = "/faqs";
   static const String policyEndPoint = "/policy";
+  static const String suggestionsAndComplaintsEndPoint = "/contact";
 }
 
 class ApiErrors {

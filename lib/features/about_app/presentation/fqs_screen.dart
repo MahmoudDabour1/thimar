@@ -5,23 +5,25 @@ import 'package:thimar/core/theming/app_assets.dart';
 import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/core/theming/app_styles.dart';
 import 'package:thimar/core/widgets/app_custom_app_bar.dart';
-import 'package:thimar/features/profile/data/models/faqs_response_model.dart';
 import 'package:thimar/features/profile/logic/profile_cubit.dart';
 import 'package:thimar/features/profile/logic/profile_state.dart';
 
 import '../../../core/di/dependency_injection.dart';
+import '../data/models/faqs_response_model.dart';
+import '../logic/about_app_cubit.dart';
+import '../logic/about_app_state.dart';
 
 class FqsScreen extends StatelessWidget {
   const FqsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final cubit = sl<ProfileCubit>();
+    final cubit = sl<AboutAppCubit>();
     return BlocProvider.value(
       value: cubit..getFaqs(),
       child: Scaffold(
           appBar: AppCustomAppBar(appBarTitle: "أسئلة متكررة"),
-          body: BlocBuilder<ProfileCubit, ProfileState>(
+          body: BlocBuilder<AboutAppCubit,AboutAppState>(
               builder: (context, state) {
             return state.maybeWhen(
               faqsLoading: () => Center(

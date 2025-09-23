@@ -63,43 +63,5 @@ class ProfileCubit extends Cubit<ProfileState> {
     emit(ProfileState.addImage());
   }
 
-  Future<void> getAboutApp() async {
-    emit(ProfileState.aboutAppLoading());
-    final response = await profileRepo.getAboutApp();
-    response.when(success: (data) {
-      emit(ProfileState.aboutAppSuccess(data));
-    }, failure: (error) {
-      emit(ProfileState.aboutAppFailure(error.message.toString()));
-    });
-  }
 
-  Future<void> getTerms() async {
-    emit(ProfileState.termsLoading());
-    final response = await profileRepo.getTerms();
-    response.when(success: (data) {
-      emit(ProfileState.termsSuccess(data));
-    }, failure: (error) {
-      emit(ProfileState.termsFailure(error.message.toString()));
-    });
-  }
-
-  Future<void> getFaqs() async {
-    emit(ProfileState.faqsLoading());
-    final response = await profileRepo.getFaqs();
-    response.when(success: (data) {
-      emit(ProfileState.faqsSuccess(data));
-    }, failure: (error) {
-      emit(ProfileState.faqsFailure(error.message.toString()));
-    });
-  }
-
-  Future<void> getPolicy() async {
-    emit(ProfileState.policyLoading());
-    final response = await profileRepo.getPolicy();
-    response.when(success: (data) {
-      emit(ProfileState.policySuccess(data));
-    }, failure: (error) {
-      emit(ProfileState.policyFailure(error.message.toString()));
-    });
-  }
 }

@@ -18,4 +18,5 @@ abstract class Routes{
   static const String allTransactionHistoryScreen = '/AllTransactionHistoryScreen';
   static const String fqsScreen = '/FqsScreen';
   static const String policyScreen = '/PolicyScreen';
+  static const String suggestionsAndComplaintsScreen = '/SuggestionsAndComplaintsScreen';
 }

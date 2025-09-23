@@ -66,7 +66,9 @@ class ProfileListWidget extends StatelessWidget {
           ProfileCustomRowWidget(
             title: "الشكاوي والأقتراحات",
             iconPath: AppAssets.editImage,
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(Routes.suggestionsAndComplaintsScreen);
+            },
           ),
           ProfileCustomRowWidget(
             title: "مشاركة التطبيق",

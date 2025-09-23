@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+
 part 'policy_response_model.g.dart';
 @JsonSerializable()
 class PolicyResponseModel {
@@ -15,7 +16,8 @@ class PolicyResponseModel {
     this.message,
   });
 
-  factory PolicyResponseModel.fromJson(Map<String, dynamic> json) => _$PolicyResponseModelFromJson(json);
+  factory PolicyResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$PolicyResponseModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$PolicyResponseModelToJson(this);
 }

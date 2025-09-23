@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
+
 part 'terms_response_model.g.dart';
+
 @JsonSerializable()
 class TermsResponseModel {
   @JsonKey(name: "data")
@@ -15,7 +17,8 @@ class TermsResponseModel {
     this.message,
   });
 
-  factory TermsResponseModel.fromJson(Map<String, dynamic> json) => _$TermsResponseModelFromJson(json);
+  factory TermsResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$TermsResponseModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$TermsResponseModelToJson(this);
 }

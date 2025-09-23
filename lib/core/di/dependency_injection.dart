@@ -1,6 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:thimar/features/about_app/data/data_sources/about_app_remote_data_source.dart';
+import 'package:thimar/features/about_app/data/repos/about_app_repos.dart';
+import 'package:thimar/features/about_app/logic/about_app_cubit.dart';
 import 'package:thimar/features/auth/forget_password/data/data_sources/forget_password_remote_data_source.dart';
 import 'package:thimar/features/auth/forget_password/data/repos/forget_password_repo.dart';
 import 'package:thimar/features/auth/forget_password/logic/forget_password_cubit.dart';
@@ -112,4 +115,11 @@ Future<void> setupGetIt() async {
   sl.registerLazySingleton<WalletRepo>(
       () => WalletRepoImpl(walletRemoteDataSource: sl()));
   sl.registerFactory<WalletCubit>(() => WalletCubit(sl()));
+
+  //wallet
+  sl.registerLazySingleton<AboutAppRemoteDataSource>(
+      () => AboutAppRemoteDataSource(dio));
+  sl.registerLazySingleton<AboutAppRepos>(
+      () => AboutAppReposImpl(aboutAppRemoteDataSource: sl()));
+  sl.registerFactory<AboutAppCubit>(() => AboutAppCubit(sl()));
 }
