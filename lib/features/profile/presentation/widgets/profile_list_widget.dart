@@ -61,7 +61,9 @@ class ProfileListWidget extends StatelessWidget {
           ProfileCustomRowWidget(
             title: "تواصل معنا",
             iconPath: AppAssets.callingImage,
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(Routes.contactScreen);
+            },
           ),
           ProfileCustomRowWidget(
             title: "الشكاوي والأقتراحات",

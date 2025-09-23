@@ -34,8 +34,16 @@ class AboutAppState<T> with _$AboutAppState {
 
   const factory AboutAppState.sendSuggestionLoading() = SendSuggestionLoading;
 
-  const factory AboutAppState.sendSuggestionSuccess(T data) = SendSuggestionSuccess;
+  const factory AboutAppState.sendSuggestionSuccess(T data) =
+      SendSuggestionSuccess;
 
   const factory AboutAppState.sendSuggestionFailure(String errorMessage) =
-  SendSuggestionFailure;
+      SendSuggestionFailure;
+
+  const factory AboutAppState.getContactLoading() = GetContactLoading;
+
+  const factory AboutAppState.getContactSuccess(T data) = GetContactSuccess;
+
+  const factory AboutAppState.getContactFailure(String errorMessage) =
+      GetContactFailure;
 }

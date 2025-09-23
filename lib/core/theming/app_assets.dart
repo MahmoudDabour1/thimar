@@ -31,7 +31,7 @@ abstract class AppAssets {
   static const String greenBackgroundImage =
       'assets/images/green_background.png';
   static const String arrowLeftImage = 'assets/images/arrow_left.png';
-  static const String callingImage = 'assets/images/calling.png';
+  static const String callingImage = 'assets/images/solid_calling_Icon.png';
   static const String checkImage = 'assets/images/check.png';
   static const String editImage = 'assets/images/edit - 3.png';
   static const String dollarImage = 'assets/images/dollar.png';
@@ -49,4 +49,8 @@ abstract class AppAssets {
   static const String arrowDownImage = 'assets/images/arrow_down.png';
   static const String containerArrowDownImage =
       'assets/images/container_arrow_down.png';
+  static const String solidCallingIconImage = 'assets/images/solid_calling_Icon.png';
+  static const String locationMarkImage = 'assets/images/location_mark.png';
+  static const String messageIconImage = 'assets/images/Message.png';
+  static const String callingIconImage = 'assets/images/calling_icon.png';
 }

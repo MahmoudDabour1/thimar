@@ -1,4 +1,5 @@
 import 'package:thimar/features/about_app/data/data_sources/about_app_remote_data_source.dart';
+import 'package:thimar/features/about_app/data/models/get_contact_response_model.dart';
 import 'package:thimar/features/about_app/data/models/suggestions_and_complaints_response_model.dart';
 
 import '../../../../core/networking/api_error_handler.dart';
@@ -22,6 +23,8 @@ abstract class AboutAppRepos {
       sendSuggestionsAndComplaints(
           SuggestionsAndComplaintsRequestBody
               suggestionsAndComplaintsRequestBody);
+
+  Future<ApiResult<GetContactResponseModel>> getContactData();
 }
 
 class AboutAppReposImpl implements AboutAppRepos {
@@ -77,6 +80,16 @@ class AboutAppReposImpl implements AboutAppRepos {
     try {
       final response = await aboutAppRemoteDataSource
           .sendSuggestionsAndComplaints(suggestionsAndComplaintsRequestBody);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  @override
+  Future<ApiResult<GetContactResponseModel>> getContactData() async {
+    try {
+      final response = await aboutAppRemoteDataSource.getContactData();
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));

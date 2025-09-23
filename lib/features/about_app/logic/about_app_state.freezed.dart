@@ -34,6 +34,9 @@ mixin _$AboutAppState<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -54,6 +57,9 @@ mixin _$AboutAppState<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -74,6 +80,9 @@ mixin _$AboutAppState<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -98,6 +107,9 @@ mixin _$AboutAppState<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -118,6 +130,9 @@ mixin _$AboutAppState<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -138,6 +153,9 @@ mixin _$AboutAppState<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -221,6 +239,9 @@ class _$AboutAppInitialImpl<T> implements AboutAppInitial<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return initial();
   }
@@ -244,6 +265,9 @@ class _$AboutAppInitialImpl<T> implements AboutAppInitial<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return initial?.call();
   }
@@ -267,6 +291,9 @@ class _$AboutAppInitialImpl<T> implements AboutAppInitial<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -297,6 +324,9 @@ class _$AboutAppInitialImpl<T> implements AboutAppInitial<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return initial(this);
   }
@@ -320,6 +350,9 @@ class _$AboutAppInitialImpl<T> implements AboutAppInitial<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return initial?.call(this);
   }
@@ -343,6 +376,9 @@ class _$AboutAppInitialImpl<T> implements AboutAppInitial<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -413,6 +449,9 @@ class _$AboutAppLoadingImpl<T> implements AboutAppLoading<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return aboutAppLoading();
   }
@@ -436,6 +475,9 @@ class _$AboutAppLoadingImpl<T> implements AboutAppLoading<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return aboutAppLoading?.call();
   }
@@ -459,6 +501,9 @@ class _$AboutAppLoadingImpl<T> implements AboutAppLoading<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (aboutAppLoading != null) {
@@ -489,6 +534,9 @@ class _$AboutAppLoadingImpl<T> implements AboutAppLoading<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return aboutAppLoading(this);
   }
@@ -512,6 +560,9 @@ class _$AboutAppLoadingImpl<T> implements AboutAppLoading<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return aboutAppLoading?.call(this);
   }
@@ -535,6 +586,9 @@ class _$AboutAppLoadingImpl<T> implements AboutAppLoading<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (aboutAppLoading != null) {
@@ -634,6 +688,9 @@ class _$AboutAppSuccessImpl<T> implements AboutAppSuccess<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return aboutAppSuccess(data);
   }
@@ -657,6 +714,9 @@ class _$AboutAppSuccessImpl<T> implements AboutAppSuccess<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return aboutAppSuccess?.call(data);
   }
@@ -680,6 +740,9 @@ class _$AboutAppSuccessImpl<T> implements AboutAppSuccess<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (aboutAppSuccess != null) {
@@ -710,6 +773,9 @@ class _$AboutAppSuccessImpl<T> implements AboutAppSuccess<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return aboutAppSuccess(this);
   }
@@ -733,6 +799,9 @@ class _$AboutAppSuccessImpl<T> implements AboutAppSuccess<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return aboutAppSuccess?.call(this);
   }
@@ -756,6 +825,9 @@ class _$AboutAppSuccessImpl<T> implements AboutAppSuccess<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (aboutAppSuccess != null) {
@@ -863,6 +935,9 @@ class _$AboutAppFailureImpl<T> implements AboutAppFailure<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return aboutAppFailure(errorMessage);
   }
@@ -886,6 +961,9 @@ class _$AboutAppFailureImpl<T> implements AboutAppFailure<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return aboutAppFailure?.call(errorMessage);
   }
@@ -909,6 +987,9 @@ class _$AboutAppFailureImpl<T> implements AboutAppFailure<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (aboutAppFailure != null) {
@@ -939,6 +1020,9 @@ class _$AboutAppFailureImpl<T> implements AboutAppFailure<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return aboutAppFailure(this);
   }
@@ -962,6 +1046,9 @@ class _$AboutAppFailureImpl<T> implements AboutAppFailure<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return aboutAppFailure?.call(this);
   }
@@ -985,6 +1072,9 @@ class _$AboutAppFailureImpl<T> implements AboutAppFailure<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (aboutAppFailure != null) {
@@ -1064,6 +1154,9 @@ class _$TermsLoadingImpl<T> implements TermsLoading<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return termsLoading();
   }
@@ -1087,6 +1180,9 @@ class _$TermsLoadingImpl<T> implements TermsLoading<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return termsLoading?.call();
   }
@@ -1110,6 +1206,9 @@ class _$TermsLoadingImpl<T> implements TermsLoading<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (termsLoading != null) {
@@ -1140,6 +1239,9 @@ class _$TermsLoadingImpl<T> implements TermsLoading<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return termsLoading(this);
   }
@@ -1163,6 +1265,9 @@ class _$TermsLoadingImpl<T> implements TermsLoading<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return termsLoading?.call(this);
   }
@@ -1186,6 +1291,9 @@ class _$TermsLoadingImpl<T> implements TermsLoading<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (termsLoading != null) {
@@ -1285,6 +1393,9 @@ class _$TermsSuccessImpl<T> implements TermsSuccess<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return termsSuccess(data);
   }
@@ -1308,6 +1419,9 @@ class _$TermsSuccessImpl<T> implements TermsSuccess<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return termsSuccess?.call(data);
   }
@@ -1331,6 +1445,9 @@ class _$TermsSuccessImpl<T> implements TermsSuccess<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (termsSuccess != null) {
@@ -1361,6 +1478,9 @@ class _$TermsSuccessImpl<T> implements TermsSuccess<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return termsSuccess(this);
   }
@@ -1384,6 +1504,9 @@ class _$TermsSuccessImpl<T> implements TermsSuccess<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return termsSuccess?.call(this);
   }
@@ -1407,6 +1530,9 @@ class _$TermsSuccessImpl<T> implements TermsSuccess<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (termsSuccess != null) {
@@ -1514,6 +1640,9 @@ class _$TermsFailureImpl<T> implements TermsFailure<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return termsFailure(errorMessage);
   }
@@ -1537,6 +1666,9 @@ class _$TermsFailureImpl<T> implements TermsFailure<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return termsFailure?.call(errorMessage);
   }
@@ -1560,6 +1692,9 @@ class _$TermsFailureImpl<T> implements TermsFailure<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (termsFailure != null) {
@@ -1590,6 +1725,9 @@ class _$TermsFailureImpl<T> implements TermsFailure<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return termsFailure(this);
   }
@@ -1613,6 +1751,9 @@ class _$TermsFailureImpl<T> implements TermsFailure<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return termsFailure?.call(this);
   }
@@ -1636,6 +1777,9 @@ class _$TermsFailureImpl<T> implements TermsFailure<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (termsFailure != null) {
@@ -1714,6 +1858,9 @@ class _$FaqsLoadingImpl<T> implements FaqsLoading<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return faqsLoading();
   }
@@ -1737,6 +1884,9 @@ class _$FaqsLoadingImpl<T> implements FaqsLoading<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return faqsLoading?.call();
   }
@@ -1760,6 +1910,9 @@ class _$FaqsLoadingImpl<T> implements FaqsLoading<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (faqsLoading != null) {
@@ -1790,6 +1943,9 @@ class _$FaqsLoadingImpl<T> implements FaqsLoading<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return faqsLoading(this);
   }
@@ -1813,6 +1969,9 @@ class _$FaqsLoadingImpl<T> implements FaqsLoading<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return faqsLoading?.call(this);
   }
@@ -1836,6 +1995,9 @@ class _$FaqsLoadingImpl<T> implements FaqsLoading<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (faqsLoading != null) {
@@ -1935,6 +2097,9 @@ class _$FaqsSuccessImpl<T> implements FaqsSuccess<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return faqsSuccess(data);
   }
@@ -1958,6 +2123,9 @@ class _$FaqsSuccessImpl<T> implements FaqsSuccess<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return faqsSuccess?.call(data);
   }
@@ -1981,6 +2149,9 @@ class _$FaqsSuccessImpl<T> implements FaqsSuccess<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (faqsSuccess != null) {
@@ -2011,6 +2182,9 @@ class _$FaqsSuccessImpl<T> implements FaqsSuccess<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return faqsSuccess(this);
   }
@@ -2034,6 +2208,9 @@ class _$FaqsSuccessImpl<T> implements FaqsSuccess<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return faqsSuccess?.call(this);
   }
@@ -2057,6 +2234,9 @@ class _$FaqsSuccessImpl<T> implements FaqsSuccess<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (faqsSuccess != null) {
@@ -2164,6 +2344,9 @@ class _$FaqsFailureImpl<T> implements FaqsFailure<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return faqsFailure(errorMessage);
   }
@@ -2187,6 +2370,9 @@ class _$FaqsFailureImpl<T> implements FaqsFailure<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return faqsFailure?.call(errorMessage);
   }
@@ -2210,6 +2396,9 @@ class _$FaqsFailureImpl<T> implements FaqsFailure<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (faqsFailure != null) {
@@ -2240,6 +2429,9 @@ class _$FaqsFailureImpl<T> implements FaqsFailure<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return faqsFailure(this);
   }
@@ -2263,6 +2455,9 @@ class _$FaqsFailureImpl<T> implements FaqsFailure<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return faqsFailure?.call(this);
   }
@@ -2286,6 +2481,9 @@ class _$FaqsFailureImpl<T> implements FaqsFailure<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (faqsFailure != null) {
@@ -2364,6 +2562,9 @@ class _$PolicyLoadingImpl<T> implements PolicyLoading<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return policyLoading();
   }
@@ -2387,6 +2588,9 @@ class _$PolicyLoadingImpl<T> implements PolicyLoading<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return policyLoading?.call();
   }
@@ -2410,6 +2614,9 @@ class _$PolicyLoadingImpl<T> implements PolicyLoading<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (policyLoading != null) {
@@ -2440,6 +2647,9 @@ class _$PolicyLoadingImpl<T> implements PolicyLoading<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return policyLoading(this);
   }
@@ -2463,6 +2673,9 @@ class _$PolicyLoadingImpl<T> implements PolicyLoading<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return policyLoading?.call(this);
   }
@@ -2486,6 +2699,9 @@ class _$PolicyLoadingImpl<T> implements PolicyLoading<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (policyLoading != null) {
@@ -2585,6 +2801,9 @@ class _$PolicySuccessImpl<T> implements PolicySuccess<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return policySuccess(data);
   }
@@ -2608,6 +2827,9 @@ class _$PolicySuccessImpl<T> implements PolicySuccess<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return policySuccess?.call(data);
   }
@@ -2631,6 +2853,9 @@ class _$PolicySuccessImpl<T> implements PolicySuccess<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (policySuccess != null) {
@@ -2661,6 +2886,9 @@ class _$PolicySuccessImpl<T> implements PolicySuccess<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return policySuccess(this);
   }
@@ -2684,6 +2912,9 @@ class _$PolicySuccessImpl<T> implements PolicySuccess<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return policySuccess?.call(this);
   }
@@ -2707,6 +2938,9 @@ class _$PolicySuccessImpl<T> implements PolicySuccess<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (policySuccess != null) {
@@ -2814,6 +3048,9 @@ class _$PolicyFailureImpl<T> implements PolicyFailure<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return policyFailure(errorMessage);
   }
@@ -2837,6 +3074,9 @@ class _$PolicyFailureImpl<T> implements PolicyFailure<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return policyFailure?.call(errorMessage);
   }
@@ -2860,6 +3100,9 @@ class _$PolicyFailureImpl<T> implements PolicyFailure<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (policyFailure != null) {
@@ -2890,6 +3133,9 @@ class _$PolicyFailureImpl<T> implements PolicyFailure<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return policyFailure(this);
   }
@@ -2913,6 +3159,9 @@ class _$PolicyFailureImpl<T> implements PolicyFailure<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return policyFailure?.call(this);
   }
@@ -2936,6 +3185,9 @@ class _$PolicyFailureImpl<T> implements PolicyFailure<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (policyFailure != null) {
@@ -3018,6 +3270,9 @@ class _$SendSuggestionLoadingImpl<T> implements SendSuggestionLoading<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return sendSuggestionLoading();
   }
@@ -3041,6 +3296,9 @@ class _$SendSuggestionLoadingImpl<T> implements SendSuggestionLoading<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return sendSuggestionLoading?.call();
   }
@@ -3064,6 +3322,9 @@ class _$SendSuggestionLoadingImpl<T> implements SendSuggestionLoading<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (sendSuggestionLoading != null) {
@@ -3094,6 +3355,9 @@ class _$SendSuggestionLoadingImpl<T> implements SendSuggestionLoading<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return sendSuggestionLoading(this);
   }
@@ -3117,6 +3381,9 @@ class _$SendSuggestionLoadingImpl<T> implements SendSuggestionLoading<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return sendSuggestionLoading?.call(this);
   }
@@ -3140,6 +3407,9 @@ class _$SendSuggestionLoadingImpl<T> implements SendSuggestionLoading<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (sendSuggestionLoading != null) {
@@ -3241,6 +3511,9 @@ class _$SendSuggestionSuccessImpl<T> implements SendSuggestionSuccess<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return sendSuggestionSuccess(data);
   }
@@ -3264,6 +3537,9 @@ class _$SendSuggestionSuccessImpl<T> implements SendSuggestionSuccess<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return sendSuggestionSuccess?.call(data);
   }
@@ -3287,6 +3563,9 @@ class _$SendSuggestionSuccessImpl<T> implements SendSuggestionSuccess<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (sendSuggestionSuccess != null) {
@@ -3317,6 +3596,9 @@ class _$SendSuggestionSuccessImpl<T> implements SendSuggestionSuccess<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return sendSuggestionSuccess(this);
   }
@@ -3340,6 +3622,9 @@ class _$SendSuggestionSuccessImpl<T> implements SendSuggestionSuccess<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return sendSuggestionSuccess?.call(this);
   }
@@ -3363,6 +3648,9 @@ class _$SendSuggestionSuccessImpl<T> implements SendSuggestionSuccess<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (sendSuggestionSuccess != null) {
@@ -3473,6 +3761,9 @@ class _$SendSuggestionFailureImpl<T> implements SendSuggestionFailure<T> {
     required TResult Function() sendSuggestionLoading,
     required TResult Function(T data) sendSuggestionSuccess,
     required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
   }) {
     return sendSuggestionFailure(errorMessage);
   }
@@ -3496,6 +3787,9 @@ class _$SendSuggestionFailureImpl<T> implements SendSuggestionFailure<T> {
     TResult? Function()? sendSuggestionLoading,
     TResult? Function(T data)? sendSuggestionSuccess,
     TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
   }) {
     return sendSuggestionFailure?.call(errorMessage);
   }
@@ -3519,6 +3813,9 @@ class _$SendSuggestionFailureImpl<T> implements SendSuggestionFailure<T> {
     TResult Function()? sendSuggestionLoading,
     TResult Function(T data)? sendSuggestionSuccess,
     TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
     required TResult orElse(),
   }) {
     if (sendSuggestionFailure != null) {
@@ -3549,6 +3846,9 @@ class _$SendSuggestionFailureImpl<T> implements SendSuggestionFailure<T> {
         sendSuggestionSuccess,
     required TResult Function(SendSuggestionFailure<T> value)
         sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
   }) {
     return sendSuggestionFailure(this);
   }
@@ -3572,6 +3872,9 @@ class _$SendSuggestionFailureImpl<T> implements SendSuggestionFailure<T> {
     TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
   }) {
     return sendSuggestionFailure?.call(this);
   }
@@ -3595,6 +3898,9 @@ class _$SendSuggestionFailureImpl<T> implements SendSuggestionFailure<T> {
     TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
     TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
     TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
     required TResult orElse(),
   }) {
     if (sendSuggestionFailure != null) {
@@ -3614,5 +3920,713 @@ abstract class SendSuggestionFailure<T> implements AboutAppState<T> {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SendSuggestionFailureImplCopyWith<T, _$SendSuggestionFailureImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetContactLoadingImplCopyWith<T, $Res> {
+  factory _$$GetContactLoadingImplCopyWith(_$GetContactLoadingImpl<T> value,
+          $Res Function(_$GetContactLoadingImpl<T>) then) =
+      __$$GetContactLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GetContactLoadingImplCopyWithImpl<T, $Res>
+    extends _$AboutAppStateCopyWithImpl<T, $Res, _$GetContactLoadingImpl<T>>
+    implements _$$GetContactLoadingImplCopyWith<T, $Res> {
+  __$$GetContactLoadingImplCopyWithImpl(_$GetContactLoadingImpl<T> _value,
+      $Res Function(_$GetContactLoadingImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AboutAppState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$GetContactLoadingImpl<T> implements GetContactLoading<T> {
+  const _$GetContactLoadingImpl();
+
+  @override
+  String toString() {
+    return 'AboutAppState<$T>.getContactLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetContactLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() aboutAppLoading,
+    required TResult Function(T data) aboutAppSuccess,
+    required TResult Function(String errorMessage) aboutAppFailure,
+    required TResult Function() termsLoading,
+    required TResult Function(T data) termsSuccess,
+    required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
+    required TResult Function() sendSuggestionLoading,
+    required TResult Function(T data) sendSuggestionSuccess,
+    required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
+  }) {
+    return getContactLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? aboutAppLoading,
+    TResult? Function(T data)? aboutAppSuccess,
+    TResult? Function(String errorMessage)? aboutAppFailure,
+    TResult? Function()? termsLoading,
+    TResult? Function(T data)? termsSuccess,
+    TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
+    TResult? Function()? sendSuggestionLoading,
+    TResult? Function(T data)? sendSuggestionSuccess,
+    TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
+  }) {
+    return getContactLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? aboutAppLoading,
+    TResult Function(T data)? aboutAppSuccess,
+    TResult Function(String errorMessage)? aboutAppFailure,
+    TResult Function()? termsLoading,
+    TResult Function(T data)? termsSuccess,
+    TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
+    TResult Function()? sendSuggestionLoading,
+    TResult Function(T data)? sendSuggestionSuccess,
+    TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
+    required TResult orElse(),
+  }) {
+    if (getContactLoading != null) {
+      return getContactLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AboutAppInitial<T> value) initial,
+    required TResult Function(AboutAppLoading<T> value) aboutAppLoading,
+    required TResult Function(AboutAppSuccess<T> value) aboutAppSuccess,
+    required TResult Function(AboutAppFailure<T> value) aboutAppFailure,
+    required TResult Function(TermsLoading<T> value) termsLoading,
+    required TResult Function(TermsSuccess<T> value) termsSuccess,
+    required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
+    required TResult Function(SendSuggestionLoading<T> value)
+        sendSuggestionLoading,
+    required TResult Function(SendSuggestionSuccess<T> value)
+        sendSuggestionSuccess,
+    required TResult Function(SendSuggestionFailure<T> value)
+        sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
+  }) {
+    return getContactLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AboutAppInitial<T> value)? initial,
+    TResult? Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult? Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult? Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult? Function(TermsLoading<T> value)? termsLoading,
+    TResult? Function(TermsSuccess<T> value)? termsSuccess,
+    TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
+    TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
+    TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
+    TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
+  }) {
+    return getContactLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AboutAppInitial<T> value)? initial,
+    TResult Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult Function(TermsLoading<T> value)? termsLoading,
+    TResult Function(TermsSuccess<T> value)? termsSuccess,
+    TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
+    TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
+    TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
+    TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
+    required TResult orElse(),
+  }) {
+    if (getContactLoading != null) {
+      return getContactLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetContactLoading<T> implements AboutAppState<T> {
+  const factory GetContactLoading() = _$GetContactLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$GetContactSuccessImplCopyWith<T, $Res> {
+  factory _$$GetContactSuccessImplCopyWith(_$GetContactSuccessImpl<T> value,
+          $Res Function(_$GetContactSuccessImpl<T>) then) =
+      __$$GetContactSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$GetContactSuccessImplCopyWithImpl<T, $Res>
+    extends _$AboutAppStateCopyWithImpl<T, $Res, _$GetContactSuccessImpl<T>>
+    implements _$$GetContactSuccessImplCopyWith<T, $Res> {
+  __$$GetContactSuccessImplCopyWithImpl(_$GetContactSuccessImpl<T> _value,
+      $Res Function(_$GetContactSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AboutAppState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$GetContactSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetContactSuccessImpl<T> implements GetContactSuccess<T> {
+  const _$GetContactSuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'AboutAppState<$T>.getContactSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetContactSuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  /// Create a copy of AboutAppState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetContactSuccessImplCopyWith<T, _$GetContactSuccessImpl<T>>
+      get copyWith =>
+          __$$GetContactSuccessImplCopyWithImpl<T, _$GetContactSuccessImpl<T>>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() aboutAppLoading,
+    required TResult Function(T data) aboutAppSuccess,
+    required TResult Function(String errorMessage) aboutAppFailure,
+    required TResult Function() termsLoading,
+    required TResult Function(T data) termsSuccess,
+    required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
+    required TResult Function() sendSuggestionLoading,
+    required TResult Function(T data) sendSuggestionSuccess,
+    required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
+  }) {
+    return getContactSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? aboutAppLoading,
+    TResult? Function(T data)? aboutAppSuccess,
+    TResult? Function(String errorMessage)? aboutAppFailure,
+    TResult? Function()? termsLoading,
+    TResult? Function(T data)? termsSuccess,
+    TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
+    TResult? Function()? sendSuggestionLoading,
+    TResult? Function(T data)? sendSuggestionSuccess,
+    TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
+  }) {
+    return getContactSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? aboutAppLoading,
+    TResult Function(T data)? aboutAppSuccess,
+    TResult Function(String errorMessage)? aboutAppFailure,
+    TResult Function()? termsLoading,
+    TResult Function(T data)? termsSuccess,
+    TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
+    TResult Function()? sendSuggestionLoading,
+    TResult Function(T data)? sendSuggestionSuccess,
+    TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
+    required TResult orElse(),
+  }) {
+    if (getContactSuccess != null) {
+      return getContactSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AboutAppInitial<T> value) initial,
+    required TResult Function(AboutAppLoading<T> value) aboutAppLoading,
+    required TResult Function(AboutAppSuccess<T> value) aboutAppSuccess,
+    required TResult Function(AboutAppFailure<T> value) aboutAppFailure,
+    required TResult Function(TermsLoading<T> value) termsLoading,
+    required TResult Function(TermsSuccess<T> value) termsSuccess,
+    required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
+    required TResult Function(SendSuggestionLoading<T> value)
+        sendSuggestionLoading,
+    required TResult Function(SendSuggestionSuccess<T> value)
+        sendSuggestionSuccess,
+    required TResult Function(SendSuggestionFailure<T> value)
+        sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
+  }) {
+    return getContactSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AboutAppInitial<T> value)? initial,
+    TResult? Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult? Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult? Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult? Function(TermsLoading<T> value)? termsLoading,
+    TResult? Function(TermsSuccess<T> value)? termsSuccess,
+    TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
+    TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
+    TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
+    TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
+  }) {
+    return getContactSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AboutAppInitial<T> value)? initial,
+    TResult Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult Function(TermsLoading<T> value)? termsLoading,
+    TResult Function(TermsSuccess<T> value)? termsSuccess,
+    TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
+    TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
+    TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
+    TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
+    required TResult orElse(),
+  }) {
+    if (getContactSuccess != null) {
+      return getContactSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetContactSuccess<T> implements AboutAppState<T> {
+  const factory GetContactSuccess(final T data) = _$GetContactSuccessImpl<T>;
+
+  T get data;
+
+  /// Create a copy of AboutAppState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetContactSuccessImplCopyWith<T, _$GetContactSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetContactFailureImplCopyWith<T, $Res> {
+  factory _$$GetContactFailureImplCopyWith(_$GetContactFailureImpl<T> value,
+          $Res Function(_$GetContactFailureImpl<T>) then) =
+      __$$GetContactFailureImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String errorMessage});
+}
+
+/// @nodoc
+class __$$GetContactFailureImplCopyWithImpl<T, $Res>
+    extends _$AboutAppStateCopyWithImpl<T, $Res, _$GetContactFailureImpl<T>>
+    implements _$$GetContactFailureImplCopyWith<T, $Res> {
+  __$$GetContactFailureImplCopyWithImpl(_$GetContactFailureImpl<T> _value,
+      $Res Function(_$GetContactFailureImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AboutAppState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorMessage = null,
+  }) {
+    return _then(_$GetContactFailureImpl<T>(
+      null == errorMessage
+          ? _value.errorMessage
+          : errorMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetContactFailureImpl<T> implements GetContactFailure<T> {
+  const _$GetContactFailureImpl(this.errorMessage);
+
+  @override
+  final String errorMessage;
+
+  @override
+  String toString() {
+    return 'AboutAppState<$T>.getContactFailure(errorMessage: $errorMessage)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetContactFailureImpl<T> &&
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorMessage);
+
+  /// Create a copy of AboutAppState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetContactFailureImplCopyWith<T, _$GetContactFailureImpl<T>>
+      get copyWith =>
+          __$$GetContactFailureImplCopyWithImpl<T, _$GetContactFailureImpl<T>>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() aboutAppLoading,
+    required TResult Function(T data) aboutAppSuccess,
+    required TResult Function(String errorMessage) aboutAppFailure,
+    required TResult Function() termsLoading,
+    required TResult Function(T data) termsSuccess,
+    required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
+    required TResult Function() sendSuggestionLoading,
+    required TResult Function(T data) sendSuggestionSuccess,
+    required TResult Function(String errorMessage) sendSuggestionFailure,
+    required TResult Function() getContactLoading,
+    required TResult Function(T data) getContactSuccess,
+    required TResult Function(String errorMessage) getContactFailure,
+  }) {
+    return getContactFailure(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? aboutAppLoading,
+    TResult? Function(T data)? aboutAppSuccess,
+    TResult? Function(String errorMessage)? aboutAppFailure,
+    TResult? Function()? termsLoading,
+    TResult? Function(T data)? termsSuccess,
+    TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
+    TResult? Function()? sendSuggestionLoading,
+    TResult? Function(T data)? sendSuggestionSuccess,
+    TResult? Function(String errorMessage)? sendSuggestionFailure,
+    TResult? Function()? getContactLoading,
+    TResult? Function(T data)? getContactSuccess,
+    TResult? Function(String errorMessage)? getContactFailure,
+  }) {
+    return getContactFailure?.call(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? aboutAppLoading,
+    TResult Function(T data)? aboutAppSuccess,
+    TResult Function(String errorMessage)? aboutAppFailure,
+    TResult Function()? termsLoading,
+    TResult Function(T data)? termsSuccess,
+    TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
+    TResult Function()? sendSuggestionLoading,
+    TResult Function(T data)? sendSuggestionSuccess,
+    TResult Function(String errorMessage)? sendSuggestionFailure,
+    TResult Function()? getContactLoading,
+    TResult Function(T data)? getContactSuccess,
+    TResult Function(String errorMessage)? getContactFailure,
+    required TResult orElse(),
+  }) {
+    if (getContactFailure != null) {
+      return getContactFailure(errorMessage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AboutAppInitial<T> value) initial,
+    required TResult Function(AboutAppLoading<T> value) aboutAppLoading,
+    required TResult Function(AboutAppSuccess<T> value) aboutAppSuccess,
+    required TResult Function(AboutAppFailure<T> value) aboutAppFailure,
+    required TResult Function(TermsLoading<T> value) termsLoading,
+    required TResult Function(TermsSuccess<T> value) termsSuccess,
+    required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
+    required TResult Function(SendSuggestionLoading<T> value)
+        sendSuggestionLoading,
+    required TResult Function(SendSuggestionSuccess<T> value)
+        sendSuggestionSuccess,
+    required TResult Function(SendSuggestionFailure<T> value)
+        sendSuggestionFailure,
+    required TResult Function(GetContactLoading<T> value) getContactLoading,
+    required TResult Function(GetContactSuccess<T> value) getContactSuccess,
+    required TResult Function(GetContactFailure<T> value) getContactFailure,
+  }) {
+    return getContactFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AboutAppInitial<T> value)? initial,
+    TResult? Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult? Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult? Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult? Function(TermsLoading<T> value)? termsLoading,
+    TResult? Function(TermsSuccess<T> value)? termsSuccess,
+    TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
+    TResult? Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
+    TResult? Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
+    TResult? Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult? Function(GetContactLoading<T> value)? getContactLoading,
+    TResult? Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult? Function(GetContactFailure<T> value)? getContactFailure,
+  }) {
+    return getContactFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AboutAppInitial<T> value)? initial,
+    TResult Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult Function(TermsLoading<T> value)? termsLoading,
+    TResult Function(TermsSuccess<T> value)? termsSuccess,
+    TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
+    TResult Function(SendSuggestionLoading<T> value)? sendSuggestionLoading,
+    TResult Function(SendSuggestionSuccess<T> value)? sendSuggestionSuccess,
+    TResult Function(SendSuggestionFailure<T> value)? sendSuggestionFailure,
+    TResult Function(GetContactLoading<T> value)? getContactLoading,
+    TResult Function(GetContactSuccess<T> value)? getContactSuccess,
+    TResult Function(GetContactFailure<T> value)? getContactFailure,
+    required TResult orElse(),
+  }) {
+    if (getContactFailure != null) {
+      return getContactFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetContactFailure<T> implements AboutAppState<T> {
+  const factory GetContactFailure(final String errorMessage) =
+      _$GetContactFailureImpl<T>;
+
+  String get errorMessage;
+
+  /// Create a copy of AboutAppState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetContactFailureImplCopyWith<T, _$GetContactFailureImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }

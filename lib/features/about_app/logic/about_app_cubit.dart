@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/helpers/helper_methods.dart';
 import 'package:thimar/features/about_app/data/models/suggestions_and_complaints_request_body.dart';
 import 'package:thimar/features/about_app/data/repos/about_app_repos.dart';
@@ -17,6 +18,7 @@ class AboutAppCubit extends Cubit<AboutAppState> {
   final messageController = TextEditingController();
 
   final formKey = GlobalKey<FormState>();
+
   Future<void> getAboutApp() async {
     emit(AboutAppState.aboutAppLoading());
     final response = await aboutAppRepos.getAboutApp();
@@ -57,7 +59,7 @@ class AboutAppCubit extends Cubit<AboutAppState> {
     });
   }
 
-  Future<void> sendSuggestionAndComplaints() async {
+  Future<void> sendSuggestionAndComplaints(BuildContext context) async {
     emit(AboutAppState.sendSuggestionLoading());
     final response = await aboutAppRepos
         .sendSuggestionsAndComplaints(SuggestionsAndComplaintsRequestBody(
@@ -69,8 +71,20 @@ class AboutAppCubit extends Cubit<AboutAppState> {
     response.when(success: (data) {
       emit(AboutAppState.sendSuggestionSuccess(data));
       showToast(message: data.message.toString());
+      context.pop();
     }, failure: (error) {
       emit(AboutAppState.sendSuggestionFailure(error.message.toString()));
+      showToast(message: error.message.toString(), isError: true);
+    });
+  }
+
+  Future<void> getContactData() async {
+    emit(AboutAppState.getContactLoading());
+    final response = await aboutAppRepos.getContactData();
+    response.when(success: (data) {
+      emit(AboutAppState.getContactSuccess(data));
+    }, failure: (error) {
+      emit(AboutAppState.getContactFailure(error.message.toString()));
     });
   }
 }
