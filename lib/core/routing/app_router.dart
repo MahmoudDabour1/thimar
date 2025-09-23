@@ -7,6 +7,7 @@ import 'package:thimar/features/layout/presentation/bottom_nav_bar_layout.dart';
 import 'package:thimar/features/product_details/presentation/product_details_screen.dart';
 import 'package:thimar/features/splash/presentation/splash_screen.dart';
 
+import '../../features/about_app/presentation/contact_screen.dart';
 import '../../features/about_app/presentation/fqs_screen.dart';
 import '../../features/about_app/presentation/policy_screen.dart';
 import '../../features/about_app/presentation/suggestions_and_complaints_screen.dart';
@@ -127,6 +128,10 @@ class AppRouter {
       case Routes.suggestionsAndComplaintsScreen:
         return MaterialPageRoute(
           builder: (_) => SuggestionsAndComplaintsScreen(),
+        );
+      case Routes.contactScreen:
+        return MaterialPageRoute(
+          builder: (_) => ContactScreen(),
         );
     }
     return null;

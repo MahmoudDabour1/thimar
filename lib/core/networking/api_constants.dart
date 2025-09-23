@@ -25,6 +25,7 @@ class ApiConstants {
   static const String faqsEndPoint = "/faqs";
   static const String policyEndPoint = "/policy";
   static const String suggestionsAndComplaintsEndPoint = "/contact";
+  static const String getContactEndPoint = "/contact";
 }
 
 class ApiErrors {
