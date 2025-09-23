@@ -3,8 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/core/utils/spacing.dart';
+import 'package:thimar/features/address/logic/address_cubit.dart';
 import 'package:thimar/features/profile/presentation/widgets/profile_custom_row_widget.dart';
 
+import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_assets.dart';
 
@@ -13,6 +15,7 @@ class ProfileListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final addressCubit = sl<AddressCubit>();
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Column(
@@ -34,7 +37,9 @@ class ProfileListWidget extends StatelessWidget {
           ProfileCustomRowWidget(
             title: "العناوين",
             iconPath: AppAssets.locationImage,
-            onTap: () {},
+            onTap: () async {
+              context.pushNamed(Routes.addressScreen);
+            },
           ),
           ProfileCustomRowWidget(
             title: "الدفع",

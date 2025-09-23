@@ -12,6 +12,8 @@ import '../../features/about_app/presentation/fqs_screen.dart';
 import '../../features/about_app/presentation/policy_screen.dart';
 import '../../features/about_app/presentation/suggestions_and_complaints_screen.dart';
 import '../../features/about_app/presentation/terms_screen.dart';
+import '../../features/address/presentation/address_screen.dart';
+import '../../features/address/presentation/insert_address_screen.dart';
 import '../../features/auth/forget_password/presentation/forget_password_screen.dart';
 import '../../features/auth/new_password/presentation/new_password_screen.dart';
 import '../../features/auth/register/presentation/register_screen.dart';
@@ -132,6 +134,28 @@ class AppRouter {
       case Routes.contactScreen:
         return MaterialPageRoute(
           builder: (_) => ContactScreen(),
+        );
+      case Routes.addressScreen:
+        return MaterialPageRoute(
+          builder: (_) => AddressScreen(),
+        );
+      case Routes.insertAddressScreen:
+        final args = settings.arguments as Map<String, dynamic>?;
+        final type = args?["type"] as String? ?? "";
+        final address = args?["address"] as String? ?? "";
+        final description = args?["description"] as String? ?? "";
+        final phoneNumber = args?["phoneNumber"] as String? ?? "";
+        final addressId = args?["addressId"] as int? ?? 0;
+        final isEdit = args?["isEdit"] as bool? ?? false;
+        return MaterialPageRoute(
+          builder: (_) => InsertAddressScreen(
+            type: type,
+            address: address,
+            description: description,
+            phoneNumber: phoneNumber,
+            addressId: addressId.toString(),
+            isEdit: isEdit,
+          ),
         );
     }
     return null;
