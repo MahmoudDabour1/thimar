@@ -83,5 +83,23 @@ class ProfileCubit extends Cubit<ProfileState> {
     });
   }
 
+  Future<void> getFaqs() async {
+    emit(ProfileState.faqsLoading());
+    final response = await profileRepo.getFaqs();
+    response.when(success: (data) {
+      emit(ProfileState.faqsSuccess(data));
+    }, failure: (error) {
+      emit(ProfileState.faqsFailure(error.message.toString()));
+    });
+  }
 
+  Future<void> getPolicy() async {
+    emit(ProfileState.policyLoading());
+    final response = await profileRepo.getPolicy();
+    response.when(success: (data) {
+      emit(ProfileState.policySuccess(data));
+    }, failure: (error) {
+      emit(ProfileState.policyFailure(error.message.toString()));
+    });
+  }
 }

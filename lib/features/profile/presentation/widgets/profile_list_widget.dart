@@ -47,12 +47,16 @@ class ProfileListWidget extends StatelessWidget {
           ProfileCustomRowWidget(
             title: "أسئلة متكررة",
             iconPath: AppAssets.questionImage,
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(Routes.fqsScreen);
+            },
           ),
           ProfileCustomRowWidget(
             title: "سياسة الخصوصية",
             iconPath: AppAssets.checkImage,
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(Routes.policyScreen);
+            },
           ),
           ProfileCustomRowWidget(
             title: "تواصل معنا",

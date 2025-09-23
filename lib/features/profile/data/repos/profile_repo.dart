@@ -4,6 +4,8 @@ import 'package:thimar/core/networking/api_error_handler.dart';
 import 'package:thimar/core/networking/api_result.dart';
 import 'package:thimar/features/profile/data/data_sources/profile_remote_data_source.dart';
 import 'package:thimar/features/profile/data/models/about_app_response_model.dart';
+import 'package:thimar/features/profile/data/models/faqs_response_model.dart';
+import 'package:thimar/features/profile/data/models/policy_response_model.dart';
 import 'package:thimar/features/profile/data/models/terms_response_model.dart';
 import 'package:thimar/features/profile/data/models/update_profile_data_response_model.dart';
 
@@ -19,6 +21,10 @@ abstract class ProfileRepo {
   Future<ApiResult<AboutAppResponseModel>> getAboutApp();
 
   Future<ApiResult<TermsResponseModel>> getTerms();
+
+  Future<ApiResult<FaqsResponseModel>> getFaqs();
+
+  Future<ApiResult<PolicyResponseModel>> getPolicy();
 }
 
 class ProfileRepoImpl implements ProfileRepo {
@@ -78,6 +84,26 @@ class ProfileRepoImpl implements ProfileRepo {
   Future<ApiResult<TermsResponseModel>> getTerms() async {
     try {
       final response = await profileRemoteDataSource.getTerms();
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  @override
+  Future<ApiResult<FaqsResponseModel>> getFaqs() async {
+    try {
+      final response = await profileRemoteDataSource.getFeqs();
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  @override
+  Future<ApiResult<PolicyResponseModel>> getPolicy() async {
+    try {
+      final response = await profileRemoteDataSource.getPolicy();
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));

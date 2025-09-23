@@ -5,6 +5,7 @@ import 'package:thimar/features/cart/presentation/cart_screen.dart';
 import 'package:thimar/features/layout/presentation/bottom_nav_bar_layout.dart';
 import 'package:thimar/features/product_details/presentation/product_details_screen.dart';
 import 'package:thimar/features/profile/presentation/about_app_screen.dart';
+import 'package:thimar/features/profile/presentation/policy_screen.dart';
 import 'package:thimar/features/splash/presentation/splash_screen.dart';
 
 import '../../features/auth/forget_password/presentation/forget_password_screen.dart';
@@ -13,6 +14,7 @@ import '../../features/auth/register/presentation/register_screen.dart';
 import '../../features/auth/verifi_code/presentation/verified_screen.dart';
 import '../../features/checkout/presentation/checkout_screen.dart';
 import '../../features/home/presentation/category_products_screen.dart';
+import '../../features/profile/presentation/fqs_screen.dart';
 import '../../features/profile/presentation/profile_data_screen.dart';
 import '../../features/profile/presentation/terms_screen.dart';
 import '../../features/walltet/presentation/all_transaction_history_screen.dart';
@@ -112,6 +114,12 @@ class AppRouter {
       case Routes.allTransactionHistoryScreen:
         return MaterialPageRoute(
           builder: (_) => AllTransactionHistoryScreen(),
+        );case Routes.fqsScreen:
+        return MaterialPageRoute(
+          builder: (_) => FqsScreen(),
+        );case Routes.policyScreen:
+        return MaterialPageRoute(
+          builder: (_) => PolicyScreen(),
         );
     }
     return null;

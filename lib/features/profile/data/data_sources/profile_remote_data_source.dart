@@ -1,7 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:thimar/features/profile/data/models/about_app_response_model.dart';
-import 'package:thimar/features/walltet/data/models/get_wallet_response_model.dart';
+import 'package:thimar/features/profile/data/models/faqs_response_model.dart';
+import 'package:thimar/features/profile/data/models/policy_response_model.dart';
 import 'package:thimar/features/profile/data/models/terms_response_model.dart';
 import 'package:thimar/features/profile/data/models/update_profile_data_response_model.dart';
 
@@ -29,4 +30,10 @@ abstract class ProfileRemoteDataSource {
 
   @GET(ApiConstants.termsEndPoint)
   Future<TermsResponseModel> getTerms();
+
+  @GET(ApiConstants.faqsEndPoint)
+  Future<FaqsResponseModel> getFeqs();
+
+  @GET(ApiConstants.policyEndPoint)
+  Future<PolicyResponseModel> getPolicy();
 }
