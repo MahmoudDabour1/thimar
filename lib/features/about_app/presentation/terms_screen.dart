@@ -2,38 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:thimar/core/widgets/app_custom_app_bar.dart';
-import 'package:thimar/features/profile/data/models/terms_response_model.dart';
+import 'package:thimar/features/about_app/data/models/terms_response_model.dart';
+import 'package:thimar/features/about_app/logic/about_app_state.dart';
 import 'package:thimar/features/profile/logic/profile_cubit.dart';
 
 import '../../../core/di/dependency_injection.dart';
 import '../../../core/theming/app_colors.dart';
-import '../logic/profile_state.dart';
+import '../../profile/logic/profile_state.dart';
+import '../logic/about_app_cubit.dart';
 
-class TermsScreen extends StatefulWidget {
+class TermsScreen extends StatelessWidget {
   const TermsScreen({super.key});
 
   @override
-  State<TermsScreen> createState() => _TermsScreenState();
-}
-
-class _TermsScreenState extends State<TermsScreen> {
-  final cubit = sl<ProfileCubit>();
-
-  @override
-  void initState() {
-    super.initState();
-    cubit.getTerms();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    final cubit = sl<AboutAppCubit>();
+
     return BlocProvider.value(
-      value: cubit,
+      value: cubit..getTerms(),
       child: Scaffold(
         appBar: AppCustomAppBar(
           appBarTitle: "سياسة الخصوصية",
         ),
-        body: BlocBuilder<ProfileCubit, ProfileState>(
+        body: BlocBuilder<AboutAppCubit,AboutAppState>(
           builder: (context, state) {
             return state.maybeWhen(
                 termsLoading: () => const Center(

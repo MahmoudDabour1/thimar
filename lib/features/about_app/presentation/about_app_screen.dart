@@ -4,34 +4,26 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/theming/app_assets.dart';
 import 'package:thimar/core/utils/spacing.dart';
 import 'package:thimar/core/widgets/app_custom_app_bar.dart';
-import 'package:thimar/features/profile/data/models/about_app_response_model.dart';
+import 'package:thimar/features/about_app/data/models/about_app_response_model.dart';
+import 'package:thimar/features/about_app/logic/about_app_cubit.dart';
 import 'package:thimar/features/profile/logic/profile_cubit.dart';
 
 import '../../../core/di/dependency_injection.dart';
 import '../../../core/theming/app_colors.dart';
-import '../logic/profile_state.dart';
+import '../../profile/logic/profile_state.dart';
 import 'package:flutter_html/flutter_html.dart';
 
+import '../logic/about_app_state.dart';
 
-class AboutAppScreen extends StatefulWidget {
+
+class AboutAppScreen extends StatelessWidget {
   const AboutAppScreen({super.key});
 
   @override
-  State<AboutAppScreen> createState() => _AboutAppScreenState();
-}
+  Widget build(BuildContext context) {  final cubit = sl<AboutAppCubit>();
 
-class _AboutAppScreenState extends State<AboutAppScreen> {
-  final cubit = sl<ProfileCubit>();
-  @override
-  void initState() {
-    super.initState();
-    cubit.getAboutApp();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocProvider.value(
-      value: cubit,
+  return BlocProvider.value(
+      value: cubit..getAboutApp(),
       child: Scaffold(
         appBar: AppCustomAppBar(appBarTitle: "عن التطبيق"),
         body: SafeArea(
@@ -48,7 +40,7 @@ class _AboutAppScreenState extends State<AboutAppScreen> {
                   ),
                 ),
                 verticalSpace(16),
-                BlocBuilder<ProfileCubit, ProfileState>(
+                BlocBuilder<AboutAppCubit,AboutAppState>(
                   builder: (context, state) {
                     return state.maybeWhen(
                         aboutAppLoading: () => Center(

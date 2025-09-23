@@ -1,7 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
-part 'terms_response_model.g.dart';
+
+part 'policy_response_model.g.dart';
 @JsonSerializable()
-class TermsResponseModel {
+class PolicyResponseModel {
   @JsonKey(name: "data")
   final Data? data;
   @JsonKey(name: "status")
@@ -9,24 +10,25 @@ class TermsResponseModel {
   @JsonKey(name: "message")
   final String? message;
 
-  TermsResponseModel({
+  PolicyResponseModel({
     this.data,
     this.status,
     this.message,
   });
 
-  factory TermsResponseModel.fromJson(Map<String, dynamic> json) => _$TermsResponseModelFromJson(json);
+  factory PolicyResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$PolicyResponseModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$TermsResponseModelToJson(this);
+  Map<String, dynamic> toJson() => _$PolicyResponseModelToJson(this);
 }
 
 @JsonSerializable()
 class Data {
-  @JsonKey(name: "terms")
-  final String? terms;
+  @JsonKey(name: "policy")
+  final String? policy;
 
   Data({
-    this.terms,
+    this.policy,
   });
 
   factory Data.fromJson(Map<String, dynamic> json) => _$DataFromJson(json);

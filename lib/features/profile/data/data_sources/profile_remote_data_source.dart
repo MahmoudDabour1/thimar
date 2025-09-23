@@ -1,8 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:thimar/features/profile/data/models/about_app_response_model.dart';
-import 'package:thimar/features/walltet/data/models/get_wallet_response_model.dart';
-import 'package:thimar/features/profile/data/models/terms_response_model.dart';
 import 'package:thimar/features/profile/data/models/update_profile_data_response_model.dart';
 
 import '../../../../core/networking/api_constants.dart';
@@ -23,10 +20,4 @@ abstract class ProfileRemoteDataSource {
   Future<UpdateProfileDataResponseModel> updateProfileData(
     @Body() FormData body,
   );
-
-  @GET(ApiConstants.aboutAppEndPoint)
-  Future<AboutAppResponseModel> getAboutApp();
-
-  @GET(ApiConstants.termsEndPoint)
-  Future<TermsResponseModel> getTerms();
 }

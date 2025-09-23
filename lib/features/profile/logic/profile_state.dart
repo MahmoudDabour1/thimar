@@ -36,5 +36,15 @@ class ProfileState<T> with _$ProfileState {
 
   const factory ProfileState.termsFailure(String errorMessage) = TermsFailure;
 
+  const factory ProfileState.faqsLoading() = FaqsLoading;
 
+  const factory ProfileState.faqsSuccess(T data) = FaqsSuccess;
+
+  const factory ProfileState.faqsFailure(String errorMessage) = FaqsFailure;
+
+  const factory ProfileState.policyLoading() = PolicyLoading;
+
+  const factory ProfileState.policySuccess(T data) = PolicySuccess;
+
+  const factory ProfileState.policyFailure(String errorMessage) = PolicyFailure;
 }

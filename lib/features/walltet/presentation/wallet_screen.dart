@@ -114,7 +114,9 @@ class _WalletScreenState extends State<WalletScreen> {
                 Text("سجل المعاملات", style: AppStyles.font16GreenBold),
                 Spacer(),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushNamed(Routes.allTransactionHistoryScreen);
+                  },
                   child: Text("عرض الكل", style: AppStyles.font16GreenMedium),
                 ),
               ],
@@ -126,16 +128,17 @@ class _WalletScreenState extends State<WalletScreen> {
               itemCount: data.data?.length ?? 0,
               itemBuilder: (context, index) {
                 final transaction = data.data?[index];
-        
+
                 final rawDate = transaction?.date?.toString() ?? "";
                 String formattedDate = rawDate;
-        
+
                 try {
                   final dateTime = DateTime.parse(rawDate);
-        
+
                   final monthName = DateFormat.MMMM('ar').format(dateTime);
-        
-                  formattedDate = " ${dateTime.day} $monthName ${dateTime.year}";
+
+                  formattedDate =
+                      " ${dateTime.day} $monthName ${dateTime.year}";
                 } catch (e) {
                   formattedDate = rawDate;
                 }

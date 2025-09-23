@@ -32,6 +32,12 @@ mixin _$ProfileState<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +56,12 @@ mixin _$ProfileState<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -68,6 +80,12 @@ mixin _$ProfileState<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -90,6 +108,12 @@ mixin _$ProfileState<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -108,6 +132,12 @@ mixin _$ProfileState<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -126,6 +156,12 @@ mixin _$ProfileState<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -207,6 +243,12 @@ class _$ProfileInitialImpl<T> implements ProfileInitial<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return initial();
   }
@@ -228,6 +270,12 @@ class _$ProfileInitialImpl<T> implements ProfileInitial<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return initial?.call();
   }
@@ -249,6 +297,12 @@ class _$ProfileInitialImpl<T> implements ProfileInitial<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -277,6 +331,12 @@ class _$ProfileInitialImpl<T> implements ProfileInitial<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return initial(this);
   }
@@ -298,6 +358,12 @@ class _$ProfileInitialImpl<T> implements ProfileInitial<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return initial?.call(this);
   }
@@ -319,6 +385,12 @@ class _$ProfileInitialImpl<T> implements ProfileInitial<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -388,6 +460,12 @@ class _$GetProfileLoadingImpl<T> implements GetProfileLoading<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return getProfileLoading();
   }
@@ -409,6 +487,12 @@ class _$GetProfileLoadingImpl<T> implements GetProfileLoading<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return getProfileLoading?.call();
   }
@@ -430,6 +514,12 @@ class _$GetProfileLoadingImpl<T> implements GetProfileLoading<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (getProfileLoading != null) {
@@ -458,6 +548,12 @@ class _$GetProfileLoadingImpl<T> implements GetProfileLoading<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return getProfileLoading(this);
   }
@@ -479,6 +575,12 @@ class _$GetProfileLoadingImpl<T> implements GetProfileLoading<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return getProfileLoading?.call(this);
   }
@@ -500,6 +602,12 @@ class _$GetProfileLoadingImpl<T> implements GetProfileLoading<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (getProfileLoading != null) {
@@ -598,6 +706,12 @@ class _$GetProfileSuccessImpl<T> implements GetProfileSuccess<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return getProfileSuccess(data);
   }
@@ -619,6 +733,12 @@ class _$GetProfileSuccessImpl<T> implements GetProfileSuccess<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return getProfileSuccess?.call(data);
   }
@@ -640,6 +760,12 @@ class _$GetProfileSuccessImpl<T> implements GetProfileSuccess<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (getProfileSuccess != null) {
@@ -668,6 +794,12 @@ class _$GetProfileSuccessImpl<T> implements GetProfileSuccess<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return getProfileSuccess(this);
   }
@@ -689,6 +821,12 @@ class _$GetProfileSuccessImpl<T> implements GetProfileSuccess<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return getProfileSuccess?.call(this);
   }
@@ -710,6 +848,12 @@ class _$GetProfileSuccessImpl<T> implements GetProfileSuccess<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (getProfileSuccess != null) {
@@ -816,6 +960,12 @@ class _$GetProfileFailureImpl<T> implements GetProfileFailure<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return getProfileFailure(errorMessage);
   }
@@ -837,6 +987,12 @@ class _$GetProfileFailureImpl<T> implements GetProfileFailure<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return getProfileFailure?.call(errorMessage);
   }
@@ -858,6 +1014,12 @@ class _$GetProfileFailureImpl<T> implements GetProfileFailure<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (getProfileFailure != null) {
@@ -886,6 +1048,12 @@ class _$GetProfileFailureImpl<T> implements GetProfileFailure<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return getProfileFailure(this);
   }
@@ -907,6 +1075,12 @@ class _$GetProfileFailureImpl<T> implements GetProfileFailure<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return getProfileFailure?.call(this);
   }
@@ -928,6 +1102,12 @@ class _$GetProfileFailureImpl<T> implements GetProfileFailure<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (getProfileFailure != null) {
@@ -1007,6 +1187,12 @@ class _$UpdateProfileLoadingImpl<T> implements UpdateProfileLoading<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return updateProfileLoading();
   }
@@ -1028,6 +1214,12 @@ class _$UpdateProfileLoadingImpl<T> implements UpdateProfileLoading<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return updateProfileLoading?.call();
   }
@@ -1049,6 +1241,12 @@ class _$UpdateProfileLoadingImpl<T> implements UpdateProfileLoading<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (updateProfileLoading != null) {
@@ -1077,6 +1275,12 @@ class _$UpdateProfileLoadingImpl<T> implements UpdateProfileLoading<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return updateProfileLoading(this);
   }
@@ -1098,6 +1302,12 @@ class _$UpdateProfileLoadingImpl<T> implements UpdateProfileLoading<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return updateProfileLoading?.call(this);
   }
@@ -1119,6 +1329,12 @@ class _$UpdateProfileLoadingImpl<T> implements UpdateProfileLoading<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (updateProfileLoading != null) {
@@ -1217,6 +1433,12 @@ class _$UpdateProfileSuccessImpl<T> implements UpdateProfileSuccess<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return updateProfileSuccess(data);
   }
@@ -1238,6 +1460,12 @@ class _$UpdateProfileSuccessImpl<T> implements UpdateProfileSuccess<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return updateProfileSuccess?.call(data);
   }
@@ -1259,6 +1487,12 @@ class _$UpdateProfileSuccessImpl<T> implements UpdateProfileSuccess<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (updateProfileSuccess != null) {
@@ -1287,6 +1521,12 @@ class _$UpdateProfileSuccessImpl<T> implements UpdateProfileSuccess<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return updateProfileSuccess(this);
   }
@@ -1308,6 +1548,12 @@ class _$UpdateProfileSuccessImpl<T> implements UpdateProfileSuccess<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return updateProfileSuccess?.call(this);
   }
@@ -1329,6 +1575,12 @@ class _$UpdateProfileSuccessImpl<T> implements UpdateProfileSuccess<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (updateProfileSuccess != null) {
@@ -1436,6 +1688,12 @@ class _$UpdateProfileFailureImpl<T> implements UpdateProfileFailure<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return updateProfileFailure(errorMessage);
   }
@@ -1457,6 +1715,12 @@ class _$UpdateProfileFailureImpl<T> implements UpdateProfileFailure<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return updateProfileFailure?.call(errorMessage);
   }
@@ -1478,6 +1742,12 @@ class _$UpdateProfileFailureImpl<T> implements UpdateProfileFailure<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (updateProfileFailure != null) {
@@ -1506,6 +1776,12 @@ class _$UpdateProfileFailureImpl<T> implements UpdateProfileFailure<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return updateProfileFailure(this);
   }
@@ -1527,6 +1803,12 @@ class _$UpdateProfileFailureImpl<T> implements UpdateProfileFailure<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return updateProfileFailure?.call(this);
   }
@@ -1548,6 +1830,12 @@ class _$UpdateProfileFailureImpl<T> implements UpdateProfileFailure<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (updateProfileFailure != null) {
@@ -1625,6 +1913,12 @@ class _$AddImageImpl<T> implements AddImage<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return addImage();
   }
@@ -1646,6 +1940,12 @@ class _$AddImageImpl<T> implements AddImage<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return addImage?.call();
   }
@@ -1667,6 +1967,12 @@ class _$AddImageImpl<T> implements AddImage<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (addImage != null) {
@@ -1695,6 +2001,12 @@ class _$AddImageImpl<T> implements AddImage<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return addImage(this);
   }
@@ -1716,6 +2028,12 @@ class _$AddImageImpl<T> implements AddImage<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return addImage?.call(this);
   }
@@ -1737,6 +2055,12 @@ class _$AddImageImpl<T> implements AddImage<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (addImage != null) {
@@ -1805,6 +2129,12 @@ class _$AboutAppLoadingImpl<T> implements AboutAppLoading<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return aboutAppLoading();
   }
@@ -1826,6 +2156,12 @@ class _$AboutAppLoadingImpl<T> implements AboutAppLoading<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return aboutAppLoading?.call();
   }
@@ -1847,6 +2183,12 @@ class _$AboutAppLoadingImpl<T> implements AboutAppLoading<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (aboutAppLoading != null) {
@@ -1875,6 +2217,12 @@ class _$AboutAppLoadingImpl<T> implements AboutAppLoading<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return aboutAppLoading(this);
   }
@@ -1896,6 +2244,12 @@ class _$AboutAppLoadingImpl<T> implements AboutAppLoading<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return aboutAppLoading?.call(this);
   }
@@ -1917,6 +2271,12 @@ class _$AboutAppLoadingImpl<T> implements AboutAppLoading<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (aboutAppLoading != null) {
@@ -2014,6 +2374,12 @@ class _$AboutAppSuccessImpl<T> implements AboutAppSuccess<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return aboutAppSuccess(data);
   }
@@ -2035,6 +2401,12 @@ class _$AboutAppSuccessImpl<T> implements AboutAppSuccess<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return aboutAppSuccess?.call(data);
   }
@@ -2056,6 +2428,12 @@ class _$AboutAppSuccessImpl<T> implements AboutAppSuccess<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (aboutAppSuccess != null) {
@@ -2084,6 +2462,12 @@ class _$AboutAppSuccessImpl<T> implements AboutAppSuccess<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return aboutAppSuccess(this);
   }
@@ -2105,6 +2489,12 @@ class _$AboutAppSuccessImpl<T> implements AboutAppSuccess<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return aboutAppSuccess?.call(this);
   }
@@ -2126,6 +2516,12 @@ class _$AboutAppSuccessImpl<T> implements AboutAppSuccess<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (aboutAppSuccess != null) {
@@ -2231,6 +2627,12 @@ class _$AboutAppFailureImpl<T> implements AboutAppFailure<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return aboutAppFailure(errorMessage);
   }
@@ -2252,6 +2654,12 @@ class _$AboutAppFailureImpl<T> implements AboutAppFailure<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return aboutAppFailure?.call(errorMessage);
   }
@@ -2273,6 +2681,12 @@ class _$AboutAppFailureImpl<T> implements AboutAppFailure<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (aboutAppFailure != null) {
@@ -2301,6 +2715,12 @@ class _$AboutAppFailureImpl<T> implements AboutAppFailure<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return aboutAppFailure(this);
   }
@@ -2322,6 +2742,12 @@ class _$AboutAppFailureImpl<T> implements AboutAppFailure<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return aboutAppFailure?.call(this);
   }
@@ -2343,6 +2769,12 @@ class _$AboutAppFailureImpl<T> implements AboutAppFailure<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (aboutAppFailure != null) {
@@ -2420,6 +2852,12 @@ class _$TermsLoadingImpl<T> implements TermsLoading<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return termsLoading();
   }
@@ -2441,6 +2879,12 @@ class _$TermsLoadingImpl<T> implements TermsLoading<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return termsLoading?.call();
   }
@@ -2462,6 +2906,12 @@ class _$TermsLoadingImpl<T> implements TermsLoading<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (termsLoading != null) {
@@ -2490,6 +2940,12 @@ class _$TermsLoadingImpl<T> implements TermsLoading<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return termsLoading(this);
   }
@@ -2511,6 +2967,12 @@ class _$TermsLoadingImpl<T> implements TermsLoading<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return termsLoading?.call(this);
   }
@@ -2532,6 +2994,12 @@ class _$TermsLoadingImpl<T> implements TermsLoading<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (termsLoading != null) {
@@ -2629,6 +3097,12 @@ class _$TermsSuccessImpl<T> implements TermsSuccess<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return termsSuccess(data);
   }
@@ -2650,6 +3124,12 @@ class _$TermsSuccessImpl<T> implements TermsSuccess<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return termsSuccess?.call(data);
   }
@@ -2671,6 +3151,12 @@ class _$TermsSuccessImpl<T> implements TermsSuccess<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (termsSuccess != null) {
@@ -2699,6 +3185,12 @@ class _$TermsSuccessImpl<T> implements TermsSuccess<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return termsSuccess(this);
   }
@@ -2720,6 +3212,12 @@ class _$TermsSuccessImpl<T> implements TermsSuccess<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return termsSuccess?.call(this);
   }
@@ -2741,6 +3239,12 @@ class _$TermsSuccessImpl<T> implements TermsSuccess<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (termsSuccess != null) {
@@ -2846,6 +3350,12 @@ class _$TermsFailureImpl<T> implements TermsFailure<T> {
     required TResult Function() termsLoading,
     required TResult Function(T data) termsSuccess,
     required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
   }) {
     return termsFailure(errorMessage);
   }
@@ -2867,6 +3377,12 @@ class _$TermsFailureImpl<T> implements TermsFailure<T> {
     TResult? Function()? termsLoading,
     TResult? Function(T data)? termsSuccess,
     TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
   }) {
     return termsFailure?.call(errorMessage);
   }
@@ -2888,6 +3404,12 @@ class _$TermsFailureImpl<T> implements TermsFailure<T> {
     TResult Function()? termsLoading,
     TResult Function(T data)? termsSuccess,
     TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
     required TResult orElse(),
   }) {
     if (termsFailure != null) {
@@ -2916,6 +3438,12 @@ class _$TermsFailureImpl<T> implements TermsFailure<T> {
     required TResult Function(TermsLoading<T> value) termsLoading,
     required TResult Function(TermsSuccess<T> value) termsSuccess,
     required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
   }) {
     return termsFailure(this);
   }
@@ -2937,6 +3465,12 @@ class _$TermsFailureImpl<T> implements TermsFailure<T> {
     TResult? Function(TermsLoading<T> value)? termsLoading,
     TResult? Function(TermsSuccess<T> value)? termsSuccess,
     TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
   }) {
     return termsFailure?.call(this);
   }
@@ -2958,6 +3492,12 @@ class _$TermsFailureImpl<T> implements TermsFailure<T> {
     TResult Function(TermsLoading<T> value)? termsLoading,
     TResult Function(TermsSuccess<T> value)? termsSuccess,
     TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
     required TResult orElse(),
   }) {
     if (termsFailure != null) {
@@ -2976,5 +3516,1450 @@ abstract class TermsFailure<T> implements ProfileState<T> {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TermsFailureImplCopyWith<T, _$TermsFailureImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FaqsLoadingImplCopyWith<T, $Res> {
+  factory _$$FaqsLoadingImplCopyWith(_$FaqsLoadingImpl<T> value,
+          $Res Function(_$FaqsLoadingImpl<T>) then) =
+      __$$FaqsLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$FaqsLoadingImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$FaqsLoadingImpl<T>>
+    implements _$$FaqsLoadingImplCopyWith<T, $Res> {
+  __$$FaqsLoadingImplCopyWithImpl(
+      _$FaqsLoadingImpl<T> _value, $Res Function(_$FaqsLoadingImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FaqsLoadingImpl<T> implements FaqsLoading<T> {
+  const _$FaqsLoadingImpl();
+
+  @override
+  String toString() {
+    return 'ProfileState<$T>.faqsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$FaqsLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getProfileLoading,
+    required TResult Function(T data) getProfileSuccess,
+    required TResult Function(String errorMessage) getProfileFailure,
+    required TResult Function() updateProfileLoading,
+    required TResult Function(T data) updateProfileSuccess,
+    required TResult Function(String errorMessage) updateProfileFailure,
+    required TResult Function() addImage,
+    required TResult Function() aboutAppLoading,
+    required TResult Function(T data) aboutAppSuccess,
+    required TResult Function(String errorMessage) aboutAppFailure,
+    required TResult Function() termsLoading,
+    required TResult Function(T data) termsSuccess,
+    required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
+  }) {
+    return faqsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getProfileLoading,
+    TResult? Function(T data)? getProfileSuccess,
+    TResult? Function(String errorMessage)? getProfileFailure,
+    TResult? Function()? updateProfileLoading,
+    TResult? Function(T data)? updateProfileSuccess,
+    TResult? Function(String errorMessage)? updateProfileFailure,
+    TResult? Function()? addImage,
+    TResult? Function()? aboutAppLoading,
+    TResult? Function(T data)? aboutAppSuccess,
+    TResult? Function(String errorMessage)? aboutAppFailure,
+    TResult? Function()? termsLoading,
+    TResult? Function(T data)? termsSuccess,
+    TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
+  }) {
+    return faqsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getProfileLoading,
+    TResult Function(T data)? getProfileSuccess,
+    TResult Function(String errorMessage)? getProfileFailure,
+    TResult Function()? updateProfileLoading,
+    TResult Function(T data)? updateProfileSuccess,
+    TResult Function(String errorMessage)? updateProfileFailure,
+    TResult Function()? addImage,
+    TResult Function()? aboutAppLoading,
+    TResult Function(T data)? aboutAppSuccess,
+    TResult Function(String errorMessage)? aboutAppFailure,
+    TResult Function()? termsLoading,
+    TResult Function(T data)? termsSuccess,
+    TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
+    required TResult orElse(),
+  }) {
+    if (faqsLoading != null) {
+      return faqsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ProfileInitial<T> value) initial,
+    required TResult Function(GetProfileLoading<T> value) getProfileLoading,
+    required TResult Function(GetProfileSuccess<T> value) getProfileSuccess,
+    required TResult Function(GetProfileFailure<T> value) getProfileFailure,
+    required TResult Function(UpdateProfileLoading<T> value)
+        updateProfileLoading,
+    required TResult Function(UpdateProfileSuccess<T> value)
+        updateProfileSuccess,
+    required TResult Function(UpdateProfileFailure<T> value)
+        updateProfileFailure,
+    required TResult Function(AddImage<T> value) addImage,
+    required TResult Function(AboutAppLoading<T> value) aboutAppLoading,
+    required TResult Function(AboutAppSuccess<T> value) aboutAppSuccess,
+    required TResult Function(AboutAppFailure<T> value) aboutAppFailure,
+    required TResult Function(TermsLoading<T> value) termsLoading,
+    required TResult Function(TermsSuccess<T> value) termsSuccess,
+    required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
+  }) {
+    return faqsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ProfileInitial<T> value)? initial,
+    TResult? Function(GetProfileLoading<T> value)? getProfileLoading,
+    TResult? Function(GetProfileSuccess<T> value)? getProfileSuccess,
+    TResult? Function(GetProfileFailure<T> value)? getProfileFailure,
+    TResult? Function(UpdateProfileLoading<T> value)? updateProfileLoading,
+    TResult? Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult? Function(UpdateProfileFailure<T> value)? updateProfileFailure,
+    TResult? Function(AddImage<T> value)? addImage,
+    TResult? Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult? Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult? Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult? Function(TermsLoading<T> value)? termsLoading,
+    TResult? Function(TermsSuccess<T> value)? termsSuccess,
+    TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
+  }) {
+    return faqsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ProfileInitial<T> value)? initial,
+    TResult Function(GetProfileLoading<T> value)? getProfileLoading,
+    TResult Function(GetProfileSuccess<T> value)? getProfileSuccess,
+    TResult Function(GetProfileFailure<T> value)? getProfileFailure,
+    TResult Function(UpdateProfileLoading<T> value)? updateProfileLoading,
+    TResult Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult Function(UpdateProfileFailure<T> value)? updateProfileFailure,
+    TResult Function(AddImage<T> value)? addImage,
+    TResult Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult Function(TermsLoading<T> value)? termsLoading,
+    TResult Function(TermsSuccess<T> value)? termsSuccess,
+    TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
+    required TResult orElse(),
+  }) {
+    if (faqsLoading != null) {
+      return faqsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FaqsLoading<T> implements ProfileState<T> {
+  const factory FaqsLoading() = _$FaqsLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$FaqsSuccessImplCopyWith<T, $Res> {
+  factory _$$FaqsSuccessImplCopyWith(_$FaqsSuccessImpl<T> value,
+          $Res Function(_$FaqsSuccessImpl<T>) then) =
+      __$$FaqsSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$FaqsSuccessImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$FaqsSuccessImpl<T>>
+    implements _$$FaqsSuccessImplCopyWith<T, $Res> {
+  __$$FaqsSuccessImplCopyWithImpl(
+      _$FaqsSuccessImpl<T> _value, $Res Function(_$FaqsSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$FaqsSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FaqsSuccessImpl<T> implements FaqsSuccess<T> {
+  const _$FaqsSuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'ProfileState<$T>.faqsSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FaqsSuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FaqsSuccessImplCopyWith<T, _$FaqsSuccessImpl<T>> get copyWith =>
+      __$$FaqsSuccessImplCopyWithImpl<T, _$FaqsSuccessImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getProfileLoading,
+    required TResult Function(T data) getProfileSuccess,
+    required TResult Function(String errorMessage) getProfileFailure,
+    required TResult Function() updateProfileLoading,
+    required TResult Function(T data) updateProfileSuccess,
+    required TResult Function(String errorMessage) updateProfileFailure,
+    required TResult Function() addImage,
+    required TResult Function() aboutAppLoading,
+    required TResult Function(T data) aboutAppSuccess,
+    required TResult Function(String errorMessage) aboutAppFailure,
+    required TResult Function() termsLoading,
+    required TResult Function(T data) termsSuccess,
+    required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
+  }) {
+    return faqsSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getProfileLoading,
+    TResult? Function(T data)? getProfileSuccess,
+    TResult? Function(String errorMessage)? getProfileFailure,
+    TResult? Function()? updateProfileLoading,
+    TResult? Function(T data)? updateProfileSuccess,
+    TResult? Function(String errorMessage)? updateProfileFailure,
+    TResult? Function()? addImage,
+    TResult? Function()? aboutAppLoading,
+    TResult? Function(T data)? aboutAppSuccess,
+    TResult? Function(String errorMessage)? aboutAppFailure,
+    TResult? Function()? termsLoading,
+    TResult? Function(T data)? termsSuccess,
+    TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
+  }) {
+    return faqsSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getProfileLoading,
+    TResult Function(T data)? getProfileSuccess,
+    TResult Function(String errorMessage)? getProfileFailure,
+    TResult Function()? updateProfileLoading,
+    TResult Function(T data)? updateProfileSuccess,
+    TResult Function(String errorMessage)? updateProfileFailure,
+    TResult Function()? addImage,
+    TResult Function()? aboutAppLoading,
+    TResult Function(T data)? aboutAppSuccess,
+    TResult Function(String errorMessage)? aboutAppFailure,
+    TResult Function()? termsLoading,
+    TResult Function(T data)? termsSuccess,
+    TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
+    required TResult orElse(),
+  }) {
+    if (faqsSuccess != null) {
+      return faqsSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ProfileInitial<T> value) initial,
+    required TResult Function(GetProfileLoading<T> value) getProfileLoading,
+    required TResult Function(GetProfileSuccess<T> value) getProfileSuccess,
+    required TResult Function(GetProfileFailure<T> value) getProfileFailure,
+    required TResult Function(UpdateProfileLoading<T> value)
+        updateProfileLoading,
+    required TResult Function(UpdateProfileSuccess<T> value)
+        updateProfileSuccess,
+    required TResult Function(UpdateProfileFailure<T> value)
+        updateProfileFailure,
+    required TResult Function(AddImage<T> value) addImage,
+    required TResult Function(AboutAppLoading<T> value) aboutAppLoading,
+    required TResult Function(AboutAppSuccess<T> value) aboutAppSuccess,
+    required TResult Function(AboutAppFailure<T> value) aboutAppFailure,
+    required TResult Function(TermsLoading<T> value) termsLoading,
+    required TResult Function(TermsSuccess<T> value) termsSuccess,
+    required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
+  }) {
+    return faqsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ProfileInitial<T> value)? initial,
+    TResult? Function(GetProfileLoading<T> value)? getProfileLoading,
+    TResult? Function(GetProfileSuccess<T> value)? getProfileSuccess,
+    TResult? Function(GetProfileFailure<T> value)? getProfileFailure,
+    TResult? Function(UpdateProfileLoading<T> value)? updateProfileLoading,
+    TResult? Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult? Function(UpdateProfileFailure<T> value)? updateProfileFailure,
+    TResult? Function(AddImage<T> value)? addImage,
+    TResult? Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult? Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult? Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult? Function(TermsLoading<T> value)? termsLoading,
+    TResult? Function(TermsSuccess<T> value)? termsSuccess,
+    TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
+  }) {
+    return faqsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ProfileInitial<T> value)? initial,
+    TResult Function(GetProfileLoading<T> value)? getProfileLoading,
+    TResult Function(GetProfileSuccess<T> value)? getProfileSuccess,
+    TResult Function(GetProfileFailure<T> value)? getProfileFailure,
+    TResult Function(UpdateProfileLoading<T> value)? updateProfileLoading,
+    TResult Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult Function(UpdateProfileFailure<T> value)? updateProfileFailure,
+    TResult Function(AddImage<T> value)? addImage,
+    TResult Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult Function(TermsLoading<T> value)? termsLoading,
+    TResult Function(TermsSuccess<T> value)? termsSuccess,
+    TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
+    required TResult orElse(),
+  }) {
+    if (faqsSuccess != null) {
+      return faqsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FaqsSuccess<T> implements ProfileState<T> {
+  const factory FaqsSuccess(final T data) = _$FaqsSuccessImpl<T>;
+
+  T get data;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FaqsSuccessImplCopyWith<T, _$FaqsSuccessImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FaqsFailureImplCopyWith<T, $Res> {
+  factory _$$FaqsFailureImplCopyWith(_$FaqsFailureImpl<T> value,
+          $Res Function(_$FaqsFailureImpl<T>) then) =
+      __$$FaqsFailureImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String errorMessage});
+}
+
+/// @nodoc
+class __$$FaqsFailureImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$FaqsFailureImpl<T>>
+    implements _$$FaqsFailureImplCopyWith<T, $Res> {
+  __$$FaqsFailureImplCopyWithImpl(
+      _$FaqsFailureImpl<T> _value, $Res Function(_$FaqsFailureImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorMessage = null,
+  }) {
+    return _then(_$FaqsFailureImpl<T>(
+      null == errorMessage
+          ? _value.errorMessage
+          : errorMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FaqsFailureImpl<T> implements FaqsFailure<T> {
+  const _$FaqsFailureImpl(this.errorMessage);
+
+  @override
+  final String errorMessage;
+
+  @override
+  String toString() {
+    return 'ProfileState<$T>.faqsFailure(errorMessage: $errorMessage)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FaqsFailureImpl<T> &&
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorMessage);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FaqsFailureImplCopyWith<T, _$FaqsFailureImpl<T>> get copyWith =>
+      __$$FaqsFailureImplCopyWithImpl<T, _$FaqsFailureImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getProfileLoading,
+    required TResult Function(T data) getProfileSuccess,
+    required TResult Function(String errorMessage) getProfileFailure,
+    required TResult Function() updateProfileLoading,
+    required TResult Function(T data) updateProfileSuccess,
+    required TResult Function(String errorMessage) updateProfileFailure,
+    required TResult Function() addImage,
+    required TResult Function() aboutAppLoading,
+    required TResult Function(T data) aboutAppSuccess,
+    required TResult Function(String errorMessage) aboutAppFailure,
+    required TResult Function() termsLoading,
+    required TResult Function(T data) termsSuccess,
+    required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
+  }) {
+    return faqsFailure(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getProfileLoading,
+    TResult? Function(T data)? getProfileSuccess,
+    TResult? Function(String errorMessage)? getProfileFailure,
+    TResult? Function()? updateProfileLoading,
+    TResult? Function(T data)? updateProfileSuccess,
+    TResult? Function(String errorMessage)? updateProfileFailure,
+    TResult? Function()? addImage,
+    TResult? Function()? aboutAppLoading,
+    TResult? Function(T data)? aboutAppSuccess,
+    TResult? Function(String errorMessage)? aboutAppFailure,
+    TResult? Function()? termsLoading,
+    TResult? Function(T data)? termsSuccess,
+    TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
+  }) {
+    return faqsFailure?.call(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getProfileLoading,
+    TResult Function(T data)? getProfileSuccess,
+    TResult Function(String errorMessage)? getProfileFailure,
+    TResult Function()? updateProfileLoading,
+    TResult Function(T data)? updateProfileSuccess,
+    TResult Function(String errorMessage)? updateProfileFailure,
+    TResult Function()? addImage,
+    TResult Function()? aboutAppLoading,
+    TResult Function(T data)? aboutAppSuccess,
+    TResult Function(String errorMessage)? aboutAppFailure,
+    TResult Function()? termsLoading,
+    TResult Function(T data)? termsSuccess,
+    TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
+    required TResult orElse(),
+  }) {
+    if (faqsFailure != null) {
+      return faqsFailure(errorMessage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ProfileInitial<T> value) initial,
+    required TResult Function(GetProfileLoading<T> value) getProfileLoading,
+    required TResult Function(GetProfileSuccess<T> value) getProfileSuccess,
+    required TResult Function(GetProfileFailure<T> value) getProfileFailure,
+    required TResult Function(UpdateProfileLoading<T> value)
+        updateProfileLoading,
+    required TResult Function(UpdateProfileSuccess<T> value)
+        updateProfileSuccess,
+    required TResult Function(UpdateProfileFailure<T> value)
+        updateProfileFailure,
+    required TResult Function(AddImage<T> value) addImage,
+    required TResult Function(AboutAppLoading<T> value) aboutAppLoading,
+    required TResult Function(AboutAppSuccess<T> value) aboutAppSuccess,
+    required TResult Function(AboutAppFailure<T> value) aboutAppFailure,
+    required TResult Function(TermsLoading<T> value) termsLoading,
+    required TResult Function(TermsSuccess<T> value) termsSuccess,
+    required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
+  }) {
+    return faqsFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ProfileInitial<T> value)? initial,
+    TResult? Function(GetProfileLoading<T> value)? getProfileLoading,
+    TResult? Function(GetProfileSuccess<T> value)? getProfileSuccess,
+    TResult? Function(GetProfileFailure<T> value)? getProfileFailure,
+    TResult? Function(UpdateProfileLoading<T> value)? updateProfileLoading,
+    TResult? Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult? Function(UpdateProfileFailure<T> value)? updateProfileFailure,
+    TResult? Function(AddImage<T> value)? addImage,
+    TResult? Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult? Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult? Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult? Function(TermsLoading<T> value)? termsLoading,
+    TResult? Function(TermsSuccess<T> value)? termsSuccess,
+    TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
+  }) {
+    return faqsFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ProfileInitial<T> value)? initial,
+    TResult Function(GetProfileLoading<T> value)? getProfileLoading,
+    TResult Function(GetProfileSuccess<T> value)? getProfileSuccess,
+    TResult Function(GetProfileFailure<T> value)? getProfileFailure,
+    TResult Function(UpdateProfileLoading<T> value)? updateProfileLoading,
+    TResult Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult Function(UpdateProfileFailure<T> value)? updateProfileFailure,
+    TResult Function(AddImage<T> value)? addImage,
+    TResult Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult Function(TermsLoading<T> value)? termsLoading,
+    TResult Function(TermsSuccess<T> value)? termsSuccess,
+    TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
+    required TResult orElse(),
+  }) {
+    if (faqsFailure != null) {
+      return faqsFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FaqsFailure<T> implements ProfileState<T> {
+  const factory FaqsFailure(final String errorMessage) = _$FaqsFailureImpl<T>;
+
+  String get errorMessage;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FaqsFailureImplCopyWith<T, _$FaqsFailureImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PolicyLoadingImplCopyWith<T, $Res> {
+  factory _$$PolicyLoadingImplCopyWith(_$PolicyLoadingImpl<T> value,
+          $Res Function(_$PolicyLoadingImpl<T>) then) =
+      __$$PolicyLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$PolicyLoadingImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$PolicyLoadingImpl<T>>
+    implements _$$PolicyLoadingImplCopyWith<T, $Res> {
+  __$$PolicyLoadingImplCopyWithImpl(_$PolicyLoadingImpl<T> _value,
+      $Res Function(_$PolicyLoadingImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$PolicyLoadingImpl<T> implements PolicyLoading<T> {
+  const _$PolicyLoadingImpl();
+
+  @override
+  String toString() {
+    return 'ProfileState<$T>.policyLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$PolicyLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getProfileLoading,
+    required TResult Function(T data) getProfileSuccess,
+    required TResult Function(String errorMessage) getProfileFailure,
+    required TResult Function() updateProfileLoading,
+    required TResult Function(T data) updateProfileSuccess,
+    required TResult Function(String errorMessage) updateProfileFailure,
+    required TResult Function() addImage,
+    required TResult Function() aboutAppLoading,
+    required TResult Function(T data) aboutAppSuccess,
+    required TResult Function(String errorMessage) aboutAppFailure,
+    required TResult Function() termsLoading,
+    required TResult Function(T data) termsSuccess,
+    required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
+  }) {
+    return policyLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getProfileLoading,
+    TResult? Function(T data)? getProfileSuccess,
+    TResult? Function(String errorMessage)? getProfileFailure,
+    TResult? Function()? updateProfileLoading,
+    TResult? Function(T data)? updateProfileSuccess,
+    TResult? Function(String errorMessage)? updateProfileFailure,
+    TResult? Function()? addImage,
+    TResult? Function()? aboutAppLoading,
+    TResult? Function(T data)? aboutAppSuccess,
+    TResult? Function(String errorMessage)? aboutAppFailure,
+    TResult? Function()? termsLoading,
+    TResult? Function(T data)? termsSuccess,
+    TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
+  }) {
+    return policyLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getProfileLoading,
+    TResult Function(T data)? getProfileSuccess,
+    TResult Function(String errorMessage)? getProfileFailure,
+    TResult Function()? updateProfileLoading,
+    TResult Function(T data)? updateProfileSuccess,
+    TResult Function(String errorMessage)? updateProfileFailure,
+    TResult Function()? addImage,
+    TResult Function()? aboutAppLoading,
+    TResult Function(T data)? aboutAppSuccess,
+    TResult Function(String errorMessage)? aboutAppFailure,
+    TResult Function()? termsLoading,
+    TResult Function(T data)? termsSuccess,
+    TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
+    required TResult orElse(),
+  }) {
+    if (policyLoading != null) {
+      return policyLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ProfileInitial<T> value) initial,
+    required TResult Function(GetProfileLoading<T> value) getProfileLoading,
+    required TResult Function(GetProfileSuccess<T> value) getProfileSuccess,
+    required TResult Function(GetProfileFailure<T> value) getProfileFailure,
+    required TResult Function(UpdateProfileLoading<T> value)
+        updateProfileLoading,
+    required TResult Function(UpdateProfileSuccess<T> value)
+        updateProfileSuccess,
+    required TResult Function(UpdateProfileFailure<T> value)
+        updateProfileFailure,
+    required TResult Function(AddImage<T> value) addImage,
+    required TResult Function(AboutAppLoading<T> value) aboutAppLoading,
+    required TResult Function(AboutAppSuccess<T> value) aboutAppSuccess,
+    required TResult Function(AboutAppFailure<T> value) aboutAppFailure,
+    required TResult Function(TermsLoading<T> value) termsLoading,
+    required TResult Function(TermsSuccess<T> value) termsSuccess,
+    required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
+  }) {
+    return policyLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ProfileInitial<T> value)? initial,
+    TResult? Function(GetProfileLoading<T> value)? getProfileLoading,
+    TResult? Function(GetProfileSuccess<T> value)? getProfileSuccess,
+    TResult? Function(GetProfileFailure<T> value)? getProfileFailure,
+    TResult? Function(UpdateProfileLoading<T> value)? updateProfileLoading,
+    TResult? Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult? Function(UpdateProfileFailure<T> value)? updateProfileFailure,
+    TResult? Function(AddImage<T> value)? addImage,
+    TResult? Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult? Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult? Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult? Function(TermsLoading<T> value)? termsLoading,
+    TResult? Function(TermsSuccess<T> value)? termsSuccess,
+    TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
+  }) {
+    return policyLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ProfileInitial<T> value)? initial,
+    TResult Function(GetProfileLoading<T> value)? getProfileLoading,
+    TResult Function(GetProfileSuccess<T> value)? getProfileSuccess,
+    TResult Function(GetProfileFailure<T> value)? getProfileFailure,
+    TResult Function(UpdateProfileLoading<T> value)? updateProfileLoading,
+    TResult Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult Function(UpdateProfileFailure<T> value)? updateProfileFailure,
+    TResult Function(AddImage<T> value)? addImage,
+    TResult Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult Function(TermsLoading<T> value)? termsLoading,
+    TResult Function(TermsSuccess<T> value)? termsSuccess,
+    TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
+    required TResult orElse(),
+  }) {
+    if (policyLoading != null) {
+      return policyLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PolicyLoading<T> implements ProfileState<T> {
+  const factory PolicyLoading() = _$PolicyLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$PolicySuccessImplCopyWith<T, $Res> {
+  factory _$$PolicySuccessImplCopyWith(_$PolicySuccessImpl<T> value,
+          $Res Function(_$PolicySuccessImpl<T>) then) =
+      __$$PolicySuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$PolicySuccessImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$PolicySuccessImpl<T>>
+    implements _$$PolicySuccessImplCopyWith<T, $Res> {
+  __$$PolicySuccessImplCopyWithImpl(_$PolicySuccessImpl<T> _value,
+      $Res Function(_$PolicySuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$PolicySuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PolicySuccessImpl<T> implements PolicySuccess<T> {
+  const _$PolicySuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'ProfileState<$T>.policySuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PolicySuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PolicySuccessImplCopyWith<T, _$PolicySuccessImpl<T>> get copyWith =>
+      __$$PolicySuccessImplCopyWithImpl<T, _$PolicySuccessImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getProfileLoading,
+    required TResult Function(T data) getProfileSuccess,
+    required TResult Function(String errorMessage) getProfileFailure,
+    required TResult Function() updateProfileLoading,
+    required TResult Function(T data) updateProfileSuccess,
+    required TResult Function(String errorMessage) updateProfileFailure,
+    required TResult Function() addImage,
+    required TResult Function() aboutAppLoading,
+    required TResult Function(T data) aboutAppSuccess,
+    required TResult Function(String errorMessage) aboutAppFailure,
+    required TResult Function() termsLoading,
+    required TResult Function(T data) termsSuccess,
+    required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
+  }) {
+    return policySuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getProfileLoading,
+    TResult? Function(T data)? getProfileSuccess,
+    TResult? Function(String errorMessage)? getProfileFailure,
+    TResult? Function()? updateProfileLoading,
+    TResult? Function(T data)? updateProfileSuccess,
+    TResult? Function(String errorMessage)? updateProfileFailure,
+    TResult? Function()? addImage,
+    TResult? Function()? aboutAppLoading,
+    TResult? Function(T data)? aboutAppSuccess,
+    TResult? Function(String errorMessage)? aboutAppFailure,
+    TResult? Function()? termsLoading,
+    TResult? Function(T data)? termsSuccess,
+    TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
+  }) {
+    return policySuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getProfileLoading,
+    TResult Function(T data)? getProfileSuccess,
+    TResult Function(String errorMessage)? getProfileFailure,
+    TResult Function()? updateProfileLoading,
+    TResult Function(T data)? updateProfileSuccess,
+    TResult Function(String errorMessage)? updateProfileFailure,
+    TResult Function()? addImage,
+    TResult Function()? aboutAppLoading,
+    TResult Function(T data)? aboutAppSuccess,
+    TResult Function(String errorMessage)? aboutAppFailure,
+    TResult Function()? termsLoading,
+    TResult Function(T data)? termsSuccess,
+    TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
+    required TResult orElse(),
+  }) {
+    if (policySuccess != null) {
+      return policySuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ProfileInitial<T> value) initial,
+    required TResult Function(GetProfileLoading<T> value) getProfileLoading,
+    required TResult Function(GetProfileSuccess<T> value) getProfileSuccess,
+    required TResult Function(GetProfileFailure<T> value) getProfileFailure,
+    required TResult Function(UpdateProfileLoading<T> value)
+        updateProfileLoading,
+    required TResult Function(UpdateProfileSuccess<T> value)
+        updateProfileSuccess,
+    required TResult Function(UpdateProfileFailure<T> value)
+        updateProfileFailure,
+    required TResult Function(AddImage<T> value) addImage,
+    required TResult Function(AboutAppLoading<T> value) aboutAppLoading,
+    required TResult Function(AboutAppSuccess<T> value) aboutAppSuccess,
+    required TResult Function(AboutAppFailure<T> value) aboutAppFailure,
+    required TResult Function(TermsLoading<T> value) termsLoading,
+    required TResult Function(TermsSuccess<T> value) termsSuccess,
+    required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
+  }) {
+    return policySuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ProfileInitial<T> value)? initial,
+    TResult? Function(GetProfileLoading<T> value)? getProfileLoading,
+    TResult? Function(GetProfileSuccess<T> value)? getProfileSuccess,
+    TResult? Function(GetProfileFailure<T> value)? getProfileFailure,
+    TResult? Function(UpdateProfileLoading<T> value)? updateProfileLoading,
+    TResult? Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult? Function(UpdateProfileFailure<T> value)? updateProfileFailure,
+    TResult? Function(AddImage<T> value)? addImage,
+    TResult? Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult? Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult? Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult? Function(TermsLoading<T> value)? termsLoading,
+    TResult? Function(TermsSuccess<T> value)? termsSuccess,
+    TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
+  }) {
+    return policySuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ProfileInitial<T> value)? initial,
+    TResult Function(GetProfileLoading<T> value)? getProfileLoading,
+    TResult Function(GetProfileSuccess<T> value)? getProfileSuccess,
+    TResult Function(GetProfileFailure<T> value)? getProfileFailure,
+    TResult Function(UpdateProfileLoading<T> value)? updateProfileLoading,
+    TResult Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult Function(UpdateProfileFailure<T> value)? updateProfileFailure,
+    TResult Function(AddImage<T> value)? addImage,
+    TResult Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult Function(TermsLoading<T> value)? termsLoading,
+    TResult Function(TermsSuccess<T> value)? termsSuccess,
+    TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
+    required TResult orElse(),
+  }) {
+    if (policySuccess != null) {
+      return policySuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PolicySuccess<T> implements ProfileState<T> {
+  const factory PolicySuccess(final T data) = _$PolicySuccessImpl<T>;
+
+  T get data;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PolicySuccessImplCopyWith<T, _$PolicySuccessImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PolicyFailureImplCopyWith<T, $Res> {
+  factory _$$PolicyFailureImplCopyWith(_$PolicyFailureImpl<T> value,
+          $Res Function(_$PolicyFailureImpl<T>) then) =
+      __$$PolicyFailureImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String errorMessage});
+}
+
+/// @nodoc
+class __$$PolicyFailureImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$PolicyFailureImpl<T>>
+    implements _$$PolicyFailureImplCopyWith<T, $Res> {
+  __$$PolicyFailureImplCopyWithImpl(_$PolicyFailureImpl<T> _value,
+      $Res Function(_$PolicyFailureImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorMessage = null,
+  }) {
+    return _then(_$PolicyFailureImpl<T>(
+      null == errorMessage
+          ? _value.errorMessage
+          : errorMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PolicyFailureImpl<T> implements PolicyFailure<T> {
+  const _$PolicyFailureImpl(this.errorMessage);
+
+  @override
+  final String errorMessage;
+
+  @override
+  String toString() {
+    return 'ProfileState<$T>.policyFailure(errorMessage: $errorMessage)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PolicyFailureImpl<T> &&
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorMessage);
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PolicyFailureImplCopyWith<T, _$PolicyFailureImpl<T>> get copyWith =>
+      __$$PolicyFailureImplCopyWithImpl<T, _$PolicyFailureImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getProfileLoading,
+    required TResult Function(T data) getProfileSuccess,
+    required TResult Function(String errorMessage) getProfileFailure,
+    required TResult Function() updateProfileLoading,
+    required TResult Function(T data) updateProfileSuccess,
+    required TResult Function(String errorMessage) updateProfileFailure,
+    required TResult Function() addImage,
+    required TResult Function() aboutAppLoading,
+    required TResult Function(T data) aboutAppSuccess,
+    required TResult Function(String errorMessage) aboutAppFailure,
+    required TResult Function() termsLoading,
+    required TResult Function(T data) termsSuccess,
+    required TResult Function(String errorMessage) termsFailure,
+    required TResult Function() faqsLoading,
+    required TResult Function(T data) faqsSuccess,
+    required TResult Function(String errorMessage) faqsFailure,
+    required TResult Function() policyLoading,
+    required TResult Function(T data) policySuccess,
+    required TResult Function(String errorMessage) policyFailure,
+  }) {
+    return policyFailure(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getProfileLoading,
+    TResult? Function(T data)? getProfileSuccess,
+    TResult? Function(String errorMessage)? getProfileFailure,
+    TResult? Function()? updateProfileLoading,
+    TResult? Function(T data)? updateProfileSuccess,
+    TResult? Function(String errorMessage)? updateProfileFailure,
+    TResult? Function()? addImage,
+    TResult? Function()? aboutAppLoading,
+    TResult? Function(T data)? aboutAppSuccess,
+    TResult? Function(String errorMessage)? aboutAppFailure,
+    TResult? Function()? termsLoading,
+    TResult? Function(T data)? termsSuccess,
+    TResult? Function(String errorMessage)? termsFailure,
+    TResult? Function()? faqsLoading,
+    TResult? Function(T data)? faqsSuccess,
+    TResult? Function(String errorMessage)? faqsFailure,
+    TResult? Function()? policyLoading,
+    TResult? Function(T data)? policySuccess,
+    TResult? Function(String errorMessage)? policyFailure,
+  }) {
+    return policyFailure?.call(errorMessage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getProfileLoading,
+    TResult Function(T data)? getProfileSuccess,
+    TResult Function(String errorMessage)? getProfileFailure,
+    TResult Function()? updateProfileLoading,
+    TResult Function(T data)? updateProfileSuccess,
+    TResult Function(String errorMessage)? updateProfileFailure,
+    TResult Function()? addImage,
+    TResult Function()? aboutAppLoading,
+    TResult Function(T data)? aboutAppSuccess,
+    TResult Function(String errorMessage)? aboutAppFailure,
+    TResult Function()? termsLoading,
+    TResult Function(T data)? termsSuccess,
+    TResult Function(String errorMessage)? termsFailure,
+    TResult Function()? faqsLoading,
+    TResult Function(T data)? faqsSuccess,
+    TResult Function(String errorMessage)? faqsFailure,
+    TResult Function()? policyLoading,
+    TResult Function(T data)? policySuccess,
+    TResult Function(String errorMessage)? policyFailure,
+    required TResult orElse(),
+  }) {
+    if (policyFailure != null) {
+      return policyFailure(errorMessage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ProfileInitial<T> value) initial,
+    required TResult Function(GetProfileLoading<T> value) getProfileLoading,
+    required TResult Function(GetProfileSuccess<T> value) getProfileSuccess,
+    required TResult Function(GetProfileFailure<T> value) getProfileFailure,
+    required TResult Function(UpdateProfileLoading<T> value)
+        updateProfileLoading,
+    required TResult Function(UpdateProfileSuccess<T> value)
+        updateProfileSuccess,
+    required TResult Function(UpdateProfileFailure<T> value)
+        updateProfileFailure,
+    required TResult Function(AddImage<T> value) addImage,
+    required TResult Function(AboutAppLoading<T> value) aboutAppLoading,
+    required TResult Function(AboutAppSuccess<T> value) aboutAppSuccess,
+    required TResult Function(AboutAppFailure<T> value) aboutAppFailure,
+    required TResult Function(TermsLoading<T> value) termsLoading,
+    required TResult Function(TermsSuccess<T> value) termsSuccess,
+    required TResult Function(TermsFailure<T> value) termsFailure,
+    required TResult Function(FaqsLoading<T> value) faqsLoading,
+    required TResult Function(FaqsSuccess<T> value) faqsSuccess,
+    required TResult Function(FaqsFailure<T> value) faqsFailure,
+    required TResult Function(PolicyLoading<T> value) policyLoading,
+    required TResult Function(PolicySuccess<T> value) policySuccess,
+    required TResult Function(PolicyFailure<T> value) policyFailure,
+  }) {
+    return policyFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ProfileInitial<T> value)? initial,
+    TResult? Function(GetProfileLoading<T> value)? getProfileLoading,
+    TResult? Function(GetProfileSuccess<T> value)? getProfileSuccess,
+    TResult? Function(GetProfileFailure<T> value)? getProfileFailure,
+    TResult? Function(UpdateProfileLoading<T> value)? updateProfileLoading,
+    TResult? Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult? Function(UpdateProfileFailure<T> value)? updateProfileFailure,
+    TResult? Function(AddImage<T> value)? addImage,
+    TResult? Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult? Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult? Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult? Function(TermsLoading<T> value)? termsLoading,
+    TResult? Function(TermsSuccess<T> value)? termsSuccess,
+    TResult? Function(TermsFailure<T> value)? termsFailure,
+    TResult? Function(FaqsLoading<T> value)? faqsLoading,
+    TResult? Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult? Function(FaqsFailure<T> value)? faqsFailure,
+    TResult? Function(PolicyLoading<T> value)? policyLoading,
+    TResult? Function(PolicySuccess<T> value)? policySuccess,
+    TResult? Function(PolicyFailure<T> value)? policyFailure,
+  }) {
+    return policyFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ProfileInitial<T> value)? initial,
+    TResult Function(GetProfileLoading<T> value)? getProfileLoading,
+    TResult Function(GetProfileSuccess<T> value)? getProfileSuccess,
+    TResult Function(GetProfileFailure<T> value)? getProfileFailure,
+    TResult Function(UpdateProfileLoading<T> value)? updateProfileLoading,
+    TResult Function(UpdateProfileSuccess<T> value)? updateProfileSuccess,
+    TResult Function(UpdateProfileFailure<T> value)? updateProfileFailure,
+    TResult Function(AddImage<T> value)? addImage,
+    TResult Function(AboutAppLoading<T> value)? aboutAppLoading,
+    TResult Function(AboutAppSuccess<T> value)? aboutAppSuccess,
+    TResult Function(AboutAppFailure<T> value)? aboutAppFailure,
+    TResult Function(TermsLoading<T> value)? termsLoading,
+    TResult Function(TermsSuccess<T> value)? termsSuccess,
+    TResult Function(TermsFailure<T> value)? termsFailure,
+    TResult Function(FaqsLoading<T> value)? faqsLoading,
+    TResult Function(FaqsSuccess<T> value)? faqsSuccess,
+    TResult Function(FaqsFailure<T> value)? faqsFailure,
+    TResult Function(PolicyLoading<T> value)? policyLoading,
+    TResult Function(PolicySuccess<T> value)? policySuccess,
+    TResult Function(PolicyFailure<T> value)? policyFailure,
+    required TResult orElse(),
+  }) {
+    if (policyFailure != null) {
+      return policyFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PolicyFailure<T> implements ProfileState<T> {
+  const factory PolicyFailure(final String errorMessage) =
+      _$PolicyFailureImpl<T>;
+
+  String get errorMessage;
+
+  /// Create a copy of ProfileState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PolicyFailureImplCopyWith<T, _$PolicyFailureImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
