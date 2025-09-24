@@ -28,6 +28,12 @@ class ApiConstants {
   static const String getContactEndPoint = "/contact";
   static const String getAddressEndPoint = "/client/addresses";
   static const String deleteAndUpdateAddressEndPoint = "/client/addresses/{id}";
+  static const String addToFavoriteEndPoint =
+      "/client/products/{id}/add_to_favorite";
+  static const String removeFromFavoriteEndPoint =
+      "/client/products/{id}/remove_from_favorite";
+  static const String getFavoriteEndPoint =
+      "/client/products/favorites";
 }
 
 class ApiErrors {
