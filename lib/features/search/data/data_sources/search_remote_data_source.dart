@@ -17,7 +17,7 @@ abstract class SearchRemoteDataSource {
     @Query("max_price") required double maxPrice,
   });
 
-  @GET(ApiConstants.searchEndPoint)
+  @GET(ApiConstants.searchByCategoryEndPoint)
   Future<SearchResponseModel> searchProductsByCategory({
     @Path("id") required int categoryId,
     @Query("keyword") required String text,

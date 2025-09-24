@@ -90,7 +90,7 @@ class _SearchRemoteDataSource implements SearchRemoteDataSource {
     )
         .compose(
           _dio.options,
-          '/search/',
+          '/search_category/${categoryId}/',
           queryParameters: queryParameters,
           data: _data,
         )
