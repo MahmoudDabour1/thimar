@@ -22,4 +22,5 @@ abstract class Routes{
   static const String contactScreen = '/ContactScreen';
   static const String addressScreen = '/AddressScreen';
   static const String insertAddressScreen = '/InsertAddressScreen';
+  static const String paymentScreen = '/PaymentScreen';
 }

@@ -49,9 +49,13 @@ abstract class AppAssets {
   static const String arrowDownImage = 'assets/images/arrow_down.png';
   static const String containerArrowDownImage =
       'assets/images/container_arrow_down.png';
-  static const String solidCallingIconImage = 'assets/images/solid_calling_Icon.png';
+  static const String solidCallingIconImage =
+      'assets/images/solid_calling_Icon.png';
   static const String locationMarkImage = 'assets/images/location_mark.png';
   static const String messageIconImage = 'assets/images/Message.png';
   static const String callingIconImage = 'assets/images/calling_icon.png';
   static const String editIconImage = 'assets/images/edit_image.png';
+  static const String blackCardImage = 'assets/images/balck_card.png';
+  static const String greenCardImage = 'assets/images/green_card.png';
+  static const String deleteCardImage = 'assets/images/delete_card_icon.png';
 }

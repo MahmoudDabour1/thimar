@@ -132,6 +132,7 @@ class AddressScreen extends StatelessWidget {
               ),
             ),
           ),
+          verticalSpace(32),
         ],
       ),
     );
