@@ -35,7 +35,7 @@ class _PriceFilterRangeWidgetState extends State<PriceFilterRangeWidget> {
       divisions: 20,
       activeColor: AppColors.primaryColor,
       overlayColor: WidgetStateProperty.resolveWith(
-            (states) => AppColors.whiteColor,
+        (states) => AppColors.whiteColor,
       ),
       labels: RangeLabels(
         "\$${_currentValues.start.toInt()}",

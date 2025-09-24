@@ -6,11 +6,12 @@ part 'cart_state.freezed.dart';
 class CartState<T> with _$CartState {
   const factory CartState.initial() = CartInitial;
 
-  const factory CartState.addToCartLoading() = AddToCartLoading;
+  const factory CartState.addToCartLoading(int productId) = AddToCartLoading;
 
-  const factory CartState.addToCartSuccess(T data) = AddToCartSuccess;
+  const factory CartState.addToCartSuccess(int productId, T data) =
+      AddToCartSuccess;
 
-  const factory CartState.addToCartFailure(String errorMessage) =
+  const factory CartState.addToCartFailure(int productId, String errorMessage) =
       AddToCartFailure;
 
   const factory CartState.getCartLoading() = GetCartLoading;

@@ -21,6 +21,7 @@ class CategoryProductSingleItem extends StatelessWidget {
   final VoidCallback onAddPressed;
   final bool? isHadAddToCartButton;
   final VoidCallback? onAddToCartPressed;
+  final int? productId;
 
   const CategoryProductSingleItem({
     super.key,
@@ -33,6 +34,7 @@ class CategoryProductSingleItem extends StatelessWidget {
     required this.onAddPressed,
     this.isHadAddToCartButton = false,
     this.onAddToCartPressed,
+    this.productId,
   });
 
   @override
@@ -153,6 +155,29 @@ class CategoryProductSingleItem extends StatelessWidget {
                       children: [
                         BlocBuilder<CartCubit, CartState>(
                           builder: (context, state) {
+                            if (state is AddToCartLoading &&
+                                state.productId == productId) {
+                              return SizedBox(
+                                width: 28.w,
+                                height: 28.h,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  color: AppColors.primaryColor,
+                                ),
+                              );
+                            }
+                            if (state is AddToCartLoading &&
+                                state.productId == productId) {
+                              return SizedBox(
+                                width: 28.w,
+                                height: 28.h,
+                                child: const CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  color: Colors.white,
+                                ),
+                              );
+                            }
+
                             return GestureDetector(
                               onTap: onAddPressed,
                               child: Container(

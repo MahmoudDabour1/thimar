@@ -45,7 +45,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             body: SafeArea(
               child: state.maybeWhen(
                 productDetailsLoading: () => setupLoading(context),
-                productDetailsSuccess: (data) => setupSuccess(data, quantity),
+                productDetailsSuccess: (data) => setupSuccess(data),
                 productDetailsFailure: (error) => setupError(error),
                 orElse: () => SizedBox.shrink(),
               ),
@@ -77,7 +77,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     );
   }
 
-  Widget setupSuccess(GetProductDetailsResponseModel data, int quantity) {
+  Widget setupSuccess(GetProductDetailsResponseModel data) {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,7 +90,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             quantity: quantity,
             onQuantityChanged: (newQuantity) {
               setState(() {
-                this.quantity = newQuantity;
+                quantity = newQuantity;
               });
             },
           ),

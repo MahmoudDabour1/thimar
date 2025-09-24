@@ -27,10 +27,10 @@ class ProductRatesNameAndStarsWidget extends StatelessWidget {
         Row(
           children: List.generate(
             5,
-            (index) {
+            (starIndex) {
               return Icon(
                 Icons.star,
-                color: index < (data.data?[index].value ?? 0)
+                color: starIndex < (data.data?[index].value ?? 0)
                     ? Colors.amber
                     : Colors.grey,
                 size: 16.sp,
