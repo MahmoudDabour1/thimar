@@ -18,7 +18,10 @@ class FavoriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = sl<FavoriteCubit>();
     return Scaffold(
-      appBar: AppCustomAppBar(appBarTitle: "المفضلة"),
+      appBar: AppCustomAppBar(
+        appBarTitle: "المفضلة",
+        isHaveBackButton: false,
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),
