@@ -12,7 +12,7 @@ class DetailsNameAndPricesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       children: [
         Text(
           data.data?.title ?? "",

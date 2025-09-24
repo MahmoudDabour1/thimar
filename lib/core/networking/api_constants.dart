@@ -34,8 +34,11 @@ class ApiConstants {
       "/client/products/{id}/remove_from_favorite";
   static const String getFavoriteEndPoint = "/client/products/favorites";
   static const String getNotificationsEndPoint = "/notifications";
-  static const String showAndDeleteNotificationsEndPoint = "/notifications/{id}";
-  static const String clearAllNotificationsEndPoint = "/notifications/clear_all_notifications";
+  static const String showAndDeleteNotificationsEndPoint =
+      "/notifications/{id}";
+  static const String clearAllNotificationsEndPoint =
+      "/notifications/clear_all_notifications";
+  static const String logoutEndPoint = "/logout";
 }
 
 class ApiErrors {

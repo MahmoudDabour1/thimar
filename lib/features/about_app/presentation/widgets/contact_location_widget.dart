@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:thimar/core/theming/app_assets.dart';
 import 'package:thimar/core/utils/spacing.dart';
@@ -63,13 +62,13 @@ class _ContactLocationWidgetState extends State<ContactLocationWidget> {
       builder: (context, state) {
         return state.maybeWhen(
             getContactLoading: () => SizedBox(
-              height: 250.h,
-              child: Center(
+                  height: 250.h,
+                  child: Center(
                     child: CircularProgressIndicator(
                       color: Theme.of(context).primaryColor,
                     ),
                   ),
-            ),
+                ),
             getContactSuccess: (data) => setupSuccess(data),
             getContactFailure: (error) => Center(
                   child: Text(

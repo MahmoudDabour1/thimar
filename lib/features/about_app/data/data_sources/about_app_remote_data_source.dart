@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:thimar/features/about_app/data/models/get_contact_response_model.dart';
 import 'package:thimar/features/about_app/data/models/suggestions_and_complaints_response_model.dart';
-import 'package:thimar/features/cart/data/models/get_cart_response_model.dart';
 
 import '../../../../core/networking/api_constants.dart';
 import '../models/about_app_response_model.dart';

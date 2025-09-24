@@ -1,6 +1,6 @@
-
 import 'package:json_annotation/json_annotation.dart';
 part 'new_password_request_body.g.dart';
+
 @JsonSerializable()
 class NewPasswordRequestBody {
   final String phone;

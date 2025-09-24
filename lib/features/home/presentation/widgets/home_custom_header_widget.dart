@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/routing/routes.dart';
-import 'package:thimar/features/cart/data/models/get_cart_response_model.dart';
 import 'package:thimar/features/cart/logic/cart_cubit.dart';
 
 import '../../../../core/theming/app_assets.dart';
@@ -62,7 +61,7 @@ class HomeCustomHeaderWidget extends StatelessWidget {
                       // .toString(),
                       style: AppStyles.font14WhiteBold),
                   backgroundColor: AppColors.primaryColor,
-                  isLabelVisible: count>0,
+                  isLabelVisible: count > 0,
                   alignment: Alignment.topRight,
                   child: Container(
                     height: 40.h,

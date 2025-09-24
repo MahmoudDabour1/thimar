@@ -35,7 +35,7 @@ class PaymentMethodContainer extends StatelessWidget {
                 horizontalSpace(8),
                 Flexible(
                   child: Text(
-                    title??"",
+                    title ?? "",
                     style: AppStyles.font16GreenBold,
                   ),
                 ),

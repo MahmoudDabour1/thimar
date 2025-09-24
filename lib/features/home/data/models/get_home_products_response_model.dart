@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'get_home_products_response_model.g.dart';
+
 @JsonSerializable()
 class GetHomeProductsResponseModel {
   @JsonKey(name: "data")
@@ -30,7 +31,8 @@ class GetHomeProductsResponseModel {
     this.minPrice,
   });
 
-  factory GetHomeProductsResponseModel.fromJson(Map<String, dynamic> json) => _$GetHomeProductsResponseModelFromJson(json);
+  factory GetHomeProductsResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$GetHomeProductsResponseModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$GetHomeProductsResponseModelToJson(this);
 }

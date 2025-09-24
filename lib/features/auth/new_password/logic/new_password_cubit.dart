@@ -18,7 +18,8 @@ class NewPasswordCubit extends Cubit<NewPasswordState> {
 
   get context => null;
 
-  Future<void> newPassword(String phone, String code,BuildContext context) async {
+  Future<void> newPassword(
+      String phone, String code, BuildContext context) async {
     emit(NewPasswordState.loading());
     final response = await newPasswordRepo.newPassword(
       NewPasswordRequestBody(

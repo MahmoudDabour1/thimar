@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'charge_wallet_request_body.g.dart';
+
 @JsonSerializable()
 class ChargeWalletRequestBody {
   final String amount;

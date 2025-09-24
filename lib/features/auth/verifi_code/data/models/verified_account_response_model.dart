@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'verified_account_response_model.g.dart';
+
 @JsonSerializable()
 class VerifiedAccountResponseModel {
   @JsonKey(name: "data")
@@ -15,7 +16,8 @@ class VerifiedAccountResponseModel {
     this.message,
   });
 
-  factory VerifiedAccountResponseModel.fromJson(Map<String, dynamic> json) => _$VerifiedAccountResponseModelFromJson(json);
+  factory VerifiedAccountResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$VerifiedAccountResponseModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$VerifiedAccountResponseModelToJson(this);
 }

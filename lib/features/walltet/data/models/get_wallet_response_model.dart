@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'get_wallet_response_model.g.dart';
+
 @JsonSerializable()
 class GetWalletResponseModel {
   @JsonKey(name: "data")

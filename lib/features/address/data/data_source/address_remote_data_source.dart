@@ -25,7 +25,7 @@ abstract class AddressRemoteDataSource {
 
   @DELETE(ApiConstants.deleteAndUpdateAddressEndPoint)
   Future<DeleteAddressResponseModel> deleteAddresses(
-    @Path("id")  int addressId,
+    @Path("id") int addressId,
   );
 
   @PUT(ApiConstants.deleteAndUpdateAddressEndPoint)

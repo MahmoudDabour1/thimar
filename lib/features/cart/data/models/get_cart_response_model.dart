@@ -46,7 +46,8 @@ class GetCartResponseModel {
     this.message,
   });
 
-  factory GetCartResponseModel.fromJson(Map<String, dynamic> json) => _$GetCartResponseModelFromJson(json);
+  factory GetCartResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$GetCartResponseModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$GetCartResponseModelToJson(this);
 }

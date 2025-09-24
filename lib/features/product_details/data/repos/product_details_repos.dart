@@ -31,7 +31,8 @@ class ProductDetailsReposImpl implements ProductDetailsRepos {
   }
 
   @override
-  Future<ApiResult<GetProductRatesResponseModel>> productRates(int productId) async{
+  Future<ApiResult<GetProductRatesResponseModel>> productRates(
+      int productId) async {
     try {
       final response = await remoteDataSource.getProductRates(productId);
       return ApiResult.success(response);

@@ -85,12 +85,12 @@ class AddressScreen extends StatelessWidget {
                         context.pushNamed(
                           Routes.insertAddressScreen,
                           arguments: {
-                            "type": address?.type??"",
+                            "type": address?.type ?? "",
                             "address": address?.location ?? "",
                             "description": address?.location ?? "",
                             "phoneNumber": address?.phone ?? "",
                             "isEdit": true,
-                            "addressId" : address?.id ?? 0,
+                            "addressId": address?.id ?? 0,
                           },
                         );
                       },

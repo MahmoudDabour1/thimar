@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/utils/spacing.dart';
 
@@ -9,11 +8,12 @@ class ContactCustomRow extends StatelessWidget {
   final String title;
   final String iconPath;
 
-  const ContactCustomRow({super.key, required this.title, required this.iconPath});
+  const ContactCustomRow(
+      {super.key, required this.title, required this.iconPath});
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       children: [
         Image.asset(
           iconPath,

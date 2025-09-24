@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:thimar/core/extensions/navigation_extension.dart';
 
 import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/utils/spacing.dart';
@@ -29,7 +28,7 @@ class SuggestionsAndComplaintsWidgets extends StatelessWidget {
                 hintText: "الإسم",
                 controller: cubit.nameController,
                 validator: (value) {
-                  if (value == null || value.isEmpty) {
+                  if (value.isEmpty) {
                     return 'هذا الحقل مطلوب';
                   }
                 },
@@ -39,7 +38,7 @@ class SuggestionsAndComplaintsWidgets extends StatelessWidget {
                 hintText: "رقم الموبايل",
                 controller: cubit.phoneController,
                 validator: (value) {
-                  if (value == null || value.isEmpty) {
+                  if (value.isEmpty) {
                     return 'هذا الحقل مطلوب';
                   }
                 },
@@ -49,7 +48,7 @@ class SuggestionsAndComplaintsWidgets extends StatelessWidget {
                 hintText: "عنوان المشكلة",
                 controller: cubit.titleController,
                 validator: (value) {
-                  if (value == null || value.isEmpty) {
+                  if (value.isEmpty) {
                     return 'هذا الحقل مطلوب';
                   }
                 },
@@ -60,7 +59,7 @@ class SuggestionsAndComplaintsWidgets extends StatelessWidget {
                 controller: cubit.messageController,
                 maxLines: 5,
                 validator: (value) {
-                  if (value == null || value.isEmpty) {
+                  if (value.isEmpty) {
                     return 'هذا الحقل مطلوب';
                   }
                 },

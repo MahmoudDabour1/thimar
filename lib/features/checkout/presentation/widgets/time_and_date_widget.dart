@@ -6,7 +6,7 @@ import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_styles.dart';
 
 class TimeAndDateWidget extends StatelessWidget {
-  const TimeAndDateWidget ({super.key});
+  const TimeAndDateWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

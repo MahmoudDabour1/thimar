@@ -1,4 +1,4 @@
-abstract class Routes{
+abstract class Routes {
   static const String splashScreen = '/SplashScreen';
   static const String loginScreen = '/LoginScreen';
   static const String registerScreen = '/RegisterScreen';
@@ -15,10 +15,12 @@ abstract class Routes{
   static const String termsScreen = '/TermsScreen';
   static const String walletScreen = '/WalletScreen';
   static const String chargeWalletScreen = '/ChargeWalletScreen';
-  static const String allTransactionHistoryScreen = '/AllTransactionHistoryScreen';
+  static const String allTransactionHistoryScreen =
+      '/AllTransactionHistoryScreen';
   static const String fqsScreen = '/FqsScreen';
   static const String policyScreen = '/PolicyScreen';
-  static const String suggestionsAndComplaintsScreen = '/SuggestionsAndComplaintsScreen';
+  static const String suggestionsAndComplaintsScreen =
+      '/SuggestionsAndComplaintsScreen';
   static const String contactScreen = '/ContactScreen';
   static const String addressScreen = '/AddressScreen';
   static const String insertAddressScreen = '/InsertAddressScreen';

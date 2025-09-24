@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'get_category_products_response_model.g.dart';
+
 @JsonSerializable()
 class GetCategoryProductsResponseModel {
   @JsonKey(name: "data")
@@ -21,9 +22,12 @@ class GetCategoryProductsResponseModel {
     this.message,
   });
 
-  factory GetCategoryProductsResponseModel.fromJson(Map<String, dynamic> json) => _$GetCategoryProductsResponseModelFromJson(json);
+  factory GetCategoryProductsResponseModel.fromJson(
+          Map<String, dynamic> json) =>
+      _$GetCategoryProductsResponseModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$GetCategoryProductsResponseModelToJson(this);
+  Map<String, dynamic> toJson() =>
+      _$GetCategoryProductsResponseModelToJson(this);
 }
 
 @JsonSerializable()

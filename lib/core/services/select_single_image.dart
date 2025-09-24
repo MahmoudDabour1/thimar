@@ -1,14 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_localization/flutter_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:thimar/core/services/image_picker_services.dart';
 
 import '../theming/app_colors.dart';
-
 
 class SelectSingleImageWidget extends StatelessWidget {
   final cubit;
@@ -74,24 +71,24 @@ class SelectSingleImageWidget extends StatelessWidget {
       child: SizedBox(
         height: MediaQuery.sizeOf(context).height * 0.25,
         width: MediaQuery.sizeOf(context).width - 48.w,
-        child:Center(
+        child: Center(
           child: image != null
               ? Image.file(
-            image!,
-            width: MediaQuery.sizeOf(context).width,
-            height: MediaQuery.sizeOf(context).height,
-            fit: BoxFit.cover,
-          )
+                  image!,
+                  width: MediaQuery.sizeOf(context).width,
+                  height: MediaQuery.sizeOf(context).height,
+                  fit: BoxFit.cover,
+                )
               : Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // SvgPicture.asset(
-              //   AppAssets.uploadImageIcon,
-              //   width: 64.w,
-              //   height: 64.h,
-              // ),
-            ],
-          ),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    // SvgPicture.asset(
+                    //   AppAssets.uploadImageIcon,
+                    //   width: 64.w,
+                    //   height: 64.h,
+                    // ),
+                  ],
+                ),
         ),
       ),
     );

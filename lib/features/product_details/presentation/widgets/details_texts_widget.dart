@@ -10,10 +10,14 @@ import 'details_price_and_quantity_widget.dart';
 
 class DetailsTextsWidget extends StatefulWidget {
   final GetProductDetailsResponseModel data;
-  final int quantity ;
+  final int quantity;
   final ValueChanged<int> onQuantityChanged;
 
-  const DetailsTextsWidget({super.key, required this.data, required this.quantity, required this.onQuantityChanged});
+  const DetailsTextsWidget(
+      {super.key,
+      required this.data,
+      required this.quantity,
+      required this.onQuantityChanged});
 
   @override
   State<DetailsTextsWidget> createState() => _DetailsTextsWidgetState();

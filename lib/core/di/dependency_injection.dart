@@ -137,9 +137,8 @@ Future<void> setupGetIt() async {
 
 //favorite
   sl.registerLazySingleton<FavoriteRemoteDataSource>(
-          () => FavoriteRemoteDataSource(dio));
+      () => FavoriteRemoteDataSource(dio));
   sl.registerLazySingleton<FavoriteRepos>(
-          () => FavoriteReposImpl(remoteDataSource: sl()));
+      () => FavoriteReposImpl(remoteDataSource: sl()));
   sl.registerFactory<FavoriteCubit>(() => FavoriteCubit(sl()));
-
 }

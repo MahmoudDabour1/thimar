@@ -20,17 +20,17 @@ class RegisterScreen extends StatelessWidget {
         body: AuthBackgroundCustomImage(
           child: SafeArea(
               child: SingleChildScrollView(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24.w),
-                  child: Column(
-                    children: [
-                      AuthHeaderWidget(),
-                      RegisterTextFormsWidget(),
-                      RegisterButtonsWidget(),
-                    ],
-                  ),
-                ),
-              )),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.w),
+              child: Column(
+                children: [
+                  AuthHeaderWidget(),
+                  RegisterTextFormsWidget(),
+                  RegisterButtonsWidget(),
+                ],
+              ),
+            ),
+          )),
         ),
       ),
     );

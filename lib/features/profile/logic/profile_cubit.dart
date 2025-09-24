@@ -62,6 +62,4 @@ class ProfileCubit extends Cubit<ProfileState> {
     image = newImage;
     emit(ProfileState.addImage());
   }
-
-
 }

@@ -9,11 +9,9 @@ import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/features/home/data/models/categories_response_model.dart';
 import 'package:thimar/features/home/logic/category_cubit.dart';
 import 'package:thimar/features/home/logic/category_state.dart';
-import 'package:thimar/features/home/logic/home_cubit.dart';
 
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/utils/spacing.dart';
-import '../../logic/home_state.dart';
 
 class HomeCategoriesWidget extends StatelessWidget {
   HomeCategoriesWidget({super.key});
@@ -59,23 +57,66 @@ class HomeCategoriesWidget extends StatelessWidget {
                     current is GetCategoriesFailure),
             builder: (context, state) {
               return state.maybeWhen(
-                getCategoriesLoading: () => Center(
-                  child: CircularProgressIndicator(
-                    color: AppColors.primaryColor,
-                  ),
-                ),
+                getCategoriesLoading: () => setupLoading(),
                 getCategoriesSuccess: (data) => setupSuccess(data),
-                getCategoriesFailure: (error) => Center(
-                  child: Text(
-                    error,
-                    style: AppStyles.font16DarkGrayLight,
-                  ),
-                ),
+                getCategoriesFailure: (error) => setupError(error),
                 orElse: () => SizedBox.shrink(),
               );
             },
           )
         ],
+      ),
+    );
+  }
+
+  Center setupError(String error) {
+    return Center(
+      child: Text(
+        error,
+        style: AppStyles.font16DarkGrayLight,
+      ),
+    );
+  }
+
+  SizedBox setupLoading() {
+    return SizedBox(
+      height: 120.h,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        padding: EdgeInsets.only(left: 18.w),
+        itemCount: 5,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: EdgeInsets.only(left: 10.w),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Shimmer.fromColors(
+                  baseColor: Colors.grey[300]!,
+                  highlightColor: Colors.grey[100]!,
+                  child: Container(
+                    width: 73.w,
+                    height: 73.h,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                  ),
+                ),
+                verticalSpace(6),
+                Shimmer.fromColors(
+                  baseColor: Colors.grey[300]!,
+                  highlightColor: Colors.grey[100]!,
+                  child: Container(
+                    width: 70.w,
+                    height: 12.h,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
       ),
     );
   }

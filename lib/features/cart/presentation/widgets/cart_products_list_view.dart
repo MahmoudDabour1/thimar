@@ -78,7 +78,6 @@ class CartProductsListView extends StatelessWidget {
                         ),
                         verticalSpace(4),
                         AppCustomQuantityWidget(
-
                           quantity: data.data?[index].amount ?? 1,
                           onQuantityChanged: (newQuantity) {
                             context.read<CartCubit>().updateCartData(

@@ -110,7 +110,7 @@ class _InsertAddressFromWidgetState extends State<InsertAddressFromWidget> {
                     ],
                   ),
                   validator: (value) {
-                    if (value == null || value.isEmpty) {
+                    if (value.isEmpty) {
                       return 'الرجاء إدخال نوع العنوان';
                     }
                     return null;
@@ -123,7 +123,7 @@ class _InsertAddressFromWidgetState extends State<InsertAddressFromWidget> {
                         ? (widget.userSelectedPhone ?? '')
                         : cubit.phoneController.text,
                   validator: (value) {
-                    if (value == null || value.isEmpty) {
+                    if (value.isEmpty) {
                       return 'الرجاء إدخال رقم الجوال';
                     }
                     return null;
@@ -136,7 +136,7 @@ class _InsertAddressFromWidgetState extends State<InsertAddressFromWidget> {
                         : cubit.descriptionController.text,
                   hintText: "الوصف",
                   validator: (value) {
-                    if (value == null || value.isEmpty) {
+                    if (value.isEmpty) {
                       return 'الرجاء إدخال وصف العنوان';
                     }
                     return null;

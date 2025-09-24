@@ -46,6 +46,29 @@ class LoginCubit extends Cubit<LoginState> {
     });
   }
 
+  Future<void> logout(BuildContext context) async {
+    emit(LoginState.logoutLoading());
+    final response = await loginRepo.logout();
+    response.when(success: (data) async {
+      emit(
+        LoginState.logoutSuccess(data),
+      );
+      await SharedPrefHelper.clearAllSecuredData();
+      context.pushNameAndRemoveUntil(
+        Routes.loginScreen,
+        predicate: (Route<dynamic> route) => false,
+      );
+      showToast(message: "تم تسجيل الخروج بنجاح");
+    }, failure: (error) {
+      emit(
+        LoginState.logoutError(
+          error: error.message.toString(),
+        ),
+      );
+      showToast(message: error.message.toString(), isError: true);
+    });
+  }
+
   Future<void> saveUserToken(String token) async {
     await SharedPrefHelper.setSecuredString(SharedPrefKeys.userToken, token);
     DioFactory.setTokenIntoHeaderAfterLogin(token);

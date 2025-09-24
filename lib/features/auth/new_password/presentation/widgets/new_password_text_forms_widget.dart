@@ -21,7 +21,7 @@ class NewPasswordTextFormsWidget extends StatelessWidget {
             controller: context.read<NewPasswordCubit>().passwordController,
             hintText: "كلمة المرور",
             validator: (value) {
-              if (value == null || value.isEmpty) {
+              if (value.isEmpty) {
                 return "أدخل كلمة مرور صحيحة";
               }
               if (value.length < 6) {
@@ -39,7 +39,7 @@ class NewPasswordTextFormsWidget extends StatelessWidget {
           AppTextFormField(
             hintText: "كلمة المرور",
             validator: (value) {
-              if (value == null || value.isEmpty) {
+              if (value.isEmpty) {
                 return "أدخل كلمة مرور صحيحة";
               }
               if (value !=

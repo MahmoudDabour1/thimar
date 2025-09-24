@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/routing/routes.dart';
-import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/features/home/data/models/get_home_products_response_model.dart';
 
 import '../../../cart/logic/cart_cubit.dart';
@@ -23,7 +22,7 @@ class HomeProductsGridView extends StatelessWidget {
         crossAxisCount: 2,
         crossAxisSpacing: 16,
         mainAxisSpacing: 16,
-        childAspectRatio: 0.75,
+        childAspectRatio: 0.67,
       ),
       itemCount: data.data?.length ?? 0,
       physics: const BouncingScrollPhysics(),
@@ -43,15 +42,15 @@ class HomeProductsGridView extends StatelessWidget {
             discountPercentage: (data.data?[index].discount)! * 100 ?? 0,
             onAddPressed: () {
               context.read<CartCubit>().addToCart(
-                data.data?[index].id ?? 0,
-                1,
-              );
+                    data.data?[index].id ?? 0,
+                    1,
+                  );
             },
             onAddToCartPressed: () {
               context.read<CartCubit>().addToCart(
-                data.data?[index].id ?? 0,
-                1,
-              );
+                    data.data?[index].id ?? 0,
+                    1,
+                  );
             },
             isHadAddToCartButton: true,
           ),

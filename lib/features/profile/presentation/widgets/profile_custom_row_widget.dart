@@ -17,7 +17,8 @@ class ProfileCustomRowWidget extends StatelessWidget {
     required this.title,
     required this.iconPath,
     required this.onTap,
-    this.isHasIcon = true, this.changeArrow,
+    this.isHasIcon = true,
+    this.changeArrow,
   });
 
   @override
@@ -46,7 +47,7 @@ class ProfileCustomRowWidget extends StatelessWidget {
             ),
             Spacer(),
             Image.asset(
-              changeArrow??AppAssets.arrowLeftImage,
+              changeArrow ?? AppAssets.arrowLeftImage,
               width: 24.w,
               height: 24.h,
             ),

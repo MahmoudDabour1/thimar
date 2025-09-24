@@ -4,11 +4,9 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:thimar/core/widgets/app_custom_app_bar.dart';
 import 'package:thimar/features/about_app/data/models/terms_response_model.dart';
 import 'package:thimar/features/about_app/logic/about_app_state.dart';
-import 'package:thimar/features/profile/logic/profile_cubit.dart';
 
 import '../../../core/di/dependency_injection.dart';
 import '../../../core/theming/app_colors.dart';
-import '../../profile/logic/profile_state.dart';
 import '../logic/about_app_cubit.dart';
 
 class TermsScreen extends StatelessWidget {
@@ -24,7 +22,7 @@ class TermsScreen extends StatelessWidget {
         appBar: AppCustomAppBar(
           appBarTitle: "سياسة الخصوصية",
         ),
-        body: BlocBuilder<AboutAppCubit,AboutAppState>(
+        body: BlocBuilder<AboutAppCubit, AboutAppState>(
           builder: (context, state) {
             return state.maybeWhen(
                 termsLoading: () => const Center(
