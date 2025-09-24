@@ -18,16 +18,16 @@ class AppCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leadingWidth: kToolbarHeight+ 10.w,
-      primary: true,
+      leadingWidth: kToolbarHeight + 10.w,
+      automaticallyImplyLeading: false,
       leading: isHaveBackButton == true
           ? SizedBox(
-          width: kToolbarHeight,
-          height: kToolbarHeight+8,
-          child: Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 10.w, vertical: 6.h),
-            child: AppCustomBackButton(),
-          ))
+              width: kToolbarHeight,
+              height: kToolbarHeight + 8,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 6.h),
+                child: AppCustomBackButton(),
+              ))
           : null,
       backgroundColor: AppColors.whiteColor,
       elevation: 0,
