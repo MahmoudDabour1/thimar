@@ -22,6 +22,9 @@ import 'package:thimar/features/auth/verifi_code/logic/verified_code_cubit.dart'
 import 'package:thimar/features/cart/data/data_sources/cart_remote_data_source.dart';
 import 'package:thimar/features/cart/data/repos/cart_repo.dart';
 import 'package:thimar/features/cart/logic/cart_cubit.dart';
+import 'package:thimar/features/favorite/data/data_sources/favorite_remote_data_source.dart';
+import 'package:thimar/features/favorite/data/repos/favorite_repos.dart';
+import 'package:thimar/features/favorite/logic/favorite_cubit.dart';
 import 'package:thimar/features/home/data/data_sources/home_remote_data_source.dart';
 import 'package:thimar/features/home/data/repos/home_repos.dart';
 import 'package:thimar/features/home/logic/home_cubit.dart';
@@ -131,4 +134,12 @@ Future<void> setupGetIt() async {
   sl.registerLazySingleton<AddressRepo>(
       () => AddressRepoImpl(addressRemoteDataSource: sl()));
   sl.registerFactory<AddressCubit>(() => AddressCubit(sl()));
+
+//favorite
+  sl.registerLazySingleton<FavoriteRemoteDataSource>(
+          () => FavoriteRemoteDataSource(dio));
+  sl.registerLazySingleton<FavoriteRepos>(
+          () => FavoriteReposImpl(remoteDataSource: sl()));
+  sl.registerFactory<FavoriteCubit>(() => FavoriteCubit(sl()));
+
 }

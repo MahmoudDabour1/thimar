@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:thimar/features/favorite/presentation/favorite_screen.dart';
 import 'package:thimar/features/layout/logic/bottom_nav_bar_state.dart';
 
 import '../../../core/theming/app_assets.dart';
@@ -19,7 +20,7 @@ class BottomNavBarCubit extends Cubit<BottomNavBarState> {
     HomeScreen(),
     Center(child: Text("طلباتي")),
     Center(child: Text("الإشعارات")),
-    Center(child: Text("المفضلة")),
+    FavoriteScreen(),
     ProfileScreen(),
   ];
 
@@ -36,7 +37,8 @@ class BottomNavBarCubit extends Cubit<BottomNavBarState> {
     AppAssets.notificationIconSvg,
     AppAssets.heartIconSvg,
     AppAssets.userIconSvg,
-  ];List<String> unSelectedIcons = [
+  ];
+  List<String> unSelectedIcons = [
     AppAssets.homeIconSvg,
     AppAssets.orderIconSvg,
     AppAssets.notificationIconSvg,
