@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:thimar/core/extensions/navigation_extension.dart';
 
 import '../theming/app_colors.dart';
 import '../theming/app_styles.dart';
@@ -10,17 +9,25 @@ class AppCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String appBarTitle;
   final bool? isHaveBackButton;
 
-  const AppCustomAppBar(
-      {super.key, required this.appBarTitle, this.isHaveBackButton = true});
+  const AppCustomAppBar({
+    super.key,
+    required this.appBarTitle,
+    this.isHaveBackButton = true,
+  });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      leadingWidth: kToolbarHeight+ 10.w,
+      primary: true,
       leading: isHaveBackButton == true
-          ? Padding(
-              padding: EdgeInsets.only(right: 8.w, bottom: 6.h),
-              child: AppCustomBackButton(),
-            )
+          ? SizedBox(
+          width: kToolbarHeight,
+          height: kToolbarHeight+8,
+          child: Padding(
+            padding:  EdgeInsets.symmetric(horizontal: 10.w, vertical: 6.h),
+            child: AppCustomBackButton(),
+          ))
           : null,
       backgroundColor: AppColors.whiteColor,
       elevation: 0,

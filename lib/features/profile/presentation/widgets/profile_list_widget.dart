@@ -44,7 +44,11 @@ class ProfileListWidget extends StatelessWidget {
           ProfileCustomRowWidget(
             title: "الدفع",
             iconPath: AppAssets.dollarImage,
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(
+                Routes.paymentScreen,
+              );
+            },
           ),
           Divider(
             color: AppColors.lightGrayColor,
