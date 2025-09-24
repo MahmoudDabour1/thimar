@@ -10,12 +10,15 @@ import '../../../core/theming/app_colors.dart';
 import '../logic/bottom_nav_bar_state.dart';
 
 class BottomNavBarLayout extends StatelessWidget {
-  const BottomNavBarLayout({super.key});
+  final int? initialIndex;
+
+  const BottomNavBarLayout({super.key, this.initialIndex});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => BottomNavBarCubit(),
+      create: (context) =>
+          BottomNavBarCubit()..changeBottomNavIndex(initialIndex ?? 0),
       child: BlocBuilder<BottomNavBarCubit, BottomNavBarState>(
         builder: (context, state) {
           final bottomNavCubit = context.read<BottomNavBarCubit>();
