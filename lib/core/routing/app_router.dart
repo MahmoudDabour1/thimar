@@ -22,6 +22,7 @@ import '../../features/auth/verifi_code/presentation/verified_screen.dart';
 import '../../features/checkout/presentation/checkout_screen.dart';
 import '../../features/home/presentation/category_products_screen.dart';
 import '../../features/profile/presentation/profile_data_screen.dart';
+import '../../features/search/presentation/search_screen.dart';
 import '../../features/walltet/presentation/all_transaction_history_screen.dart';
 import '../../features/walltet/presentation/charge_wallet_screen.dart';
 import '../../features/walltet/presentation/wallet_screen.dart';
@@ -161,6 +162,10 @@ class AppRouter {
       case Routes.paymentScreen:
         return MaterialPageRoute(
           builder: (_) => PaymentScreen(),
+        );
+      case Routes.searchScreen:
+        return MaterialPageRoute(
+          builder: (_) => SearchScreen(),
         );
     }
     return null;

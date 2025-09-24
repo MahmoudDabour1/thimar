@@ -34,6 +34,9 @@ import 'package:thimar/features/product_details/logic/product_details_cubit.dart
 import 'package:thimar/features/profile/data/data_sources/profile_remote_data_source.dart';
 import 'package:thimar/features/profile/data/repos/profile_repo.dart';
 import 'package:thimar/features/profile/logic/profile_cubit.dart';
+import 'package:thimar/features/search/data/data_sources/search_remote_data_source.dart';
+import 'package:thimar/features/search/data/repos/search_repo.dart';
+import 'package:thimar/features/search/logic/search_cubit.dart';
 import 'package:thimar/features/walltet/data/data_sources/wallet_remote_data_source.dart';
 import 'package:thimar/features/walltet/data/repos/wallet_repo.dart';
 import 'package:thimar/features/walltet/logic/wallet_cubit.dart';
@@ -141,4 +144,10 @@ Future<void> setupGetIt() async {
   sl.registerLazySingleton<FavoriteRepos>(
       () => FavoriteReposImpl(remoteDataSource: sl()));
   sl.registerFactory<FavoriteCubit>(() => FavoriteCubit(sl()));
+
+//search
+  sl.registerLazySingleton<SearchRemoteDataSource>(
+      () => SearchRemoteDataSource(dio));
+  sl.registerLazySingleton<SearchRepo>(() => SearchRepoImpl(sl()));
+  sl.registerFactory<SearchCubit>(() => SearchCubit(sl()));
 }

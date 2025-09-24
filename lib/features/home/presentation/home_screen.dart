@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:thimar/core/extensions/navigation_extension.dart';
+import 'package:thimar/core/routing/routes.dart';
 import 'package:thimar/core/utils/spacing.dart';
+import 'package:thimar/core/widgets/app_custom_search_bar.dart';
 import 'package:thimar/features/home/logic/category_cubit.dart';
 import 'package:thimar/features/home/logic/home_cubit.dart';
 import 'package:thimar/features/home/presentation/widgets/home_carousel_slider_widget.dart';
 import 'package:thimar/features/home/presentation/widgets/home_categories_widget.dart';
 import 'package:thimar/features/home/presentation/widgets/home_custom_header_widget.dart';
-import 'package:thimar/features/home/presentation/widgets/home_custom_search_bar.dart';
 import 'package:thimar/features/home/presentation/widgets/home_products_widget.dart';
 
 import '../../../core/di/dependency_injection.dart';
@@ -41,7 +44,16 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             verticalSpace(8),
             HomeCustomHeaderWidget(),
-            HomeCustomSearchBar(),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 22.h),
+              child: AppCustomSearchBar(
+                readOnly: true,
+                // enabled: false,
+                onTap: () {
+                  context.pushNamed(Routes.searchScreen);
+                },
+              ),
+            ),
             BlocProvider.value(
               value: sliderCubit,
               child: HomeCarouselSliderWidget(),

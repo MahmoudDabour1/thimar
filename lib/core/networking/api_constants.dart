@@ -39,6 +39,8 @@ class ApiConstants {
   static const String clearAllNotificationsEndPoint =
       "/notifications/clear_all_notifications";
   static const String logoutEndPoint = "/logout";
+  static const String searchEndPoint = "/search/";
+  static const String searchByCategoryEndPoint = "/search_category/{id}/";
 }
 
 class ApiErrors {
