@@ -39,7 +39,7 @@ class SearchCubit extends Cubit<SearchState> {
       text: searchController.text,
       filter: filter,
       minPrice: minPrice ?? 0,
-      maxPrice: maxPrice ?? 0,
+      maxPrice: maxPrice ?? 5000,
       categoryId: categoryId,
     );
     response.when(
