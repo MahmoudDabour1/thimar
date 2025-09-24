@@ -17,7 +17,7 @@ class ChargeWalletCardData extends StatelessWidget {
           hintText: "الاسم",
           fillColor: AppColors.lighterGreenColor,
           validator: (value) {
-            if (value == null || value.isEmpty) {
+            if (value.isEmpty) {
               return 'يرجى إدخال الاسم';
             }
             return null;
@@ -28,7 +28,7 @@ class ChargeWalletCardData extends StatelessWidget {
           fillColor: AppColors.lighterGreenColor,
           hintText: "رقم البطاقة الائتمانية",
           validator: (value) {
-            if (value == null || value.isEmpty) {
+            if (value.isEmpty) {
               return 'يرجى إدخال رقم البطاقة الائتمانية';
             }
             return null;
@@ -42,7 +42,7 @@ class ChargeWalletCardData extends StatelessWidget {
                 fillColor: AppColors.lighterGreenColor,
                 hintText: "تاريخ الانتهاء",
                 validator: (value) {
-                  if (value == null || value.isEmpty) {
+                  if (value.isEmpty) {
                     return 'يرجى إدخال تاريخ الانتهاء';
                   }
                   return null;
@@ -55,7 +55,7 @@ class ChargeWalletCardData extends StatelessWidget {
                 fillColor: AppColors.lighterGreenColor,
                 hintText: "الرقم المتسلسل",
                 validator: (value) {
-                  if (value == null || value.isEmpty) {
+                  if (value.isEmpty) {
                     return 'يرجى إدخال الرقم المتسلسل';
                   }
                   return null;

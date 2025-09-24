@@ -11,6 +11,7 @@ class HomeCustomSearchBar extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 22.h),
       child: AppCustomSearchBar(
+
         hintText: "ابحث عن ماتريد؟",
         validator: (value) {},
       ),

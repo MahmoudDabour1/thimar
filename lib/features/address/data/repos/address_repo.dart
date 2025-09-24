@@ -15,7 +15,8 @@ abstract class AddressRepo {
       InsertAddressRequestBody insertAddressRequestBody);
 
   Future<ApiResult<UpdateAddressResponseModel>> updateAddresses(
-      { required InsertAddressRequestBody insertAddressRequestBody,required  int id});
+      {required InsertAddressRequestBody insertAddressRequestBody,
+      required int id});
 
   Future<ApiResult<DeleteAddressResponseModel>> deleteAddresses(int id);
 }
@@ -49,7 +50,8 @@ class AddressRepoImpl implements AddressRepo {
 
   @override
   Future<ApiResult<UpdateAddressResponseModel>> updateAddresses(
-      {required InsertAddressRequestBody insertAddressRequestBody, required int id}) async {
+      {required InsertAddressRequestBody insertAddressRequestBody,
+      required int id}) async {
     try {
       final response = await addressRemoteDataSource.updateAddresses(
           insertAddressRequestBody: insertAddressRequestBody, addressId: id);

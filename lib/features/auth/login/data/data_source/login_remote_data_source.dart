@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
+import 'package:thimar/features/auth/login/data/models/logout_response_model.dart';
 
 import '../../../../../../core/networking/api_constants.dart';
 import '../models/login_request_body.dart';
@@ -16,4 +17,7 @@ abstract class LoginRemoteDataSource {
   Future<LoginResponseModel> login(
     @Body() LoginRequestBody loginRequestBody,
   );
+
+  @POST(ApiConstants.logoutEndPoint)
+  Future<LogoutResponseModel> logout();
 }

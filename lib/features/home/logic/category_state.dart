@@ -8,18 +8,18 @@ class CategoryState<T> with _$CategoryState<T> {
 
   const factory CategoryState.getCategoriesLoading() = GetCategoriesLoading;
 
-  const factory CategoryState.getCategoriesSuccess(
-      T data) = GetCategoriesSuccess;
+  const factory CategoryState.getCategoriesSuccess(T data) =
+      GetCategoriesSuccess;
 
   const factory CategoryState.getCategoriesFailure(String errorMessage) =
-  GetCategoriesFailure;
+      GetCategoriesFailure;
 
   const factory CategoryState.getCategoryProductsLoading() =
-  GetCategoryProductLoading;
+      GetCategoryProductLoading;
 
   const factory CategoryState.getCategoryProductsSuccess(T data) =
-  GetCategoryProductSuccess;
+      GetCategoryProductSuccess;
 
   const factory CategoryState.getCategoryProductsFailure(String errorMessage) =
-  GetCategoryProductFailure;
+      GetCategoryProductFailure;
 }

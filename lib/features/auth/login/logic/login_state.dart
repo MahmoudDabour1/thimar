@@ -11,4 +11,10 @@ class LoginState<T> with _$LoginState<T> {
   const factory LoginState.success(T response) = LoginSuccess<T>;
 
   const factory LoginState.error({required String error}) = LoginError;
+
+  const factory LoginState.logoutLoading() = LogoutLoading;
+
+  factory LoginState.logoutSuccess(T response) = LogoutSuccess<T>;
+
+  factory LoginState.logoutError({required String error}) = LogoutError;
 }

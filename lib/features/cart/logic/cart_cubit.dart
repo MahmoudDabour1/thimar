@@ -20,7 +20,7 @@ class CartCubit extends Cubit<CartState> {
       ),
     );
     response.when(
-      success: (data)async {
+      success: (data) async {
         showToast(message: data.message.toString());
         emit(CartState.addToCartSuccess(data));
         await getCartData();
@@ -49,7 +49,7 @@ class CartCubit extends Cubit<CartState> {
     emit(CartState.deleteCartLoading());
     final response = await cartRepo.deleteCartData(id);
     response.when(
-      success: (data) async{
+      success: (data) async {
         showToast(message: data.message.toString());
         emit(CartState.deleteCartSuccess(data));
         await getCartData();
@@ -59,11 +59,12 @@ class CartCubit extends Cubit<CartState> {
       },
     );
   }
+
   Future<void> updateCartData(int id, int amount) async {
     emit(CartState.updateCartLoading());
     final response = await cartRepo.updateCartData(id, amount);
     response.when(
-      success: (data) async{
+      success: (data) async {
         showToast(message: data.message ?? "تم التعديل بنجاح");
         emit(CartState.updateCartSuccess(data));
         await getCartData();

@@ -4,8 +4,6 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/widgets/app_custom_app_bar.dart';
 import 'package:thimar/features/about_app/data/models/policy_response_model.dart';
-import 'package:thimar/features/profile/logic/profile_cubit.dart';
-import 'package:thimar/features/profile/logic/profile_state.dart';
 
 import '../../../core/di/dependency_injection.dart';
 import '../logic/about_app_cubit.dart';
@@ -21,7 +19,7 @@ class PolicyScreen extends StatelessWidget {
       value: cubit..getPolicy(),
       child: Scaffold(
         appBar: AppCustomAppBar(appBarTitle: "سياسة الخصوصية"),
-        body: BlocBuilder<AboutAppCubit,AboutAppState>(
+        body: BlocBuilder<AboutAppCubit, AboutAppState>(
           builder: (context, state) {
             return state.maybeWhen(
                 policyLoading: () => Center(

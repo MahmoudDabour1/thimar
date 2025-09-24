@@ -22,7 +22,7 @@ class RegisterTextFormsWidget extends StatelessWidget {
             hintText: "اسم المستخدم",
             controller: cubit.nameController,
             validator: (value) {
-              if (value == null || value.isEmpty) {
+              if (value.isEmpty) {
                 return "أدخل اسم مستخدم صحيح";
               }
               return null;
@@ -41,7 +41,7 @@ class RegisterTextFormsWidget extends StatelessWidget {
           AppTextFormField(
             hintText: "المدينة",
             validator: (value) {
-              if (value == null || value.isEmpty) {
+              if (value.isEmpty) {
                 return "أدخل مدينة صحيحة";
               }
               return null;
@@ -57,7 +57,7 @@ class RegisterTextFormsWidget extends StatelessWidget {
             controller: cubit.passwordController,
             hintText: "كلمة المرور",
             validator: (value) {
-              if (value == null || value.isEmpty) {
+              if (value.isEmpty) {
                 return "أدخل كلمة مرور صحيحة";
               }
               if (value.length < 6) {
@@ -76,7 +76,7 @@ class RegisterTextFormsWidget extends StatelessWidget {
             controller: cubit.confirmPasswordController,
             hintText: "كلمة المرور",
             validator: (value) {
-              if (value == null || value.isEmpty) {
+              if (value.isEmpty) {
                 return "أدخل كلمة مرور صحيحة";
               }
               if (value != cubit.passwordController.text) {

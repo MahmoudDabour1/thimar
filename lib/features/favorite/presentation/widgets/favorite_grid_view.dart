@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
-import 'package:thimar/features/favorite/data/models/add_to_favorite_response_model.dart';
 import 'package:thimar/features/favorite/data/models/get_favorite_response_model.dart';
 
 import '../../../../core/routing/routes.dart';
@@ -42,15 +41,15 @@ class FavoriteGridView extends StatelessWidget {
             discountPercentage: (data.data?[index].discount)! * 100 ?? 0,
             onAddPressed: () {
               context.read<CartCubit>().addToCart(
-                data.data?[index].id ?? 0,
-                1,
-              );
+                    data.data?[index].id ?? 0,
+                    1,
+                  );
             },
             onAddToCartPressed: () {
               context.read<CartCubit>().addToCart(
-                data.data?[index].id ?? 0,
-                1,
-              );
+                    data.data?[index].id ?? 0,
+                    1,
+                  );
             },
           ),
         );

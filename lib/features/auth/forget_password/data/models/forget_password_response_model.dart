@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'forget_password_response_model.g.dart';
+
 @JsonSerializable()
 class ForgetPasswordResponseModel {
   @JsonKey(name: "status")
@@ -21,7 +22,8 @@ class ForgetPasswordResponseModel {
     this.devMessage,
   });
 
-  factory ForgetPasswordResponseModel.fromJson(Map<String, dynamic> json) => _$ForgetPasswordResponseModelFromJson(json);
+  factory ForgetPasswordResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$ForgetPasswordResponseModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$ForgetPasswordResponseModelToJson(this);
 }

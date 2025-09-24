@@ -50,7 +50,7 @@ class _ChargeWalletScreenState extends State<ChargeWalletScreen> {
                     fillColor: AppColors.lighterGreenColor,
                     controller: cubit.amountController,
                     validator: (value) {
-                      if (value == null || value.isEmpty) {
+                      if (value.isEmpty) {
                         return 'يرجى إدخال المبلغ';
                       }
                       return null;

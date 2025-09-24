@@ -5,8 +5,6 @@ import 'package:thimar/core/theming/app_assets.dart';
 import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/core/theming/app_styles.dart';
 import 'package:thimar/core/widgets/app_custom_app_bar.dart';
-import 'package:thimar/features/profile/logic/profile_cubit.dart';
-import 'package:thimar/features/profile/logic/profile_state.dart';
 
 import '../../../core/di/dependency_injection.dart';
 import '../data/models/faqs_response_model.dart';
@@ -23,7 +21,7 @@ class FqsScreen extends StatelessWidget {
       value: cubit..getFaqs(),
       child: Scaffold(
           appBar: AppCustomAppBar(appBarTitle: "أسئلة متكررة"),
-          body: BlocBuilder<AboutAppCubit,AboutAppState>(
+          body: BlocBuilder<AboutAppCubit, AboutAppState>(
               builder: (context, state) {
             return state.maybeWhen(
               faqsLoading: () => Center(

@@ -6,23 +6,21 @@ import 'package:thimar/core/utils/spacing.dart';
 import 'package:thimar/core/widgets/app_custom_app_bar.dart';
 import 'package:thimar/features/about_app/data/models/about_app_response_model.dart';
 import 'package:thimar/features/about_app/logic/about_app_cubit.dart';
-import 'package:thimar/features/profile/logic/profile_cubit.dart';
 
 import '../../../core/di/dependency_injection.dart';
 import '../../../core/theming/app_colors.dart';
-import '../../profile/logic/profile_state.dart';
 import 'package:flutter_html/flutter_html.dart';
 
 import '../logic/about_app_state.dart';
-
 
 class AboutAppScreen extends StatelessWidget {
   const AboutAppScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {  final cubit = sl<AboutAppCubit>();
+  Widget build(BuildContext context) {
+    final cubit = sl<AboutAppCubit>();
 
-  return BlocProvider.value(
+    return BlocProvider.value(
       value: cubit..getAboutApp(),
       child: Scaffold(
         appBar: AppCustomAppBar(appBarTitle: "عن التطبيق"),
@@ -40,7 +38,7 @@ class AboutAppScreen extends StatelessWidget {
                   ),
                 ),
                 verticalSpace(16),
-                BlocBuilder<AboutAppCubit,AboutAppState>(
+                BlocBuilder<AboutAppCubit, AboutAppState>(
                   builder: (context, state) {
                     return state.maybeWhen(
                         aboutAppLoading: () => Center(
@@ -64,7 +62,7 @@ class AboutAppScreen extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Html(
-        data: data.data?.about??"",
+        data: data.data?.about ?? "",
         style: {
           "p.fancy": Style(
             textAlign: TextAlign.center,

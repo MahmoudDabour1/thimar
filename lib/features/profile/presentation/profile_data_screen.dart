@@ -134,7 +134,7 @@ class _ProfileDataScreenState extends State<ProfileDataScreen> {
                 ..text = data.data?.fullname ?? "",
               fillColor: AppColors.lighterGreenColor,
               validator: (value) {
-                if (value == null || value.isEmpty) {
+                if (value.isEmpty) {
                   return 'هذا الحقل مطلوب';
                 }
               },
@@ -157,7 +157,7 @@ class _ProfileDataScreenState extends State<ProfileDataScreen> {
               controller: profileCubit.cityController
                 ..text = data.data?.city?.name ?? "",
               validator: (value) {
-                if (value == null || value.isEmpty) {
+                if (value.isEmpty) {
                   return 'هذا الحقل مطلوب';
                 }
               },

@@ -46,10 +46,11 @@ class _SplashScreenState extends State<SplashScreen>
 
     _navigate();
   }
+
   Future<void> _navigate() async {
     await Future.delayed(const Duration(seconds: 3));
     final token =
-    await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
+        await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
 
     if (mounted) {
       if (token.isNotEmpty) {
@@ -59,6 +60,7 @@ class _SplashScreenState extends State<SplashScreen>
       }
     }
   }
+
   @override
   void dispose() {
     _controller.dispose();

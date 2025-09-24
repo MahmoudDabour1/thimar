@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'resend_code_response_model.g.dart';
+
 @JsonSerializable()
 class ResendCodeResponseModel {
   @JsonKey(name: "status")
@@ -21,7 +22,8 @@ class ResendCodeResponseModel {
     this.devMessage,
   });
 
-  factory ResendCodeResponseModel.fromJson(Map<String, dynamic> json) => _$ResendCodeResponseModelFromJson(json);
+  factory ResendCodeResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$ResendCodeResponseModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$ResendCodeResponseModelToJson(this);
 }

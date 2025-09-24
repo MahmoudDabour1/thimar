@@ -15,8 +15,7 @@ class ProductDetailsState<T> with _$ProductDetailsState {
   const factory ProductDetailsState.productDetailsFailure(String errorMessage) =
       ProductDetailsFailure;
 
-  const factory ProductDetailsState.productRatesLoading() =
-      ProductRatesLoading;
+  const factory ProductDetailsState.productRatesLoading() = ProductRatesLoading;
 
   const factory ProductDetailsState.productRatesSuccess(T data) =
       ProductRatesSuccess;

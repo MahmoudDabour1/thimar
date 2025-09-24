@@ -26,7 +26,7 @@ class LoginTextFormsWidget extends StatelessWidget {
             hintText: "كلمة المرور",
             controller: loginCubit.passwordController,
             validator: (value) {
-              if (value == null || value.isEmpty) {
+              if (value.isEmpty) {
                 return 'يرجى إدخال كلمة المرور';
               }
             },

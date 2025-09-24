@@ -15,13 +15,18 @@ InputDecoration getCommonInputDecoration({
   return InputDecoration(
     isDense: true,
     filled: true,
-    fillColor: fillColor??AppColors.whiteColor,
+    fillColor: fillColor ?? AppColors.whiteColor,
     contentPadding: EdgeInsets.symmetric(
-      vertical:verticalPadding?? 15.h,
+      vertical: verticalPadding ?? 15.h,
       horizontal: 20.w,
     ),
+    focusColor: AppColors.lightGrayColor,
     enabledBorder: OutlineInputBorder(
-      borderSide: const BorderSide(color: AppColors.lightGrayColor, width: 1.3),
+      borderSide: BorderSide(color: AppColors.lightGrayColor, width: 1.3),
+      borderRadius: BorderRadius.circular(16.r),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: AppColors.lightGrayColor, width: 1.3),
       borderRadius: BorderRadius.circular(16.r),
     ),
     errorBorder: OutlineInputBorder(
@@ -33,15 +38,14 @@ InputDecoration getCommonInputDecoration({
       borderRadius: BorderRadius.circular(16.r),
     ),
     border: OutlineInputBorder(
-      borderSide:  BorderSide.none,
+      borderSide: const BorderSide(color: AppColors.lightGrayColor, width: 1.3),
       borderRadius: BorderRadius.circular(16.r),
     ),
     disabledBorder: OutlineInputBorder(
       borderSide: const BorderSide(color: AppColors.lightGrayColor, width: 1.3),
       borderRadius: BorderRadius.circular(16.r),
     ),
-    hintText:
-      hintText,
+    hintText: hintText,
     hintStyle: labelStyle ?? AppStyles.font15GrayRegular,
     prefixIcon: prefixIcon,
     suffixIcon: suffixIcon,

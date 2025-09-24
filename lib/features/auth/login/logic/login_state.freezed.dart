@@ -22,6 +22,9 @@ mixin _$LoginState<T> {
     required TResult Function() loading,
     required TResult Function(T response) success,
     required TResult Function(String error) error,
+    required TResult Function() logoutLoading,
+    required TResult Function(T response) logoutSuccess,
+    required TResult Function(String error) logoutError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,9 @@ mixin _$LoginState<T> {
     TResult? Function()? loading,
     TResult? Function(T response)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? logoutLoading,
+    TResult? Function(T response)? logoutSuccess,
+    TResult? Function(String error)? logoutError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +44,9 @@ mixin _$LoginState<T> {
     TResult Function()? loading,
     TResult Function(T response)? success,
     TResult Function(String error)? error,
+    TResult Function()? logoutLoading,
+    TResult Function(T response)? logoutSuccess,
+    TResult Function(String error)? logoutError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +56,9 @@ mixin _$LoginState<T> {
     required TResult Function(LoginLoading<T> value) loading,
     required TResult Function(LoginSuccess<T> value) success,
     required TResult Function(LoginError<T> value) error,
+    required TResult Function(LogoutLoading<T> value) logoutLoading,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +67,9 @@ mixin _$LoginState<T> {
     TResult? Function(LoginLoading<T> value)? loading,
     TResult? Function(LoginSuccess<T> value)? success,
     TResult? Function(LoginError<T> value)? error,
+    TResult? Function(LogoutLoading<T> value)? logoutLoading,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +78,9 @@ mixin _$LoginState<T> {
     TResult Function(LoginLoading<T> value)? loading,
     TResult Function(LoginSuccess<T> value)? success,
     TResult Function(LoginError<T> value)? error,
+    TResult Function(LogoutLoading<T> value)? logoutLoading,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +152,9 @@ class _$LoginInitialImpl<T> implements LoginInitial<T> {
     required TResult Function() loading,
     required TResult Function(T response) success,
     required TResult Function(String error) error,
+    required TResult Function() logoutLoading,
+    required TResult Function(T response) logoutSuccess,
+    required TResult Function(String error) logoutError,
   }) {
     return initial();
   }
@@ -145,6 +166,9 @@ class _$LoginInitialImpl<T> implements LoginInitial<T> {
     TResult? Function()? loading,
     TResult? Function(T response)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? logoutLoading,
+    TResult? Function(T response)? logoutSuccess,
+    TResult? Function(String error)? logoutError,
   }) {
     return initial?.call();
   }
@@ -156,6 +180,9 @@ class _$LoginInitialImpl<T> implements LoginInitial<T> {
     TResult Function()? loading,
     TResult Function(T response)? success,
     TResult Function(String error)? error,
+    TResult Function()? logoutLoading,
+    TResult Function(T response)? logoutSuccess,
+    TResult Function(String error)? logoutError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -171,6 +198,9 @@ class _$LoginInitialImpl<T> implements LoginInitial<T> {
     required TResult Function(LoginLoading<T> value) loading,
     required TResult Function(LoginSuccess<T> value) success,
     required TResult Function(LoginError<T> value) error,
+    required TResult Function(LogoutLoading<T> value) logoutLoading,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
   }) {
     return initial(this);
   }
@@ -182,6 +212,9 @@ class _$LoginInitialImpl<T> implements LoginInitial<T> {
     TResult? Function(LoginLoading<T> value)? loading,
     TResult? Function(LoginSuccess<T> value)? success,
     TResult? Function(LoginError<T> value)? error,
+    TResult? Function(LogoutLoading<T> value)? logoutLoading,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
   }) {
     return initial?.call(this);
   }
@@ -193,6 +226,9 @@ class _$LoginInitialImpl<T> implements LoginInitial<T> {
     TResult Function(LoginLoading<T> value)? loading,
     TResult Function(LoginSuccess<T> value)? success,
     TResult Function(LoginError<T> value)? error,
+    TResult Function(LogoutLoading<T> value)? logoutLoading,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -251,6 +287,9 @@ class _$LoginLoadingImpl<T> implements LoginLoading<T> {
     required TResult Function() loading,
     required TResult Function(T response) success,
     required TResult Function(String error) error,
+    required TResult Function() logoutLoading,
+    required TResult Function(T response) logoutSuccess,
+    required TResult Function(String error) logoutError,
   }) {
     return loading();
   }
@@ -262,6 +301,9 @@ class _$LoginLoadingImpl<T> implements LoginLoading<T> {
     TResult? Function()? loading,
     TResult? Function(T response)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? logoutLoading,
+    TResult? Function(T response)? logoutSuccess,
+    TResult? Function(String error)? logoutError,
   }) {
     return loading?.call();
   }
@@ -273,6 +315,9 @@ class _$LoginLoadingImpl<T> implements LoginLoading<T> {
     TResult Function()? loading,
     TResult Function(T response)? success,
     TResult Function(String error)? error,
+    TResult Function()? logoutLoading,
+    TResult Function(T response)? logoutSuccess,
+    TResult Function(String error)? logoutError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -288,6 +333,9 @@ class _$LoginLoadingImpl<T> implements LoginLoading<T> {
     required TResult Function(LoginLoading<T> value) loading,
     required TResult Function(LoginSuccess<T> value) success,
     required TResult Function(LoginError<T> value) error,
+    required TResult Function(LogoutLoading<T> value) logoutLoading,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
   }) {
     return loading(this);
   }
@@ -299,6 +347,9 @@ class _$LoginLoadingImpl<T> implements LoginLoading<T> {
     TResult? Function(LoginLoading<T> value)? loading,
     TResult? Function(LoginSuccess<T> value)? success,
     TResult? Function(LoginError<T> value)? error,
+    TResult? Function(LogoutLoading<T> value)? logoutLoading,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
   }) {
     return loading?.call(this);
   }
@@ -310,6 +361,9 @@ class _$LoginLoadingImpl<T> implements LoginLoading<T> {
     TResult Function(LoginLoading<T> value)? loading,
     TResult Function(LoginSuccess<T> value)? success,
     TResult Function(LoginError<T> value)? error,
+    TResult Function(LogoutLoading<T> value)? logoutLoading,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -397,6 +451,9 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
     required TResult Function() loading,
     required TResult Function(T response) success,
     required TResult Function(String error) error,
+    required TResult Function() logoutLoading,
+    required TResult Function(T response) logoutSuccess,
+    required TResult Function(String error) logoutError,
   }) {
     return success(response);
   }
@@ -408,6 +465,9 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
     TResult? Function()? loading,
     TResult? Function(T response)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? logoutLoading,
+    TResult? Function(T response)? logoutSuccess,
+    TResult? Function(String error)? logoutError,
   }) {
     return success?.call(response);
   }
@@ -419,6 +479,9 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
     TResult Function()? loading,
     TResult Function(T response)? success,
     TResult Function(String error)? error,
+    TResult Function()? logoutLoading,
+    TResult Function(T response)? logoutSuccess,
+    TResult Function(String error)? logoutError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -434,6 +497,9 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
     required TResult Function(LoginLoading<T> value) loading,
     required TResult Function(LoginSuccess<T> value) success,
     required TResult Function(LoginError<T> value) error,
+    required TResult Function(LogoutLoading<T> value) logoutLoading,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
   }) {
     return success(this);
   }
@@ -445,6 +511,9 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
     TResult? Function(LoginLoading<T> value)? loading,
     TResult? Function(LoginSuccess<T> value)? success,
     TResult? Function(LoginError<T> value)? error,
+    TResult? Function(LogoutLoading<T> value)? logoutLoading,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
   }) {
     return success?.call(this);
   }
@@ -456,6 +525,9 @@ class _$LoginSuccessImpl<T> implements LoginSuccess<T> {
     TResult Function(LoginLoading<T> value)? loading,
     TResult Function(LoginSuccess<T> value)? success,
     TResult Function(LoginError<T> value)? error,
+    TResult Function(LogoutLoading<T> value)? logoutLoading,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -549,6 +621,9 @@ class _$LoginErrorImpl<T> implements LoginError<T> {
     required TResult Function() loading,
     required TResult Function(T response) success,
     required TResult Function(String error) error,
+    required TResult Function() logoutLoading,
+    required TResult Function(T response) logoutSuccess,
+    required TResult Function(String error) logoutError,
   }) {
     return error(this.error);
   }
@@ -560,6 +635,9 @@ class _$LoginErrorImpl<T> implements LoginError<T> {
     TResult? Function()? loading,
     TResult? Function(T response)? success,
     TResult? Function(String error)? error,
+    TResult? Function()? logoutLoading,
+    TResult? Function(T response)? logoutSuccess,
+    TResult? Function(String error)? logoutError,
   }) {
     return error?.call(this.error);
   }
@@ -571,6 +649,9 @@ class _$LoginErrorImpl<T> implements LoginError<T> {
     TResult Function()? loading,
     TResult Function(T response)? success,
     TResult Function(String error)? error,
+    TResult Function()? logoutLoading,
+    TResult Function(T response)? logoutSuccess,
+    TResult Function(String error)? logoutError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -586,6 +667,9 @@ class _$LoginErrorImpl<T> implements LoginError<T> {
     required TResult Function(LoginLoading<T> value) loading,
     required TResult Function(LoginSuccess<T> value) success,
     required TResult Function(LoginError<T> value) error,
+    required TResult Function(LogoutLoading<T> value) logoutLoading,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
   }) {
     return error(this);
   }
@@ -597,6 +681,9 @@ class _$LoginErrorImpl<T> implements LoginError<T> {
     TResult? Function(LoginLoading<T> value)? loading,
     TResult? Function(LoginSuccess<T> value)? success,
     TResult? Function(LoginError<T> value)? error,
+    TResult? Function(LogoutLoading<T> value)? logoutLoading,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
   }) {
     return error?.call(this);
   }
@@ -608,6 +695,9 @@ class _$LoginErrorImpl<T> implements LoginError<T> {
     TResult Function(LoginLoading<T> value)? loading,
     TResult Function(LoginSuccess<T> value)? success,
     TResult Function(LoginError<T> value)? error,
+    TResult Function(LogoutLoading<T> value)? logoutLoading,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -626,5 +716,483 @@ abstract class LoginError<T> implements LoginState<T> {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoginErrorImplCopyWith<T, _$LoginErrorImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LogoutLoadingImplCopyWith<T, $Res> {
+  factory _$$LogoutLoadingImplCopyWith(_$LogoutLoadingImpl<T> value,
+          $Res Function(_$LogoutLoadingImpl<T>) then) =
+      __$$LogoutLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$LogoutLoadingImplCopyWithImpl<T, $Res>
+    extends _$LoginStateCopyWithImpl<T, $Res, _$LogoutLoadingImpl<T>>
+    implements _$$LogoutLoadingImplCopyWith<T, $Res> {
+  __$$LogoutLoadingImplCopyWithImpl(_$LogoutLoadingImpl<T> _value,
+      $Res Function(_$LogoutLoadingImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$LogoutLoadingImpl<T> implements LogoutLoading<T> {
+  const _$LogoutLoadingImpl();
+
+  @override
+  String toString() {
+    return 'LoginState<$T>.logoutLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LogoutLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T response) success,
+    required TResult Function(String error) error,
+    required TResult Function() logoutLoading,
+    required TResult Function(T response) logoutSuccess,
+    required TResult Function(String error) logoutError,
+  }) {
+    return logoutLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T response)? success,
+    TResult? Function(String error)? error,
+    TResult? Function()? logoutLoading,
+    TResult? Function(T response)? logoutSuccess,
+    TResult? Function(String error)? logoutError,
+  }) {
+    return logoutLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T response)? success,
+    TResult Function(String error)? error,
+    TResult Function()? logoutLoading,
+    TResult Function(T response)? logoutSuccess,
+    TResult Function(String error)? logoutError,
+    required TResult orElse(),
+  }) {
+    if (logoutLoading != null) {
+      return logoutLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoginInitial<T> value) initial,
+    required TResult Function(LoginLoading<T> value) loading,
+    required TResult Function(LoginSuccess<T> value) success,
+    required TResult Function(LoginError<T> value) error,
+    required TResult Function(LogoutLoading<T> value) logoutLoading,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
+  }) {
+    return logoutLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(LoginInitial<T> value)? initial,
+    TResult? Function(LoginLoading<T> value)? loading,
+    TResult? Function(LoginSuccess<T> value)? success,
+    TResult? Function(LoginError<T> value)? error,
+    TResult? Function(LogoutLoading<T> value)? logoutLoading,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
+  }) {
+    return logoutLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoginInitial<T> value)? initial,
+    TResult Function(LoginLoading<T> value)? loading,
+    TResult Function(LoginSuccess<T> value)? success,
+    TResult Function(LoginError<T> value)? error,
+    TResult Function(LogoutLoading<T> value)? logoutLoading,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
+    required TResult orElse(),
+  }) {
+    if (logoutLoading != null) {
+      return logoutLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LogoutLoading<T> implements LoginState<T> {
+  const factory LogoutLoading() = _$LogoutLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$LogoutSuccessImplCopyWith<T, $Res> {
+  factory _$$LogoutSuccessImplCopyWith(_$LogoutSuccessImpl<T> value,
+          $Res Function(_$LogoutSuccessImpl<T>) then) =
+      __$$LogoutSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T response});
+}
+
+/// @nodoc
+class __$$LogoutSuccessImplCopyWithImpl<T, $Res>
+    extends _$LoginStateCopyWithImpl<T, $Res, _$LogoutSuccessImpl<T>>
+    implements _$$LogoutSuccessImplCopyWith<T, $Res> {
+  __$$LogoutSuccessImplCopyWithImpl(_$LogoutSuccessImpl<T> _value,
+      $Res Function(_$LogoutSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? response = freezed,
+  }) {
+    return _then(_$LogoutSuccessImpl<T>(
+      freezed == response
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LogoutSuccessImpl<T> implements LogoutSuccess<T> {
+  _$LogoutSuccessImpl(this.response);
+
+  @override
+  final T response;
+
+  @override
+  String toString() {
+    return 'LoginState<$T>.logoutSuccess(response: $response)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LogoutSuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.response, response));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(response));
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LogoutSuccessImplCopyWith<T, _$LogoutSuccessImpl<T>> get copyWith =>
+      __$$LogoutSuccessImplCopyWithImpl<T, _$LogoutSuccessImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T response) success,
+    required TResult Function(String error) error,
+    required TResult Function() logoutLoading,
+    required TResult Function(T response) logoutSuccess,
+    required TResult Function(String error) logoutError,
+  }) {
+    return logoutSuccess(response);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T response)? success,
+    TResult? Function(String error)? error,
+    TResult? Function()? logoutLoading,
+    TResult? Function(T response)? logoutSuccess,
+    TResult? Function(String error)? logoutError,
+  }) {
+    return logoutSuccess?.call(response);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T response)? success,
+    TResult Function(String error)? error,
+    TResult Function()? logoutLoading,
+    TResult Function(T response)? logoutSuccess,
+    TResult Function(String error)? logoutError,
+    required TResult orElse(),
+  }) {
+    if (logoutSuccess != null) {
+      return logoutSuccess(response);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoginInitial<T> value) initial,
+    required TResult Function(LoginLoading<T> value) loading,
+    required TResult Function(LoginSuccess<T> value) success,
+    required TResult Function(LoginError<T> value) error,
+    required TResult Function(LogoutLoading<T> value) logoutLoading,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
+  }) {
+    return logoutSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(LoginInitial<T> value)? initial,
+    TResult? Function(LoginLoading<T> value)? loading,
+    TResult? Function(LoginSuccess<T> value)? success,
+    TResult? Function(LoginError<T> value)? error,
+    TResult? Function(LogoutLoading<T> value)? logoutLoading,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
+  }) {
+    return logoutSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoginInitial<T> value)? initial,
+    TResult Function(LoginLoading<T> value)? loading,
+    TResult Function(LoginSuccess<T> value)? success,
+    TResult Function(LoginError<T> value)? error,
+    TResult Function(LogoutLoading<T> value)? logoutLoading,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
+    required TResult orElse(),
+  }) {
+    if (logoutSuccess != null) {
+      return logoutSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LogoutSuccess<T> implements LoginState<T> {
+  factory LogoutSuccess(final T response) = _$LogoutSuccessImpl<T>;
+
+  T get response;
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LogoutSuccessImplCopyWith<T, _$LogoutSuccessImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LogoutErrorImplCopyWith<T, $Res> {
+  factory _$$LogoutErrorImplCopyWith(_$LogoutErrorImpl<T> value,
+          $Res Function(_$LogoutErrorImpl<T>) then) =
+      __$$LogoutErrorImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$LogoutErrorImplCopyWithImpl<T, $Res>
+    extends _$LoginStateCopyWithImpl<T, $Res, _$LogoutErrorImpl<T>>
+    implements _$$LogoutErrorImplCopyWith<T, $Res> {
+  __$$LogoutErrorImplCopyWithImpl(
+      _$LogoutErrorImpl<T> _value, $Res Function(_$LogoutErrorImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$LogoutErrorImpl<T>(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LogoutErrorImpl<T> implements LogoutError<T> {
+  _$LogoutErrorImpl({required this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'LoginState<$T>.logoutError(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LogoutErrorImpl<T> &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LogoutErrorImplCopyWith<T, _$LogoutErrorImpl<T>> get copyWith =>
+      __$$LogoutErrorImplCopyWithImpl<T, _$LogoutErrorImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(T response) success,
+    required TResult Function(String error) error,
+    required TResult Function() logoutLoading,
+    required TResult Function(T response) logoutSuccess,
+    required TResult Function(String error) logoutError,
+  }) {
+    return logoutError(this.error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(T response)? success,
+    TResult? Function(String error)? error,
+    TResult? Function()? logoutLoading,
+    TResult? Function(T response)? logoutSuccess,
+    TResult? Function(String error)? logoutError,
+  }) {
+    return logoutError?.call(this.error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(T response)? success,
+    TResult Function(String error)? error,
+    TResult Function()? logoutLoading,
+    TResult Function(T response)? logoutSuccess,
+    TResult Function(String error)? logoutError,
+    required TResult orElse(),
+  }) {
+    if (logoutError != null) {
+      return logoutError(this.error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoginInitial<T> value) initial,
+    required TResult Function(LoginLoading<T> value) loading,
+    required TResult Function(LoginSuccess<T> value) success,
+    required TResult Function(LoginError<T> value) error,
+    required TResult Function(LogoutLoading<T> value) logoutLoading,
+    required TResult Function(LogoutSuccess<T> value) logoutSuccess,
+    required TResult Function(LogoutError<T> value) logoutError,
+  }) {
+    return logoutError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(LoginInitial<T> value)? initial,
+    TResult? Function(LoginLoading<T> value)? loading,
+    TResult? Function(LoginSuccess<T> value)? success,
+    TResult? Function(LoginError<T> value)? error,
+    TResult? Function(LogoutLoading<T> value)? logoutLoading,
+    TResult? Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult? Function(LogoutError<T> value)? logoutError,
+  }) {
+    return logoutError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoginInitial<T> value)? initial,
+    TResult Function(LoginLoading<T> value)? loading,
+    TResult Function(LoginSuccess<T> value)? success,
+    TResult Function(LoginError<T> value)? error,
+    TResult Function(LogoutLoading<T> value)? logoutLoading,
+    TResult Function(LogoutSuccess<T> value)? logoutSuccess,
+    TResult Function(LogoutError<T> value)? logoutError,
+    required TResult orElse(),
+  }) {
+    if (logoutError != null) {
+      return logoutError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LogoutError<T> implements LoginState<T> {
+  factory LogoutError({required final String error}) = _$LogoutErrorImpl<T>;
+
+  String get error;
+
+  /// Create a copy of LoginState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LogoutErrorImplCopyWith<T, _$LogoutErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

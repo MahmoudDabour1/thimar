@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/core/utils/spacing.dart';
 import 'package:thimar/features/cart/logic/cart_cubit.dart';
@@ -70,8 +71,17 @@ class CategoryProductSingleItem extends StatelessWidget {
                           height: 110.h,
                           width: double.infinity,
                           fit: BoxFit.cover,
-                          placeholder: (context, url) =>
-                              const Center(child: CircularProgressIndicator()),
+                          //shimmer
+                          placeholder: (context, url) => Shimmer.fromColors(
+                            baseColor: Colors.grey[300]!,
+                            highlightColor: Colors.grey[100]!,
+                            child: Container(
+                              height: 110.h,
+                              width: double.infinity,
+                              color: Colors.white,
+                            ),
+                          ),
+
                           errorWidget: (context, url, error) =>
                               const Icon(Icons.error),
                         ),

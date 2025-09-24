@@ -25,17 +25,19 @@ class CategoryProductsScreen extends StatelessWidget {
         appBar: AppCustomAppBar(
           appBarTitle: categoryName,
         ),
-        body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.w),
+        body: SafeArea(
           child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20.h),
-                  child: AppCustomSearchBar(),
-                ),
-                CategoryProductBlocBuilder(),
-              ],
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.w),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 20.h),
+                    child: AppCustomSearchBar(),
+                  ),
+                  CategoryProductBlocBuilder(),
+                ],
+              ),
             ),
           ),
         ),

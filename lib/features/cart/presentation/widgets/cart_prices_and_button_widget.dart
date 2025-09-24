@@ -25,7 +25,7 @@ class CartPricesAndButtonWidget extends StatelessWidget {
           AppTextFormField(
             hintText: "عندك كوبون ؟ ادخل رقم الكوبون",
             validator: (value) {
-              if (value == null || value.isEmpty) {
+              if (value.isEmpty) {
                 return 'الرجاء إدخال رقم الكوبون';
               }
             },

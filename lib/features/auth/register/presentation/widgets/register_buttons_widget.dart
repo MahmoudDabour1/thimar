@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/features/auth/register/presentation/logic/register_cubit.dart';
-import 'package:thimar/features/auth/register/presentation/logic/register_cubit.dart';
 
 import '../../../../../core/routing/routes.dart';
 import '../../../../../core/utils/spacing.dart';

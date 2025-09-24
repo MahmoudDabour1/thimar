@@ -30,7 +30,7 @@ class DetailsImageAndButtonsWidget extends StatelessWidget {
               width: double.infinity,
               fit: BoxFit.cover,
               placeholder: (context, url) =>
-              const Center(child: CircularProgressIndicator()),
+                  const Center(child: CircularProgressIndicator()),
               errorWidget: (context, url, error) => const Icon(Icons.error)),
         ),
         Padding(
@@ -40,7 +40,7 @@ class DetailsImageAndButtonsWidget extends StatelessWidget {
               AppCustomBackButton(),
               Spacer(),
               BlocProvider.value(
-                value:favoriteCubit,
+                value: favoriteCubit,
                 child: IconButton(
                   padding: EdgeInsets.zero,
                   style: IconButton.styleFrom(
@@ -52,10 +52,10 @@ class DetailsImageAndButtonsWidget extends StatelessWidget {
                   ),
                   onPressed: () {
                     data.data?.isFavorite == true
-                        ? favoriteCubit
-                        .removeFromFavorite(data.data?.id ?? 0,context)
-                        : favoriteCubit
-                        .addToFavorite(data.data?.id ?? 0,context);
+                        ? favoriteCubit.removeFromFavorite(
+                            data.data?.id ?? 0, context)
+                        : favoriteCubit.addToFavorite(
+                            data.data?.id ?? 0, context);
                   },
                   icon: Center(
                     child: Icon(

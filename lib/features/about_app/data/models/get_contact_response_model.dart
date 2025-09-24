@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'get_contact_response_model.g.dart';
+
 @JsonSerializable()
 class GetContactResponseModel {
   @JsonKey(name: "data")
@@ -15,7 +16,8 @@ class GetContactResponseModel {
     this.message,
   });
 
-  factory GetContactResponseModel.fromJson(Map<String, dynamic> json) => _$GetContactResponseModelFromJson(json);
+  factory GetContactResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$GetContactResponseModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$GetContactResponseModelToJson(this);
 }

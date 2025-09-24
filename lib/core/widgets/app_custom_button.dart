@@ -33,7 +33,9 @@ class AppCustomButton extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(radius.r),
-        color: isBorder ? AppColors.whiteColor : AppColors.primaryColor,
+        color: isBorder
+            ? AppColors.whiteColor
+            : backgroundColor ?? AppColors.primaryColor,
         border: isBorder
             ? Border.all(
                 color: AppColors.primaryColor,

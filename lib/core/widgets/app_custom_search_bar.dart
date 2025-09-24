@@ -10,6 +10,12 @@ class AppCustomSearchBar extends StatelessWidget {
   final Function(String)? validator;
   final Widget? suffixIcon;
   final Color? fillColor;
+  final TextEditingController? controller;
+  final void Function(String)? onChanged;
+  final bool? enabled;
+  final bool? readOnly;
+  final VoidCallback? onTap;
+
 
   const AppCustomSearchBar({
     super.key,
@@ -17,11 +23,19 @@ class AppCustomSearchBar extends StatelessWidget {
     this.validator,
     this.suffixIcon,
     this.fillColor,
+    this.controller,
+    this.onChanged,
+    this.enabled,
+    this.readOnly,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return AppTextFormField(
+      controller: controller,
+      enabled: enabled,
+      readOnly: readOnly,
       hintText: hintText ?? "ابحث عن ماتريد؟",
       validator: validator ?? (value) {},
       prefixIcon: Image.asset(
@@ -31,6 +45,8 @@ class AppCustomSearchBar extends StatelessWidget {
       ),
       suffixIcon: suffixIcon,
       fillColor: AppColors.fillGrayColor,
+      onChanged: onChanged,
+      onTap: onTap,
     );
   }
 }

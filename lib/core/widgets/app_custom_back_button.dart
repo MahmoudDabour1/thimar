@@ -11,8 +11,7 @@ class AppCustomBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       style: ButtonStyle(
-        backgroundColor:
-            WidgetStateProperty.all(AppColors.lighterGreenColor),
+        backgroundColor: WidgetStateProperty.all(AppColors.lighterGreenColor),
         shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.r),

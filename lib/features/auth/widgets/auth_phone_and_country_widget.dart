@@ -70,7 +70,7 @@ class AuthPhoneAndCountryWidget extends StatelessWidget {
             controller: phoneController,
             hintText: "رقم الجوال",
             validator: (value) {
-              if (value == null || value.isEmpty) {
+              if (value.isEmpty) {
                 return 'يرجى إدخال رقم الجوال';
               }
             },
@@ -87,6 +87,6 @@ class AuthPhoneAndCountryWidget extends StatelessWidget {
   }
 
   void _onCountryChange(CountryCode countryCode) {
-    print("New Country selected: " + countryCode.toString());
+    print("New Country selected: $countryCode");
   }
 }

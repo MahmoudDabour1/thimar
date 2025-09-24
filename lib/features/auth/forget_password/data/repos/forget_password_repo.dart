@@ -7,8 +7,7 @@ import '../../../../../core/networking/api_error_handler.dart';
 
 abstract class ForgetPasswordRepo {
   Future<ApiResult<ForgetPasswordResponseModel>> forgetPassword(
-     ForgetPasswordRequestBody forgetPasswordRequestBody
-  );
+      ForgetPasswordRequestBody forgetPasswordRequestBody);
 }
 
 class ForgetPasswordRepoImpl implements ForgetPasswordRepo {
@@ -20,8 +19,8 @@ class ForgetPasswordRepoImpl implements ForgetPasswordRepo {
   Future<ApiResult<ForgetPasswordResponseModel>> forgetPassword(
       ForgetPasswordRequestBody forgetPasswordRequestBody) async {
     try {
-      final response =
-          await forgetPasswordRemoteDataSource.forgetPassword(forgetPasswordRequestBody);
+      final response = await forgetPasswordRemoteDataSource
+          .forgetPassword(forgetPasswordRequestBody);
       return ApiResult.success(response);
     } catch (error) {
       return ApiResult.failure(ApiErrorHandler.handle(error));

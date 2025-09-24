@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 part 'remove_from_favorite_response_model.g.dart';
+
 @JsonSerializable()
 class RemoveFromFavoriteResponseModel {
   @JsonKey(name: "status")
