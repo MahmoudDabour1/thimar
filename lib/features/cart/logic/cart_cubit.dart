@@ -12,7 +12,7 @@ class CartCubit extends Cubit<CartState> {
   int cartCount = 0;
 
   Future<void> addToCart(int productId, int amount) async {
-    emit(CartState.addToCartLoading());
+    emit(CartState.addToCartLoading(productId));
     final response = await cartRepo.addToCart(
       AddToCartRequestBody(
         productId: productId,
@@ -22,11 +22,11 @@ class CartCubit extends Cubit<CartState> {
     response.when(
       success: (data) async {
         showToast(message: data.message.toString());
-        emit(CartState.addToCartSuccess(data));
+        emit(CartState.addToCartSuccess(productId, data));
         await getCartData();
       },
       failure: (error) {
-        emit(CartState.addToCartFailure(error.message.toString()));
+        emit(CartState.addToCartFailure(productId, error.message.toString()));
       },
     );
   }

@@ -11,23 +11,26 @@ class SearchResponseBlocBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<SearchCubit, SearchState>(builder: (context, state) {
-      return state.maybeWhen(
+    return BlocBuilder<SearchCubit, SearchState>(
+      builder: (context, state) {
+        return state.maybeWhen(
           searchLoading: () => AppLoadingIndicatorWidget(),
           searchSuccess: (data) => SearchProductGridView(
-                data: data,
-              ),
+            data: data,
+          ),
           searchFailure: (error) => Center(
-                child: Text(
-                  error,
-                  style: const TextStyle(
-                    color: Colors.red,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
+            child: Text(
+              error,
+              style: const TextStyle(
+                color: Colors.red,
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
               ),
-          orElse: () => SizedBox.shrink());
-    });
+            ),
+          ),
+          orElse: () => SizedBox.shrink(),
+        );
+      },
+    );
   }
 }

@@ -42,13 +42,12 @@ class _HomeScreenState extends State<HomeScreen> {
         child: ListView(
           physics: const BouncingScrollPhysics(),
           children: [
-            verticalSpace(8),
+            verticalSpace(16),
             HomeCustomHeaderWidget(),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 22.h),
               child: AppCustomSearchBar(
                 readOnly: true,
-                // enabled: false,
                 onTap: () {
                   context.pushNamed(Routes.searchScreen);
                 },

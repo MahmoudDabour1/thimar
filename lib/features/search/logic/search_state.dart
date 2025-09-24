@@ -11,5 +11,6 @@ class SearchState<T> with _$SearchState<T> {
   const factory SearchState.searchSuccess(T data) = SearchSuccess<T>;
 
   const factory SearchState.searchFailure(String error) = SearchFailure<T>;
+
   const factory SearchState.changeFilter() = ChangeFilter<T>;
 }

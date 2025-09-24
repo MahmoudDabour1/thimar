@@ -35,8 +35,7 @@ class _ArrangeFilterSectionState extends State<ArrangeFilterSection> {
             borderRadius: BorderRadius.circular(8.r),
           ),
           activeColor: AppColors.primaryColor,
-          fillColor: WidgetStateProperty.all(
-              AppColors.primaryColor),
+          fillColor: WidgetStateProperty.all(AppColors.primaryColor),
           value: "asc",
           groupValue: sortFilter,
           onChanged: (value) {
@@ -55,8 +54,7 @@ class _ArrangeFilterSectionState extends State<ArrangeFilterSection> {
             borderRadius: BorderRadius.circular(8.r),
           ),
           activeColor: AppColors.primaryColor,
-          fillColor: MaterialStateProperty.all(
-              AppColors.primaryColor),
+          fillColor: WidgetStateProperty.all(AppColors.primaryColor),
           value: "desc",
           groupValue: sortFilter,
           onChanged: (value) {

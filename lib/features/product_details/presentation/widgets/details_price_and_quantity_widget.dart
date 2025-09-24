@@ -58,8 +58,9 @@ class _DetailsPriceAndQuantityWidgetState
             borderRadius: BorderRadius.circular(10.r),
           ),
           child: AppCustomQuantityWidget(
-            quantity: widget.quantity ?? 1,
+            quantity: _quantity,
             onQuantityChanged: (newQuantity) {
+              _updateQuantity(newQuantity);
               context
                   .read<CartCubit>()
                   .updateCartData(widget.data.data?.id ?? 0, newQuantity);

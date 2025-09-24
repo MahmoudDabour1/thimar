@@ -16,7 +16,6 @@ class AppCustomSearchBar extends StatelessWidget {
   final bool? readOnly;
   final VoidCallback? onTap;
 
-
   const AppCustomSearchBar({
     super.key,
     this.hintText,
