@@ -7,7 +7,20 @@ import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 
 class OrderStateSingleItem extends StatelessWidget {
-  OrderStateSingleItem({super.key});
+  final String? orderNumber;
+  final String? orderDate;
+  final String? orderStatus;
+  final double? orderPrice;
+  final String? orderImage;
+
+  OrderStateSingleItem({
+    super.key,
+    this.orderNumber,
+    this.orderDate,
+    this.orderStatus,
+    this.orderPrice,
+    this.orderImage,
+  });
 
   final List<String> images = [
     AppAssets.thimarIcon,
@@ -44,7 +57,7 @@ class OrderStateSingleItem extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    "طلب #4587",
+                    "طلب #${orderNumber ?? ""}",
                     style: AppStyles.font16GreenBold,
                   ),
                   Spacer(),
@@ -56,58 +69,69 @@ class OrderStateSingleItem extends StatelessWidget {
                       borderRadius: BorderRadius.circular(6.r),
                     ),
                     child: Text(
-                      "بإنتظار الموافقة",
+                      orderStatus ?? "مكتمل",
                       style: AppStyles.font12GreenBold,
                     ),
                   ),
                 ],
               ),
               Text(
-                "27يونيو,2021,",
+                orderDate ?? "",
                 style: AppStyles.font16DarkerGrayLight,
               ),
               verticalSpace(16),
               Row(
                 children: [
-                  ...List.generate(
-                    (images.length > 3 ? 3 : images.length),
-                    (index) => Padding(
-                      padding: EdgeInsets.only(right: 4.w),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8.r),
-                        child: Image.asset(
-                          images[index],
-                          width: 25.w,
-                          height: 25.h,
-                          fit: BoxFit.cover,
-                        ),
+                 Padding(
+                    padding: EdgeInsets.only(right: 4.w),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.r),
+                      child: Image.network(
+                        orderImage??"",
+                        width: 25.w,
+                        height: 25.h,
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
-                  if (images.length > 3)
-                    Padding(
-                      padding: EdgeInsets.only(right: 4.w),
-                      child: Container(
-                        width: 25.w,
-                        height: 25.h,
-                        decoration: BoxDecoration(
-                          color: AppColors.lighterGreenColor,
-                          shape: BoxShape.circle,
-                        ),
-                        child: Center(
-                          child: Text(
-                            "+${images.length - 3}",
-                            // العدد المخفي
-                            style: AppStyles.font14WhiteBold.copyWith(
-                              color: AppColors.primaryColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
+                  // ...List.generate(
+                  //   (images.length > 3 ? 3 : images.length),
+                  //   (index) => Padding(
+                  //     padding: EdgeInsets.only(right: 4.w),
+                  //     child: ClipRRect(
+                  //       borderRadius: BorderRadius.circular(8.r),
+                  //       child: Image.asset(
+                  //         images[index],
+                  //         width: 25.w,
+                  //         height: 25.h,
+                  //         fit: BoxFit.cover,
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                  // if (images.length > 3)
+                  //   Padding(
+                  //     padding: EdgeInsets.only(right: 4.w),
+                  //     child: Container(
+                  //       width: 25.w,
+                  //       height: 25.h,
+                  //       decoration: BoxDecoration(
+                  //         color: AppColors.lighterGreenColor,
+                  //         shape: BoxShape.circle,
+                  //       ),
+                  //       child: Center(
+                  //         child: Text(
+                  //           "+${images.length - 3}",
+                  //           style: AppStyles.font14WhiteBold.copyWith(
+                  //             color: AppColors.primaryColor,
+                  //           ),
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
                   Spacer(),
                   Text(
-                    "180ر.س",
+                    orderPrice != null ? "${orderPrice} ر.س" : "0 ر.س",
                     style: AppStyles.font16GreenBold,
                   ),
                 ],

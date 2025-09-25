@@ -7,7 +7,9 @@ import '../../../../core/utils/spacing.dart';
 import 'finish_order_button.dart';
 
 class ButtonAndPricesWidget extends StatefulWidget {
-  const ButtonAndPricesWidget({super.key});
+  final double? discount;
+  final double? totalPrice;
+  const ButtonAndPricesWidget({super.key, this.discount, this.totalPrice});
 
   @override
   State<ButtonAndPricesWidget> createState() => _ButtonAndPricesWidgetState();
@@ -44,7 +46,9 @@ class _ButtonAndPricesWidgetState extends State<ButtonAndPricesWidget> {
                     ),
                     const Spacer(),
                     Text(
-                      "- 40 ر.س",
+                      widget.discount != null
+                          ? "${widget.discount} ر.س"
+                          : "0 ر.س",
                       style: AppStyles.font16GreenMedium,
                     ),
                   ],
@@ -61,7 +65,9 @@ class _ButtonAndPricesWidgetState extends State<ButtonAndPricesWidget> {
                     ),
                     const Spacer(),
                     Text(
-                      "150 ر.س",
+                      widget.totalPrice != null
+                          ? "${widget.totalPrice} ر.س"
+                          : "0 ر.س",
                       style: AppStyles.font16GreenBold,
                     ),
                   ],

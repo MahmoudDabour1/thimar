@@ -21,6 +21,7 @@ import '../../features/auth/register/presentation/register_screen.dart';
 import '../../features/auth/verifi_code/presentation/verified_screen.dart';
 import '../../features/checkout/presentation/checkout_screen.dart';
 import '../../features/home/presentation/category_products_screen.dart';
+import '../../features/orders/presentation/orders_details_screen.dart';
 import '../../features/profile/presentation/profile_data_screen.dart';
 import '../../features/search/presentation/search_screen.dart';
 import '../../features/walltet/presentation/all_transaction_history_screen.dart';
@@ -97,8 +98,15 @@ class AppRouter {
           builder: (_) => CartScreen(),
         );
       case Routes.checkoutScreen:
+        final args = settings.arguments as Map<String, dynamic>?;
+        final totalPrice = args?["totalPrice"] as double? ?? 0.0;
+        final discount = args?["discount"] as double? ?? 0.0;
+
         return MaterialPageRoute(
-          builder: (_) => CheckoutScreen(),
+          builder: (_) => CheckoutScreen(
+            discount: discount,
+            totalPrice: totalPrice,
+          ),
         );
       case Routes.profileDataScreen:
         return MaterialPageRoute(
@@ -169,6 +177,12 @@ class AppRouter {
       case Routes.searchScreen:
         return MaterialPageRoute(
           builder: (_) => SearchScreen(),
+        );case Routes.ordersDetailsScreen:
+          final orderId = settings.arguments as int? ?? 0;
+        return MaterialPageRoute(
+          builder: (_) => OrdersDetailsScreen(
+            orderId: orderId,
+          ),
         );
     }
     return null;

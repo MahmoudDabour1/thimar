@@ -10,9 +10,15 @@ import 'package:thimar/features/cart/presentation/widgets/cart_products_list_vie
 import '../../../core/widgets/app_custom_app_bar.dart';
 import '../logic/cart_state.dart';
 
-class CartScreen extends StatelessWidget {
+class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
 
+  @override
+  State<CartScreen> createState() => _CartScreenState();
+}
+
+class _CartScreenState extends State<CartScreen> {
+  GetCartResponseModel? cartData = GetCartResponseModel();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +41,10 @@ class CartScreen extends StatelessWidget {
                             color: AppColors.primaryColor,
                           ),
                         ),
-                    getCartSuccess: (data) => setupSuccess(data),
+                    getCartSuccess: (data) {
+                      cartData = data;
+                      return setupSuccess(data);
+                    },
                     getCartFailure: (error) => Center(
                           child: Text(
                             error,
@@ -45,7 +54,13 @@ class CartScreen extends StatelessWidget {
                     orElse: () => SizedBox.shrink());
               },
             ),
-            CartPricesAndButtonWidget(),
+            CartPricesAndButtonWidget(
+              discount: cartData?.totalDiscount != null
+                  ? (cartData!.totalDiscount! as num).toDouble()
+                  : 0.0,
+              totalPrice: cartData?.totalPriceBeforeDiscount != null
+                  ? (cartData!.totalPriceBeforeDiscount! as num).toDouble()
+                  : 0.0,),
           ],
         ),
       ),

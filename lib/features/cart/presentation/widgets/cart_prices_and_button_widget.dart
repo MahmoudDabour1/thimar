@@ -14,7 +14,9 @@ import '../../../../core/widgets/app_custom_button.dart';
 import '../../logic/cart_state.dart';
 
 class CartPricesAndButtonWidget extends StatelessWidget {
-  const CartPricesAndButtonWidget({super.key});
+  final double? discount;
+  final double? totalPrice;
+  const CartPricesAndButtonWidget({super.key, this.discount, this.totalPrice});
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +72,10 @@ class CartPricesAndButtonWidget extends StatelessWidget {
           AppCustomButton(
             textButton: "الانتقال لإتمام الطلب",
             onPressed: () {
-              context.pushNamed(Routes.checkoutScreen);
+              context.pushNamed(Routes.checkoutScreen,arguments: {
+                'discount': discount,
+                'totalPrice': totalPrice,
+              });
             },
           ),
           verticalSpace(32),

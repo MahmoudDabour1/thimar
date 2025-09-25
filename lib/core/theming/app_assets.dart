@@ -31,6 +31,7 @@ abstract class AppAssets {
   static const String greenBackgroundImage =
       'assets/images/green_background.png';
   static const String arrowLeftImage = 'assets/images/arrow_left.png';
+  static const String arrowLeftContainerImage = 'assets/images/arrow_left_container.png';
   static const String callingImage = 'assets/images/solid_calling_Icon.png';
   static const String checkImage = 'assets/images/check.png';
   static const String editImage = 'assets/images/edit - 3.png';
