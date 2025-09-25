@@ -59,4 +59,6 @@ abstract class AppAssets {
   static const String greenCardImage = 'assets/images/green_card.png';
   static const String deleteCardImage = 'assets/images/delete_card_icon.png';
   static const String filterImage = 'assets/images/filter_button.png';
+  static const String addIconImage = 'assets/images/add_icon.png';
+  static const String thanksImage = 'assets/images/thanks_image.png';
 }

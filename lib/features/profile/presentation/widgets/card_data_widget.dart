@@ -13,6 +13,8 @@ class CardDataWidget extends StatelessWidget {
   final bool isSelected;
   final VoidCallback? onDelete;
   final String? cardTypeImage;
+  final double? width;
+  final double? height;
 
   const CardDataWidget(
       {super.key,
@@ -22,13 +24,15 @@ class CardDataWidget extends StatelessWidget {
       required this.cardNumber,
       required this.isSelected,
       this.onDelete,
-      this.cardTypeImage});
+      this.cardTypeImage,
+      this.width,
+      this.height});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      height: 160.h,
+      width: width ?? double.infinity,
+      height: height ?? 160.h,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(

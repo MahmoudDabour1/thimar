@@ -4,11 +4,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/utils/spacing.dart';
-import '../../../../core/widgets/app_custom_button.dart';
+import 'finish_order_button.dart';
 
-class ButtonAndPricesWidget extends StatelessWidget {
+class ButtonAndPricesWidget extends StatefulWidget {
   const ButtonAndPricesWidget({super.key});
 
+  @override
+  State<ButtonAndPricesWidget> createState() => _ButtonAndPricesWidgetState();
+}
+
+class _ButtonAndPricesWidgetState extends State<ButtonAndPricesWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -27,10 +32,7 @@ class ButtonAndPricesWidget extends StatelessWidget {
           ),
           child: Column(
             children: [
-              AppCustomButton(
-                textButton: "إنهاء الطلب",
-                onPressed: () {},
-              ),
+              FinishOrderButton(),
               verticalSpace(12),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.w),

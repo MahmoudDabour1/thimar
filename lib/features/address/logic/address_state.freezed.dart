@@ -20,7 +20,7 @@ mixin _$AddressState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -37,7 +37,7 @@ mixin _$AddressState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -54,7 +54,7 @@ mixin _$AddressState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
@@ -195,7 +195,7 @@ class _$AddressInitialImpl<T> implements AddressInitial<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -215,7 +215,7 @@ class _$AddressInitialImpl<T> implements AddressInitial<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -235,7 +235,7 @@ class _$AddressInitialImpl<T> implements AddressInitial<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
@@ -376,7 +376,7 @@ class _$GetAddressLoadingImpl<T> implements GetAddressLoading<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -396,7 +396,7 @@ class _$GetAddressLoadingImpl<T> implements GetAddressLoading<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -416,7 +416,7 @@ class _$GetAddressLoadingImpl<T> implements GetAddressLoading<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
@@ -519,7 +519,7 @@ abstract class _$$GetAddressSuccessImplCopyWith<T, $Res> {
           $Res Function(_$GetAddressSuccessImpl<T>) then) =
       __$$GetAddressSuccessImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({T data});
+  $Res call({GetAddressResponseModel data});
 }
 
 /// @nodoc
@@ -535,13 +535,13 @@ class __$$GetAddressSuccessImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$GetAddressSuccessImpl<T>(
-      freezed == data
+      null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as T,
+              as GetAddressResponseModel,
     ));
   }
 }
@@ -552,7 +552,7 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
   const _$GetAddressSuccessImpl(this.data);
 
   @override
-  final T data;
+  final GetAddressResponseModel data;
 
   @override
   String toString() {
@@ -564,12 +564,11 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetAddressSuccessImpl<T> &&
-            const DeepCollectionEquality().equals(other.data, data));
+            (identical(other.data, data) || other.data == data));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+  int get hashCode => Object.hash(runtimeType, data);
 
   /// Create a copy of AddressState
   /// with the given fields replaced by the non-null parameter values.
@@ -586,7 +585,7 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -606,7 +605,7 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -626,7 +625,7 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
@@ -720,9 +719,10 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
 }
 
 abstract class GetAddressSuccess<T> implements AddressState<T> {
-  const factory GetAddressSuccess(final T data) = _$GetAddressSuccessImpl<T>;
+  const factory GetAddressSuccess(final GetAddressResponseModel data) =
+      _$GetAddressSuccessImpl<T>;
 
-  T get data;
+  GetAddressResponseModel get data;
 
   /// Create a copy of AddressState
   /// with the given fields replaced by the non-null parameter values.
@@ -804,7 +804,7 @@ class _$GetAddressFailureImpl<T> implements GetAddressFailure<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -824,7 +824,7 @@ class _$GetAddressFailureImpl<T> implements GetAddressFailure<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -844,7 +844,7 @@ class _$GetAddressFailureImpl<T> implements GetAddressFailure<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
@@ -995,7 +995,7 @@ class _$InsertAddressLoadingImpl<T> implements InsertAddressLoading<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -1015,7 +1015,7 @@ class _$InsertAddressLoadingImpl<T> implements InsertAddressLoading<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -1035,7 +1035,7 @@ class _$InsertAddressLoadingImpl<T> implements InsertAddressLoading<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
@@ -1205,7 +1205,7 @@ class _$InsertAddressSuccessImpl<T> implements InsertAddressSuccess<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -1225,7 +1225,7 @@ class _$InsertAddressSuccessImpl<T> implements InsertAddressSuccess<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -1245,7 +1245,7 @@ class _$InsertAddressSuccessImpl<T> implements InsertAddressSuccess<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
@@ -1424,7 +1424,7 @@ class _$InsertAddressFailureImpl<T> implements InsertAddressFailure<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -1444,7 +1444,7 @@ class _$InsertAddressFailureImpl<T> implements InsertAddressFailure<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -1464,7 +1464,7 @@ class _$InsertAddressFailureImpl<T> implements InsertAddressFailure<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
@@ -1615,7 +1615,7 @@ class _$UpdateAddressLoadingImpl<T> implements UpdateAddressLoading<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -1635,7 +1635,7 @@ class _$UpdateAddressLoadingImpl<T> implements UpdateAddressLoading<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -1655,7 +1655,7 @@ class _$UpdateAddressLoadingImpl<T> implements UpdateAddressLoading<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
@@ -1825,7 +1825,7 @@ class _$UpdateAddressSuccessImpl<T> implements UpdateAddressSuccess<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -1845,7 +1845,7 @@ class _$UpdateAddressSuccessImpl<T> implements UpdateAddressSuccess<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -1865,7 +1865,7 @@ class _$UpdateAddressSuccessImpl<T> implements UpdateAddressSuccess<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
@@ -2044,7 +2044,7 @@ class _$UpdateAddressFailureImpl<T> implements UpdateAddressFailure<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -2064,7 +2064,7 @@ class _$UpdateAddressFailureImpl<T> implements UpdateAddressFailure<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -2084,7 +2084,7 @@ class _$UpdateAddressFailureImpl<T> implements UpdateAddressFailure<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
@@ -2235,7 +2235,7 @@ class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -2255,7 +2255,7 @@ class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -2275,7 +2275,7 @@ class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
@@ -2445,7 +2445,7 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -2465,7 +2465,7 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -2485,7 +2485,7 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
@@ -2664,7 +2664,7 @@ class _$DeleteAddressFailureImpl<T> implements DeleteAddressFailure<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() getAddressLoading,
-    required TResult Function(T data) getAddressSuccess,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
     required TResult Function(String errorMessage) getAddressFailure,
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
@@ -2684,7 +2684,7 @@ class _$DeleteAddressFailureImpl<T> implements DeleteAddressFailure<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? getAddressLoading,
-    TResult? Function(T data)? getAddressSuccess,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult? Function(String errorMessage)? getAddressFailure,
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
@@ -2704,7 +2704,7 @@ class _$DeleteAddressFailureImpl<T> implements DeleteAddressFailure<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? getAddressLoading,
-    TResult Function(T data)? getAddressSuccess,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
     TResult Function(String errorMessage)? getAddressFailure,
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,

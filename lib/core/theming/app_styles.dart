@@ -25,6 +25,11 @@ class AppStyles {
     color: AppColors.whiteColor,
     fontWeight: FontWeightHelper.bold,
   );
+  static TextStyle font12GreenBold = TextStyle(
+    fontSize: 12.sp,
+    color: AppColors.primaryColor,
+    fontWeight: FontWeightHelper.bold,
+  );
   static TextStyle font16DarkGrayLight = TextStyle(
     fontSize: 16.sp,
     color: AppColors.darkGrayColor,

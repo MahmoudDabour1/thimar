@@ -68,8 +68,11 @@ class AppRouter {
         );
 
       case Routes.bottomNavBarLayout:
+        final int initialIndex = settings.arguments as int? ?? 0;
         return MaterialPageRoute(
-          builder: (_) => BottomNavBarLayout(),
+          builder: (_) => BottomNavBarLayout(
+            initialIndex: initialIndex,
+          ),
         );
       case Routes.categoryProductsScreen:
         final args = settings.arguments as Map<String, dynamic>?;

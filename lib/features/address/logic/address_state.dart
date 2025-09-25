@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../data/models/get_address_response_model.dart';
+
 part 'address_state.freezed.dart';
 
 @freezed
@@ -8,7 +10,7 @@ class AddressState<T> with _$AddressState {
 
   const factory AddressState.getAddressLoading() = GetAddressLoading;
 
-  const factory AddressState.getAddressSuccess(T data) = GetAddressSuccess;
+  const factory AddressState.getAddressSuccess(GetAddressResponseModel data) = GetAddressSuccess;
 
   const factory AddressState.getAddressFailure(String errorMessage) =
       GetAddressFailure;
