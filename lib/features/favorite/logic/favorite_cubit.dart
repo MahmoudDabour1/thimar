@@ -30,6 +30,7 @@ class FavoriteCubit extends Cubit<FavoriteState> {
     response.when(
       success: (data) {
         emit(FavoriteState.addToFavoriteSuccess(data));
+        context.read<ProductDetailsCubit>().isUpdate = true;
         getFavorite();
         context.read<ProductDetailsCubit>().productDetails(id);
         showToast(message: data.message ?? "Added to favorites successfully");
@@ -45,6 +46,7 @@ class FavoriteCubit extends Cubit<FavoriteState> {
     final response = await favoriteRepos.removeFromFavorite(id: id);
     response.when(
       success: (data) {
+        context.read<ProductDetailsCubit>().isUpdate = true;
         emit(FavoriteState.removeFromFavoriteSuccess(data));
         getFavorite();
         context.read<ProductDetailsCubit>().productDetails(id);

@@ -4,7 +4,6 @@ import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/core/utils/spacing.dart';
 import 'package:thimar/features/checkout/presentation/widgets/time_and_calender_custom_container.dart';
 
-import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../logic/checkout_cubit.dart';
@@ -34,8 +33,9 @@ class _TimeAndDateWidgetState extends State<TimeAndDateWidget> {
     String dateText = selectedDate == null
         ? "اختر اليوم والتاريخ"
         : DateFormat("dd/MM/yyyy").format(selectedDate!);
-    String timeText =
-    selectedTime == null ? "اختر الوقت" : "${selectedTime!.hour.toString().padLeft(2,'0')}:${selectedTime!.minute.toString().padLeft(2,'0')}";
+    String timeText = selectedTime == null
+        ? "اختر الوقت"
+        : "${selectedTime!.hour.toString().padLeft(2, '0')}:${selectedTime!.minute.toString().padLeft(2, '0')}";
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -114,7 +114,7 @@ class _TimeAndDateWidgetState extends State<TimeAndDateWidget> {
                   if (pickedTime != null) {
                     setState(() => selectedTime = pickedTime);
                     checkOutCubit.time =
-                    "${pickedTime.hour.toString().padLeft(2,'0')}:${pickedTime.minute.toString().padLeft(2,'0')}";
+                        "${pickedTime.hour.toString().padLeft(2, '0')}:${pickedTime.minute.toString().padLeft(2, '0')}";
                   }
                 },
               ),

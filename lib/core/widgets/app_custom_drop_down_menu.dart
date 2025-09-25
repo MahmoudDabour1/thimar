@@ -32,7 +32,6 @@ class AppCustomDropDownButtonFormField extends StatelessWidget {
     return DropdownButtonFormField<String>(
       isExpanded: isEnabled,
       iconDisabledColor: AppColors.grayColor,
-
       value: value,
       icon: Icon(
         Icons.keyboard_arrow_down_outlined,

@@ -35,7 +35,7 @@ class CheckoutCubit extends Cubit<CheckoutState> {
         addressId: addressId,
         date: date,
         time: time,
-        payType: payType??"cash",
+        payType: payType ?? "cash",
       ),
     );
     response.when(success: (data) {
@@ -43,12 +43,11 @@ class CheckoutCubit extends Cubit<CheckoutState> {
       showModalBottomSheet(
         context: context,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(
-              top: Radius.circular(16.r)),
+          borderRadius: BorderRadius.vertical(top: Radius.circular(16.r)),
         ),
         builder: (
-            context,
-            ) {
+          context,
+        ) {
           return Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -61,21 +60,16 @@ class CheckoutCubit extends Cubit<CheckoutState> {
               ),
               Text(
                 "شكرا لك لقد تم تنفيذ طلبك بنجاح",
-                style:
-                AppStyles.font16GreenBold,
+                style: AppStyles.font16GreenBold,
               ),
               Text(
                 "يمكنك متابعة حالة الطلب او الرجوع للرئسيية",
-                style: AppStyles
-                    .font16GreenMedium
-                    .copyWith(
-                    color: AppColors
-                        .darkerGrayColor),
+                style: AppStyles.font16GreenMedium
+                    .copyWith(color: AppColors.darkerGrayColor),
               ),
               verticalSpace(16),
               Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: 16.w),
+                padding: EdgeInsets.symmetric(horizontal: 16.w),
                 child: Row(
                   children: [
                     Expanded(
@@ -83,8 +77,7 @@ class CheckoutCubit extends Cubit<CheckoutState> {
                         textButton: "طلباتي",
                         onPressed: () {
                           context.pushNamed(
-                            Routes
-                                .bottomNavBarLayout,
+                            Routes.bottomNavBarLayout,
                             arguments: 1,
                           );
                         },
@@ -92,17 +85,15 @@ class CheckoutCubit extends Cubit<CheckoutState> {
                     ),
                     horizontalSpace(8),
                     Expanded(
-                        child:
-                        AppCustomButton(
-                          textButton: "الرئيسية",
-                          onPressed: () {
-                            context.pushNamed(
-                              Routes
-                                  .bottomNavBarLayout,
-                            );
-                          },
-                          isBorder: true,
-                        )),
+                        child: AppCustomButton(
+                      textButton: "الرئيسية",
+                      onPressed: () {
+                        context.pushNamed(
+                          Routes.bottomNavBarLayout,
+                        );
+                      },
+                      isBorder: true,
+                    )),
                   ],
                 ),
               ),

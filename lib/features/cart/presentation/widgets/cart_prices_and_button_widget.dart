@@ -72,7 +72,7 @@ class CartPricesAndButtonWidget extends StatelessWidget {
           AppCustomButton(
             textButton: "الانتقال لإتمام الطلب",
             onPressed: () {
-              context.pushNamed(Routes.checkoutScreen,arguments: {
+              context.pushNamed(Routes.checkoutScreen, arguments: {
                 'discount': discount,
                 'totalPrice': totalPrice,
               });

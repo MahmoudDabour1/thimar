@@ -24,12 +24,12 @@ class _NotificationRemoteDataSource implements NotificationRemoteDataSource {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<void> getNotifications() async {
+  Future<GetNotificationResponseModel> getNotifications() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<void>(Options(
+    final _options = _setStreamType<GetNotificationResponseModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -45,7 +45,15 @@ class _NotificationRemoteDataSource implements NotificationRemoteDataSource {
           _dio.options.baseUrl,
           baseUrl,
         )));
-    await _dio.fetch<void>(_options);
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late GetNotificationResponseModel _value;
+    try {
+      _value = GetNotificationResponseModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -74,12 +82,13 @@ class _NotificationRemoteDataSource implements NotificationRemoteDataSource {
   }
 
   @override
-  Future<void> deleteNotification({required int id}) async {
+  Future<DeleteNotificationResponseModel> deleteNotification(
+      {required int id}) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<void>(Options(
+    final _options = _setStreamType<DeleteNotificationResponseModel>(Options(
       method: 'DELETE',
       headers: _headers,
       extra: _extra,
@@ -95,32 +104,50 @@ class _NotificationRemoteDataSource implements NotificationRemoteDataSource {
           _dio.options.baseUrl,
           baseUrl,
         )));
-    await _dio.fetch<void>(_options);
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late DeleteNotificationResponseModel _value;
+    try {
+      _value = DeleteNotificationResponseModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
-  Future<void> showNotification({required int id}) async {
+  Future<ShowNotificationDetailsResponseModel> showNotification(
+      {required int id}) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<void>(Options(
+    final _options =
+        _setStreamType<ShowNotificationDetailsResponseModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          '/notifications/${id}',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        )));
-    await _dio.fetch<void>(_options);
+            .compose(
+              _dio.options,
+              '/notifications/${id}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late ShowNotificationDetailsResponseModel _value;
+    try {
+      _value = ShowNotificationDetailsResponseModel.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {

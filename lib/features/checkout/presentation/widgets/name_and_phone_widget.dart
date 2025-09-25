@@ -49,9 +49,9 @@ class _NameAndPhoneWidgetState extends State<NameAndPhoneWidget> {
                   ),
                   state.maybeWhen(
                       getProfileSuccess: (data) => Text(
-                        data.data.phone ?? "غير متوفر",
-                        style: AppStyles.font16GreenExtraBold,
-                      ),
+                            data.data.phone ?? "غير متوفر",
+                            style: AppStyles.font16GreenExtraBold,
+                          ),
                       orElse: () => SizedBox.shrink()),
                 ],
               ),

@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'get_current_orders_response_model.g.dart';
+
 @JsonSerializable()
 class GetCurrentOrdersResponseModel {
   @JsonKey(name: "data")
@@ -21,7 +22,8 @@ class GetCurrentOrdersResponseModel {
     this.message,
   });
 
-  factory GetCurrentOrdersResponseModel.fromJson(Map<String, dynamic> json) => _$GetCurrentOrdersResponseModelFromJson(json);
+  factory GetCurrentOrdersResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$GetCurrentOrdersResponseModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$GetCurrentOrdersResponseModelToJson(this);
 }
@@ -97,7 +99,8 @@ class Product {
     this.url,
   });
 
-  factory Product.fromJson(Map<String, dynamic> json) => _$ProductFromJson(json);
+  factory Product.fromJson(Map<String, dynamic> json) =>
+      _$ProductFromJson(json);
 
   Map<String, dynamic> toJson() => _$ProductToJson(this);
 }

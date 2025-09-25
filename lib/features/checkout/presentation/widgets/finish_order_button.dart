@@ -39,7 +39,7 @@ class _FinishOrderButtonState extends State<FinishOrderButton> {
               return;
             }
 
-            if (cubit.payType == "visa" || cubit.payType =="master") {
+            if (cubit.payType == "visa" || cubit.payType == "master") {
               showModalBottomSheet(
                 context: context,
                 isScrollControlled: true,

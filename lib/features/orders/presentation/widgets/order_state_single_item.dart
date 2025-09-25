@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/utils/spacing.dart';
 
-import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 
@@ -13,7 +12,7 @@ class OrderStateSingleItem extends StatelessWidget {
   final double? orderPrice;
   final String? orderImage;
 
-  OrderStateSingleItem({
+  const OrderStateSingleItem({
     super.key,
     this.orderNumber,
     this.orderDate,
@@ -22,15 +21,15 @@ class OrderStateSingleItem extends StatelessWidget {
     this.orderImage,
   });
 
-  final List<String> images = [
-    AppAssets.thimarIcon,
-    AppAssets.thimarIcon,
-    AppAssets.thimarIcon,
-    AppAssets.thimarIcon,
-    AppAssets.thimarIcon,
-    AppAssets.thimarIcon,
-    AppAssets.thimarIcon,
-  ];
+  // final List<String> images = [
+  //   AppAssets.thimarIcon,
+  //   AppAssets.thimarIcon,
+  //   AppAssets.thimarIcon,
+  //   AppAssets.thimarIcon,
+  //   AppAssets.thimarIcon,
+  //   AppAssets.thimarIcon,
+  //   AppAssets.thimarIcon,
+  // ];
 
   @override
   Widget build(BuildContext context) {
@@ -65,12 +64,13 @@ class OrderStateSingleItem extends StatelessWidget {
                     padding:
                         EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
                     decoration: BoxDecoration(
-                      color: AppColors.lighterGreenColor,
+                      color: getStatusColor(orderStatus),
                       borderRadius: BorderRadius.circular(6.r),
                     ),
                     child: Text(
                       orderStatus ?? "مكتمل",
-                      style: AppStyles.font12GreenBold,
+                      style: AppStyles.font12GreenBold
+                          .copyWith(color: getStatusTextColor(orderStatus)),
                     ),
                   ),
                 ],
@@ -82,12 +82,12 @@ class OrderStateSingleItem extends StatelessWidget {
               verticalSpace(16),
               Row(
                 children: [
-                 Padding(
+                  Padding(
                     padding: EdgeInsets.only(right: 4.w),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.r),
                       child: Image.network(
-                        orderImage??"",
+                        orderImage ?? "",
                         width: 25.w,
                         height: 25.h,
                         fit: BoxFit.cover,
@@ -131,7 +131,7 @@ class OrderStateSingleItem extends StatelessWidget {
                   //   ),
                   Spacer(),
                   Text(
-                    orderPrice != null ? "${orderPrice} ر.س" : "0 ر.س",
+                    orderPrice != null ? "$orderPrice ر.س" : "0 ر.س",
                     style: AppStyles.font16GreenBold,
                   ),
                 ],
@@ -142,5 +142,35 @@ class OrderStateSingleItem extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Color getStatusColor(String? status) {
+    switch (status?.toLowerCase()) {
+      case 'accepted':
+        return AppColors.primaryColor;
+      case 'in_way':
+        return Colors.blue;
+      case 'delivered':
+        return Colors.green;
+      case 'canceled':
+        return Colors.red;
+      default:
+        return AppColors.lighterGreenColor;
+    }
+  }
+
+  Color getStatusTextColor(String? status) {
+    switch (status?.toLowerCase()) {
+      case 'accepted':
+        return AppColors.whiteColor;
+      case 'in_way':
+        return Colors.white;
+      case 'delivered':
+        return Colors.white;
+      case 'canceled':
+        return Colors.white;
+      default:
+        return AppColors.blackColor;
+    }
   }
 }
