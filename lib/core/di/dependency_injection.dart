@@ -22,6 +22,9 @@ import 'package:thimar/features/auth/verifi_code/logic/verified_code_cubit.dart'
 import 'package:thimar/features/cart/data/data_sources/cart_remote_data_source.dart';
 import 'package:thimar/features/cart/data/repos/cart_repo.dart';
 import 'package:thimar/features/cart/logic/cart_cubit.dart';
+import 'package:thimar/features/checkout/data/data_sources/checkout_remote_data_source.dart';
+import 'package:thimar/features/checkout/data/repos/checkout_repo.dart';
+import 'package:thimar/features/checkout/logic/checkout_cubit.dart';
 import 'package:thimar/features/favorite/data/data_sources/favorite_remote_data_source.dart';
 import 'package:thimar/features/favorite/data/repos/favorite_repos.dart';
 import 'package:thimar/features/favorite/logic/favorite_cubit.dart';
@@ -150,4 +153,10 @@ Future<void> setupGetIt() async {
       () => SearchRemoteDataSource(dio));
   sl.registerLazySingleton<SearchRepo>(() => SearchRepoImpl(sl()));
   sl.registerFactory<SearchCubit>(() => SearchCubit(sl()));
+//search
+  sl.registerLazySingleton<CheckoutRemoteDataSource>(
+      () => CheckoutRemoteDataSource(dio));
+  sl.registerLazySingleton<CheckoutRepo>(
+      () => CheckoutRepoImp(checkoutRemoteDataSource: sl()));
+  sl.registerFactory<CheckoutCubit>(() => CheckoutCubit(sl()));
 }
