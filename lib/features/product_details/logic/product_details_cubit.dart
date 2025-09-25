@@ -8,8 +8,10 @@ class ProductDetailsCubit extends Cubit<ProductDetailsState> {
   ProductDetailsCubit(this.productDetailsRepos)
       : super(ProductDetailsState.initial());
 
+  bool isUpdate = false;
+
   Future<void> productDetails(int productId) async {
-    emit(ProductDetailsState.productDetailsLoading());
+    isUpdate ? null : emit(ProductDetailsState.productDetailsLoading());
     final response = await productDetailsRepos.productDetails(productId);
     response.when(
       success: (data) {

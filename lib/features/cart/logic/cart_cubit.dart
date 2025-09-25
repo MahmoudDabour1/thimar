@@ -10,6 +10,7 @@ class CartCubit extends Cubit<CartState> {
 
   CartCubit(this.cartRepo) : super(CartState.initial());
   int cartCount = 0;
+  bool isUpdateOrDelete = false;
 
   Future<void> addToCart(int productId, int amount) async {
     emit(CartState.addToCartLoading(productId));
@@ -32,7 +33,7 @@ class CartCubit extends Cubit<CartState> {
   }
 
   Future<void> getCartData() async {
-    emit(CartState.getCartLoading());
+    isUpdateOrDelete ? null : emit(CartState.getCartLoading());
     final response = await cartRepo.getCartData();
     response.when(
       success: (data) {
@@ -50,6 +51,7 @@ class CartCubit extends Cubit<CartState> {
     final response = await cartRepo.deleteCartData(id);
     response.when(
       success: (data) async {
+        isUpdateOrDelete = true;
         showToast(message: data.message.toString());
         emit(CartState.deleteCartSuccess(data));
         await getCartData();
@@ -65,6 +67,7 @@ class CartCubit extends Cubit<CartState> {
     final response = await cartRepo.updateCartData(id, amount);
     response.when(
       success: (data) async {
+        isUpdateOrDelete = true;
         showToast(message: data.message ?? "تم التعديل بنجاح");
         emit(CartState.updateCartSuccess(data));
         await getCartData();

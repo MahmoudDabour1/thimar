@@ -9,6 +9,7 @@ import 'package:thimar/features/orders/presentation/widgets/current_orders_tap.d
 import 'package:thimar/features/orders/presentation/widgets/finish_orders_tap.dart';
 
 import '../../../core/di/dependency_injection.dart';
+
 //
 // class OrdersScreen extends StatefulWidget {
 //   const OrdersScreen({super.key});
@@ -96,7 +97,8 @@ class OrdersScreen extends StatefulWidget {
   State<OrdersScreen> createState() => _OrdersScreenState();
 }
 
-class _OrdersScreenState extends State<OrdersScreen> with SingleTickerProviderStateMixin {
+class _OrdersScreenState extends State<OrdersScreen>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final ordersCubit = sl<OrdersCubit>();
 

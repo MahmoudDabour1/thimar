@@ -52,7 +52,7 @@ class OrdersReposImpl implements OrdersRepos {
   }
 
   @override
-  Future<ApiResult<CancelOrderResponseModel>> cancelOrder(int id)async{
+  Future<ApiResult<CancelOrderResponseModel>> cancelOrder(int id) async {
     try {
       final response = await remoteDataSource.cancelOrder(id: id);
       return ApiResult.success(response);

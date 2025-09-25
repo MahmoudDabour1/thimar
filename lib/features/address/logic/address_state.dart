@@ -10,7 +10,8 @@ class AddressState<T> with _$AddressState {
 
   const factory AddressState.getAddressLoading() = GetAddressLoading;
 
-  const factory AddressState.getAddressSuccess(GetAddressResponseModel data) = GetAddressSuccess;
+  const factory AddressState.getAddressSuccess(GetAddressResponseModel data) =
+      GetAddressSuccess;
 
   const factory AddressState.getAddressFailure(String errorMessage) =
       GetAddressFailure;

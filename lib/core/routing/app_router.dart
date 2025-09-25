@@ -177,8 +177,9 @@ class AppRouter {
       case Routes.searchScreen:
         return MaterialPageRoute(
           builder: (_) => SearchScreen(),
-        );case Routes.ordersDetailsScreen:
-          final orderId = settings.arguments as int? ?? 0;
+        );
+      case Routes.ordersDetailsScreen:
+        final orderId = settings.arguments as int? ?? 0;
         return MaterialPageRoute(
           builder: (_) => OrdersDetailsScreen(
             orderId: orderId,

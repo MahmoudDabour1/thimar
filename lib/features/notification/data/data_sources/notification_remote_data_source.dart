@@ -1,5 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
+import 'package:thimar/features/notification/data/models/delete_notification_response_model.dart';
+import 'package:thimar/features/notification/data/models/get_notification_response_model.dart';
+import 'package:thimar/features/notification/data/models/show_notification_details_response_model.dart';
 
 import '../../../../core/networking/api_constants.dart';
 
@@ -11,18 +14,18 @@ abstract class NotificationRemoteDataSource {
       _NotificationRemoteDataSource;
 
   @GET(ApiConstants.getNotificationsEndPoint)
-  Future<void> getNotifications();
+  Future<GetNotificationResponseModel> getNotifications();
 
   @POST(ApiConstants.clearAllNotificationsEndPoint)
   Future<void> clearAllNotification();
 
   @DELETE(ApiConstants.showAndDeleteNotificationsEndPoint)
-  Future<void> deleteNotification({
+  Future<DeleteNotificationResponseModel> deleteNotification({
     @Path() required int id,
   });
 
   @GET(ApiConstants.showAndDeleteNotificationsEndPoint)
-  Future<void> showNotification({
+  Future<ShowNotificationDetailsResponseModel> showNotification({
     @Path() required int id,
   });
 }

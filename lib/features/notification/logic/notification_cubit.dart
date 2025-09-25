@@ -14,7 +14,7 @@ class NotificationCubit extends Cubit<NotificationState> {
     final response = await notificationRepos.getNotifications();
     response.when(
       success: (data) {
-        // emit(NotificationState.getNotificationsSuccess(data));
+        emit(NotificationState.getNotificationsSuccess(data));
       },
       failure: (error) {
         emit(NotificationState.getNotificationsFailure(
@@ -28,7 +28,7 @@ class NotificationCubit extends Cubit<NotificationState> {
     final response = await notificationRepos.deleteNotifications(id: id);
     response.when(
       success: (data) {
-        // emit(NotificationState.deleteNotificationsSuccess(data));
+        emit(NotificationState.deleteNotificationsSuccess(data));
       },
       failure: (error) {
         emit(NotificationState.deleteNotificationsFailure(
@@ -37,26 +37,26 @@ class NotificationCubit extends Cubit<NotificationState> {
     );
   }
 
-  Future<void> clearAllNotifications() async {
-    emit(NotificationState.clearAllNotificationsLoading());
-    final response = await notificationRepos.clearAllNotifications();
-    response.when(
-      success: (data) {
-        // emit(NotificationState.clearAllNotificationsSuccess(data));
-      },
-      failure: (error) {
-        emit(NotificationState.clearAllNotificationsFailure(
-            error.message.toString()));
-      },
-    );
-  }
+  // Future<void> clearAllNotifications() async {
+  //   emit(NotificationState.clearAllNotificationsLoading());
+  //   final response = await notificationRepos.clearAllNotifications();
+  //   response.when(
+  //     success: (data) {
+  //       emit(NotificationState.clearAllNotificationsSuccess(data));
+  //     },
+  //     failure: (error) {
+  //       emit(NotificationState.clearAllNotificationsFailure(
+  //           error.message.toString()));
+  //     },
+  //   );
+  // }
 
   Future<void> showOneNotification(int id) async {
     emit(NotificationState.showOneNotificationsLoading());
     final response = await notificationRepos.showNotification(id: id);
     response.when(
       success: (data) {
-        // emit(NotificationState.showOneNotificationsSuccess(data));
+        emit(NotificationState.showOneNotificationsSuccess(data));
       },
       failure: (error) {
         emit(NotificationState.showOneNotificationsFailure(

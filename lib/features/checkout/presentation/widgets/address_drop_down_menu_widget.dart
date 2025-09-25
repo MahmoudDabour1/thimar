@@ -14,7 +14,8 @@ class AddressDropDownMenuWidget extends StatefulWidget {
   final AddressCubit addressCubit;
   final CheckoutCubit checkoutCubit;
 
-  const AddressDropDownMenuWidget({super.key, required this.addressCubit, required this.checkoutCubit});
+  const AddressDropDownMenuWidget(
+      {super.key, required this.addressCubit, required this.checkoutCubit});
 
   @override
   State<AddressDropDownMenuWidget> createState() =>
@@ -80,7 +81,6 @@ class _AddressDropDownMenuWidgetState extends State<AddressDropDownMenuWidget> {
                             setState(() {
                               selectedAddress = value;
                             });
-
                           },
                         );
                       },

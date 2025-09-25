@@ -60,7 +60,8 @@ class _CartScreenState extends State<CartScreen> {
                   : 0.0,
               totalPrice: cartData?.totalPriceBeforeDiscount != null
                   ? (cartData!.totalPriceBeforeDiscount! as num).toDouble()
-                  : 0.0,),
+                  : 0.0,
+            ),
           ],
         ),
       ),
