@@ -97,8 +97,15 @@ class AppRouter {
           builder: (_) => CartScreen(),
         );
       case Routes.checkoutScreen:
+        final args = settings.arguments as Map<String, dynamic>?;
+        final totalPrice = args?["totalPrice"] as double? ?? 0.0;
+        final discount = args?["discount"] as double? ?? 0.0;
+
         return MaterialPageRoute(
-          builder: (_) => CheckoutScreen(),
+          builder: (_) => CheckoutScreen(
+            discount: discount,
+            totalPrice: totalPrice,
+          ),
         );
       case Routes.profileDataScreen:
         return MaterialPageRoute(

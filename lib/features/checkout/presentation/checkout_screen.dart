@@ -19,7 +19,10 @@ import '../../../core/widgets/app_custom_drop_down_menu.dart';
 import '../../address/data/models/get_address_response_model.dart';
 
 class CheckoutScreen extends StatefulWidget {
-  const CheckoutScreen({super.key});
+  final double? discount;
+  final double? totalPrice;
+
+  const CheckoutScreen({super.key, this.discount, this.totalPrice});
 
   @override
   State<CheckoutScreen> createState() => _CheckoutScreenState();
@@ -153,7 +156,10 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                 ),
                 BlocProvider.value(
                   value: checkOutCubit,
-                  child: ButtonAndPricesWidget(),
+                  child: ButtonAndPricesWidget(
+                    discount: widget.discount,
+                    totalPrice: widget.totalPrice,
+                  ),
                 ),
               ],
             ),
