@@ -31,6 +31,9 @@ import 'package:thimar/features/favorite/logic/favorite_cubit.dart';
 import 'package:thimar/features/home/data/data_sources/home_remote_data_source.dart';
 import 'package:thimar/features/home/data/repos/home_repos.dart';
 import 'package:thimar/features/home/logic/home_cubit.dart';
+import 'package:thimar/features/orders/data/data_sources/orders_remote_data_source.dart';
+import 'package:thimar/features/orders/data/repos/orders_repos.dart';
+import 'package:thimar/features/orders/logic/orders_cubit.dart';
 import 'package:thimar/features/product_details/data/data_sources/product_details_remote_data_source.dart';
 import 'package:thimar/features/product_details/data/repos/product_details_repos.dart';
 import 'package:thimar/features/product_details/logic/product_details_cubit.dart';
@@ -159,4 +162,11 @@ Future<void> setupGetIt() async {
   sl.registerLazySingleton<CheckoutRepo>(
       () => CheckoutRepoImp(checkoutRemoteDataSource: sl()));
   sl.registerFactory<CheckoutCubit>(() => CheckoutCubit(sl()));
+
+  //orders
+  sl.registerLazySingleton<OrdersRemoteDataSource>(
+      () => OrdersRemoteDataSource(dio));
+  sl.registerLazySingleton<OrdersRepos>(
+      () => OrdersReposImpl(remoteDataSource: sl()));
+  sl.registerFactory<OrdersCubit>(() => OrdersCubit(sl()));
 }

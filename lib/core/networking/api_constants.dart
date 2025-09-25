@@ -42,6 +42,10 @@ class ApiConstants {
   static const String searchEndPoint = "/search/";
   static const String searchByCategoryEndPoint = "/search_category/{id}/";
   static const String storeOrderEndPoint = "/client/orders";
+  static const String getCurrentOrderEndPoint = "/client/orders/current";
+  static const String getFinishOrderEndPoint = "/client/orders/finished";
+  static const String orderDetailsEndPoint = "/client/orders/{id}";
+  static const String cancelOrderEndPoint = "/client/orders/{id}/cancel";
 }
 
 class ApiErrors {
