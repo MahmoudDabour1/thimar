@@ -19,4 +19,6 @@ class WalletState<T> with _$WalletState {
 
   const factory WalletState.chargeWalletFailure(String errorMessage) =
       ChargeWalletFailure;
+
+  const factory WalletState.updateWallet() = updateWallet;
 }

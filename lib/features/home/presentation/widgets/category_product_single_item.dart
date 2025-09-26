@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/core/utils/spacing.dart';
+import 'package:thimar/core/widgets/app_loading_indicator_widget.dart';
 import 'package:thimar/features/cart/logic/cart_cubit.dart';
 
 import '../../../../core/theming/app_styles.dart';
@@ -73,7 +74,6 @@ class CategoryProductSingleItem extends StatelessWidget {
                           height: 110.h,
                           width: double.infinity,
                           fit: BoxFit.cover,
-                          //shimmer
                           placeholder: (context, url) => Shimmer.fromColors(
                             baseColor: Colors.grey[300]!,
                             highlightColor: Colors.grey[100]!,
@@ -83,7 +83,6 @@ class CategoryProductSingleItem extends StatelessWidget {
                               color: Colors.white,
                             ),
                           ),
-
                           errorWidget: (context, url, error) =>
                               const Icon(Icons.error),
                         ),
@@ -125,89 +124,77 @@ class CategoryProductSingleItem extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Flexible(
-                      flex: 2,
-                      child: Text(
-                        "${currentPrice.toStringAsFixed(0)}ر.س",
-                        style: AppStyles.font16GreenBold,
-                        overflow: TextOverflow.ellipsis,
+                      flex: 7,
+                      child: Row(
+                        children: [
+                          Text(
+                            "${currentPrice.toStringAsFixed(0)}ر.س",
+                            style: AppStyles.font16GreenBold,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          horizontalSpace(2),
+                          Text(
+                            "${oldPrice.toStringAsFixed(0)}ر.س",
+                            style: AppStyles.font16GreenMedium.copyWith(
+                              decoration: TextDecoration.lineThrough,
+                              decorationStyle: TextDecorationStyle.solid,
+                              decorationColor: AppColors.blackColor,
+                              decorationThickness: 30.w,
+                              fontSize: 12.sp,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
                       ),
                     ),
-                    horizontalSpace(2),
                     Flexible(
-                      flex: 1,
-                      child: Text(
-                        "${oldPrice.toStringAsFixed(0)}ر.س",
-                        style: AppStyles.font16GreenMedium.copyWith(
-                          decoration: TextDecoration.lineThrough,
-                          decorationStyle: TextDecorationStyle.solid,
-                          decorationColor: AppColors.blackColor,
-                          decorationThickness: 30.w,
-                          fontSize: 12.sp,
-                        ),
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                    // horizontalSpace(8),
-                    Spacer(),
-                    Row(
-                      children: [
-                        BlocBuilder<CartCubit, CartState>(
-                          builder: (context, state) {
-                            if (state is AddToCartLoading &&
-                                state.productId == productId) {
-                              return SizedBox(
-                                width: 28.w,
-                                height: 28.h,
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                  color: AppColors.primaryColor,
-                                ),
-                              );
-                            }
-                            if (state is AddToCartLoading &&
-                                state.productId == productId) {
-                              return SizedBox(
-                                width: 28.w,
-                                height: 28.h,
-                                child: const CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                  color: Colors.white,
-                                ),
-                              );
-                            }
-
-                            return GestureDetector(
-                              onTap: onAddPressed,
-                              child: Container(
-                                width: 28.w,
-                                height: 28.h,
-                                decoration: BoxDecoration(
-                                  color: AppColors.mediumGreenColor,
-                                  borderRadius: BorderRadius.circular(8.r),
-                                ),
-                                child: Icon(
-                                  Icons.add,
-                                  color: AppColors.whiteColor,
-                                  size: 23.r,
-                                ),
+                      flex: 2,
+                      child: BlocBuilder<CartCubit, CartState>(
+                        builder: (context, state) {
+                          return GestureDetector(
+                            onTap: onAddPressed,
+                            child: Container(
+                              width: 28.w,
+                              height: 28.h,
+                              decoration: BoxDecoration(
+                                color: AppColors.mediumGreenColor,
+                                borderRadius: BorderRadius.circular(8.r),
                               ),
-                            );
-                          },
-                        ),
-                      ],
+                              child: state is AddToCartLoading &&
+                                      state.productId == productId
+                                  ? AppLoadingIndicatorWidget(
+                                      size: 23.w,
+                                      color: AppColors.whiteColor,
+                                    )
+                                  : Icon(
+                                      Icons.add,
+                                      color: AppColors.whiteColor,
+                                      size: 23.r,
+                                    ),
+                            ),
+                          );
+                        },
+                      ),
                     )
                   ],
                 ),
                 verticalSpace(isHadAddToCartButton == true ? 4 : 8),
                 isHadAddToCartButton == true
                     ? Center(
-                        child: AppCustomButton(
-                          textButton: "أضف للسلة",
-                          onPressed: onAddToCartPressed,
-                          btnHeight: 30.h,
-                          btnWidth: 110.w,
+                        child: BlocBuilder<CartCubit, CartState>(
+                          builder: (context, state) {
+                            return AppCustomButton(
+                              isLoading: state is AddToCartLoading &&
+                                  state.productId == productId,
+                              textButton: "أضف للسلة",
+                              onPressed: onAddToCartPressed,
+                              btnHeight: 30.h,
+                              btnWidth: 110.w,
+                            );
+                          },
                         ),
                       )
                     : SizedBox.shrink(),

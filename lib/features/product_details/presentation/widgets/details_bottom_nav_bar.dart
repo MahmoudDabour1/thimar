@@ -8,9 +8,7 @@ import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/utils/spacing.dart';
-import '../../../../core/widgets/app_loading_indicator_widget.dart';
 import '../../../cart/logic/cart_state.dart';
-import '../../../cart/presentation/widgets/add_to_cart_bottom_sheet_widget.dart';
 
 class DetailsBottomNavBar extends StatelessWidget {
   final GetProductDetailsResponseModel data;
@@ -28,23 +26,28 @@ class DetailsBottomNavBar extends StatelessWidget {
             context.read<CartCubit>().addToCart(
                   data.data?.id ?? 0,
                   quantity,
+                  context,
                 );
-            showModalBottomSheet(
-              context: context,
-              builder: (_) {
-                return BlocBuilder<CartCubit, CartState>(
-                  builder: (context, state) {
-                    return state is AddToCartLoading
-                        ? AppLoadingIndicatorWidget()
-                        : AddToCartBottomSheetWidget(
-                            title: data.data?.title ?? "",
-                            imageUrl: data.data?.mainImage ?? "",
-                            price: (data.data?.price ?? 0).toDouble(),
-                          );
-                  },
-                );
-              },
-            );
+            // showModalBottomSheet(
+            //   context: context,
+            //   builder: (_) {
+            //     return AddToCartBottomSheetWidget(
+            //       title: data.data?.title ?? "",
+            //       imageUrl: data.data?.mainImage ?? "",
+            //       price: (data.data?.price ?? 0)
+            //           .toDouble(),
+            //     );
+            //     //   BlocBuilder<CartCubit, CartState>(
+            //     //   builder: (context, state) {
+            //     //     return AddToCartBottomSheetWidget(
+            //     //             title: data.data?.title ?? "",
+            //     //             imageUrl: data.data?.mainImage ?? "",
+            //     //             price: (data.data?.price ?? 0).toDouble(),
+            //     //           );
+            //     //   },
+            //     // );
+            //   },
+            // );
           },
           child: Container(
             height: 60.h,

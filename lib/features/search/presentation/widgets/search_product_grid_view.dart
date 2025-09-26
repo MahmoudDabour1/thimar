@@ -3,9 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
 
+import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../cart/logic/cart_cubit.dart';
+import '../../../favorite/logic/favorite_cubit.dart';
 import '../../../home/presentation/widgets/category_product_single_item.dart';
 import '../../data/models/search_response_model.dart';
 
@@ -36,10 +38,10 @@ class SearchProductGridView extends StatelessWidget {
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
-                  context.pushNamed(
-                    Routes.productDetailsScreen,
-                    arguments: data.data?.searchResult?[index].id ?? 0,
-                  );
+                  context.pushNamed(Routes.productDetailsScreen, arguments: {
+                    "productId": data.data?.searchResult?[index].id ?? 0,
+                    "favCubit": sl<FavoriteCubit>(),
+                  });
                 },
                 child: CategoryProductSingleItem(
                   imageUrl: data.data?.searchResult?[index].mainImage ?? "",
@@ -56,12 +58,14 @@ class SearchProductGridView extends StatelessWidget {
                     context.read<CartCubit>().addToCart(
                           data.data?.searchResult?[index].id ?? 0,
                           1,
+                          context,
                         );
                   },
                   onAddToCartPressed: () {
                     context.read<CartCubit>().addToCart(
                           data.data?.searchResult?[index].id ?? 0,
                           1,
+                          context,
                         );
                   },
                 ),

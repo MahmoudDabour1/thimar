@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/widgets/app_text_form_field.dart';
-import 'package:thimar/features/cart/data/models/get_cart_response_model.dart';
 import 'package:thimar/features/cart/logic/cart_cubit.dart';
 
 import '../../../../core/routing/routes.dart';
@@ -16,6 +15,7 @@ import '../../logic/cart_state.dart';
 class CartPricesAndButtonWidget extends StatelessWidget {
   final double? discount;
   final double? totalPrice;
+
   const CartPricesAndButtonWidget({super.key, this.discount, this.totalPrice});
 
   @override
@@ -23,6 +23,8 @@ class CartPricesAndButtonWidget extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
           AppTextFormField(
             hintText: "عندك كوبون ؟ ادخل رقم الكوبون",
@@ -54,17 +56,75 @@ class CartPricesAndButtonWidget extends StatelessWidget {
             ),
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 16.w),
-              child: BlocBuilder<CartCubit, CartState>(
-                builder: (context, state) {
-                  return state.maybeWhen(
-                      getCartLoading: () => Center(
-                            child: CircularProgressIndicator(
-                              color: AppColors.primaryColor,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text("إجمالي المنتجات",
+                          style: AppStyles.font16GreenMedium),
+                      Spacer(),
+                      BlocBuilder<CartCubit, CartState>(
+                        buildWhen: (prev, curr) => curr is GetCartSuccess,
+                        builder: (context, state) {
+                          return state.maybeWhen(
+                            getCartSuccess: (data) => Text(
+                              "${data.totalPriceBeforeDiscount} ر.س",
+                              style: AppStyles.font16GreenMedium,
                             ),
-                          ),
-                      getCartSuccess: (data) => setupSuccess(data),
-                      orElse: () => SizedBox.shrink());
-                },
+                            orElse: () => SizedBox.shrink(),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
+                  verticalSpace(10),
+                  Row(
+                    children: [
+                      Text("الخصم", style: AppStyles.font16GreenMedium),
+                      Spacer(),
+                      BlocBuilder<CartCubit, CartState>(
+                        buildWhen: (prev, curr) => curr is GetCartSuccess,
+                        builder: (context, state) {
+                          return state.maybeWhen(
+                            getCartSuccess: (data) => Text(
+                              "${data.totalDiscount} ر.س",
+                              style: AppStyles.font16GreenMedium,
+                            ),
+                            orElse: () => SizedBox.shrink(),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
+                  verticalSpace(10),
+                  Divider(),
+                  verticalSpace(10),
+                  Row(
+                    children: [
+                      Text(
+                        "المجموع",
+                        style: AppStyles.font16BlackExtraBold.copyWith(
+                          color: AppColors.primaryColor,
+                        ),
+                      ),
+                      Spacer(),
+                      BlocBuilder<CartCubit, CartState>(
+                        buildWhen: (prev, curr) => curr is GetCartSuccess,
+                        builder: (context, state) {
+                          return state.maybeWhen(
+                            getCartSuccess: (data) => Text(
+                              "${data.totalPriceWithVat} ر.س",
+                              style: AppStyles.font16BlackExtraBold.copyWith(
+                                color: AppColors.primaryColor,
+                              ),
+                            ),
+                            orElse: () => SizedBox.shrink(),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),
@@ -78,53 +138,9 @@ class CartPricesAndButtonWidget extends StatelessWidget {
               });
             },
           ),
-          verticalSpace(32),
+          verticalSpace(16),
         ],
       ),
-    );
-  }
-
-  Widget setupSuccess(GetCartResponseModel data) {
-    return Column(
-      children: [
-        Row(
-          children: [
-            Text("إجمالي المنتجات", style: AppStyles.font16GreenMedium),
-            Spacer(),
-            Text("${data.totalPriceBeforeDiscount} ر.س",
-                style: AppStyles.font16GreenMedium)
-          ],
-        ),
-        verticalSpace(10),
-        Row(
-          children: [
-            Text("الخصم", style: AppStyles.font16GreenMedium),
-            Spacer(),
-            Text("${data.totalDiscount} ر.س",
-                style: AppStyles.font16GreenMedium)
-          ],
-        ),
-        verticalSpace(10),
-        Divider(),
-        verticalSpace(10),
-        Row(
-          children: [
-            Text(
-              "المجموع",
-              style: AppStyles.font16BlackExtraBold.copyWith(
-                color: AppColors.primaryColor,
-              ),
-            ),
-            Spacer(),
-            Text(
-              "${data.totalPriceWithVat} ر.س",
-              style: AppStyles.font16BlackExtraBold.copyWith(
-                color: AppColors.primaryColor,
-              ),
-            ),
-          ],
-        ),
-      ],
     );
   }
 }

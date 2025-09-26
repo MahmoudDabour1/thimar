@@ -9,11 +9,18 @@ import 'package:thimar/features/orders/data/models/get_current_orders_response_m
 import 'package:thimar/features/orders/logic/orders_cubit.dart';
 import 'package:thimar/features/orders/logic/orders_state.dart';
 
+import '../../data/models/show_order_model.dart';
 import 'order_state_single_item.dart';
 
-class CurrentOrdersTap extends StatelessWidget {
-  const CurrentOrdersTap({super.key});
+class CurrentOrdersTap extends StatefulWidget {
+  final OrdersCubit ordersCubit;
+  const CurrentOrdersTap({super.key, required this.ordersCubit});
 
+  @override
+  State<CurrentOrdersTap> createState() => _CurrentOrdersTapState();
+}
+
+class _CurrentOrdersTapState extends State<CurrentOrdersTap> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -43,39 +50,43 @@ class CurrentOrdersTap extends StatelessWidget {
 
   Widget setupSuccess(GetCurrentOrdersResponseModel data) {
     return ListView.builder(
-        itemCount: data.data?.length,
-        shrinkWrap: true,
-        scrollDirection: Axis.vertical,
-        physics: BouncingScrollPhysics(),
-        itemBuilder: (context, index) {
-          final order = data.data![index];
+      itemCount: data.data?.length,
+      shrinkWrap: true,
+      scrollDirection: Axis.vertical,
+      physics: BouncingScrollPhysics(),
+      itemBuilder: (context, index) {
+        final order = data.data![index];
 
-          DateTime? orderDate = order.date != null
-              ? DateTime.tryParse(order.date.toString())
-              : null;
+        DateTime? orderDate = order.date != null
+            ? DateTime.tryParse(order.date.toString())
+            : null;
 
-          String formattedDate = orderDate != null
-              ? DateFormat("dd, MMMM, yyyy", "ar").format(orderDate)
-              : "";
-          return GestureDetector(
-            onTap: () {
-              context.pushNamed(
-                Routes.ordersDetailsScreen,
-                arguments: order.id,
-              );
-            },
-            child: OrderStateSingleItem(
+        String formattedDate = orderDate != null
+            ? DateFormat("dd, MMMM, yyyy", "ar").format(orderDate)
+            : "";
+        return GestureDetector(
+          onTap: () {
+            context.pushNamed(Routes.ordersDetailsScreen, arguments: {
+              "id": order.id ?? 0,
+              "orderCubit": widget.ordersCubit,
+            }).then((_) {
+              widget.ordersCubit.updateOrders();
+            });
+          },
+          child: OrderStateSingleItem(
+            order: ShowOrderModel(
               orderDate: formattedDate,
               orderStatus: order.status ?? '',
               orderNumber: order.id.toString() ?? '',
               orderPrice: order.totalPrice != null
                   ? (order.totalPrice! as num).toDouble()
                   : 0.0,
-              orderImage: order.products?.isNotEmpty == true
-                  ? (order.products![0].url)
-                  : null,
+              products: order.products ?? [],
+              ordersCubit: widget.ordersCubit,
             ),
-          );
-        });
+          ),
+        );
+      },
+    );
   }
 }

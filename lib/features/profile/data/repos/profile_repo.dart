@@ -34,18 +34,32 @@ class ProfileRepoImpl implements ProfileRepo {
   Future<ApiResult<UpdateProfileDataResponseModel>> updateProfileData(
       UpdateProfileDataRequestModel request) async {
     try {
+      MultipartFile? imageFile;
+
+      if (request.image != null) {
+        imageFile = await MultipartFile.fromFile(
+          request.image!.path,
+          filename: request.image!.path.split('/').last,
+          contentType: MediaType('image', 'jpeg'),
+        );
+      } else if (request.oldImage != null && request.oldImage!.isNotEmpty) {
+        final response = await Dio().get<List<int>>(
+          request.oldImage!,
+          options: Options(responseType: ResponseType.bytes),
+        );
+
+        imageFile = MultipartFile.fromBytes(
+          response.data!,
+          filename: request.oldImage!.split('/').last,
+          contentType: MediaType('image', 'jpeg'),
+        );
+      }
+
       final formData = FormData.fromMap({
         "fullname": request.fullName,
         "phone": request.phone,
         if (request.cityId != null) "city_id": request.cityId,
-        if (request.image != null)
-          "image": await MultipartFile.fromFile(
-            request.image!.path,
-            filename: request.image!.path.split('/').last,
-            contentType: MediaType('image', 'jpeg'),
-          )
-        else if (request.oldImage != null)
-          "image": request.oldImage,
+        if (imageFile != null) "image": imageFile,
         if (request.password != null) "password": request.password,
         if (request.passwordConfirmation != null)
           "password_confirmation": request.passwordConfirmation,

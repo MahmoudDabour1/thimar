@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/core/theming/app_styles.dart';
 import 'package:thimar/core/widgets/app_custom_app_bar.dart';
@@ -11,12 +12,24 @@ import 'package:thimar/features/favorite/presentation/widgets/favorite_grid_view
 
 import '../../../core/di/dependency_injection.dart';
 
-class FavoriteScreen extends StatelessWidget {
+class FavoriteScreen extends StatefulWidget {
   const FavoriteScreen({super.key});
 
   @override
+  State<FavoriteScreen> createState() => _FavoriteScreenState();
+}
+
+class _FavoriteScreenState extends State<FavoriteScreen> {
+  final favCubit = sl<FavoriteCubit>();
+
+  @override
+  void initState() {
+    super.initState();
+    favCubit.getFavorite();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final cubit = sl<FavoriteCubit>();
     return Scaffold(
       appBar: AppCustomAppBar(
         appBarTitle: "المفضلة",
@@ -26,16 +39,21 @@ class FavoriteScreen extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: BlocProvider.value(
-            value: cubit..getFavorite(),
+            value: favCubit,
             child: BlocBuilder<FavoriteCubit, FavoriteState>(
+                buildWhen: (previous, current) =>
+                    previous != current &&
+                    (current is GetFavoriteLoading ||
+                        current is GetFavoriteSuccess ||
+                        current is GetFavoriteFailure),
                 builder: (context, state) {
-              return state.maybeWhen(
-                getFavoriteLoading: () => setupLoading(),
-                getFavoriteSuccess: (data) => setupSuccess(data),
-                getFavoriteFailure: (error) => setupError(error),
-                orElse: () => const SizedBox(),
-              );
-            }),
+                  return state.maybeWhen(
+                    getFavoriteLoading: () => setupLoading(),
+                    getFavoriteSuccess: (data) => setupSuccess(data),
+                    getFavoriteFailure: (error) => setupError(error),
+                    orElse: () => const SizedBox(),
+                  );
+                }),
           ),
         ),
       ),
@@ -60,7 +78,7 @@ class FavoriteScreen extends StatelessWidget {
   }
 
   Widget setupSuccess(GetFavoriteResponseModel data) {
-    return data.data == null
+    return data.data.isNullOrEmpty()
         ? Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -76,6 +94,7 @@ class FavoriteScreen extends StatelessWidget {
         : SingleChildScrollView(
             child: FavoriteGridView(
               data: data,
+              cubit: favCubit,
             ),
           );
   }

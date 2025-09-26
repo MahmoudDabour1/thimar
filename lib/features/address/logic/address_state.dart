@@ -24,19 +24,23 @@ class AddressState<T> with _$AddressState {
   const factory AddressState.insertAddressFailure(String errorMessage) =
       InsertAddressFailure;
 
-  const factory AddressState.updateAddressLoading() = UpdateAddressLoading;
+  const factory AddressState.updateAddressLoading(int id) =
+      UpdateAddressLoading;
 
-  const factory AddressState.updateAddressSuccess(T data) =
+  const factory AddressState.updateAddressSuccess(int id, T data) =
       UpdateAddressSuccess;
 
-  const factory AddressState.updateAddressFailure(String errorMessage) =
+  const factory AddressState.updateAddressFailure(int id, String errorMessage) =
       UpdateAddressFailure;
 
-  const factory AddressState.deleteAddressLoading() = DeleteAddressLoading;
+  const factory AddressState.deleteAddressLoading(int id) =
+      DeleteAddressLoading;
 
-  const factory AddressState.deleteAddressSuccess(T data) =
+  const factory AddressState.deleteAddressSuccess(int id, T data) =
       DeleteAddressSuccess;
 
-  const factory AddressState.deleteAddressFailure(String errorMessage) =
+  const factory AddressState.deleteAddressFailure(int id, String errorMessage) =
       DeleteAddressFailure;
+
+  const factory AddressState.updateAddress() = UpdateAddress;
 }

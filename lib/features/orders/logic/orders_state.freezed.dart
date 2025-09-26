@@ -31,6 +31,7 @@ mixin _$OrdersState<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -48,6 +49,7 @@ mixin _$OrdersState<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +67,7 @@ mixin _$OrdersState<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -89,6 +92,7 @@ mixin _$OrdersState<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -106,6 +110,7 @@ mixin _$OrdersState<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -123,6 +128,7 @@ mixin _$OrdersState<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -203,6 +209,7 @@ class _$OrdersInitialImpl<T> implements OrdersInitial<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) {
     return initial();
   }
@@ -223,6 +230,7 @@ class _$OrdersInitialImpl<T> implements OrdersInitial<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) {
     return initial?.call();
   }
@@ -243,6 +251,7 @@ class _$OrdersInitialImpl<T> implements OrdersInitial<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -273,6 +282,7 @@ class _$OrdersInitialImpl<T> implements OrdersInitial<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) {
     return initial(this);
   }
@@ -293,6 +303,7 @@ class _$OrdersInitialImpl<T> implements OrdersInitial<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) {
     return initial?.call(this);
   }
@@ -313,6 +324,7 @@ class _$OrdersInitialImpl<T> implements OrdersInitial<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -381,6 +393,7 @@ class _$GetOrdersLoadingImpl<T> implements GetOrdersLoading<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) {
     return getOrdersLoading();
   }
@@ -401,6 +414,7 @@ class _$GetOrdersLoadingImpl<T> implements GetOrdersLoading<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) {
     return getOrdersLoading?.call();
   }
@@ -421,6 +435,7 @@ class _$GetOrdersLoadingImpl<T> implements GetOrdersLoading<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) {
     if (getOrdersLoading != null) {
@@ -451,6 +466,7 @@ class _$GetOrdersLoadingImpl<T> implements GetOrdersLoading<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) {
     return getOrdersLoading(this);
   }
@@ -471,6 +487,7 @@ class _$GetOrdersLoadingImpl<T> implements GetOrdersLoading<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) {
     return getOrdersLoading?.call(this);
   }
@@ -491,6 +508,7 @@ class _$GetOrdersLoadingImpl<T> implements GetOrdersLoading<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) {
     if (getOrdersLoading != null) {
@@ -587,6 +605,7 @@ class _$GetOrdersSuccessImpl<T> implements GetOrdersSuccess<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) {
     return getOrdersSuccess(data);
   }
@@ -607,6 +626,7 @@ class _$GetOrdersSuccessImpl<T> implements GetOrdersSuccess<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) {
     return getOrdersSuccess?.call(data);
   }
@@ -627,6 +647,7 @@ class _$GetOrdersSuccessImpl<T> implements GetOrdersSuccess<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) {
     if (getOrdersSuccess != null) {
@@ -657,6 +678,7 @@ class _$GetOrdersSuccessImpl<T> implements GetOrdersSuccess<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) {
     return getOrdersSuccess(this);
   }
@@ -677,6 +699,7 @@ class _$GetOrdersSuccessImpl<T> implements GetOrdersSuccess<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) {
     return getOrdersSuccess?.call(this);
   }
@@ -697,6 +720,7 @@ class _$GetOrdersSuccessImpl<T> implements GetOrdersSuccess<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) {
     if (getOrdersSuccess != null) {
@@ -801,6 +825,7 @@ class _$GetOrdersFailureImpl<T> implements GetOrdersFailure<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) {
     return getOrdersFailure(errorMessage);
   }
@@ -821,6 +846,7 @@ class _$GetOrdersFailureImpl<T> implements GetOrdersFailure<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) {
     return getOrdersFailure?.call(errorMessage);
   }
@@ -841,6 +867,7 @@ class _$GetOrdersFailureImpl<T> implements GetOrdersFailure<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) {
     if (getOrdersFailure != null) {
@@ -871,6 +898,7 @@ class _$GetOrdersFailureImpl<T> implements GetOrdersFailure<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) {
     return getOrdersFailure(this);
   }
@@ -891,6 +919,7 @@ class _$GetOrdersFailureImpl<T> implements GetOrdersFailure<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) {
     return getOrdersFailure?.call(this);
   }
@@ -911,6 +940,7 @@ class _$GetOrdersFailureImpl<T> implements GetOrdersFailure<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) {
     if (getOrdersFailure != null) {
@@ -990,6 +1020,7 @@ class _$GetFinishOrdersLoadingImpl<T> implements GetFinishOrdersLoading<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) {
     return getFinishOrdersLoading();
   }
@@ -1010,6 +1041,7 @@ class _$GetFinishOrdersLoadingImpl<T> implements GetFinishOrdersLoading<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) {
     return getFinishOrdersLoading?.call();
   }
@@ -1030,6 +1062,7 @@ class _$GetFinishOrdersLoadingImpl<T> implements GetFinishOrdersLoading<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) {
     if (getFinishOrdersLoading != null) {
@@ -1060,6 +1093,7 @@ class _$GetFinishOrdersLoadingImpl<T> implements GetFinishOrdersLoading<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) {
     return getFinishOrdersLoading(this);
   }
@@ -1080,6 +1114,7 @@ class _$GetFinishOrdersLoadingImpl<T> implements GetFinishOrdersLoading<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) {
     return getFinishOrdersLoading?.call(this);
   }
@@ -1100,6 +1135,7 @@ class _$GetFinishOrdersLoadingImpl<T> implements GetFinishOrdersLoading<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) {
     if (getFinishOrdersLoading != null) {
@@ -1198,6 +1234,7 @@ class _$GetFinishOrdersSuccessImpl<T> implements GetFinishOrdersSuccess<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) {
     return getFinishOrdersSuccess(data);
   }
@@ -1218,6 +1255,7 @@ class _$GetFinishOrdersSuccessImpl<T> implements GetFinishOrdersSuccess<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) {
     return getFinishOrdersSuccess?.call(data);
   }
@@ -1238,6 +1276,7 @@ class _$GetFinishOrdersSuccessImpl<T> implements GetFinishOrdersSuccess<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) {
     if (getFinishOrdersSuccess != null) {
@@ -1268,6 +1307,7 @@ class _$GetFinishOrdersSuccessImpl<T> implements GetFinishOrdersSuccess<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) {
     return getFinishOrdersSuccess(this);
   }
@@ -1288,6 +1328,7 @@ class _$GetFinishOrdersSuccessImpl<T> implements GetFinishOrdersSuccess<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) {
     return getFinishOrdersSuccess?.call(this);
   }
@@ -1308,6 +1349,7 @@ class _$GetFinishOrdersSuccessImpl<T> implements GetFinishOrdersSuccess<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) {
     if (getFinishOrdersSuccess != null) {
@@ -1415,6 +1457,7 @@ class _$GetFinishOrdersFailureImpl<T> implements GetFinishOrdersFailure<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) {
     return getFinishOrdersFailure(errorMessage);
   }
@@ -1435,6 +1478,7 @@ class _$GetFinishOrdersFailureImpl<T> implements GetFinishOrdersFailure<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) {
     return getFinishOrdersFailure?.call(errorMessage);
   }
@@ -1455,6 +1499,7 @@ class _$GetFinishOrdersFailureImpl<T> implements GetFinishOrdersFailure<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) {
     if (getFinishOrdersFailure != null) {
@@ -1485,6 +1530,7 @@ class _$GetFinishOrdersFailureImpl<T> implements GetFinishOrdersFailure<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) {
     return getFinishOrdersFailure(this);
   }
@@ -1505,6 +1551,7 @@ class _$GetFinishOrdersFailureImpl<T> implements GetFinishOrdersFailure<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) {
     return getFinishOrdersFailure?.call(this);
   }
@@ -1525,6 +1572,7 @@ class _$GetFinishOrdersFailureImpl<T> implements GetFinishOrdersFailure<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) {
     if (getFinishOrdersFailure != null) {
@@ -1603,6 +1651,7 @@ class _$OrdersDetailsLoadingImpl<T> implements OrdersDetailsLoading<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) {
     return ordersDetailsLoading();
   }
@@ -1623,6 +1672,7 @@ class _$OrdersDetailsLoadingImpl<T> implements OrdersDetailsLoading<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) {
     return ordersDetailsLoading?.call();
   }
@@ -1643,6 +1693,7 @@ class _$OrdersDetailsLoadingImpl<T> implements OrdersDetailsLoading<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) {
     if (ordersDetailsLoading != null) {
@@ -1673,6 +1724,7 @@ class _$OrdersDetailsLoadingImpl<T> implements OrdersDetailsLoading<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) {
     return ordersDetailsLoading(this);
   }
@@ -1693,6 +1745,7 @@ class _$OrdersDetailsLoadingImpl<T> implements OrdersDetailsLoading<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) {
     return ordersDetailsLoading?.call(this);
   }
@@ -1713,6 +1766,7 @@ class _$OrdersDetailsLoadingImpl<T> implements OrdersDetailsLoading<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) {
     if (ordersDetailsLoading != null) {
@@ -1810,6 +1864,7 @@ class _$OrdersDetailsSuccessImpl<T> implements OrdersDetailsSuccess<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) {
     return ordersDetailsSuccess(data);
   }
@@ -1830,6 +1885,7 @@ class _$OrdersDetailsSuccessImpl<T> implements OrdersDetailsSuccess<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) {
     return ordersDetailsSuccess?.call(data);
   }
@@ -1850,6 +1906,7 @@ class _$OrdersDetailsSuccessImpl<T> implements OrdersDetailsSuccess<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) {
     if (ordersDetailsSuccess != null) {
@@ -1880,6 +1937,7 @@ class _$OrdersDetailsSuccessImpl<T> implements OrdersDetailsSuccess<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) {
     return ordersDetailsSuccess(this);
   }
@@ -1900,6 +1958,7 @@ class _$OrdersDetailsSuccessImpl<T> implements OrdersDetailsSuccess<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) {
     return ordersDetailsSuccess?.call(this);
   }
@@ -1920,6 +1979,7 @@ class _$OrdersDetailsSuccessImpl<T> implements OrdersDetailsSuccess<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) {
     if (ordersDetailsSuccess != null) {
@@ -2026,6 +2086,7 @@ class _$OrdersDetailsFailureImpl<T> implements OrdersDetailsFailure<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) {
     return orderDetailsFailure(errorMessage);
   }
@@ -2046,6 +2107,7 @@ class _$OrdersDetailsFailureImpl<T> implements OrdersDetailsFailure<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) {
     return orderDetailsFailure?.call(errorMessage);
   }
@@ -2066,6 +2128,7 @@ class _$OrdersDetailsFailureImpl<T> implements OrdersDetailsFailure<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) {
     if (orderDetailsFailure != null) {
@@ -2096,6 +2159,7 @@ class _$OrdersDetailsFailureImpl<T> implements OrdersDetailsFailure<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) {
     return orderDetailsFailure(this);
   }
@@ -2116,6 +2180,7 @@ class _$OrdersDetailsFailureImpl<T> implements OrdersDetailsFailure<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) {
     return orderDetailsFailure?.call(this);
   }
@@ -2136,6 +2201,7 @@ class _$OrdersDetailsFailureImpl<T> implements OrdersDetailsFailure<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) {
     if (orderDetailsFailure != null) {
@@ -2213,6 +2279,7 @@ class _$CancelOrderLoadingImpl<T> implements CancelOrderLoading<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) {
     return cancelOrderLoading();
   }
@@ -2233,6 +2300,7 @@ class _$CancelOrderLoadingImpl<T> implements CancelOrderLoading<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) {
     return cancelOrderLoading?.call();
   }
@@ -2253,6 +2321,7 @@ class _$CancelOrderLoadingImpl<T> implements CancelOrderLoading<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) {
     if (cancelOrderLoading != null) {
@@ -2283,6 +2352,7 @@ class _$CancelOrderLoadingImpl<T> implements CancelOrderLoading<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) {
     return cancelOrderLoading(this);
   }
@@ -2303,6 +2373,7 @@ class _$CancelOrderLoadingImpl<T> implements CancelOrderLoading<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) {
     return cancelOrderLoading?.call(this);
   }
@@ -2323,6 +2394,7 @@ class _$CancelOrderLoadingImpl<T> implements CancelOrderLoading<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) {
     if (cancelOrderLoading != null) {
@@ -2419,6 +2491,7 @@ class _$CancelOrderSuccessImpl<T> implements CancelOrderSuccess<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) {
     return cancelOrderSuccess(data);
   }
@@ -2439,6 +2512,7 @@ class _$CancelOrderSuccessImpl<T> implements CancelOrderSuccess<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) {
     return cancelOrderSuccess?.call(data);
   }
@@ -2459,6 +2533,7 @@ class _$CancelOrderSuccessImpl<T> implements CancelOrderSuccess<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) {
     if (cancelOrderSuccess != null) {
@@ -2489,6 +2564,7 @@ class _$CancelOrderSuccessImpl<T> implements CancelOrderSuccess<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) {
     return cancelOrderSuccess(this);
   }
@@ -2509,6 +2585,7 @@ class _$CancelOrderSuccessImpl<T> implements CancelOrderSuccess<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) {
     return cancelOrderSuccess?.call(this);
   }
@@ -2529,6 +2606,7 @@ class _$CancelOrderSuccessImpl<T> implements CancelOrderSuccess<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) {
     if (cancelOrderSuccess != null) {
@@ -2633,6 +2711,7 @@ class _$CancelOrderFailureImpl<T> implements CancelOrderFailure<T> {
     required TResult Function() cancelOrderLoading,
     required TResult Function(T data) cancelOrderSuccess,
     required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
   }) {
     return cancelOrderFailure(errorMessage);
   }
@@ -2653,6 +2732,7 @@ class _$CancelOrderFailureImpl<T> implements CancelOrderFailure<T> {
     TResult? Function()? cancelOrderLoading,
     TResult? Function(T data)? cancelOrderSuccess,
     TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
   }) {
     return cancelOrderFailure?.call(errorMessage);
   }
@@ -2673,6 +2753,7 @@ class _$CancelOrderFailureImpl<T> implements CancelOrderFailure<T> {
     TResult Function()? cancelOrderLoading,
     TResult Function(T data)? cancelOrderSuccess,
     TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
     required TResult orElse(),
   }) {
     if (cancelOrderFailure != null) {
@@ -2703,6 +2784,7 @@ class _$CancelOrderFailureImpl<T> implements CancelOrderFailure<T> {
     required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
     required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
     required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
   }) {
     return cancelOrderFailure(this);
   }
@@ -2723,6 +2805,7 @@ class _$CancelOrderFailureImpl<T> implements CancelOrderFailure<T> {
     TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
   }) {
     return cancelOrderFailure?.call(this);
   }
@@ -2743,6 +2826,7 @@ class _$CancelOrderFailureImpl<T> implements CancelOrderFailure<T> {
     TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
     TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
     TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
     required TResult orElse(),
   }) {
     if (cancelOrderFailure != null) {
@@ -2763,4 +2847,187 @@ abstract class CancelOrderFailure<T> implements OrdersState<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CancelOrderFailureImplCopyWith<T, _$CancelOrderFailureImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$updateOrdersImplCopyWith<T, $Res> {
+  factory _$$updateOrdersImplCopyWith(_$updateOrdersImpl<T> value,
+          $Res Function(_$updateOrdersImpl<T>) then) =
+      __$$updateOrdersImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$updateOrdersImplCopyWithImpl<T, $Res>
+    extends _$OrdersStateCopyWithImpl<T, $Res, _$updateOrdersImpl<T>>
+    implements _$$updateOrdersImplCopyWith<T, $Res> {
+  __$$updateOrdersImplCopyWithImpl(
+      _$updateOrdersImpl<T> _value, $Res Function(_$updateOrdersImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of OrdersState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$updateOrdersImpl<T> implements updateOrders<T> {
+  const _$updateOrdersImpl();
+
+  @override
+  String toString() {
+    return 'OrdersState<$T>.updateOrders()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$updateOrdersImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getOrdersLoading,
+    required TResult Function(T data) getOrdersSuccess,
+    required TResult Function(String errorMessage) getOrdersFailure,
+    required TResult Function() getFinishOrdersLoading,
+    required TResult Function(T data) getFinishOrdersSuccess,
+    required TResult Function(String errorMessage) getFinishOrdersFailure,
+    required TResult Function() ordersDetailsLoading,
+    required TResult Function(T data) ordersDetailsSuccess,
+    required TResult Function(String errorMessage) orderDetailsFailure,
+    required TResult Function() cancelOrderLoading,
+    required TResult Function(T data) cancelOrderSuccess,
+    required TResult Function(String errorMessage) cancelOrderFailure,
+    required TResult Function() updateOrders,
+  }) {
+    return updateOrders();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getOrdersLoading,
+    TResult? Function(T data)? getOrdersSuccess,
+    TResult? Function(String errorMessage)? getOrdersFailure,
+    TResult? Function()? getFinishOrdersLoading,
+    TResult? Function(T data)? getFinishOrdersSuccess,
+    TResult? Function(String errorMessage)? getFinishOrdersFailure,
+    TResult? Function()? ordersDetailsLoading,
+    TResult? Function(T data)? ordersDetailsSuccess,
+    TResult? Function(String errorMessage)? orderDetailsFailure,
+    TResult? Function()? cancelOrderLoading,
+    TResult? Function(T data)? cancelOrderSuccess,
+    TResult? Function(String errorMessage)? cancelOrderFailure,
+    TResult? Function()? updateOrders,
+  }) {
+    return updateOrders?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getOrdersLoading,
+    TResult Function(T data)? getOrdersSuccess,
+    TResult Function(String errorMessage)? getOrdersFailure,
+    TResult Function()? getFinishOrdersLoading,
+    TResult Function(T data)? getFinishOrdersSuccess,
+    TResult Function(String errorMessage)? getFinishOrdersFailure,
+    TResult Function()? ordersDetailsLoading,
+    TResult Function(T data)? ordersDetailsSuccess,
+    TResult Function(String errorMessage)? orderDetailsFailure,
+    TResult Function()? cancelOrderLoading,
+    TResult Function(T data)? cancelOrderSuccess,
+    TResult Function(String errorMessage)? cancelOrderFailure,
+    TResult Function()? updateOrders,
+    required TResult orElse(),
+  }) {
+    if (updateOrders != null) {
+      return updateOrders();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(OrdersInitial<T> value) initial,
+    required TResult Function(GetOrdersLoading<T> value) getOrdersLoading,
+    required TResult Function(GetOrdersSuccess<T> value) getOrdersSuccess,
+    required TResult Function(GetOrdersFailure<T> value) getOrdersFailure,
+    required TResult Function(GetFinishOrdersLoading<T> value)
+        getFinishOrdersLoading,
+    required TResult Function(GetFinishOrdersSuccess<T> value)
+        getFinishOrdersSuccess,
+    required TResult Function(GetFinishOrdersFailure<T> value)
+        getFinishOrdersFailure,
+    required TResult Function(OrdersDetailsLoading<T> value)
+        ordersDetailsLoading,
+    required TResult Function(OrdersDetailsSuccess<T> value)
+        ordersDetailsSuccess,
+    required TResult Function(OrdersDetailsFailure<T> value)
+        orderDetailsFailure,
+    required TResult Function(CancelOrderLoading<T> value) cancelOrderLoading,
+    required TResult Function(CancelOrderSuccess<T> value) cancelOrderSuccess,
+    required TResult Function(CancelOrderFailure<T> value) cancelOrderFailure,
+    required TResult Function(updateOrders<T> value) updateOrders,
+  }) {
+    return updateOrders(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(OrdersInitial<T> value)? initial,
+    TResult? Function(GetOrdersLoading<T> value)? getOrdersLoading,
+    TResult? Function(GetOrdersSuccess<T> value)? getOrdersSuccess,
+    TResult? Function(GetOrdersFailure<T> value)? getOrdersFailure,
+    TResult? Function(GetFinishOrdersLoading<T> value)? getFinishOrdersLoading,
+    TResult? Function(GetFinishOrdersSuccess<T> value)? getFinishOrdersSuccess,
+    TResult? Function(GetFinishOrdersFailure<T> value)? getFinishOrdersFailure,
+    TResult? Function(OrdersDetailsLoading<T> value)? ordersDetailsLoading,
+    TResult? Function(OrdersDetailsSuccess<T> value)? ordersDetailsSuccess,
+    TResult? Function(OrdersDetailsFailure<T> value)? orderDetailsFailure,
+    TResult? Function(CancelOrderLoading<T> value)? cancelOrderLoading,
+    TResult? Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
+    TResult? Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult? Function(updateOrders<T> value)? updateOrders,
+  }) {
+    return updateOrders?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(OrdersInitial<T> value)? initial,
+    TResult Function(GetOrdersLoading<T> value)? getOrdersLoading,
+    TResult Function(GetOrdersSuccess<T> value)? getOrdersSuccess,
+    TResult Function(GetOrdersFailure<T> value)? getOrdersFailure,
+    TResult Function(GetFinishOrdersLoading<T> value)? getFinishOrdersLoading,
+    TResult Function(GetFinishOrdersSuccess<T> value)? getFinishOrdersSuccess,
+    TResult Function(GetFinishOrdersFailure<T> value)? getFinishOrdersFailure,
+    TResult Function(OrdersDetailsLoading<T> value)? ordersDetailsLoading,
+    TResult Function(OrdersDetailsSuccess<T> value)? ordersDetailsSuccess,
+    TResult Function(OrdersDetailsFailure<T> value)? orderDetailsFailure,
+    TResult Function(CancelOrderLoading<T> value)? cancelOrderLoading,
+    TResult Function(CancelOrderSuccess<T> value)? cancelOrderSuccess,
+    TResult Function(CancelOrderFailure<T> value)? cancelOrderFailure,
+    TResult Function(updateOrders<T> value)? updateOrders,
+    required TResult orElse(),
+  }) {
+    if (updateOrders != null) {
+      return updateOrders(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class updateOrders<T> implements OrdersState<T> {
+  const factory updateOrders() = _$updateOrdersImpl<T>;
 }

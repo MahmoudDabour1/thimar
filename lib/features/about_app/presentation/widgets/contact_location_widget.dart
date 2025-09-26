@@ -14,6 +14,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../core/theming/app_colors.dart';
 import '../../../../../core/theming/app_styles.dart';
+import '../../../../core/widgets/app_loading_indicator_widget.dart';
 import 'contact_custom_row.dart';
 
 class ContactLocationWidget extends StatefulWidget {
@@ -63,11 +64,7 @@ class _ContactLocationWidgetState extends State<ContactLocationWidget> {
         return state.maybeWhen(
             getContactLoading: () => SizedBox(
                   height: 250.h,
-                  child: Center(
-                    child: CircularProgressIndicator(
-                      color: Theme.of(context).primaryColor,
-                    ),
-                  ),
+                  child: AppLoadingIndicatorWidget(),
                 ),
             getContactSuccess: (data) => setupSuccess(data),
             getContactFailure: (error) => Center(

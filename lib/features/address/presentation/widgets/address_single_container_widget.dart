@@ -1,33 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:thimar/core/widgets/app_loading_indicator_widget.dart';
+import 'package:thimar/features/address/data/models/address_single_item_model.dart';
+import 'package:thimar/features/address/logic/address_cubit.dart';
+import 'package:thimar/features/address/logic/address_state.dart';
 
 import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/utils/spacing.dart';
 
-class AddressSingleContainerWidget extends StatelessWidget {
-  final String type;
-  final String address;
-  final String description;
-  final String phoneNumber;
-  final VoidCallback onEdit;
-  final VoidCallback onDelete;
+class AddressSingleContainerWidget extends StatefulWidget {
+  final AddressSingleItemModel addressModel;
 
   const AddressSingleContainerWidget({
     super.key,
-    required this.type,
-    required this.address,
-    required this.description,
-    required this.phoneNumber,
-    required this.onEdit,
-    required this.onDelete,
+    required this.addressModel,
   });
 
   @override
+  State<AddressSingleContainerWidget> createState() =>
+      _AddressSingleContainerWidgetState();
+}
+
+class _AddressSingleContainerWidgetState
+    extends State<AddressSingleContainerWidget> {
+  @override
   Widget build(BuildContext context) {
+    final model = widget.addressModel;
+
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8),
+      padding: EdgeInsets.only(bottom: 8.h),
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.whiteColor,
@@ -46,22 +50,31 @@ class AddressSingleContainerWidget extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    type,
+                    model.type,
                     style: AppStyles.font16GreenBold,
                   ),
                   Spacer(),
-                  IconButton(
-                    onPressed: onDelete,
-                    icon: Image.asset(
-                      AppAssets.deleteIcon,
-                      height: 30.h,
-                      width: 30.w,
-                      fit: BoxFit.contain,
-                    ),
+                  BlocBuilder<AddressCubit, AddressState>(
+                    builder: (context, state) {
+                      return state is DeleteAddressLoading &&
+                              state.id == model.id
+                          ? AppLoadingIndicatorWidget(
+                              size: 25.h,
+                            )
+                          : IconButton(
+                              onPressed: model.onDelete,
+                              icon: Image.asset(
+                                AppAssets.deleteIcon,
+                                height: 30.h,
+                                width: 30.w,
+                                fit: BoxFit.contain,
+                              ),
+                            );
+                    },
                   ),
                   horizontalSpace(4),
                   IconButton(
-                    onPressed: onEdit,
+                    onPressed: model.onEdit,
                     icon: Image.asset(
                       AppAssets.editIconImage,
                       height: 30.h,
@@ -72,15 +85,15 @@ class AddressSingleContainerWidget extends StatelessWidget {
                 ],
               ),
               Text(
-                "العنوان: $address",
+                "العنوان: ${model.address}",
                 style: AppStyles.font14greenBold,
               ),
               Text(
-                "الوصف: $description",
+                "الوصف: ${model.description}",
                 style: AppStyles.font15GrayRegular,
               ),
               Text(
-                "رقم الجوال: $phoneNumber",
+                "رقم الجوال: ${model.phoneNumber}",
                 style: AppStyles.font15GrayRegular,
               ),
             ],

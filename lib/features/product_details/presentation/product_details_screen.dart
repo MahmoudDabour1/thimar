@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:thimar/features/favorite/logic/favorite_cubit.dart';
 import 'package:thimar/features/product_details/data/models/get_product_details_response_model.dart';
 import 'package:thimar/features/product_details/logic/product_details_cubit.dart';
 import 'package:thimar/features/product_details/presentation/widgets/details_bottom_nav_bar.dart';
@@ -12,8 +13,10 @@ import '../logic/product_details_state.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   final int productId;
+  final FavoriteCubit favoriteCubit;
 
-  const ProductDetailsScreen({super.key, required this.productId});
+  const ProductDetailsScreen(
+      {super.key, required this.productId, required this.favoriteCubit});
 
   @override
   State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();
@@ -84,6 +87,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
         children: [
           DetailsImageAndButtonsWidget(
             data: data,
+            favoriteCubit: widget.favoriteCubit,
           ),
           DetailsTextsWidget(
             data: data,

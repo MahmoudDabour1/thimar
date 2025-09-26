@@ -30,4 +30,6 @@ class FavoriteState<T> with _$FavoriteState<T> {
 
   const factory FavoriteState.removeFromFavoriteFailure(String errorMessage) =
       RemoveFromFavoriteFailure;
+
+  const factory FavoriteState.updateFavorite() = updateFavorite;
 }

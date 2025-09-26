@@ -84,7 +84,11 @@ class _WalletScreenState extends State<WalletScreen> {
             verticalSpace(70),
             GestureDetector(
               onTap: () {
-                context.pushNamed(Routes.chargeWalletScreen);
+                context
+                    .pushNamed(Routes.chargeWalletScreen, arguments: cubit)
+                    .then((_) {
+                  cubit.updateWallet();
+                });
               },
               child: DottedBorder(
                 color: Colors.grey,

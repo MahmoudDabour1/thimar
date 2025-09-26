@@ -20,6 +20,7 @@ class _ButtonAndPricesWidgetState extends State<ButtonAndPricesWidget> {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: [
         verticalSpace(16),
         Text(

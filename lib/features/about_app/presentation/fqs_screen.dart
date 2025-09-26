@@ -7,6 +7,7 @@ import 'package:thimar/core/theming/app_styles.dart';
 import 'package:thimar/core/widgets/app_custom_app_bar.dart';
 
 import '../../../core/di/dependency_injection.dart';
+import '../../../core/widgets/app_loading_indicator_widget.dart';
 import '../data/models/faqs_response_model.dart';
 import '../logic/about_app_cubit.dart';
 import '../logic/about_app_state.dart';
@@ -24,11 +25,7 @@ class FqsScreen extends StatelessWidget {
           body: BlocBuilder<AboutAppCubit, AboutAppState>(
               builder: (context, state) {
             return state.maybeWhen(
-              faqsLoading: () => Center(
-                child: CircularProgressIndicator(
-                  color: AppColors.primaryColor,
-                ),
-              ),
+              faqsLoading: () => AppLoadingIndicatorWidget(),
               faqsSuccess: (data) => setupSuccess(data),
               faqsFailure: (error) => Center(
                 child: Text(

@@ -1,8 +1,11 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
 import 'package:thimar/core/helpers/helper_methods.dart';
+import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/features/cart/data/models/add_to_cart_request_body.dart';
 import 'package:thimar/features/cart/data/repos/cart_repo.dart';
 
+import '../presentation/widgets/add_to_cart_bottom_sheet_widget.dart';
 import 'cart_state.dart';
 
 class CartCubit extends Cubit<CartState> {
@@ -12,7 +15,8 @@ class CartCubit extends Cubit<CartState> {
   int cartCount = 0;
   bool isUpdateOrDelete = false;
 
-  Future<void> addToCart(int productId, int amount) async {
+  Future<void> addToCart(
+      int productId, int amount, BuildContext context) async {
     emit(CartState.addToCartLoading(productId));
     final response = await cartRepo.addToCart(
       AddToCartRequestBody(
@@ -22,8 +26,18 @@ class CartCubit extends Cubit<CartState> {
     );
     response.when(
       success: (data) async {
-        showToast(message: data.message.toString());
         emit(CartState.addToCartSuccess(productId, data));
+        showModalBottomSheet(
+          context: context,
+          backgroundColor: AppColors.whiteColor,
+          builder: (_) {
+            return AddToCartBottomSheetWidget(
+              title: data.data?.title ?? "",
+              imageUrl: data.data?.image ?? "",
+              price: (data.data?.price ?? 0).toDouble(),
+            );
+          },
+        );
         await getCartData();
       },
       failure: (error) {
@@ -47,33 +61,33 @@ class CartCubit extends Cubit<CartState> {
   }
 
   Future<void> deleteCartData(int id) async {
-    emit(CartState.deleteCartLoading());
+    emit(CartState.deleteCartLoading(id));
     final response = await cartRepo.deleteCartData(id);
     response.when(
       success: (data) async {
         isUpdateOrDelete = true;
         showToast(message: data.message.toString());
-        emit(CartState.deleteCartSuccess(data));
+        emit(CartState.deleteCartSuccess(id, data));
         await getCartData();
       },
       failure: (error) {
-        emit(CartState.deleteCartFailure(error.message.toString()));
+        emit(CartState.deleteCartFailure(id, error.message.toString()));
       },
     );
   }
 
   Future<void> updateCartData(int id, int amount) async {
-    emit(CartState.updateCartLoading());
+    emit(CartState.updateCartLoading(id));
     final response = await cartRepo.updateCartData(id, amount);
     response.when(
       success: (data) async {
         isUpdateOrDelete = true;
         showToast(message: data.message ?? "تم التعديل بنجاح");
-        emit(CartState.updateCartSuccess(data));
+        emit(CartState.updateCartSuccess(id, data));
         await getCartData();
       },
       failure: (error) {
-        emit(CartState.updateCartFailure(error.message.toString()));
+        emit(CartState.updateCartFailure(id, error.message.toString()));
       },
     );
   }

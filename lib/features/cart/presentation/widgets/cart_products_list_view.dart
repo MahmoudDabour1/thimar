@@ -6,7 +6,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/routing/routes.dart';
 import 'package:thimar/features/cart/data/models/get_cart_response_model.dart';
+import 'package:thimar/features/cart/logic/cart_state.dart';
+import 'package:thimar/features/favorite/logic/favorite_cubit.dart';
 
+import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
@@ -28,8 +31,10 @@ class CartProductsListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {
-            context.pushNamed(Routes.productDetailsScreen,
-                arguments: data.data?[index].id);
+            context.pushNamed(Routes.productDetailsScreen, arguments: {
+              "productId": data.data?[index].id ?? 0,
+              "favCubit": sl<FavoriteCubit>(),
+            });
           },
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 4.h),
@@ -88,36 +93,54 @@ class CartProductsListView extends StatelessWidget {
                     ),
                   ),
                   Spacer(),
-                  IconButton(
-                    onPressed: () {
-                      showCustomDialog(
-                        context: context,
-                        title: "تنبيه",
-                        message: "هل أنت متأكد من حذف هذا العنصر من السلة؟",
-                        cancelButtonText: "لا",
-                        confirmButtonText: "نعم",
-                        cancelButtonColor: Colors.red,
-                        cancelButtonTextColor: Colors.white,
-                        confirmButtonColor: Colors.green,
-                        confirmButtonTextColor: Colors.white,
-                        onCancel: () {
-                          Navigator.of(context).pop();
-                        },
-                        onConfirm: () {
-                          context
-                              .read<CartCubit>()
-                              .deleteCartData(data.data?[index].id ?? 0);
-                          context.pop();
-                        },
-                        isFlip: true,
+                  BlocBuilder<CartCubit, CartState>(
+                    builder: (context, state) {
+                      final isDeleting = state is DeleteCartLoading &&
+                          state.productId == data.data?[index].id;
+
+                      return IconButton(
+                        onPressed: isDeleting
+                            ? null
+                            : () {
+                                showCustomDialog(
+                                  context: context,
+                                  title: "تنبيه",
+                                  message:
+                                      "هل أنت متأكد من حذف هذا العنصر من السلة؟",
+                                  cancelButtonText: "لا",
+                                  confirmButtonText: "نعم",
+                                  cancelButtonColor: Colors.red,
+                                  cancelButtonTextColor: Colors.white,
+                                  confirmButtonColor: Colors.green,
+                                  confirmButtonTextColor: Colors.white,
+                                  onCancel: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  onConfirm: () {
+                                    context.read<CartCubit>().deleteCartData(
+                                        data.data?[index].id ?? 0);
+                                    context.pop();
+                                  },
+                                  isFlip: true,
+                                );
+                              },
+                        icon: isDeleting
+                            ? SizedBox(
+                                width: 24.w,
+                                height: 24.w,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  color: AppColors.primaryColor,
+                                ),
+                              )
+                            : Image.asset(
+                                AppAssets.deleteIcon,
+                                width: 35.w,
+                                height: 35.h,
+                                fit: BoxFit.fill,
+                              ),
                       );
                     },
-                    icon: Image.asset(
-                      AppAssets.deleteIcon,
-                      width: 35.w,
-                      height: 35.h,
-                      fit: BoxFit.fill,
-                    ),
                   ),
                   horizontalSpace(16),
                 ],

@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/features/walltet/data/models/charge_wallet_request_body.dart';
 import 'package:thimar/features/walltet/data/repos/wallet_repo.dart';
 import 'package:thimar/features/walltet/logic/wallet_state.dart';
@@ -12,6 +13,10 @@ class WalletCubit extends Cubit<WalletState> {
   WalletCubit(this.walletRepo) : super(WalletState.initial());
   final formKey = GlobalKey<FormState>();
   final amountController = TextEditingController();
+
+  void updateWallet() {
+    emit(WalletState.updateWallet());
+  }
 
   Future<void> getWalletData() async {
     emit(WalletState.getWalletLoading());
@@ -31,9 +36,8 @@ class WalletCubit extends Cubit<WalletState> {
     response.when(success: (data) {
       emit(WalletState.chargeWalletSuccess(data));
       showToast(message: data.message.toString());
-
-      // context.pop();
-      // getWalletData();
+      getWalletData();
+      context.pop();
     }, failure: (error) {
       emit(
         WalletState.chargeWalletFailure(

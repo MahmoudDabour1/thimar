@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:thimar/core/theming/app_assets.dart';
+import 'package:thimar/core/extensions/navigation_extension.dart';
+import 'package:thimar/core/routing/routes.dart';
 import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/core/theming/app_styles.dart';
 import 'package:thimar/core/utils/spacing.dart';
@@ -12,6 +13,7 @@ import 'package:thimar/features/checkout/logic/checkout_cubit.dart';
 import 'package:thimar/features/checkout/presentation/widgets/button_and_prices_widget.dart';
 import 'package:thimar/features/checkout/presentation/widgets/name_and_phone_widget.dart';
 import 'package:thimar/features/checkout/presentation/widgets/notes_container_widget.dart';
+import 'package:thimar/features/checkout/presentation/widgets/payment_methods_widget.dart';
 import 'package:thimar/features/checkout/presentation/widgets/time_and_date_widget.dart';
 
 import '../../../core/di/dependency_injection.dart';
@@ -29,7 +31,6 @@ class CheckoutScreen extends StatefulWidget {
 }
 
 class _CheckoutScreenState extends State<CheckoutScreen> {
-  String? selectedPayment;
   final addressCubit = sl<AddressCubit>();
   final checkOutCubit = sl<CheckoutCubit>();
 
@@ -44,6 +45,13 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     return Scaffold(
       appBar: AppCustomAppBar(
         appBarTitle: "إتمام الطلب",
+      ),
+      bottomNavigationBar: BlocProvider.value(
+        value: checkOutCubit,
+        child: ButtonAndPricesWidget(
+          discount: widget.discount,
+          totalPrice: widget.totalPrice,
+        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -60,17 +68,25 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                       style: AppStyles.font16GreenExtraBold,
                     ),
                     const Spacer(),
-                    Container(
-                      width: 26.w,
-                      height: 26.h,
-                      decoration: BoxDecoration(
-                        color: AppColors.lighterGreenColor,
-                        borderRadius: BorderRadius.circular(8.r),
-                      ),
-                      child: Icon(
-                        Icons.add,
-                        color: AppColors.primaryColor,
-                        size: 20.w,
+                    GestureDetector(
+                      onTap: () {
+                        context
+                            .pushNamed(Routes.insertAddressScreen, arguments: {
+                          "cubit": addressCubit,
+                        });
+                      },
+                      child: Container(
+                        width: 26.w,
+                        height: 26.h,
+                        decoration: BoxDecoration(
+                          color: AppColors.lighterGreenColor,
+                          borderRadius: BorderRadius.circular(8.r),
+                        ),
+                        child: Icon(
+                          Icons.add,
+                          color: AppColors.primaryColor,
+                          size: 20.w,
+                        ),
                       ),
                     ),
                   ],
@@ -125,90 +141,12 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                   checkOutCubit: checkOutCubit,
                 ),
                 NotesContainerWidget(),
-                verticalSpace(16.h),
-                Text(
-                  "اختر طريقة الدفع",
-                  style: AppStyles.font16GreenExtraBold,
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: buildPaymentMethod(
-                        iconPath: AppAssets.moneyIcon,
-                        title: "كاش",
-                      ),
-                    ),
-                    horizontalSpace(16),
-                    Expanded(
-                      child: buildPaymentMethod(
-                        iconPath: AppAssets.visaIcon,
-                        title: null,
-                      ),
-                    ),
-                    horizontalSpace(16),
-                    Expanded(
-                      child: buildPaymentMethod(
-                        iconPath: AppAssets.masterIcon,
-                        title: null,
-                      ),
-                    ),
-                  ],
-                ),
-                BlocProvider.value(
-                  value: checkOutCubit,
-                  child: ButtonAndPricesWidget(
-                    discount: widget.discount,
-                    totalPrice: widget.totalPrice,
-                  ),
+                PaymentMethodsWidget(
+                  checkOutCubit: checkOutCubit,
                 ),
               ],
             ),
           ),
-        ),
-      ),
-    );
-  }
-
-  Widget buildPaymentMethod({required String iconPath, String? title}) {
-    final methodId = title ??
-        (iconPath.contains("visa")
-            ? "visa"
-            : iconPath.contains("master")
-                ? "master"
-                : "cash");
-    final isSelected = selectedPayment == methodId;
-
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          selectedPayment = methodId;
-        });
-        checkOutCubit.setPaymentType(methodId);
-      },
-      child: Container(
-        height: 50.h,
-        decoration: BoxDecoration(
-          color: AppColors.whiteColor,
-          borderRadius: BorderRadius.circular(12.r),
-          border: Border.all(
-            color: isSelected
-                ? AppColors.primaryColor
-                : AppColors.textFormGrayColor,
-            width: 2,
-          ),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(iconPath,
-                width: title == null ? 40.w : 20.w,
-                height: title == null ? 40.h : 20.h),
-            horizontalSpace(8),
-            if (title != null) ...[
-              horizontalSpace(8),
-              Text(title, style: AppStyles.font16GreenBold),
-            ],
-          ],
         ),
       ),
     );

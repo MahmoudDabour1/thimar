@@ -38,7 +38,10 @@ class LoginCubit extends Cubit<LoginState> {
       phoneController.clear();
       passwordController.clear();
 
-      context.pushNamed(Routes.bottomNavBarLayout);
+      context.pushNameAndRemoveUntil(
+        Routes.bottomNavBarLayout,
+        predicate: (route) => false,
+      );
       showToast(message: "تم تسجيل الدخول بنجاح");
     }, failure: (error) {
       emit(LoginState.error(error: error.message.toString()));

@@ -34,4 +34,6 @@ class OrdersState<T> with _$OrdersState {
 
   const factory OrdersState.cancelOrderFailure(String errorMessage) =
       CancelOrderFailure;
+
+  const factory OrdersState.updateOrders() = updateOrders;
 }

@@ -20,17 +20,23 @@ class CartState<T> with _$CartState {
 
   const factory CartState.getCartFailure(String errorMessage) = GetCartFailure;
 
-  const factory CartState.deleteCartLoading() = DeleteCartLoading;
+  const factory CartState.deleteCartLoading(
+    int productId,
+  ) = DeleteCartLoading;
 
-  const factory CartState.deleteCartSuccess(T data) = DeleteCartSuccess;
+  const factory CartState.deleteCartSuccess(int productId, T data) =
+      DeleteCartSuccess;
 
-  const factory CartState.deleteCartFailure(String errorMessage) =
-      DeleteCartFailure;
+  const factory CartState.deleteCartFailure(
+      int productId, String errorMessage) = DeleteCartFailure;
 
-  const factory CartState.updateCartLoading() = UpdateCartLoading;
+  const factory CartState.updateCartLoading(
+    int productId,
+  ) = UpdateCartLoading;
 
-  const factory CartState.updateCartSuccess(T data) = UpdateCartSuccess;
+  const factory CartState.updateCartSuccess(int productId, T data) =
+      UpdateCartSuccess;
 
-  const factory CartState.updateCartFailure(String errorMessage) =
-      UpdateCartFailure;
+  const factory CartState.updateCartFailure(
+      int productId, String errorMessage) = UpdateCartFailure;
 }

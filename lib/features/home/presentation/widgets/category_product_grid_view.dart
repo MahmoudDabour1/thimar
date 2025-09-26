@@ -6,11 +6,10 @@ import 'package:thimar/core/theming/app_styles.dart';
 import 'package:thimar/features/home/data/models/get_category_products_response_model.dart';
 import 'package:thimar/features/home/presentation/widgets/category_product_single_item.dart';
 
+import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/routing/routes.dart';
-import '../../../../core/widgets/app_loading_indicator_widget.dart';
 import '../../../cart/logic/cart_cubit.dart';
-import '../../../cart/logic/cart_state.dart';
-import '../../../cart/presentation/widgets/add_to_cart_bottom_sheet_widget.dart';
+import '../../../favorite/logic/favorite_cubit.dart';
 
 class CategoryProductGridView extends StatelessWidget {
   final GetCategoryProductsResponseModel data;
@@ -39,10 +38,10 @@ class CategoryProductGridView extends StatelessWidget {
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
-                  context.pushNamed(
-                    Routes.productDetailsScreen,
-                    arguments: data.data?[index].id ?? 0,
-                  );
+                  context.pushNamed(Routes.productDetailsScreen, arguments: {
+                    "productId": data.data?[index].id ?? 0,
+                    "favCubit": sl<FavoriteCubit>(),
+                  });
                 },
                 child: CategoryProductSingleItem(
                   imageUrl: data.data?[index].mainImage ?? "",
@@ -56,47 +55,60 @@ class CategoryProductGridView extends StatelessWidget {
                     context.read<CartCubit>().addToCart(
                           data.data?[index].id ?? 0,
                           1,
+                          context,
                         );
-                    showModalBottomSheet(
-                      context: context,
-                      builder: (_) {
-                        return BlocBuilder<CartCubit, CartState>(
-                          builder: (context, state) {
-                            return state is AddToCartLoading
-                                ? AppLoadingIndicatorWidget()
-                                : AddToCartBottomSheetWidget(
-                                    title: data.data?[index].title ?? "",
-                                    imageUrl: data.data?[index].mainImage ?? "",
-                                    price: (data.data?[index].price ?? 0)
-                                        .toDouble(),
-                                  );
-                          },
-                        );
-                      },
-                    );
+                    // showModalBottomSheet(
+                    //   context: context,
+                    //   builder: (_) {
+                    //     return AddToCartBottomSheetWidget(
+                    //       title: data.data?[index].title ?? "",
+                    //       imageUrl: data.data?[index].mainImage ?? "",
+                    //       price: (data.data?[index].price ?? 0)
+                    //           .toDouble(),
+                    //     );
+                    //       BlocBuilder<CartCubit, CartState>(
+                    //       builder: (context, state) {
+                    //         return  AddToCartBottomSheetWidget(
+                    //                 title: data.data?[index].title ?? "",
+                    //                 imageUrl: data.data?[index].mainImage ?? "",
+                    //                 price: (data.data?[index].price ?? 0)
+                    //                     .toDouble(),
+                    //               );
+                    //       },
+                    //     );
+                    //   },
+                    // );
                   },
                   onAddToCartPressed: () {
                     context.read<CartCubit>().addToCart(
                           data.data?[index].id ?? 0,
                           1,
+                          context,
                         );
-                    showModalBottomSheet(
-                      context: context,
-                      builder: (_) {
-                        return BlocBuilder<CartCubit, CartState>(
-                          builder: (context, state) {
-                            return state is AddToCartLoading
-                                ? AppLoadingIndicatorWidget()
-                                : AddToCartBottomSheetWidget(
-                                    title: data.data?[index].title ?? "",
-                                    imageUrl: data.data?[index].mainImage ?? "",
-                                    price: (data.data?[index].price ?? 0)
-                                        .toDouble(),
-                                  );
-                          },
-                        );
-                      },
-                    );
+                    // showModalBottomSheet(
+                    //   context: context,
+                    //   builder: (_) {
+                    //     return AddToCartBottomSheetWidget(
+                    //       title: data.data?[index].title ?? "",
+                    //       imageUrl: data.data?[index].mainImage ?? "",
+                    //       price: (data.data?[index].price ?? 0)
+                    //           .toDouble(),
+                    //     );
+
+                    // return BlocBuilder<CartCubit, CartState>(
+                    //   builder: (context, state) {
+                    //     return state is AddToCartLoading
+                    //         ? AppLoadingIndicatorWidget()
+                    //         : AddToCartBottomSheetWidget(
+                    //             title: data.data?[index].title ?? "",
+                    //             imageUrl: data.data?[index].mainImage ?? "",
+                    //             price: (data.data?[index].price ?? 0)
+                    //                 .toDouble(),
+                    //           );
+                    //   },
+                    // );
+                    // },
+                    // );
                   },
                 ),
               );

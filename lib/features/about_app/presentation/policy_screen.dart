@@ -6,6 +6,7 @@ import 'package:thimar/core/widgets/app_custom_app_bar.dart';
 import 'package:thimar/features/about_app/data/models/policy_response_model.dart';
 
 import '../../../core/di/dependency_injection.dart';
+import '../../../core/widgets/app_loading_indicator_widget.dart';
 import '../logic/about_app_cubit.dart';
 import '../logic/about_app_state.dart';
 
@@ -22,11 +23,7 @@ class PolicyScreen extends StatelessWidget {
         body: BlocBuilder<AboutAppCubit, AboutAppState>(
           builder: (context, state) {
             return state.maybeWhen(
-                policyLoading: () => Center(
-                      child: CircularProgressIndicator(
-                        color: Theme.of(context).primaryColor,
-                      ),
-                    ),
+                policyLoading: () => AppLoadingIndicatorWidget(),
                 policySuccess: (data) => setupSuccess(data),
                 policyFailure: (error) => Center(
                       child: Text(
