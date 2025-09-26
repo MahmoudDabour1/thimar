@@ -50,13 +50,18 @@ class FavoriteCubit extends Cubit<FavoriteState> {
         emit(FavoriteState.removeFromFavoriteSuccess(data));
         getFavorite();
         context.read<ProductDetailsCubit>().productDetails(id);
-
         showToast(
-            message: data.message ?? "Removed from favorites successfully");
+          message: data.message.toString(),
+        );
       },
       failure: (error) {
+        showToast(message: error.message.toString(), isError: true);
         emit(FavoriteState.removeFromFavoriteFailure(error.message.toString()));
       },
     );
+  }
+
+  void updateFavorite() {
+    emit(FavoriteState.updateFavorite());
   }
 }

@@ -4,11 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/theming/app_assets.dart';
 import 'package:thimar/core/utils/spacing.dart';
 import 'package:thimar/core/widgets/app_custom_app_bar.dart';
+import 'package:thimar/core/widgets/app_loading_indicator_widget.dart';
 import 'package:thimar/features/about_app/data/models/about_app_response_model.dart';
 import 'package:thimar/features/about_app/logic/about_app_cubit.dart';
 
 import '../../../core/di/dependency_injection.dart';
-import '../../../core/theming/app_colors.dart';
 import 'package:flutter_html/flutter_html.dart';
 
 import '../logic/about_app_state.dart';
@@ -41,11 +41,7 @@ class AboutAppScreen extends StatelessWidget {
                 BlocBuilder<AboutAppCubit, AboutAppState>(
                   builder: (context, state) {
                     return state.maybeWhen(
-                        aboutAppLoading: () => Center(
-                              child: CircularProgressIndicator(
-                                color: AppColors.primaryColor,
-                              ),
-                            ),
+                        aboutAppLoading: () => AppLoadingIndicatorWidget(),
                         aboutAppSuccess: (data) => setupSuccess(data),
                         orElse: () => SizedBox.shrink());
                   },
@@ -66,7 +62,6 @@ class AboutAppScreen extends StatelessWidget {
         style: {
           "p.fancy": Style(
             textAlign: TextAlign.center,
-            // padding: const EdgeInsets.all(16),
             backgroundColor: Colors.grey,
             margin: Margins(left: Margin(50, Unit.px), right: Margin.auto()),
             width: Width(300, Unit.px),

@@ -6,28 +6,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
 import 'package:thimar/core/widgets/app_custom_app_bar.dart';
-import 'package:thimar/features/address/logic/address_cubit.dart';
+import 'package:thimar/features/address/data/models/insert_address_form_model.dart';
 import 'package:thimar/features/address/presentation/widgets/insert_address_from_widget.dart';
 
-import '../../../core/di/dependency_injection.dart';
 import '../../../core/theming/app_colors.dart';
 
 class InsertAddressScreen extends StatefulWidget {
-  final String type;
-  final String address;
-  final String description;
-  final String phoneNumber;
-  final String addressId;
-  final bool isEdit;
+  final InsertAddressFormModel insertAddressFormModel;
 
   const InsertAddressScreen({
     super.key,
-    required this.type,
-    required this.address,
-    required this.description,
-    required this.phoneNumber,
-    required this.addressId,
-    required this.isEdit,
+    required this.insertAddressFormModel,
   });
 
   @override
@@ -56,12 +45,6 @@ class _InsertAddressScreenState extends State<InsertAddressScreen> {
     super.initState();
     getCustomMarker();
     fetchLocation();
-    // if (widget.isEdit == true) {
-    //   cubit.phoneController.text = widget.phoneNumber;
-    //   cubit.locationController.text = widget.address;
-    //   cubit.descriptionController.text = widget.description;
-    //   cubit.typeController.text = widget.type;
-    // }
   }
 
   void fetchLocation() async {
@@ -81,22 +64,13 @@ class _InsertAddressScreenState extends State<InsertAddressScreen> {
     }
   }
 
-  final cubit = sl<AddressCubit>();
-
   @override
   Widget build(BuildContext context) {
-    print(widget.isEdit);
-    print(cubit.phoneController.text);
-    // if (widget.isEdit == true) {
-    //   cubit.phoneController.text = widget.phoneNumber;
-    //   cubit.locationController.text = widget.address;
-    //   cubit.descriptionController.text = widget.description;
-    //   cubit.typeController.text = widget.type;
-    // }
+    final model = widget.insertAddressFormModel;
     return Scaffold(
       appBar: AppCustomAppBar(appBarTitle: "إضافة عنوان"),
       body: BlocProvider.value(
-        value: cubit,
+        value: model.cubit,
         child: Stack(
           children: [
             currentLatLng == null
@@ -117,12 +91,15 @@ class _InsertAddressScreenState extends State<InsertAddressScreen> {
                     },
                   ),
             InsertAddressFromWidget(
-              currentLatLng: currentLatLng,
-              isEdit: widget.isEdit,
-              userSelectedType: widget.type,
-              userSelectedDescription: widget.description,
-              userSelectedPhone: widget.phoneNumber,
-              addressId: int.tryParse(widget.addressId),
+              insertAddressFormModel: InsertAddressFormModel(
+                currentLatLng: currentLatLng,
+                isEdit: model.isEdit,
+                userSelectedType: model.userSelectedType,
+                userSelectedDescription: model.userSelectedDescription,
+                userSelectedPhone: model.userSelectedPhone,
+                addressId: int.tryParse(model.addressId.toString()) ?? 0,
+                cubit: model.cubit,
+              ),
             ),
           ],
         ),

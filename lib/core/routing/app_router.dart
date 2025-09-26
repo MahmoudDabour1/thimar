@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:thimar/core/routing/routes.dart';
 import 'package:thimar/features/about_app/presentation/about_app_screen.dart';
+import 'package:thimar/features/address/data/models/insert_address_form_model.dart';
 import 'package:thimar/features/auth/login/presentation/login_screen.dart';
 import 'package:thimar/features/cart/presentation/cart_screen.dart';
+import 'package:thimar/features/favorite/logic/favorite_cubit.dart';
 import 'package:thimar/features/layout/presentation/bottom_nav_bar_layout.dart';
+import 'package:thimar/features/orders/logic/orders_cubit.dart';
 import 'package:thimar/features/product_details/presentation/product_details_screen.dart';
+import 'package:thimar/features/profile/logic/profile_cubit.dart';
 import 'package:thimar/features/profile/presentation/payment_screen.dart';
 import 'package:thimar/features/splash/presentation/splash_screen.dart';
 
@@ -24,9 +28,11 @@ import '../../features/home/presentation/category_products_screen.dart';
 import '../../features/orders/presentation/orders_details_screen.dart';
 import '../../features/profile/presentation/profile_data_screen.dart';
 import '../../features/search/presentation/search_screen.dart';
+import '../../features/walltet/logic/wallet_cubit.dart';
 import '../../features/walltet/presentation/all_transaction_history_screen.dart';
 import '../../features/walltet/presentation/charge_wallet_screen.dart';
 import '../../features/walltet/presentation/wallet_screen.dart';
+import '../di/dependency_injection.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -87,10 +93,14 @@ class AppRouter {
           ),
         );
       case Routes.productDetailsScreen:
-        final productId = settings.arguments as int? ?? 0;
+        final args = settings.arguments as Map<String, dynamic>?;
+        final productId = args?["productId"] as int? ?? 0;
+        final favCubit = args?["favCubit"] as FavoriteCubit?;
+
         return MaterialPageRoute(
           builder: (_) => ProductDetailsScreen(
             productId: productId,
+            favoriteCubit: favCubit ?? sl<FavoriteCubit>(),
           ),
         );
       case Routes.cartScreen:
@@ -109,8 +119,11 @@ class AppRouter {
           ),
         );
       case Routes.profileDataScreen:
+        final cubit = settings.arguments as ProfileCubit;
         return MaterialPageRoute(
-          builder: (_) => ProfileDataScreen(),
+          builder: (_) => ProfileDataScreen(
+            profileCubit: cubit,
+          ),
         );
       case Routes.aboutAppScreen:
         return MaterialPageRoute(
@@ -125,8 +138,9 @@ class AppRouter {
           builder: (_) => WalletScreen(),
         );
       case Routes.chargeWalletScreen:
+        final cubit = settings.arguments as WalletCubit;
         return MaterialPageRoute(
-          builder: (_) => ChargeWalletScreen(),
+          builder: (_) => ChargeWalletScreen(cubit: cubit),
         );
       case Routes.allTransactionHistoryScreen:
         return MaterialPageRoute(
@@ -153,21 +167,15 @@ class AppRouter {
           builder: (_) => AddressScreen(),
         );
       case Routes.insertAddressScreen:
-        final args = settings.arguments as Map<String, dynamic>?;
-        final type = args?["type"] as String? ?? "";
-        final address = args?["address"] as String? ?? "";
-        final description = args?["description"] as String? ?? "";
-        final phoneNumber = args?["phoneNumber"] as String? ?? "";
-        final addressId = args?["addressId"] as int? ?? 0;
-        final isEdit = args?["isEdit"] as bool? ?? false;
+        final model = settings.arguments as InsertAddressFormModel?;
+        if (model!.isEdit == true) {
+          model.cubit.phoneController.text = model.userSelectedPhone ?? "";
+          model.cubit.descriptionController.text =
+              model.userSelectedDescription ?? "";
+        }
         return MaterialPageRoute(
           builder: (_) => InsertAddressScreen(
-            type: type,
-            address: address,
-            description: description,
-            phoneNumber: phoneNumber,
-            addressId: addressId.toString(),
-            isEdit: isEdit,
+            insertAddressFormModel: model,
           ),
         );
       case Routes.paymentScreen:
@@ -179,10 +187,13 @@ class AppRouter {
           builder: (_) => SearchScreen(),
         );
       case Routes.ordersDetailsScreen:
-        final orderId = settings.arguments as int? ?? 0;
+        final args = settings.arguments as Map<String, dynamic>?;
+        final orderId = args?["id"] as int? ?? 0;
+        final orderCubit = args?["orderCubit"] as OrdersCubit;
         return MaterialPageRoute(
           builder: (_) => OrdersDetailsScreen(
             orderId: orderId,
+            ordersCubit: orderCubit,
           ),
         );
     }

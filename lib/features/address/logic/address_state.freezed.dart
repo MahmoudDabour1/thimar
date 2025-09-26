@@ -25,12 +25,13 @@ mixin _$AddressState<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,12 +43,13 @@ mixin _$AddressState<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,12 +61,13 @@ mixin _$AddressState<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -92,6 +95,7 @@ mixin _$AddressState<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -109,6 +113,7 @@ mixin _$AddressState<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -126,6 +131,7 @@ mixin _$AddressState<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -200,12 +206,13 @@ class _$AddressInitialImpl<T> implements AddressInitial<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) {
     return initial();
   }
@@ -220,12 +227,13 @@ class _$AddressInitialImpl<T> implements AddressInitial<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) {
     return initial?.call();
   }
@@ -240,12 +248,13 @@ class _$AddressInitialImpl<T> implements AddressInitial<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -279,6 +288,7 @@ class _$AddressInitialImpl<T> implements AddressInitial<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) {
     return initial(this);
   }
@@ -299,6 +309,7 @@ class _$AddressInitialImpl<T> implements AddressInitial<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) {
     return initial?.call(this);
   }
@@ -319,6 +330,7 @@ class _$AddressInitialImpl<T> implements AddressInitial<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -381,12 +393,13 @@ class _$GetAddressLoadingImpl<T> implements GetAddressLoading<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) {
     return getAddressLoading();
   }
@@ -401,12 +414,13 @@ class _$GetAddressLoadingImpl<T> implements GetAddressLoading<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) {
     return getAddressLoading?.call();
   }
@@ -421,12 +435,13 @@ class _$GetAddressLoadingImpl<T> implements GetAddressLoading<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) {
     if (getAddressLoading != null) {
@@ -460,6 +475,7 @@ class _$GetAddressLoadingImpl<T> implements GetAddressLoading<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) {
     return getAddressLoading(this);
   }
@@ -480,6 +496,7 @@ class _$GetAddressLoadingImpl<T> implements GetAddressLoading<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) {
     return getAddressLoading?.call(this);
   }
@@ -500,6 +517,7 @@ class _$GetAddressLoadingImpl<T> implements GetAddressLoading<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) {
     if (getAddressLoading != null) {
@@ -590,12 +608,13 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) {
     return getAddressSuccess(data);
   }
@@ -610,12 +629,13 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) {
     return getAddressSuccess?.call(data);
   }
@@ -630,12 +650,13 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) {
     if (getAddressSuccess != null) {
@@ -669,6 +690,7 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) {
     return getAddressSuccess(this);
   }
@@ -689,6 +711,7 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) {
     return getAddressSuccess?.call(this);
   }
@@ -709,6 +732,7 @@ class _$GetAddressSuccessImpl<T> implements GetAddressSuccess<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) {
     if (getAddressSuccess != null) {
@@ -809,12 +833,13 @@ class _$GetAddressFailureImpl<T> implements GetAddressFailure<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) {
     return getAddressFailure(errorMessage);
   }
@@ -829,12 +854,13 @@ class _$GetAddressFailureImpl<T> implements GetAddressFailure<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) {
     return getAddressFailure?.call(errorMessage);
   }
@@ -849,12 +875,13 @@ class _$GetAddressFailureImpl<T> implements GetAddressFailure<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) {
     if (getAddressFailure != null) {
@@ -888,6 +915,7 @@ class _$GetAddressFailureImpl<T> implements GetAddressFailure<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) {
     return getAddressFailure(this);
   }
@@ -908,6 +936,7 @@ class _$GetAddressFailureImpl<T> implements GetAddressFailure<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) {
     return getAddressFailure?.call(this);
   }
@@ -928,6 +957,7 @@ class _$GetAddressFailureImpl<T> implements GetAddressFailure<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) {
     if (getAddressFailure != null) {
@@ -1000,12 +1030,13 @@ class _$InsertAddressLoadingImpl<T> implements InsertAddressLoading<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) {
     return insertAddressLoading();
   }
@@ -1020,12 +1051,13 @@ class _$InsertAddressLoadingImpl<T> implements InsertAddressLoading<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) {
     return insertAddressLoading?.call();
   }
@@ -1040,12 +1072,13 @@ class _$InsertAddressLoadingImpl<T> implements InsertAddressLoading<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) {
     if (insertAddressLoading != null) {
@@ -1079,6 +1112,7 @@ class _$InsertAddressLoadingImpl<T> implements InsertAddressLoading<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) {
     return insertAddressLoading(this);
   }
@@ -1099,6 +1133,7 @@ class _$InsertAddressLoadingImpl<T> implements InsertAddressLoading<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) {
     return insertAddressLoading?.call(this);
   }
@@ -1119,6 +1154,7 @@ class _$InsertAddressLoadingImpl<T> implements InsertAddressLoading<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) {
     if (insertAddressLoading != null) {
@@ -1210,12 +1246,13 @@ class _$InsertAddressSuccessImpl<T> implements InsertAddressSuccess<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) {
     return insertAddressSuccess(data);
   }
@@ -1230,12 +1267,13 @@ class _$InsertAddressSuccessImpl<T> implements InsertAddressSuccess<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) {
     return insertAddressSuccess?.call(data);
   }
@@ -1250,12 +1288,13 @@ class _$InsertAddressSuccessImpl<T> implements InsertAddressSuccess<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) {
     if (insertAddressSuccess != null) {
@@ -1289,6 +1328,7 @@ class _$InsertAddressSuccessImpl<T> implements InsertAddressSuccess<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) {
     return insertAddressSuccess(this);
   }
@@ -1309,6 +1349,7 @@ class _$InsertAddressSuccessImpl<T> implements InsertAddressSuccess<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) {
     return insertAddressSuccess?.call(this);
   }
@@ -1329,6 +1370,7 @@ class _$InsertAddressSuccessImpl<T> implements InsertAddressSuccess<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) {
     if (insertAddressSuccess != null) {
@@ -1429,12 +1471,13 @@ class _$InsertAddressFailureImpl<T> implements InsertAddressFailure<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) {
     return insertAddressFailure(errorMessage);
   }
@@ -1449,12 +1492,13 @@ class _$InsertAddressFailureImpl<T> implements InsertAddressFailure<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) {
     return insertAddressFailure?.call(errorMessage);
   }
@@ -1469,12 +1513,13 @@ class _$InsertAddressFailureImpl<T> implements InsertAddressFailure<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) {
     if (insertAddressFailure != null) {
@@ -1508,6 +1553,7 @@ class _$InsertAddressFailureImpl<T> implements InsertAddressFailure<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) {
     return insertAddressFailure(this);
   }
@@ -1528,6 +1574,7 @@ class _$InsertAddressFailureImpl<T> implements InsertAddressFailure<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) {
     return insertAddressFailure?.call(this);
   }
@@ -1548,6 +1595,7 @@ class _$InsertAddressFailureImpl<T> implements InsertAddressFailure<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) {
     if (insertAddressFailure != null) {
@@ -1576,6 +1624,8 @@ abstract class _$$UpdateAddressLoadingImplCopyWith<T, $Res> {
           _$UpdateAddressLoadingImpl<T> value,
           $Res Function(_$UpdateAddressLoadingImpl<T>) then) =
       __$$UpdateAddressLoadingImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({int id});
 }
 
 /// @nodoc
@@ -1588,27 +1638,52 @@ class __$$UpdateAddressLoadingImplCopyWithImpl<T, $Res>
 
   /// Create a copy of AddressState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$UpdateAddressLoadingImpl<T>(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$UpdateAddressLoadingImpl<T> implements UpdateAddressLoading<T> {
-  const _$UpdateAddressLoadingImpl();
+  const _$UpdateAddressLoadingImpl(this.id);
+
+  @override
+  final int id;
 
   @override
   String toString() {
-    return 'AddressState<$T>.updateAddressLoading()';
+    return 'AddressState<$T>.updateAddressLoading(id: $id)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UpdateAddressLoadingImpl<T>);
+            other is _$UpdateAddressLoadingImpl<T> &&
+            (identical(other.id, id) || other.id == id));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, id);
+
+  /// Create a copy of AddressState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateAddressLoadingImplCopyWith<T, _$UpdateAddressLoadingImpl<T>>
+      get copyWith => __$$UpdateAddressLoadingImplCopyWithImpl<T,
+          _$UpdateAddressLoadingImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1620,14 +1695,15 @@ class _$UpdateAddressLoadingImpl<T> implements UpdateAddressLoading<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) {
-    return updateAddressLoading();
+    return updateAddressLoading(id);
   }
 
   @override
@@ -1640,14 +1716,15 @@ class _$UpdateAddressLoadingImpl<T> implements UpdateAddressLoading<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) {
-    return updateAddressLoading?.call();
+    return updateAddressLoading?.call(id);
   }
 
   @override
@@ -1660,16 +1737,17 @@ class _$UpdateAddressLoadingImpl<T> implements UpdateAddressLoading<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) {
     if (updateAddressLoading != null) {
-      return updateAddressLoading();
+      return updateAddressLoading(id);
     }
     return orElse();
   }
@@ -1699,6 +1777,7 @@ class _$UpdateAddressLoadingImpl<T> implements UpdateAddressLoading<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) {
     return updateAddressLoading(this);
   }
@@ -1719,6 +1798,7 @@ class _$UpdateAddressLoadingImpl<T> implements UpdateAddressLoading<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) {
     return updateAddressLoading?.call(this);
   }
@@ -1739,6 +1819,7 @@ class _$UpdateAddressLoadingImpl<T> implements UpdateAddressLoading<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) {
     if (updateAddressLoading != null) {
@@ -1749,7 +1830,16 @@ class _$UpdateAddressLoadingImpl<T> implements UpdateAddressLoading<T> {
 }
 
 abstract class UpdateAddressLoading<T> implements AddressState<T> {
-  const factory UpdateAddressLoading() = _$UpdateAddressLoadingImpl<T>;
+  const factory UpdateAddressLoading(final int id) =
+      _$UpdateAddressLoadingImpl<T>;
+
+  int get id;
+
+  /// Create a copy of AddressState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UpdateAddressLoadingImplCopyWith<T, _$UpdateAddressLoadingImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1759,7 +1849,7 @@ abstract class _$$UpdateAddressSuccessImplCopyWith<T, $Res> {
           $Res Function(_$UpdateAddressSuccessImpl<T>) then) =
       __$$UpdateAddressSuccessImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({T data});
+  $Res call({int id, T data});
 }
 
 /// @nodoc
@@ -1775,9 +1865,14 @@ class __$$UpdateAddressSuccessImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? data = freezed,
   }) {
     return _then(_$UpdateAddressSuccessImpl<T>(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -1789,14 +1884,16 @@ class __$$UpdateAddressSuccessImplCopyWithImpl<T, $Res>
 /// @nodoc
 
 class _$UpdateAddressSuccessImpl<T> implements UpdateAddressSuccess<T> {
-  const _$UpdateAddressSuccessImpl(this.data);
+  const _$UpdateAddressSuccessImpl(this.id, this.data);
 
+  @override
+  final int id;
   @override
   final T data;
 
   @override
   String toString() {
-    return 'AddressState<$T>.updateAddressSuccess(data: $data)';
+    return 'AddressState<$T>.updateAddressSuccess(id: $id, data: $data)';
   }
 
   @override
@@ -1804,12 +1901,13 @@ class _$UpdateAddressSuccessImpl<T> implements UpdateAddressSuccess<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UpdateAddressSuccessImpl<T> &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality().equals(other.data, data));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+      Object.hash(runtimeType, id, const DeepCollectionEquality().hash(data));
 
   /// Create a copy of AddressState
   /// with the given fields replaced by the non-null parameter values.
@@ -1830,14 +1928,15 @@ class _$UpdateAddressSuccessImpl<T> implements UpdateAddressSuccess<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) {
-    return updateAddressSuccess(data);
+    return updateAddressSuccess(id, data);
   }
 
   @override
@@ -1850,14 +1949,15 @@ class _$UpdateAddressSuccessImpl<T> implements UpdateAddressSuccess<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) {
-    return updateAddressSuccess?.call(data);
+    return updateAddressSuccess?.call(id, data);
   }
 
   @override
@@ -1870,16 +1970,17 @@ class _$UpdateAddressSuccessImpl<T> implements UpdateAddressSuccess<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) {
     if (updateAddressSuccess != null) {
-      return updateAddressSuccess(data);
+      return updateAddressSuccess(id, data);
     }
     return orElse();
   }
@@ -1909,6 +2010,7 @@ class _$UpdateAddressSuccessImpl<T> implements UpdateAddressSuccess<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) {
     return updateAddressSuccess(this);
   }
@@ -1929,6 +2031,7 @@ class _$UpdateAddressSuccessImpl<T> implements UpdateAddressSuccess<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) {
     return updateAddressSuccess?.call(this);
   }
@@ -1949,6 +2052,7 @@ class _$UpdateAddressSuccessImpl<T> implements UpdateAddressSuccess<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) {
     if (updateAddressSuccess != null) {
@@ -1959,9 +2063,10 @@ class _$UpdateAddressSuccessImpl<T> implements UpdateAddressSuccess<T> {
 }
 
 abstract class UpdateAddressSuccess<T> implements AddressState<T> {
-  const factory UpdateAddressSuccess(final T data) =
+  const factory UpdateAddressSuccess(final int id, final T data) =
       _$UpdateAddressSuccessImpl<T>;
 
+  int get id;
   T get data;
 
   /// Create a copy of AddressState
@@ -1978,7 +2083,7 @@ abstract class _$$UpdateAddressFailureImplCopyWith<T, $Res> {
           $Res Function(_$UpdateAddressFailureImpl<T>) then) =
       __$$UpdateAddressFailureImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({String errorMessage});
+  $Res call({int id, String errorMessage});
 }
 
 /// @nodoc
@@ -1994,9 +2099,14 @@ class __$$UpdateAddressFailureImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? errorMessage = null,
   }) {
     return _then(_$UpdateAddressFailureImpl<T>(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       null == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -2008,14 +2118,16 @@ class __$$UpdateAddressFailureImplCopyWithImpl<T, $Res>
 /// @nodoc
 
 class _$UpdateAddressFailureImpl<T> implements UpdateAddressFailure<T> {
-  const _$UpdateAddressFailureImpl(this.errorMessage);
+  const _$UpdateAddressFailureImpl(this.id, this.errorMessage);
 
+  @override
+  final int id;
   @override
   final String errorMessage;
 
   @override
   String toString() {
-    return 'AddressState<$T>.updateAddressFailure(errorMessage: $errorMessage)';
+    return 'AddressState<$T>.updateAddressFailure(id: $id, errorMessage: $errorMessage)';
   }
 
   @override
@@ -2023,12 +2135,13 @@ class _$UpdateAddressFailureImpl<T> implements UpdateAddressFailure<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UpdateAddressFailureImpl<T> &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, errorMessage);
+  int get hashCode => Object.hash(runtimeType, id, errorMessage);
 
   /// Create a copy of AddressState
   /// with the given fields replaced by the non-null parameter values.
@@ -2049,14 +2162,15 @@ class _$UpdateAddressFailureImpl<T> implements UpdateAddressFailure<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) {
-    return updateAddressFailure(errorMessage);
+    return updateAddressFailure(id, errorMessage);
   }
 
   @override
@@ -2069,14 +2183,15 @@ class _$UpdateAddressFailureImpl<T> implements UpdateAddressFailure<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) {
-    return updateAddressFailure?.call(errorMessage);
+    return updateAddressFailure?.call(id, errorMessage);
   }
 
   @override
@@ -2089,16 +2204,17 @@ class _$UpdateAddressFailureImpl<T> implements UpdateAddressFailure<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) {
     if (updateAddressFailure != null) {
-      return updateAddressFailure(errorMessage);
+      return updateAddressFailure(id, errorMessage);
     }
     return orElse();
   }
@@ -2128,6 +2244,7 @@ class _$UpdateAddressFailureImpl<T> implements UpdateAddressFailure<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) {
     return updateAddressFailure(this);
   }
@@ -2148,6 +2265,7 @@ class _$UpdateAddressFailureImpl<T> implements UpdateAddressFailure<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) {
     return updateAddressFailure?.call(this);
   }
@@ -2168,6 +2286,7 @@ class _$UpdateAddressFailureImpl<T> implements UpdateAddressFailure<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) {
     if (updateAddressFailure != null) {
@@ -2178,9 +2297,10 @@ class _$UpdateAddressFailureImpl<T> implements UpdateAddressFailure<T> {
 }
 
 abstract class UpdateAddressFailure<T> implements AddressState<T> {
-  const factory UpdateAddressFailure(final String errorMessage) =
+  const factory UpdateAddressFailure(final int id, final String errorMessage) =
       _$UpdateAddressFailureImpl<T>;
 
+  int get id;
   String get errorMessage;
 
   /// Create a copy of AddressState
@@ -2196,6 +2316,8 @@ abstract class _$$DeleteAddressLoadingImplCopyWith<T, $Res> {
           _$DeleteAddressLoadingImpl<T> value,
           $Res Function(_$DeleteAddressLoadingImpl<T>) then) =
       __$$DeleteAddressLoadingImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({int id});
 }
 
 /// @nodoc
@@ -2208,27 +2330,52 @@ class __$$DeleteAddressLoadingImplCopyWithImpl<T, $Res>
 
   /// Create a copy of AddressState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$DeleteAddressLoadingImpl<T>(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
-  const _$DeleteAddressLoadingImpl();
+  const _$DeleteAddressLoadingImpl(this.id);
+
+  @override
+  final int id;
 
   @override
   String toString() {
-    return 'AddressState<$T>.deleteAddressLoading()';
+    return 'AddressState<$T>.deleteAddressLoading(id: $id)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DeleteAddressLoadingImpl<T>);
+            other is _$DeleteAddressLoadingImpl<T> &&
+            (identical(other.id, id) || other.id == id));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, id);
+
+  /// Create a copy of AddressState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteAddressLoadingImplCopyWith<T, _$DeleteAddressLoadingImpl<T>>
+      get copyWith => __$$DeleteAddressLoadingImplCopyWithImpl<T,
+          _$DeleteAddressLoadingImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2240,14 +2387,15 @@ class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) {
-    return deleteAddressLoading();
+    return deleteAddressLoading(id);
   }
 
   @override
@@ -2260,14 +2408,15 @@ class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) {
-    return deleteAddressLoading?.call();
+    return deleteAddressLoading?.call(id);
   }
 
   @override
@@ -2280,16 +2429,17 @@ class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) {
     if (deleteAddressLoading != null) {
-      return deleteAddressLoading();
+      return deleteAddressLoading(id);
     }
     return orElse();
   }
@@ -2319,6 +2469,7 @@ class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) {
     return deleteAddressLoading(this);
   }
@@ -2339,6 +2490,7 @@ class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) {
     return deleteAddressLoading?.call(this);
   }
@@ -2359,6 +2511,7 @@ class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) {
     if (deleteAddressLoading != null) {
@@ -2369,7 +2522,16 @@ class _$DeleteAddressLoadingImpl<T> implements DeleteAddressLoading<T> {
 }
 
 abstract class DeleteAddressLoading<T> implements AddressState<T> {
-  const factory DeleteAddressLoading() = _$DeleteAddressLoadingImpl<T>;
+  const factory DeleteAddressLoading(final int id) =
+      _$DeleteAddressLoadingImpl<T>;
+
+  int get id;
+
+  /// Create a copy of AddressState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DeleteAddressLoadingImplCopyWith<T, _$DeleteAddressLoadingImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2379,7 +2541,7 @@ abstract class _$$DeleteAddressSuccessImplCopyWith<T, $Res> {
           $Res Function(_$DeleteAddressSuccessImpl<T>) then) =
       __$$DeleteAddressSuccessImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({T data});
+  $Res call({int id, T data});
 }
 
 /// @nodoc
@@ -2395,9 +2557,14 @@ class __$$DeleteAddressSuccessImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? data = freezed,
   }) {
     return _then(_$DeleteAddressSuccessImpl<T>(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -2409,14 +2576,16 @@ class __$$DeleteAddressSuccessImplCopyWithImpl<T, $Res>
 /// @nodoc
 
 class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
-  const _$DeleteAddressSuccessImpl(this.data);
+  const _$DeleteAddressSuccessImpl(this.id, this.data);
 
+  @override
+  final int id;
   @override
   final T data;
 
   @override
   String toString() {
-    return 'AddressState<$T>.deleteAddressSuccess(data: $data)';
+    return 'AddressState<$T>.deleteAddressSuccess(id: $id, data: $data)';
   }
 
   @override
@@ -2424,12 +2593,13 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeleteAddressSuccessImpl<T> &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality().equals(other.data, data));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+      Object.hash(runtimeType, id, const DeepCollectionEquality().hash(data));
 
   /// Create a copy of AddressState
   /// with the given fields replaced by the non-null parameter values.
@@ -2450,14 +2620,15 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) {
-    return deleteAddressSuccess(data);
+    return deleteAddressSuccess(id, data);
   }
 
   @override
@@ -2470,14 +2641,15 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) {
-    return deleteAddressSuccess?.call(data);
+    return deleteAddressSuccess?.call(id, data);
   }
 
   @override
@@ -2490,16 +2662,17 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) {
     if (deleteAddressSuccess != null) {
-      return deleteAddressSuccess(data);
+      return deleteAddressSuccess(id, data);
     }
     return orElse();
   }
@@ -2529,6 +2702,7 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) {
     return deleteAddressSuccess(this);
   }
@@ -2549,6 +2723,7 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) {
     return deleteAddressSuccess?.call(this);
   }
@@ -2569,6 +2744,7 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) {
     if (deleteAddressSuccess != null) {
@@ -2579,9 +2755,10 @@ class _$DeleteAddressSuccessImpl<T> implements DeleteAddressSuccess<T> {
 }
 
 abstract class DeleteAddressSuccess<T> implements AddressState<T> {
-  const factory DeleteAddressSuccess(final T data) =
+  const factory DeleteAddressSuccess(final int id, final T data) =
       _$DeleteAddressSuccessImpl<T>;
 
+  int get id;
   T get data;
 
   /// Create a copy of AddressState
@@ -2598,7 +2775,7 @@ abstract class _$$DeleteAddressFailureImplCopyWith<T, $Res> {
           $Res Function(_$DeleteAddressFailureImpl<T>) then) =
       __$$DeleteAddressFailureImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({String errorMessage});
+  $Res call({int id, String errorMessage});
 }
 
 /// @nodoc
@@ -2614,9 +2791,14 @@ class __$$DeleteAddressFailureImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? errorMessage = null,
   }) {
     return _then(_$DeleteAddressFailureImpl<T>(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       null == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -2628,14 +2810,16 @@ class __$$DeleteAddressFailureImplCopyWithImpl<T, $Res>
 /// @nodoc
 
 class _$DeleteAddressFailureImpl<T> implements DeleteAddressFailure<T> {
-  const _$DeleteAddressFailureImpl(this.errorMessage);
+  const _$DeleteAddressFailureImpl(this.id, this.errorMessage);
 
+  @override
+  final int id;
   @override
   final String errorMessage;
 
   @override
   String toString() {
-    return 'AddressState<$T>.deleteAddressFailure(errorMessage: $errorMessage)';
+    return 'AddressState<$T>.deleteAddressFailure(id: $id, errorMessage: $errorMessage)';
   }
 
   @override
@@ -2643,12 +2827,13 @@ class _$DeleteAddressFailureImpl<T> implements DeleteAddressFailure<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeleteAddressFailureImpl<T> &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, errorMessage);
+  int get hashCode => Object.hash(runtimeType, id, errorMessage);
 
   /// Create a copy of AddressState
   /// with the given fields replaced by the non-null parameter values.
@@ -2669,14 +2854,15 @@ class _$DeleteAddressFailureImpl<T> implements DeleteAddressFailure<T> {
     required TResult Function() insertAddressLoading,
     required TResult Function(T data) insertAddressSuccess,
     required TResult Function(String errorMessage) insertAddressFailure,
-    required TResult Function() updateAddressLoading,
-    required TResult Function(T data) updateAddressSuccess,
-    required TResult Function(String errorMessage) updateAddressFailure,
-    required TResult Function() deleteAddressLoading,
-    required TResult Function(T data) deleteAddressSuccess,
-    required TResult Function(String errorMessage) deleteAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
   }) {
-    return deleteAddressFailure(errorMessage);
+    return deleteAddressFailure(id, errorMessage);
   }
 
   @override
@@ -2689,14 +2875,15 @@ class _$DeleteAddressFailureImpl<T> implements DeleteAddressFailure<T> {
     TResult? Function()? insertAddressLoading,
     TResult? Function(T data)? insertAddressSuccess,
     TResult? Function(String errorMessage)? insertAddressFailure,
-    TResult? Function()? updateAddressLoading,
-    TResult? Function(T data)? updateAddressSuccess,
-    TResult? Function(String errorMessage)? updateAddressFailure,
-    TResult? Function()? deleteAddressLoading,
-    TResult? Function(T data)? deleteAddressSuccess,
-    TResult? Function(String errorMessage)? deleteAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
   }) {
-    return deleteAddressFailure?.call(errorMessage);
+    return deleteAddressFailure?.call(id, errorMessage);
   }
 
   @override
@@ -2709,16 +2896,17 @@ class _$DeleteAddressFailureImpl<T> implements DeleteAddressFailure<T> {
     TResult Function()? insertAddressLoading,
     TResult Function(T data)? insertAddressSuccess,
     TResult Function(String errorMessage)? insertAddressFailure,
-    TResult Function()? updateAddressLoading,
-    TResult Function(T data)? updateAddressSuccess,
-    TResult Function(String errorMessage)? updateAddressFailure,
-    TResult Function()? deleteAddressLoading,
-    TResult Function(T data)? deleteAddressSuccess,
-    TResult Function(String errorMessage)? deleteAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
     required TResult orElse(),
   }) {
     if (deleteAddressFailure != null) {
-      return deleteAddressFailure(errorMessage);
+      return deleteAddressFailure(id, errorMessage);
     }
     return orElse();
   }
@@ -2748,6 +2936,7 @@ class _$DeleteAddressFailureImpl<T> implements DeleteAddressFailure<T> {
         deleteAddressSuccess,
     required TResult Function(DeleteAddressFailure<T> value)
         deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
   }) {
     return deleteAddressFailure(this);
   }
@@ -2768,6 +2957,7 @@ class _$DeleteAddressFailureImpl<T> implements DeleteAddressFailure<T> {
     TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
   }) {
     return deleteAddressFailure?.call(this);
   }
@@ -2788,6 +2978,7 @@ class _$DeleteAddressFailureImpl<T> implements DeleteAddressFailure<T> {
     TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
     TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
     TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
     required TResult orElse(),
   }) {
     if (deleteAddressFailure != null) {
@@ -2798,9 +2989,10 @@ class _$DeleteAddressFailureImpl<T> implements DeleteAddressFailure<T> {
 }
 
 abstract class DeleteAddressFailure<T> implements AddressState<T> {
-  const factory DeleteAddressFailure(final String errorMessage) =
+  const factory DeleteAddressFailure(final int id, final String errorMessage) =
       _$DeleteAddressFailureImpl<T>;
 
+  int get id;
   String get errorMessage;
 
   /// Create a copy of AddressState
@@ -2808,4 +3000,190 @@ abstract class DeleteAddressFailure<T> implements AddressState<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeleteAddressFailureImplCopyWith<T, _$DeleteAddressFailureImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateAddressImplCopyWith<T, $Res> {
+  factory _$$UpdateAddressImplCopyWith(_$UpdateAddressImpl<T> value,
+          $Res Function(_$UpdateAddressImpl<T>) then) =
+      __$$UpdateAddressImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$UpdateAddressImplCopyWithImpl<T, $Res>
+    extends _$AddressStateCopyWithImpl<T, $Res, _$UpdateAddressImpl<T>>
+    implements _$$UpdateAddressImplCopyWith<T, $Res> {
+  __$$UpdateAddressImplCopyWithImpl(_$UpdateAddressImpl<T> _value,
+      $Res Function(_$UpdateAddressImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddressState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$UpdateAddressImpl<T> implements UpdateAddress<T> {
+  const _$UpdateAddressImpl();
+
+  @override
+  String toString() {
+    return 'AddressState<$T>.updateAddress()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UpdateAddressImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getAddressLoading,
+    required TResult Function(GetAddressResponseModel data) getAddressSuccess,
+    required TResult Function(String errorMessage) getAddressFailure,
+    required TResult Function() insertAddressLoading,
+    required TResult Function(T data) insertAddressSuccess,
+    required TResult Function(String errorMessage) insertAddressFailure,
+    required TResult Function(int id) updateAddressLoading,
+    required TResult Function(int id, T data) updateAddressSuccess,
+    required TResult Function(int id, String errorMessage) updateAddressFailure,
+    required TResult Function(int id) deleteAddressLoading,
+    required TResult Function(int id, T data) deleteAddressSuccess,
+    required TResult Function(int id, String errorMessage) deleteAddressFailure,
+    required TResult Function() updateAddress,
+  }) {
+    return updateAddress();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getAddressLoading,
+    TResult? Function(GetAddressResponseModel data)? getAddressSuccess,
+    TResult? Function(String errorMessage)? getAddressFailure,
+    TResult? Function()? insertAddressLoading,
+    TResult? Function(T data)? insertAddressSuccess,
+    TResult? Function(String errorMessage)? insertAddressFailure,
+    TResult? Function(int id)? updateAddressLoading,
+    TResult? Function(int id, T data)? updateAddressSuccess,
+    TResult? Function(int id, String errorMessage)? updateAddressFailure,
+    TResult? Function(int id)? deleteAddressLoading,
+    TResult? Function(int id, T data)? deleteAddressSuccess,
+    TResult? Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult? Function()? updateAddress,
+  }) {
+    return updateAddress?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getAddressLoading,
+    TResult Function(GetAddressResponseModel data)? getAddressSuccess,
+    TResult Function(String errorMessage)? getAddressFailure,
+    TResult Function()? insertAddressLoading,
+    TResult Function(T data)? insertAddressSuccess,
+    TResult Function(String errorMessage)? insertAddressFailure,
+    TResult Function(int id)? updateAddressLoading,
+    TResult Function(int id, T data)? updateAddressSuccess,
+    TResult Function(int id, String errorMessage)? updateAddressFailure,
+    TResult Function(int id)? deleteAddressLoading,
+    TResult Function(int id, T data)? deleteAddressSuccess,
+    TResult Function(int id, String errorMessage)? deleteAddressFailure,
+    TResult Function()? updateAddress,
+    required TResult orElse(),
+  }) {
+    if (updateAddress != null) {
+      return updateAddress();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AddressInitial<T> value) initial,
+    required TResult Function(GetAddressLoading<T> value) getAddressLoading,
+    required TResult Function(GetAddressSuccess<T> value) getAddressSuccess,
+    required TResult Function(GetAddressFailure<T> value) getAddressFailure,
+    required TResult Function(InsertAddressLoading<T> value)
+        insertAddressLoading,
+    required TResult Function(InsertAddressSuccess<T> value)
+        insertAddressSuccess,
+    required TResult Function(InsertAddressFailure<T> value)
+        insertAddressFailure,
+    required TResult Function(UpdateAddressLoading<T> value)
+        updateAddressLoading,
+    required TResult Function(UpdateAddressSuccess<T> value)
+        updateAddressSuccess,
+    required TResult Function(UpdateAddressFailure<T> value)
+        updateAddressFailure,
+    required TResult Function(DeleteAddressLoading<T> value)
+        deleteAddressLoading,
+    required TResult Function(DeleteAddressSuccess<T> value)
+        deleteAddressSuccess,
+    required TResult Function(DeleteAddressFailure<T> value)
+        deleteAddressFailure,
+    required TResult Function(UpdateAddress<T> value) updateAddress,
+  }) {
+    return updateAddress(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AddressInitial<T> value)? initial,
+    TResult? Function(GetAddressLoading<T> value)? getAddressLoading,
+    TResult? Function(GetAddressSuccess<T> value)? getAddressSuccess,
+    TResult? Function(GetAddressFailure<T> value)? getAddressFailure,
+    TResult? Function(InsertAddressLoading<T> value)? insertAddressLoading,
+    TResult? Function(InsertAddressSuccess<T> value)? insertAddressSuccess,
+    TResult? Function(InsertAddressFailure<T> value)? insertAddressFailure,
+    TResult? Function(UpdateAddressLoading<T> value)? updateAddressLoading,
+    TResult? Function(UpdateAddressSuccess<T> value)? updateAddressSuccess,
+    TResult? Function(UpdateAddressFailure<T> value)? updateAddressFailure,
+    TResult? Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
+    TResult? Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
+    TResult? Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult? Function(UpdateAddress<T> value)? updateAddress,
+  }) {
+    return updateAddress?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AddressInitial<T> value)? initial,
+    TResult Function(GetAddressLoading<T> value)? getAddressLoading,
+    TResult Function(GetAddressSuccess<T> value)? getAddressSuccess,
+    TResult Function(GetAddressFailure<T> value)? getAddressFailure,
+    TResult Function(InsertAddressLoading<T> value)? insertAddressLoading,
+    TResult Function(InsertAddressSuccess<T> value)? insertAddressSuccess,
+    TResult Function(InsertAddressFailure<T> value)? insertAddressFailure,
+    TResult Function(UpdateAddressLoading<T> value)? updateAddressLoading,
+    TResult Function(UpdateAddressSuccess<T> value)? updateAddressSuccess,
+    TResult Function(UpdateAddressFailure<T> value)? updateAddressFailure,
+    TResult Function(DeleteAddressLoading<T> value)? deleteAddressLoading,
+    TResult Function(DeleteAddressSuccess<T> value)? deleteAddressSuccess,
+    TResult Function(DeleteAddressFailure<T> value)? deleteAddressFailure,
+    TResult Function(UpdateAddress<T> value)? updateAddress,
+    required TResult orElse(),
+  }) {
+    if (updateAddress != null) {
+      return updateAddress(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateAddress<T> implements AddressState<T> {
+  const factory UpdateAddress() = _$UpdateAddressImpl<T>;
 }

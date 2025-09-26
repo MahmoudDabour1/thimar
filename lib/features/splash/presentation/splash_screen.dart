@@ -41,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen>
     _controller.forward();
 
     Timer(const Duration(seconds: 3), () {
-      context.pushNamed(Routes.loginScreen);
+      context.pushReplacement(Routes.loginScreen);
     });
 
     _navigate();
@@ -54,9 +54,9 @@ class _SplashScreenState extends State<SplashScreen>
 
     if (mounted) {
       if (token.isNotEmpty) {
-        context.pushNamed(Routes.bottomNavBarLayout);
+        context.pushReplacement(Routes.bottomNavBarLayout);
       } else {
-        context.pushNamed(Routes.loginScreen);
+        context.pushReplacement(Routes.loginScreen);
       }
     }
   }

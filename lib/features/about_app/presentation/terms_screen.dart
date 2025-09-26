@@ -6,7 +6,7 @@ import 'package:thimar/features/about_app/data/models/terms_response_model.dart'
 import 'package:thimar/features/about_app/logic/about_app_state.dart';
 
 import '../../../core/di/dependency_injection.dart';
-import '../../../core/theming/app_colors.dart';
+import '../../../core/widgets/app_loading_indicator_widget.dart';
 import '../logic/about_app_cubit.dart';
 
 class TermsScreen extends StatelessWidget {
@@ -25,11 +25,7 @@ class TermsScreen extends StatelessWidget {
         body: BlocBuilder<AboutAppCubit, AboutAppState>(
           builder: (context, state) {
             return state.maybeWhen(
-                termsLoading: () => const Center(
-                      child: CircularProgressIndicator(
-                        color: AppColors.primaryColor,
-                      ),
-                    ),
+                termsLoading: () => AppLoadingIndicatorWidget(),
                 termsSuccess: (data) => setupSuccess(data),
                 termsFailure: (error) => Center(
                       child: Text(

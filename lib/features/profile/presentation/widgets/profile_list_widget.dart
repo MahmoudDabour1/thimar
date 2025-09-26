@@ -7,6 +7,7 @@ import 'package:thimar/core/utils/spacing.dart';
 import 'package:thimar/core/widgets/app_custom_button.dart';
 import 'package:thimar/features/auth/login/logic/login_cubit.dart';
 import 'package:thimar/features/auth/login/logic/login_state.dart';
+import 'package:thimar/features/profile/logic/profile_cubit.dart';
 import 'package:thimar/features/profile/presentation/widgets/profile_custom_row_widget.dart';
 
 import '../../../../core/di/dependency_injection.dart';
@@ -15,7 +16,9 @@ import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_styles.dart';
 
 class ProfileListWidget extends StatelessWidget {
-  const ProfileListWidget({super.key});
+  final ProfileCubit profileCubit;
+
+  const ProfileListWidget({super.key, required this.profileCubit});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +32,11 @@ class ProfileListWidget extends StatelessWidget {
             title: "البيانات الشخصية",
             iconPath: AppAssets.profileUserImage,
             onTap: () {
-              context.pushNamed(Routes.profileDataScreen);
+              context
+                  .pushNamed(Routes.profileDataScreen, arguments: profileCubit)
+                  .then((_) {
+                profileCubit.updateProfile();
+              });
             },
           ),
           ProfileCustomRowWidget(

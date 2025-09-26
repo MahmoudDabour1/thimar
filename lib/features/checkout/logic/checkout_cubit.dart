@@ -76,7 +76,7 @@ class CheckoutCubit extends Cubit<CheckoutState> {
                       child: AppCustomButton(
                         textButton: "طلباتي",
                         onPressed: () {
-                          context.pushNamed(
+                          context.pushReplacement(
                             Routes.bottomNavBarLayout,
                             arguments: 1,
                           );
@@ -88,7 +88,7 @@ class CheckoutCubit extends Cubit<CheckoutState> {
                         child: AppCustomButton(
                       textButton: "الرئيسية",
                       onPressed: () {
-                        context.pushNamed(
+                        context.pushReplacement(
                           Routes.bottomNavBarLayout,
                         );
                       },

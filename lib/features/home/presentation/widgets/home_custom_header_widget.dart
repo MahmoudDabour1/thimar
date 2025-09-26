@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/routing/routes.dart';
+import 'package:thimar/features/address/logic/address_cubit.dart';
+import 'package:thimar/features/address/logic/address_state.dart';
 import 'package:thimar/features/cart/logic/cart_cubit.dart';
 
 import '../../../../core/theming/app_assets.dart';
@@ -39,9 +42,26 @@ class HomeCustomHeaderWidget extends StatelessWidget {
                 "التوصيل إلى",
                 style: AppStyles.font16GreenBold,
               ),
-              Text(
-                "شارع الملك فهد - جدة",
-                style: AppStyles.font16greenLight,
+              BlocBuilder<AddressCubit, AddressState>(
+                builder: (context, state) {
+                  return state.maybeWhen(
+                      getAddressLoading: () => Shimmer.fromColors(
+                            baseColor: Colors.grey[300]!,
+                            highlightColor: Colors.grey[100]!,
+                            child: Container(
+                              width: 150.w,
+                              height: 20.h,
+                              color: Colors.white,
+                            ),
+                          ),
+                      getAddressSuccess: (data) {
+                        return Text(
+                          data.data?.last.location ?? "شارع الملك فهد - جدة",
+                          style: AppStyles.font16greenLight,
+                        );
+                      },
+                      orElse: () => SizedBox.shrink());
+                },
               ),
             ],
           ),

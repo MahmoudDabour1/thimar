@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/features/product_details/data/models/get_product_details_response_model.dart';
 
-import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/app_custom_quantity_widget.dart';
 import '../../../cart/logic/cart_cubit.dart';
@@ -50,22 +48,14 @@ class _DetailsPriceAndQuantityWidgetState
           style: AppStyles.font20BlackMedium,
         ),
         Spacer(),
-        Container(
-          height: 35.h,
-          width: 110.w,
-          decoration: BoxDecoration(
-            color: AppColors.lighterGreenColor,
-            borderRadius: BorderRadius.circular(10.r),
-          ),
-          child: AppCustomQuantityWidget(
-            quantity: _quantity,
-            onQuantityChanged: (newQuantity) {
-              _updateQuantity(newQuantity);
-              context
-                  .read<CartCubit>()
-                  .updateCartData(widget.data.data?.id ?? 0, newQuantity);
-            },
-          ),
+        AppCustomQuantityWidget(
+          quantity: _quantity,
+          onQuantityChanged: (newQuantity) {
+            _updateQuantity(newQuantity);
+            context
+                .read<CartCubit>()
+                .updateCartData(widget.data.data?.id ?? 0, newQuantity);
+          },
         ),
       ],
     );

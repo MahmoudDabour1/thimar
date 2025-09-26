@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
+import 'package:thimar/core/helpers/helper_methods.dart';
 import 'package:thimar/features/orders/data/models/order_details_response_model.dart';
 
 import '../../../../core/theming/app_assets.dart';
-import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/utils/spacing.dart';
 import 'order_details_address_widget.dart';
@@ -39,12 +39,13 @@ class OrderDetailsItem extends StatelessWidget {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
               decoration: BoxDecoration(
-                color: AppColors.lighterGreenColor,
+                color: getStatusContainerColor(order?.status ?? ""),
                 borderRadius: BorderRadius.circular(6.r),
               ),
               child: Text(
-                order?.status ?? "",
-                style: AppStyles.font12GreenBold,
+                getStatusText(order?.status ?? ""),
+                style: AppStyles.font12GreenBold
+                    .copyWith(color: getStatusTextColor(order?.status ?? "")),
               ),
             ),
           ],

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/core/theming/app_styles.dart';
+import 'package:thimar/core/widgets/app_custom_error_widget.dart';
+import 'package:thimar/core/widgets/app_loading_indicator_widget.dart';
 import 'package:thimar/features/cart/data/models/get_cart_response_model.dart';
 import 'package:thimar/features/cart/logic/cart_cubit.dart';
 import 'package:thimar/features/cart/presentation/widgets/cart_prices_and_button_widget.dart';
@@ -19,58 +20,68 @@ class CartScreen extends StatefulWidget {
 
 class _CartScreenState extends State<CartScreen> {
   GetCartResponseModel? cartData = GetCartResponseModel();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppCustomAppBar(
         appBarTitle: "السلة",
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            BlocBuilder<CartCubit, CartState>(
-              buildWhen: (previous, current) =>
-                  previous != current &&
-                  (current is GetCartLoading ||
-                      current is GetCartSuccess ||
-                      current is GetCartFailure),
-              builder: (context, state) {
-                return state.maybeWhen(
-                    getCartLoading: () => Center(
-                          child: CircularProgressIndicator(
-                            color: AppColors.primaryColor,
+      body: BlocBuilder<CartCubit, CartState>(
+        buildWhen: (previous, current) =>
+            previous != current &&
+            (current is GetCartLoading ||
+                current is GetCartSuccess ||
+                current is GetCartFailure),
+        builder: (context, state) {
+          return state.maybeWhen(
+              getCartLoading: () => AppLoadingIndicatorWidget(),
+              getCartSuccess: (data) {
+                cartData = data;
+                return (cartData?.data?.isEmpty ?? true)
+                    ? Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Center(
+                            child: Text(
+                              "السلة فارغة",
+                              style: AppStyles.font16GreenExtraBold,
+                            ),
                           ),
-                        ),
-                    getCartSuccess: (data) {
-                      cartData = data;
-                      return setupSuccess(data);
-                    },
-                    getCartFailure: (error) => Center(
-                          child: Text(
-                            error,
-                            style: AppStyles.font16BlackBold,
-                          ),
-                        ),
-                    orElse: () => SizedBox.shrink());
+                        ],
+                      )
+                    : setupSuccess(data);
               },
-            ),
-            CartPricesAndButtonWidget(
-              discount: cartData?.totalDiscount != null
-                  ? (cartData!.totalDiscount! as num).toDouble()
-                  : 0.0,
-              totalPrice: cartData?.totalPriceBeforeDiscount != null
-                  ? (cartData!.totalPriceBeforeDiscount! as num).toDouble()
-                  : 0.0,
-            ),
-          ],
-        ),
+              getCartFailure: (error) => AppCustomErrorWidget(error: error),
+              orElse: () => SizedBox.shrink());
+        },
+      ),
+      bottomNavigationBar: BlocBuilder<CartCubit, CartState>(
+        buildWhen: (previous, current) =>
+            previous != current &&
+            (current is GetCartSuccess || current is GetCartFailure),
+        builder: (context, state) {
+          return state.maybeWhen(
+            getCartSuccess: (data) {
+              if (data.data?.isEmpty ?? true) return const SizedBox.shrink();
+              return CartPricesAndButtonWidget(
+                discount: (data.totalDiscount ?? 0).toDouble(),
+                totalPrice: (data.totalPriceBeforeDiscount ?? 0).toDouble(),
+              );
+            },
+            orElse: () => const SizedBox.shrink(),
+          );
+        },
       ),
     );
   }
 
   Widget setupSuccess(GetCartResponseModel data) {
-    return CartProductsListView(
-      data: data,
+    return SingleChildScrollView(
+      child: CartProductsListView(
+        data: data,
+      ),
     );
   }
 }

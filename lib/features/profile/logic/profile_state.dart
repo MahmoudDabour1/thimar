@@ -47,4 +47,5 @@ class ProfileState<T> with _$ProfileState {
   const factory ProfileState.policySuccess(T data) = PolicySuccess;
 
   const factory ProfileState.policyFailure(String errorMessage) = PolicyFailure;
+  const factory ProfileState.updateProfile() = UpdateProfile;
 }

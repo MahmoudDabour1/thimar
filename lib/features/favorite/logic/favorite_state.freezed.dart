@@ -28,6 +28,7 @@ mixin _$FavoriteState<T> {
     required TResult Function() removeFromFavoriteLoading,
     required TResult Function(T data) removeFromFavoriteSuccess,
     required TResult Function(String errorMessage) removeFromFavoriteFailure,
+    required TResult Function() updateFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +43,7 @@ mixin _$FavoriteState<T> {
     TResult? Function()? removeFromFavoriteLoading,
     TResult? Function(T data)? removeFromFavoriteSuccess,
     TResult? Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult? Function()? updateFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +58,7 @@ mixin _$FavoriteState<T> {
     TResult Function()? removeFromFavoriteLoading,
     TResult Function(T data)? removeFromFavoriteSuccess,
     TResult Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult Function()? updateFavorite,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -77,6 +80,7 @@ mixin _$FavoriteState<T> {
         removeFromFavoriteSuccess,
     required TResult Function(RemoveFromFavoriteFailure<T> value)
         removeFromFavoriteFailure,
+    required TResult Function(updateFavorite<T> value) updateFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -94,6 +98,7 @@ mixin _$FavoriteState<T> {
         removeFromFavoriteSuccess,
     TResult? Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult? Function(updateFavorite<T> value)? updateFavorite,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -111,6 +116,7 @@ mixin _$FavoriteState<T> {
         removeFromFavoriteSuccess,
     TResult Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult Function(updateFavorite<T> value)? updateFavorite,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -188,6 +194,7 @@ class _$FavoriteInitialImpl<T> implements FavoriteInitial<T> {
     required TResult Function() removeFromFavoriteLoading,
     required TResult Function(T data) removeFromFavoriteSuccess,
     required TResult Function(String errorMessage) removeFromFavoriteFailure,
+    required TResult Function() updateFavorite,
   }) {
     return initial();
   }
@@ -205,6 +212,7 @@ class _$FavoriteInitialImpl<T> implements FavoriteInitial<T> {
     TResult? Function()? removeFromFavoriteLoading,
     TResult? Function(T data)? removeFromFavoriteSuccess,
     TResult? Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult? Function()? updateFavorite,
   }) {
     return initial?.call();
   }
@@ -222,6 +230,7 @@ class _$FavoriteInitialImpl<T> implements FavoriteInitial<T> {
     TResult Function()? removeFromFavoriteLoading,
     TResult Function(T data)? removeFromFavoriteSuccess,
     TResult Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult Function()? updateFavorite,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -249,6 +258,7 @@ class _$FavoriteInitialImpl<T> implements FavoriteInitial<T> {
         removeFromFavoriteSuccess,
     required TResult Function(RemoveFromFavoriteFailure<T> value)
         removeFromFavoriteFailure,
+    required TResult Function(updateFavorite<T> value) updateFavorite,
   }) {
     return initial(this);
   }
@@ -269,6 +279,7 @@ class _$FavoriteInitialImpl<T> implements FavoriteInitial<T> {
         removeFromFavoriteSuccess,
     TResult? Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult? Function(updateFavorite<T> value)? updateFavorite,
   }) {
     return initial?.call(this);
   }
@@ -289,6 +300,7 @@ class _$FavoriteInitialImpl<T> implements FavoriteInitial<T> {
         removeFromFavoriteSuccess,
     TResult Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult Function(updateFavorite<T> value)? updateFavorite,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -354,6 +366,7 @@ class _$GetFavoriteLoadingImpl<T> implements GetFavoriteLoading<T> {
     required TResult Function() removeFromFavoriteLoading,
     required TResult Function(T data) removeFromFavoriteSuccess,
     required TResult Function(String errorMessage) removeFromFavoriteFailure,
+    required TResult Function() updateFavorite,
   }) {
     return getFavoriteLoading();
   }
@@ -371,6 +384,7 @@ class _$GetFavoriteLoadingImpl<T> implements GetFavoriteLoading<T> {
     TResult? Function()? removeFromFavoriteLoading,
     TResult? Function(T data)? removeFromFavoriteSuccess,
     TResult? Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult? Function()? updateFavorite,
   }) {
     return getFavoriteLoading?.call();
   }
@@ -388,6 +402,7 @@ class _$GetFavoriteLoadingImpl<T> implements GetFavoriteLoading<T> {
     TResult Function()? removeFromFavoriteLoading,
     TResult Function(T data)? removeFromFavoriteSuccess,
     TResult Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult Function()? updateFavorite,
     required TResult orElse(),
   }) {
     if (getFavoriteLoading != null) {
@@ -415,6 +430,7 @@ class _$GetFavoriteLoadingImpl<T> implements GetFavoriteLoading<T> {
         removeFromFavoriteSuccess,
     required TResult Function(RemoveFromFavoriteFailure<T> value)
         removeFromFavoriteFailure,
+    required TResult Function(updateFavorite<T> value) updateFavorite,
   }) {
     return getFavoriteLoading(this);
   }
@@ -435,6 +451,7 @@ class _$GetFavoriteLoadingImpl<T> implements GetFavoriteLoading<T> {
         removeFromFavoriteSuccess,
     TResult? Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult? Function(updateFavorite<T> value)? updateFavorite,
   }) {
     return getFavoriteLoading?.call(this);
   }
@@ -455,6 +472,7 @@ class _$GetFavoriteLoadingImpl<T> implements GetFavoriteLoading<T> {
         removeFromFavoriteSuccess,
     TResult Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult Function(updateFavorite<T> value)? updateFavorite,
     required TResult orElse(),
   }) {
     if (getFavoriteLoading != null) {
@@ -548,6 +566,7 @@ class _$GetFavoriteSuccessImpl<T> implements GetFavoriteSuccess<T> {
     required TResult Function() removeFromFavoriteLoading,
     required TResult Function(T data) removeFromFavoriteSuccess,
     required TResult Function(String errorMessage) removeFromFavoriteFailure,
+    required TResult Function() updateFavorite,
   }) {
     return getFavoriteSuccess(data);
   }
@@ -565,6 +584,7 @@ class _$GetFavoriteSuccessImpl<T> implements GetFavoriteSuccess<T> {
     TResult? Function()? removeFromFavoriteLoading,
     TResult? Function(T data)? removeFromFavoriteSuccess,
     TResult? Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult? Function()? updateFavorite,
   }) {
     return getFavoriteSuccess?.call(data);
   }
@@ -582,6 +602,7 @@ class _$GetFavoriteSuccessImpl<T> implements GetFavoriteSuccess<T> {
     TResult Function()? removeFromFavoriteLoading,
     TResult Function(T data)? removeFromFavoriteSuccess,
     TResult Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult Function()? updateFavorite,
     required TResult orElse(),
   }) {
     if (getFavoriteSuccess != null) {
@@ -609,6 +630,7 @@ class _$GetFavoriteSuccessImpl<T> implements GetFavoriteSuccess<T> {
         removeFromFavoriteSuccess,
     required TResult Function(RemoveFromFavoriteFailure<T> value)
         removeFromFavoriteFailure,
+    required TResult Function(updateFavorite<T> value) updateFavorite,
   }) {
     return getFavoriteSuccess(this);
   }
@@ -629,6 +651,7 @@ class _$GetFavoriteSuccessImpl<T> implements GetFavoriteSuccess<T> {
         removeFromFavoriteSuccess,
     TResult? Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult? Function(updateFavorite<T> value)? updateFavorite,
   }) {
     return getFavoriteSuccess?.call(this);
   }
@@ -649,6 +672,7 @@ class _$GetFavoriteSuccessImpl<T> implements GetFavoriteSuccess<T> {
         removeFromFavoriteSuccess,
     TResult Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult Function(updateFavorite<T> value)? updateFavorite,
     required TResult orElse(),
   }) {
     if (getFavoriteSuccess != null) {
@@ -750,6 +774,7 @@ class _$GetFavoriteFailureImpl<T> implements GetFavoriteFailure<T> {
     required TResult Function() removeFromFavoriteLoading,
     required TResult Function(T data) removeFromFavoriteSuccess,
     required TResult Function(String errorMessage) removeFromFavoriteFailure,
+    required TResult Function() updateFavorite,
   }) {
     return getFavoriteFailure(errorMessage);
   }
@@ -767,6 +792,7 @@ class _$GetFavoriteFailureImpl<T> implements GetFavoriteFailure<T> {
     TResult? Function()? removeFromFavoriteLoading,
     TResult? Function(T data)? removeFromFavoriteSuccess,
     TResult? Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult? Function()? updateFavorite,
   }) {
     return getFavoriteFailure?.call(errorMessage);
   }
@@ -784,6 +810,7 @@ class _$GetFavoriteFailureImpl<T> implements GetFavoriteFailure<T> {
     TResult Function()? removeFromFavoriteLoading,
     TResult Function(T data)? removeFromFavoriteSuccess,
     TResult Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult Function()? updateFavorite,
     required TResult orElse(),
   }) {
     if (getFavoriteFailure != null) {
@@ -811,6 +838,7 @@ class _$GetFavoriteFailureImpl<T> implements GetFavoriteFailure<T> {
         removeFromFavoriteSuccess,
     required TResult Function(RemoveFromFavoriteFailure<T> value)
         removeFromFavoriteFailure,
+    required TResult Function(updateFavorite<T> value) updateFavorite,
   }) {
     return getFavoriteFailure(this);
   }
@@ -831,6 +859,7 @@ class _$GetFavoriteFailureImpl<T> implements GetFavoriteFailure<T> {
         removeFromFavoriteSuccess,
     TResult? Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult? Function(updateFavorite<T> value)? updateFavorite,
   }) {
     return getFavoriteFailure?.call(this);
   }
@@ -851,6 +880,7 @@ class _$GetFavoriteFailureImpl<T> implements GetFavoriteFailure<T> {
         removeFromFavoriteSuccess,
     TResult Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult Function(updateFavorite<T> value)? updateFavorite,
     required TResult orElse(),
   }) {
     if (getFavoriteFailure != null) {
@@ -926,6 +956,7 @@ class _$AddToFavoriteLoadingImpl<T> implements AddToFavoriteLoading<T> {
     required TResult Function() removeFromFavoriteLoading,
     required TResult Function(T data) removeFromFavoriteSuccess,
     required TResult Function(String errorMessage) removeFromFavoriteFailure,
+    required TResult Function() updateFavorite,
   }) {
     return addToFavoriteLoading();
   }
@@ -943,6 +974,7 @@ class _$AddToFavoriteLoadingImpl<T> implements AddToFavoriteLoading<T> {
     TResult? Function()? removeFromFavoriteLoading,
     TResult? Function(T data)? removeFromFavoriteSuccess,
     TResult? Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult? Function()? updateFavorite,
   }) {
     return addToFavoriteLoading?.call();
   }
@@ -960,6 +992,7 @@ class _$AddToFavoriteLoadingImpl<T> implements AddToFavoriteLoading<T> {
     TResult Function()? removeFromFavoriteLoading,
     TResult Function(T data)? removeFromFavoriteSuccess,
     TResult Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult Function()? updateFavorite,
     required TResult orElse(),
   }) {
     if (addToFavoriteLoading != null) {
@@ -987,6 +1020,7 @@ class _$AddToFavoriteLoadingImpl<T> implements AddToFavoriteLoading<T> {
         removeFromFavoriteSuccess,
     required TResult Function(RemoveFromFavoriteFailure<T> value)
         removeFromFavoriteFailure,
+    required TResult Function(updateFavorite<T> value) updateFavorite,
   }) {
     return addToFavoriteLoading(this);
   }
@@ -1007,6 +1041,7 @@ class _$AddToFavoriteLoadingImpl<T> implements AddToFavoriteLoading<T> {
         removeFromFavoriteSuccess,
     TResult? Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult? Function(updateFavorite<T> value)? updateFavorite,
   }) {
     return addToFavoriteLoading?.call(this);
   }
@@ -1027,6 +1062,7 @@ class _$AddToFavoriteLoadingImpl<T> implements AddToFavoriteLoading<T> {
         removeFromFavoriteSuccess,
     TResult Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult Function(updateFavorite<T> value)? updateFavorite,
     required TResult orElse(),
   }) {
     if (addToFavoriteLoading != null) {
@@ -1121,6 +1157,7 @@ class _$AddToFavoriteSuccessImpl<T> implements AddToFavoriteSuccess<T> {
     required TResult Function() removeFromFavoriteLoading,
     required TResult Function(T data) removeFromFavoriteSuccess,
     required TResult Function(String errorMessage) removeFromFavoriteFailure,
+    required TResult Function() updateFavorite,
   }) {
     return addToFavoriteSuccess(data);
   }
@@ -1138,6 +1175,7 @@ class _$AddToFavoriteSuccessImpl<T> implements AddToFavoriteSuccess<T> {
     TResult? Function()? removeFromFavoriteLoading,
     TResult? Function(T data)? removeFromFavoriteSuccess,
     TResult? Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult? Function()? updateFavorite,
   }) {
     return addToFavoriteSuccess?.call(data);
   }
@@ -1155,6 +1193,7 @@ class _$AddToFavoriteSuccessImpl<T> implements AddToFavoriteSuccess<T> {
     TResult Function()? removeFromFavoriteLoading,
     TResult Function(T data)? removeFromFavoriteSuccess,
     TResult Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult Function()? updateFavorite,
     required TResult orElse(),
   }) {
     if (addToFavoriteSuccess != null) {
@@ -1182,6 +1221,7 @@ class _$AddToFavoriteSuccessImpl<T> implements AddToFavoriteSuccess<T> {
         removeFromFavoriteSuccess,
     required TResult Function(RemoveFromFavoriteFailure<T> value)
         removeFromFavoriteFailure,
+    required TResult Function(updateFavorite<T> value) updateFavorite,
   }) {
     return addToFavoriteSuccess(this);
   }
@@ -1202,6 +1242,7 @@ class _$AddToFavoriteSuccessImpl<T> implements AddToFavoriteSuccess<T> {
         removeFromFavoriteSuccess,
     TResult? Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult? Function(updateFavorite<T> value)? updateFavorite,
   }) {
     return addToFavoriteSuccess?.call(this);
   }
@@ -1222,6 +1263,7 @@ class _$AddToFavoriteSuccessImpl<T> implements AddToFavoriteSuccess<T> {
         removeFromFavoriteSuccess,
     TResult Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult Function(updateFavorite<T> value)? updateFavorite,
     required TResult orElse(),
   }) {
     if (addToFavoriteSuccess != null) {
@@ -1325,6 +1367,7 @@ class _$AddToFavoriteFailureImpl<T> implements AddToFavoriteFailure<T> {
     required TResult Function() removeFromFavoriteLoading,
     required TResult Function(T data) removeFromFavoriteSuccess,
     required TResult Function(String errorMessage) removeFromFavoriteFailure,
+    required TResult Function() updateFavorite,
   }) {
     return addToFavoriteFailure(errorMessage);
   }
@@ -1342,6 +1385,7 @@ class _$AddToFavoriteFailureImpl<T> implements AddToFavoriteFailure<T> {
     TResult? Function()? removeFromFavoriteLoading,
     TResult? Function(T data)? removeFromFavoriteSuccess,
     TResult? Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult? Function()? updateFavorite,
   }) {
     return addToFavoriteFailure?.call(errorMessage);
   }
@@ -1359,6 +1403,7 @@ class _$AddToFavoriteFailureImpl<T> implements AddToFavoriteFailure<T> {
     TResult Function()? removeFromFavoriteLoading,
     TResult Function(T data)? removeFromFavoriteSuccess,
     TResult Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult Function()? updateFavorite,
     required TResult orElse(),
   }) {
     if (addToFavoriteFailure != null) {
@@ -1386,6 +1431,7 @@ class _$AddToFavoriteFailureImpl<T> implements AddToFavoriteFailure<T> {
         removeFromFavoriteSuccess,
     required TResult Function(RemoveFromFavoriteFailure<T> value)
         removeFromFavoriteFailure,
+    required TResult Function(updateFavorite<T> value) updateFavorite,
   }) {
     return addToFavoriteFailure(this);
   }
@@ -1406,6 +1452,7 @@ class _$AddToFavoriteFailureImpl<T> implements AddToFavoriteFailure<T> {
         removeFromFavoriteSuccess,
     TResult? Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult? Function(updateFavorite<T> value)? updateFavorite,
   }) {
     return addToFavoriteFailure?.call(this);
   }
@@ -1426,6 +1473,7 @@ class _$AddToFavoriteFailureImpl<T> implements AddToFavoriteFailure<T> {
         removeFromFavoriteSuccess,
     TResult Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult Function(updateFavorite<T> value)? updateFavorite,
     required TResult orElse(),
   }) {
     if (addToFavoriteFailure != null) {
@@ -1504,6 +1552,7 @@ class _$RemoveFromFavoriteLoadingImpl<T>
     required TResult Function() removeFromFavoriteLoading,
     required TResult Function(T data) removeFromFavoriteSuccess,
     required TResult Function(String errorMessage) removeFromFavoriteFailure,
+    required TResult Function() updateFavorite,
   }) {
     return removeFromFavoriteLoading();
   }
@@ -1521,6 +1570,7 @@ class _$RemoveFromFavoriteLoadingImpl<T>
     TResult? Function()? removeFromFavoriteLoading,
     TResult? Function(T data)? removeFromFavoriteSuccess,
     TResult? Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult? Function()? updateFavorite,
   }) {
     return removeFromFavoriteLoading?.call();
   }
@@ -1538,6 +1588,7 @@ class _$RemoveFromFavoriteLoadingImpl<T>
     TResult Function()? removeFromFavoriteLoading,
     TResult Function(T data)? removeFromFavoriteSuccess,
     TResult Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult Function()? updateFavorite,
     required TResult orElse(),
   }) {
     if (removeFromFavoriteLoading != null) {
@@ -1565,6 +1616,7 @@ class _$RemoveFromFavoriteLoadingImpl<T>
         removeFromFavoriteSuccess,
     required TResult Function(RemoveFromFavoriteFailure<T> value)
         removeFromFavoriteFailure,
+    required TResult Function(updateFavorite<T> value) updateFavorite,
   }) {
     return removeFromFavoriteLoading(this);
   }
@@ -1585,6 +1637,7 @@ class _$RemoveFromFavoriteLoadingImpl<T>
         removeFromFavoriteSuccess,
     TResult? Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult? Function(updateFavorite<T> value)? updateFavorite,
   }) {
     return removeFromFavoriteLoading?.call(this);
   }
@@ -1605,6 +1658,7 @@ class _$RemoveFromFavoriteLoadingImpl<T>
         removeFromFavoriteSuccess,
     TResult Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult Function(updateFavorite<T> value)? updateFavorite,
     required TResult orElse(),
   }) {
     if (removeFromFavoriteLoading != null) {
@@ -1704,6 +1758,7 @@ class _$RemoveFromFavoriteSuccessImpl<T>
     required TResult Function() removeFromFavoriteLoading,
     required TResult Function(T data) removeFromFavoriteSuccess,
     required TResult Function(String errorMessage) removeFromFavoriteFailure,
+    required TResult Function() updateFavorite,
   }) {
     return removeFromFavoriteSuccess(data);
   }
@@ -1721,6 +1776,7 @@ class _$RemoveFromFavoriteSuccessImpl<T>
     TResult? Function()? removeFromFavoriteLoading,
     TResult? Function(T data)? removeFromFavoriteSuccess,
     TResult? Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult? Function()? updateFavorite,
   }) {
     return removeFromFavoriteSuccess?.call(data);
   }
@@ -1738,6 +1794,7 @@ class _$RemoveFromFavoriteSuccessImpl<T>
     TResult Function()? removeFromFavoriteLoading,
     TResult Function(T data)? removeFromFavoriteSuccess,
     TResult Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult Function()? updateFavorite,
     required TResult orElse(),
   }) {
     if (removeFromFavoriteSuccess != null) {
@@ -1765,6 +1822,7 @@ class _$RemoveFromFavoriteSuccessImpl<T>
         removeFromFavoriteSuccess,
     required TResult Function(RemoveFromFavoriteFailure<T> value)
         removeFromFavoriteFailure,
+    required TResult Function(updateFavorite<T> value) updateFavorite,
   }) {
     return removeFromFavoriteSuccess(this);
   }
@@ -1785,6 +1843,7 @@ class _$RemoveFromFavoriteSuccessImpl<T>
         removeFromFavoriteSuccess,
     TResult? Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult? Function(updateFavorite<T> value)? updateFavorite,
   }) {
     return removeFromFavoriteSuccess?.call(this);
   }
@@ -1805,6 +1864,7 @@ class _$RemoveFromFavoriteSuccessImpl<T>
         removeFromFavoriteSuccess,
     TResult Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult Function(updateFavorite<T> value)? updateFavorite,
     required TResult orElse(),
   }) {
     if (removeFromFavoriteSuccess != null) {
@@ -1913,6 +1973,7 @@ class _$RemoveFromFavoriteFailureImpl<T>
     required TResult Function() removeFromFavoriteLoading,
     required TResult Function(T data) removeFromFavoriteSuccess,
     required TResult Function(String errorMessage) removeFromFavoriteFailure,
+    required TResult Function() updateFavorite,
   }) {
     return removeFromFavoriteFailure(errorMessage);
   }
@@ -1930,6 +1991,7 @@ class _$RemoveFromFavoriteFailureImpl<T>
     TResult? Function()? removeFromFavoriteLoading,
     TResult? Function(T data)? removeFromFavoriteSuccess,
     TResult? Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult? Function()? updateFavorite,
   }) {
     return removeFromFavoriteFailure?.call(errorMessage);
   }
@@ -1947,6 +2009,7 @@ class _$RemoveFromFavoriteFailureImpl<T>
     TResult Function()? removeFromFavoriteLoading,
     TResult Function(T data)? removeFromFavoriteSuccess,
     TResult Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult Function()? updateFavorite,
     required TResult orElse(),
   }) {
     if (removeFromFavoriteFailure != null) {
@@ -1974,6 +2037,7 @@ class _$RemoveFromFavoriteFailureImpl<T>
         removeFromFavoriteSuccess,
     required TResult Function(RemoveFromFavoriteFailure<T> value)
         removeFromFavoriteFailure,
+    required TResult Function(updateFavorite<T> value) updateFavorite,
   }) {
     return removeFromFavoriteFailure(this);
   }
@@ -1994,6 +2058,7 @@ class _$RemoveFromFavoriteFailureImpl<T>
         removeFromFavoriteSuccess,
     TResult? Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult? Function(updateFavorite<T> value)? updateFavorite,
   }) {
     return removeFromFavoriteFailure?.call(this);
   }
@@ -2014,6 +2079,7 @@ class _$RemoveFromFavoriteFailureImpl<T>
         removeFromFavoriteSuccess,
     TResult Function(RemoveFromFavoriteFailure<T> value)?
         removeFromFavoriteFailure,
+    TResult Function(updateFavorite<T> value)? updateFavorite,
     required TResult orElse(),
   }) {
     if (removeFromFavoriteFailure != null) {
@@ -2035,4 +2101,175 @@ abstract class RemoveFromFavoriteFailure<T> implements FavoriteState<T> {
   _$$RemoveFromFavoriteFailureImplCopyWith<T,
           _$RemoveFromFavoriteFailureImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$updateFavoriteImplCopyWith<T, $Res> {
+  factory _$$updateFavoriteImplCopyWith(_$updateFavoriteImpl<T> value,
+          $Res Function(_$updateFavoriteImpl<T>) then) =
+      __$$updateFavoriteImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$updateFavoriteImplCopyWithImpl<T, $Res>
+    extends _$FavoriteStateCopyWithImpl<T, $Res, _$updateFavoriteImpl<T>>
+    implements _$$updateFavoriteImplCopyWith<T, $Res> {
+  __$$updateFavoriteImplCopyWithImpl(_$updateFavoriteImpl<T> _value,
+      $Res Function(_$updateFavoriteImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FavoriteState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$updateFavoriteImpl<T> implements updateFavorite<T> {
+  const _$updateFavoriteImpl();
+
+  @override
+  String toString() {
+    return 'FavoriteState<$T>.updateFavorite()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$updateFavoriteImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getFavoriteLoading,
+    required TResult Function(T data) getFavoriteSuccess,
+    required TResult Function(String errorMessage) getFavoriteFailure,
+    required TResult Function() addToFavoriteLoading,
+    required TResult Function(T data) addToFavoriteSuccess,
+    required TResult Function(String errorMessage) addToFavoriteFailure,
+    required TResult Function() removeFromFavoriteLoading,
+    required TResult Function(T data) removeFromFavoriteSuccess,
+    required TResult Function(String errorMessage) removeFromFavoriteFailure,
+    required TResult Function() updateFavorite,
+  }) {
+    return updateFavorite();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getFavoriteLoading,
+    TResult? Function(T data)? getFavoriteSuccess,
+    TResult? Function(String errorMessage)? getFavoriteFailure,
+    TResult? Function()? addToFavoriteLoading,
+    TResult? Function(T data)? addToFavoriteSuccess,
+    TResult? Function(String errorMessage)? addToFavoriteFailure,
+    TResult? Function()? removeFromFavoriteLoading,
+    TResult? Function(T data)? removeFromFavoriteSuccess,
+    TResult? Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult? Function()? updateFavorite,
+  }) {
+    return updateFavorite?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getFavoriteLoading,
+    TResult Function(T data)? getFavoriteSuccess,
+    TResult Function(String errorMessage)? getFavoriteFailure,
+    TResult Function()? addToFavoriteLoading,
+    TResult Function(T data)? addToFavoriteSuccess,
+    TResult Function(String errorMessage)? addToFavoriteFailure,
+    TResult Function()? removeFromFavoriteLoading,
+    TResult Function(T data)? removeFromFavoriteSuccess,
+    TResult Function(String errorMessage)? removeFromFavoriteFailure,
+    TResult Function()? updateFavorite,
+    required TResult orElse(),
+  }) {
+    if (updateFavorite != null) {
+      return updateFavorite();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(FavoriteInitial<T> value) initial,
+    required TResult Function(GetFavoriteLoading<T> value) getFavoriteLoading,
+    required TResult Function(GetFavoriteSuccess<T> value) getFavoriteSuccess,
+    required TResult Function(GetFavoriteFailure<T> value) getFavoriteFailure,
+    required TResult Function(AddToFavoriteLoading<T> value)
+        addToFavoriteLoading,
+    required TResult Function(AddToFavoriteSuccess<T> value)
+        addToFavoriteSuccess,
+    required TResult Function(AddToFavoriteFailure<T> value)
+        addToFavoriteFailure,
+    required TResult Function(RemoveFromFavoriteLoading<T> value)
+        removeFromFavoriteLoading,
+    required TResult Function(RemoveFromFavoriteSuccess<T> value)
+        removeFromFavoriteSuccess,
+    required TResult Function(RemoveFromFavoriteFailure<T> value)
+        removeFromFavoriteFailure,
+    required TResult Function(updateFavorite<T> value) updateFavorite,
+  }) {
+    return updateFavorite(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(FavoriteInitial<T> value)? initial,
+    TResult? Function(GetFavoriteLoading<T> value)? getFavoriteLoading,
+    TResult? Function(GetFavoriteSuccess<T> value)? getFavoriteSuccess,
+    TResult? Function(GetFavoriteFailure<T> value)? getFavoriteFailure,
+    TResult? Function(AddToFavoriteLoading<T> value)? addToFavoriteLoading,
+    TResult? Function(AddToFavoriteSuccess<T> value)? addToFavoriteSuccess,
+    TResult? Function(AddToFavoriteFailure<T> value)? addToFavoriteFailure,
+    TResult? Function(RemoveFromFavoriteLoading<T> value)?
+        removeFromFavoriteLoading,
+    TResult? Function(RemoveFromFavoriteSuccess<T> value)?
+        removeFromFavoriteSuccess,
+    TResult? Function(RemoveFromFavoriteFailure<T> value)?
+        removeFromFavoriteFailure,
+    TResult? Function(updateFavorite<T> value)? updateFavorite,
+  }) {
+    return updateFavorite?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(FavoriteInitial<T> value)? initial,
+    TResult Function(GetFavoriteLoading<T> value)? getFavoriteLoading,
+    TResult Function(GetFavoriteSuccess<T> value)? getFavoriteSuccess,
+    TResult Function(GetFavoriteFailure<T> value)? getFavoriteFailure,
+    TResult Function(AddToFavoriteLoading<T> value)? addToFavoriteLoading,
+    TResult Function(AddToFavoriteSuccess<T> value)? addToFavoriteSuccess,
+    TResult Function(AddToFavoriteFailure<T> value)? addToFavoriteFailure,
+    TResult Function(RemoveFromFavoriteLoading<T> value)?
+        removeFromFavoriteLoading,
+    TResult Function(RemoveFromFavoriteSuccess<T> value)?
+        removeFromFavoriteSuccess,
+    TResult Function(RemoveFromFavoriteFailure<T> value)?
+        removeFromFavoriteFailure,
+    TResult Function(updateFavorite<T> value)? updateFavorite,
+    required TResult orElse(),
+  }) {
+    if (updateFavorite != null) {
+      return updateFavorite(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class updateFavorite<T> implements FavoriteState<T> {
+  const factory updateFavorite() = _$updateFavoriteImpl<T>;
 }

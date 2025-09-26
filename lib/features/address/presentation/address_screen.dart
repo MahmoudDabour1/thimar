@@ -1,13 +1,14 @@
-import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
 import 'package:thimar/core/helpers/helper_methods.dart';
-import 'package:thimar/core/theming/app_colors.dart';
 import 'package:thimar/core/utils/spacing.dart';
 import 'package:thimar/core/widgets/app_custom_app_bar.dart';
+import 'package:thimar/core/widgets/app_loading_indicator_widget.dart';
+import 'package:thimar/features/address/data/models/address_single_item_model.dart';
 import 'package:thimar/features/address/data/models/get_address_response_model.dart';
+import 'package:thimar/features/address/data/models/insert_address_form_model.dart';
 import 'package:thimar/features/address/logic/address_cubit.dart';
 import 'package:thimar/features/address/logic/address_state.dart';
 import 'package:thimar/features/address/presentation/widgets/address_single_container_widget.dart';
@@ -15,15 +16,49 @@ import 'package:thimar/features/address/presentation/widgets/address_single_cont
 import '../../../core/di/dependency_injection.dart';
 import '../../../core/routing/routes.dart';
 import '../../../core/theming/app_styles.dart';
+import '../../../core/widgets/app_custom_dotted_border.dart';
+import '../../../core/widgets/app_custom_error_widget.dart';
 
-class AddressScreen extends StatelessWidget {
+class AddressScreen extends StatefulWidget {
   const AddressScreen({super.key});
 
   @override
+  State<AddressScreen> createState() => _AddressScreenState();
+}
+
+class _AddressScreenState extends State<AddressScreen> {
+  final cubit = sl<AddressCubit>();
+
+  @override
+  void initState() {
+    super.initState();
+    cubit.getAddresses();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final cubit = sl<AddressCubit>();
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppCustomAppBar(appBarTitle: "العناوين"),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.all(16.h),
+        child: GestureDetector(
+          onTap: () {
+            context
+                .pushNamed(
+              Routes.insertAddressScreen,
+              arguments: InsertAddressFormModel(
+                isEdit: false,
+                cubit: cubit,
+              ),
+            )
+                .then((_) {
+              cubit.updateAddresses();
+            });
+          },
+          child: AppCustomDottedBorder(title: "اضافة عنوان"),
+        ),
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),
@@ -37,19 +72,17 @@ class AddressScreen extends StatelessWidget {
                         current is GetAddressFailure),
                 builder: (context, state) {
                   return state.maybeWhen(
-                    getAddressLoading: () => Center(
-                      child: CircularProgressIndicator(
-                        color: AppColors.primaryColor,
-                      ),
-                    ),
-                    getAddressSuccess: (data) =>
-                        setupSuccess(data, context, cubit),
-                    getAddressFailure: (error) => Center(
-                      child: Text(
-                        error,
-                        style: TextStyle(color: Colors.red),
-                      ),
-                    ),
+                    getAddressLoading: () => AppLoadingIndicatorWidget(),
+                    getAddressSuccess: (data) => data.data == null
+                        ? Center(
+                            child: Text(
+                              "لا يوجد عناوين مضافة",
+                              style: AppStyles.font20GreenBold,
+                            ),
+                          )
+                        : setupSuccess(data, context, cubit),
+                    getAddressFailure: (error) =>
+                        AppCustomErrorWidget(error: error),
                     orElse: () => SizedBox.shrink(),
                   );
                 }),
@@ -64,75 +97,45 @@ class AddressScreen extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          verticalSpace(16),
-          data.data == null
-              ? Text(
-                  "لا يوجد عناوين مضافة",
-                  style: AppStyles.font20GreenBold,
-                )
-              : ListView.builder(
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  itemCount: data.data?.length ?? 0,
-                  itemBuilder: (context, index) {
-                    final address = data.data?[index];
-                    return AddressSingleContainerWidget(
-                      type: address?.type ?? '',
-                      address: address?.location ?? '',
-                      description: address?.location ?? '',
-                      phoneNumber: address?.phone ?? '',
-                      onEdit: () {
-                        context.pushNamed(
-                          Routes.insertAddressScreen,
-                          arguments: {
-                            "type": address?.type ?? "",
-                            "address": address?.location ?? "",
-                            "description": address?.location ?? "",
-                            "phoneNumber": address?.phone ?? "",
-                            "isEdit": true,
-                            "addressId": address?.id ?? 0,
-                          },
-                        );
-                      },
-                      onDelete: () {
-                        appCustomDialog(
-                            context: context,
-                            onConfirmPress: () {
-                              cubit.deleteAddress(address?.id ?? 0);
-                              context.pop();
-                            });
-                      },
+          ListView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemCount: data.data?.length ?? 0,
+            itemBuilder: (context, index) {
+              final address = data.data?[index];
+              return AddressSingleContainerWidget(
+                addressModel: AddressSingleItemModel(
+                  id: address?.id ?? 0,
+                  type: address?.type ?? '',
+                  address: address?.location ?? '',
+                  description: address?.location ?? '',
+                  phoneNumber: address?.phone ?? '',
+                  onEdit: () {
+                    context.pushNamed(
+                      Routes.insertAddressScreen,
+                      arguments: InsertAddressFormModel(
+                        addressId: address?.id ?? 0,
+                        userSelectedPhone: address?.phone ?? '',
+                        userSelectedDescription: address?.location ?? '',
+                        userSelectedType: address?.type ?? '',
+                        isEdit: true,
+                        cubit: cubit,
+                      ),
                     );
                   },
+                  onDelete: () {
+                    appCustomDialog(
+                        context: context,
+                        onConfirmPress: () {
+                          cubit.deleteAddress(address?.id ?? 0);
+                          context.pop();
+                        });
+                  },
                 ),
-          verticalSpace(16.h),
-          GestureDetector(
-            onTap: () {
-              context.pushNamed(Routes.insertAddressScreen);
+              );
             },
-            child: DottedBorder(
-              color: Colors.grey,
-              strokeWidth: 1.w,
-              borderType: BorderType.RRect,
-              radius: Radius.circular(16.r),
-              dashPattern: [6, 4],
-              child: Container(
-                height: 60.h,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16.r),
-                  color: AppColors.lighterGreenColor,
-                ),
-                child: Center(
-                  child: Text(
-                    "إضافة عنوان",
-                    style: AppStyles.font16GreenBold,
-                  ),
-                ),
-              ),
-            ),
           ),
-          verticalSpace(32),
+          verticalSpace(16.h),
         ],
       ),
     );

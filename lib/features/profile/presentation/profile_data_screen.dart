@@ -12,7 +12,6 @@ import 'package:thimar/core/widgets/app_text_form_field.dart';
 import 'package:thimar/features/profile/data/models/get_profile_response_model.dart';
 import 'package:thimar/features/profile/logic/profile_cubit.dart';
 
-import '../../../core/di/dependency_injection.dart';
 import '../../../core/services/image_picker_services.dart';
 import '../../../core/theming/app_styles.dart';
 import '../../../core/utils/spacing.dart';
@@ -20,15 +19,16 @@ import '../../auth/widgets/auth_phone_and_country_widget.dart';
 import '../logic/profile_state.dart';
 
 class ProfileDataScreen extends StatefulWidget {
-  const ProfileDataScreen({super.key});
+  final ProfileCubit profileCubit;
+
+  const ProfileDataScreen({super.key, required this.profileCubit});
 
   @override
   State<ProfileDataScreen> createState() => _ProfileDataScreenState();
 }
 
 class _ProfileDataScreenState extends State<ProfileDataScreen> {
-  final profileCubit = sl<ProfileCubit>();
-
+  ProfileCubit get profileCubit => widget.profileCubit;
   @override
   void initState() {
     super.initState();
@@ -40,6 +40,23 @@ class _ProfileDataScreenState extends State<ProfileDataScreen> {
     return BlocProvider.value(
       value: profileCubit,
       child: Scaffold(
+        resizeToAvoidBottomInset: true,
+        bottomNavigationBar: Padding(
+          padding: EdgeInsets.all(16.w),
+          child: BlocBuilder<ProfileCubit, ProfileState>(
+            builder: (context, state) {
+              return AppCustomButton(
+                isLoading: state is UpdateProfileLoading,
+                textButton: "تعديل البيانات",
+                onPressed: () {
+                  profileCubit.updateProfileData(context).then((value) {
+                    context.pop();
+                  });
+                },
+              );
+            },
+          ),
+        ),
         appBar: AppCustomAppBar(appBarTitle: "البيانات الشخصية"),
         body: BlocBuilder<ProfileCubit, ProfileState>(
           buildWhen: (previous, current) =>
@@ -185,21 +202,21 @@ class _ProfileDataScreenState extends State<ProfileDataScreen> {
                 height: 22.h,
               ),
             ),
-            const Spacer(),
-            BlocBuilder<ProfileCubit, ProfileState>(
-              builder: (context, state) {
-                return AppCustomButton(
-                  isLoading: state is UpdateProfileLoading,
-                  textButton: "تعديل البيانات",
-                  onPressed: () {
-                    profileCubit.updateProfileData(context).then((value) {
-                      context.pop();
-                    });
-                  },
-                );
-              },
-            ),
-            verticalSpace(32),
+
+            // BlocBuilder<ProfileCubit, ProfileState>(
+            //   builder: (context, state) {
+            //     return AppCustomButton(
+            //       isLoading: state is UpdateProfileLoading,
+            //       textButton: "تعديل البيانات",
+            //       onPressed: () {
+            //         profileCubit.updateProfileData(context).then((value) {
+            //           context.pop();
+            //         });
+            //       },
+            //     );
+            //   },
+            // ),
+            // verticalSpace(32),
           ],
         ),
       ),

@@ -25,6 +25,7 @@ mixin _$WalletState<T> {
     required TResult Function() chargeWalletLoading,
     required TResult Function(T data) chargeWalletSuccess,
     required TResult Function(String errorMessage) chargeWalletFailure,
+    required TResult Function() updateWallet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +37,7 @@ mixin _$WalletState<T> {
     TResult? Function()? chargeWalletLoading,
     TResult? Function(T data)? chargeWalletSuccess,
     TResult? Function(String errorMessage)? chargeWalletFailure,
+    TResult? Function()? updateWallet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +49,7 @@ mixin _$WalletState<T> {
     TResult Function()? chargeWalletLoading,
     TResult Function(T data)? chargeWalletSuccess,
     TResult Function(String errorMessage)? chargeWalletFailure,
+    TResult Function()? updateWallet,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -60,6 +63,7 @@ mixin _$WalletState<T> {
     required TResult Function(ChargeWalletsSuccess<T> value)
         chargeWalletSuccess,
     required TResult Function(ChargeWalletFailure<T> value) chargeWalletFailure,
+    required TResult Function(updateWallet<T> value) updateWallet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -71,6 +75,7 @@ mixin _$WalletState<T> {
     TResult? Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult? Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult? Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult? Function(updateWallet<T> value)? updateWallet,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -82,6 +87,7 @@ mixin _$WalletState<T> {
     TResult Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult Function(updateWallet<T> value)? updateWallet,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -156,6 +162,7 @@ class _$WalletInitialImpl<T> implements WalletInitial<T> {
     required TResult Function() chargeWalletLoading,
     required TResult Function(T data) chargeWalletSuccess,
     required TResult Function(String errorMessage) chargeWalletFailure,
+    required TResult Function() updateWallet,
   }) {
     return initial();
   }
@@ -170,6 +177,7 @@ class _$WalletInitialImpl<T> implements WalletInitial<T> {
     TResult? Function()? chargeWalletLoading,
     TResult? Function(T data)? chargeWalletSuccess,
     TResult? Function(String errorMessage)? chargeWalletFailure,
+    TResult? Function()? updateWallet,
   }) {
     return initial?.call();
   }
@@ -184,6 +192,7 @@ class _$WalletInitialImpl<T> implements WalletInitial<T> {
     TResult Function()? chargeWalletLoading,
     TResult Function(T data)? chargeWalletSuccess,
     TResult Function(String errorMessage)? chargeWalletFailure,
+    TResult Function()? updateWallet,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -203,6 +212,7 @@ class _$WalletInitialImpl<T> implements WalletInitial<T> {
     required TResult Function(ChargeWalletsSuccess<T> value)
         chargeWalletSuccess,
     required TResult Function(ChargeWalletFailure<T> value) chargeWalletFailure,
+    required TResult Function(updateWallet<T> value) updateWallet,
   }) {
     return initial(this);
   }
@@ -217,6 +227,7 @@ class _$WalletInitialImpl<T> implements WalletInitial<T> {
     TResult? Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult? Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult? Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult? Function(updateWallet<T> value)? updateWallet,
   }) {
     return initial?.call(this);
   }
@@ -231,6 +242,7 @@ class _$WalletInitialImpl<T> implements WalletInitial<T> {
     TResult Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult Function(updateWallet<T> value)? updateWallet,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -293,6 +305,7 @@ class _$GetWalletLoadingImpl<T> implements GetWalletLoading<T> {
     required TResult Function() chargeWalletLoading,
     required TResult Function(T data) chargeWalletSuccess,
     required TResult Function(String errorMessage) chargeWalletFailure,
+    required TResult Function() updateWallet,
   }) {
     return getWalletLoading();
   }
@@ -307,6 +320,7 @@ class _$GetWalletLoadingImpl<T> implements GetWalletLoading<T> {
     TResult? Function()? chargeWalletLoading,
     TResult? Function(T data)? chargeWalletSuccess,
     TResult? Function(String errorMessage)? chargeWalletFailure,
+    TResult? Function()? updateWallet,
   }) {
     return getWalletLoading?.call();
   }
@@ -321,6 +335,7 @@ class _$GetWalletLoadingImpl<T> implements GetWalletLoading<T> {
     TResult Function()? chargeWalletLoading,
     TResult Function(T data)? chargeWalletSuccess,
     TResult Function(String errorMessage)? chargeWalletFailure,
+    TResult Function()? updateWallet,
     required TResult orElse(),
   }) {
     if (getWalletLoading != null) {
@@ -340,6 +355,7 @@ class _$GetWalletLoadingImpl<T> implements GetWalletLoading<T> {
     required TResult Function(ChargeWalletsSuccess<T> value)
         chargeWalletSuccess,
     required TResult Function(ChargeWalletFailure<T> value) chargeWalletFailure,
+    required TResult Function(updateWallet<T> value) updateWallet,
   }) {
     return getWalletLoading(this);
   }
@@ -354,6 +370,7 @@ class _$GetWalletLoadingImpl<T> implements GetWalletLoading<T> {
     TResult? Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult? Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult? Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult? Function(updateWallet<T> value)? updateWallet,
   }) {
     return getWalletLoading?.call(this);
   }
@@ -368,6 +385,7 @@ class _$GetWalletLoadingImpl<T> implements GetWalletLoading<T> {
     TResult Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult Function(updateWallet<T> value)? updateWallet,
     required TResult orElse(),
   }) {
     if (getWalletLoading != null) {
@@ -459,6 +477,7 @@ class _$GetWalletsSuccessImpl<T> implements GetWalletsSuccess<T> {
     required TResult Function() chargeWalletLoading,
     required TResult Function(T data) chargeWalletSuccess,
     required TResult Function(String errorMessage) chargeWalletFailure,
+    required TResult Function() updateWallet,
   }) {
     return getWalletSuccess(data);
   }
@@ -473,6 +492,7 @@ class _$GetWalletsSuccessImpl<T> implements GetWalletsSuccess<T> {
     TResult? Function()? chargeWalletLoading,
     TResult? Function(T data)? chargeWalletSuccess,
     TResult? Function(String errorMessage)? chargeWalletFailure,
+    TResult? Function()? updateWallet,
   }) {
     return getWalletSuccess?.call(data);
   }
@@ -487,6 +507,7 @@ class _$GetWalletsSuccessImpl<T> implements GetWalletsSuccess<T> {
     TResult Function()? chargeWalletLoading,
     TResult Function(T data)? chargeWalletSuccess,
     TResult Function(String errorMessage)? chargeWalletFailure,
+    TResult Function()? updateWallet,
     required TResult orElse(),
   }) {
     if (getWalletSuccess != null) {
@@ -506,6 +527,7 @@ class _$GetWalletsSuccessImpl<T> implements GetWalletsSuccess<T> {
     required TResult Function(ChargeWalletsSuccess<T> value)
         chargeWalletSuccess,
     required TResult Function(ChargeWalletFailure<T> value) chargeWalletFailure,
+    required TResult Function(updateWallet<T> value) updateWallet,
   }) {
     return getWalletSuccess(this);
   }
@@ -520,6 +542,7 @@ class _$GetWalletsSuccessImpl<T> implements GetWalletsSuccess<T> {
     TResult? Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult? Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult? Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult? Function(updateWallet<T> value)? updateWallet,
   }) {
     return getWalletSuccess?.call(this);
   }
@@ -534,6 +557,7 @@ class _$GetWalletsSuccessImpl<T> implements GetWalletsSuccess<T> {
     TResult Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult Function(updateWallet<T> value)? updateWallet,
     required TResult orElse(),
   }) {
     if (getWalletSuccess != null) {
@@ -632,6 +656,7 @@ class _$GetWalletFailureImpl<T> implements GetWalletFailure<T> {
     required TResult Function() chargeWalletLoading,
     required TResult Function(T data) chargeWalletSuccess,
     required TResult Function(String errorMessage) chargeWalletFailure,
+    required TResult Function() updateWallet,
   }) {
     return getWalletFailure(errorMessage);
   }
@@ -646,6 +671,7 @@ class _$GetWalletFailureImpl<T> implements GetWalletFailure<T> {
     TResult? Function()? chargeWalletLoading,
     TResult? Function(T data)? chargeWalletSuccess,
     TResult? Function(String errorMessage)? chargeWalletFailure,
+    TResult? Function()? updateWallet,
   }) {
     return getWalletFailure?.call(errorMessage);
   }
@@ -660,6 +686,7 @@ class _$GetWalletFailureImpl<T> implements GetWalletFailure<T> {
     TResult Function()? chargeWalletLoading,
     TResult Function(T data)? chargeWalletSuccess,
     TResult Function(String errorMessage)? chargeWalletFailure,
+    TResult Function()? updateWallet,
     required TResult orElse(),
   }) {
     if (getWalletFailure != null) {
@@ -679,6 +706,7 @@ class _$GetWalletFailureImpl<T> implements GetWalletFailure<T> {
     required TResult Function(ChargeWalletsSuccess<T> value)
         chargeWalletSuccess,
     required TResult Function(ChargeWalletFailure<T> value) chargeWalletFailure,
+    required TResult Function(updateWallet<T> value) updateWallet,
   }) {
     return getWalletFailure(this);
   }
@@ -693,6 +721,7 @@ class _$GetWalletFailureImpl<T> implements GetWalletFailure<T> {
     TResult? Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult? Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult? Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult? Function(updateWallet<T> value)? updateWallet,
   }) {
     return getWalletFailure?.call(this);
   }
@@ -707,6 +736,7 @@ class _$GetWalletFailureImpl<T> implements GetWalletFailure<T> {
     TResult Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult Function(updateWallet<T> value)? updateWallet,
     required TResult orElse(),
   }) {
     if (getWalletFailure != null) {
@@ -778,6 +808,7 @@ class _$ChargeWalletLoadingImpl<T> implements ChargeWalletLoading<T> {
     required TResult Function() chargeWalletLoading,
     required TResult Function(T data) chargeWalletSuccess,
     required TResult Function(String errorMessage) chargeWalletFailure,
+    required TResult Function() updateWallet,
   }) {
     return chargeWalletLoading();
   }
@@ -792,6 +823,7 @@ class _$ChargeWalletLoadingImpl<T> implements ChargeWalletLoading<T> {
     TResult? Function()? chargeWalletLoading,
     TResult? Function(T data)? chargeWalletSuccess,
     TResult? Function(String errorMessage)? chargeWalletFailure,
+    TResult? Function()? updateWallet,
   }) {
     return chargeWalletLoading?.call();
   }
@@ -806,6 +838,7 @@ class _$ChargeWalletLoadingImpl<T> implements ChargeWalletLoading<T> {
     TResult Function()? chargeWalletLoading,
     TResult Function(T data)? chargeWalletSuccess,
     TResult Function(String errorMessage)? chargeWalletFailure,
+    TResult Function()? updateWallet,
     required TResult orElse(),
   }) {
     if (chargeWalletLoading != null) {
@@ -825,6 +858,7 @@ class _$ChargeWalletLoadingImpl<T> implements ChargeWalletLoading<T> {
     required TResult Function(ChargeWalletsSuccess<T> value)
         chargeWalletSuccess,
     required TResult Function(ChargeWalletFailure<T> value) chargeWalletFailure,
+    required TResult Function(updateWallet<T> value) updateWallet,
   }) {
     return chargeWalletLoading(this);
   }
@@ -839,6 +873,7 @@ class _$ChargeWalletLoadingImpl<T> implements ChargeWalletLoading<T> {
     TResult? Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult? Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult? Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult? Function(updateWallet<T> value)? updateWallet,
   }) {
     return chargeWalletLoading?.call(this);
   }
@@ -853,6 +888,7 @@ class _$ChargeWalletLoadingImpl<T> implements ChargeWalletLoading<T> {
     TResult Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult Function(updateWallet<T> value)? updateWallet,
     required TResult orElse(),
   }) {
     if (chargeWalletLoading != null) {
@@ -944,6 +980,7 @@ class _$ChargeWalletsSuccessImpl<T> implements ChargeWalletsSuccess<T> {
     required TResult Function() chargeWalletLoading,
     required TResult Function(T data) chargeWalletSuccess,
     required TResult Function(String errorMessage) chargeWalletFailure,
+    required TResult Function() updateWallet,
   }) {
     return chargeWalletSuccess(data);
   }
@@ -958,6 +995,7 @@ class _$ChargeWalletsSuccessImpl<T> implements ChargeWalletsSuccess<T> {
     TResult? Function()? chargeWalletLoading,
     TResult? Function(T data)? chargeWalletSuccess,
     TResult? Function(String errorMessage)? chargeWalletFailure,
+    TResult? Function()? updateWallet,
   }) {
     return chargeWalletSuccess?.call(data);
   }
@@ -972,6 +1010,7 @@ class _$ChargeWalletsSuccessImpl<T> implements ChargeWalletsSuccess<T> {
     TResult Function()? chargeWalletLoading,
     TResult Function(T data)? chargeWalletSuccess,
     TResult Function(String errorMessage)? chargeWalletFailure,
+    TResult Function()? updateWallet,
     required TResult orElse(),
   }) {
     if (chargeWalletSuccess != null) {
@@ -991,6 +1030,7 @@ class _$ChargeWalletsSuccessImpl<T> implements ChargeWalletsSuccess<T> {
     required TResult Function(ChargeWalletsSuccess<T> value)
         chargeWalletSuccess,
     required TResult Function(ChargeWalletFailure<T> value) chargeWalletFailure,
+    required TResult Function(updateWallet<T> value) updateWallet,
   }) {
     return chargeWalletSuccess(this);
   }
@@ -1005,6 +1045,7 @@ class _$ChargeWalletsSuccessImpl<T> implements ChargeWalletsSuccess<T> {
     TResult? Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult? Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult? Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult? Function(updateWallet<T> value)? updateWallet,
   }) {
     return chargeWalletSuccess?.call(this);
   }
@@ -1019,6 +1060,7 @@ class _$ChargeWalletsSuccessImpl<T> implements ChargeWalletsSuccess<T> {
     TResult Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult Function(updateWallet<T> value)? updateWallet,
     required TResult orElse(),
   }) {
     if (chargeWalletSuccess != null) {
@@ -1118,6 +1160,7 @@ class _$ChargeWalletFailureImpl<T> implements ChargeWalletFailure<T> {
     required TResult Function() chargeWalletLoading,
     required TResult Function(T data) chargeWalletSuccess,
     required TResult Function(String errorMessage) chargeWalletFailure,
+    required TResult Function() updateWallet,
   }) {
     return chargeWalletFailure(errorMessage);
   }
@@ -1132,6 +1175,7 @@ class _$ChargeWalletFailureImpl<T> implements ChargeWalletFailure<T> {
     TResult? Function()? chargeWalletLoading,
     TResult? Function(T data)? chargeWalletSuccess,
     TResult? Function(String errorMessage)? chargeWalletFailure,
+    TResult? Function()? updateWallet,
   }) {
     return chargeWalletFailure?.call(errorMessage);
   }
@@ -1146,6 +1190,7 @@ class _$ChargeWalletFailureImpl<T> implements ChargeWalletFailure<T> {
     TResult Function()? chargeWalletLoading,
     TResult Function(T data)? chargeWalletSuccess,
     TResult Function(String errorMessage)? chargeWalletFailure,
+    TResult Function()? updateWallet,
     required TResult orElse(),
   }) {
     if (chargeWalletFailure != null) {
@@ -1165,6 +1210,7 @@ class _$ChargeWalletFailureImpl<T> implements ChargeWalletFailure<T> {
     required TResult Function(ChargeWalletsSuccess<T> value)
         chargeWalletSuccess,
     required TResult Function(ChargeWalletFailure<T> value) chargeWalletFailure,
+    required TResult Function(updateWallet<T> value) updateWallet,
   }) {
     return chargeWalletFailure(this);
   }
@@ -1179,6 +1225,7 @@ class _$ChargeWalletFailureImpl<T> implements ChargeWalletFailure<T> {
     TResult? Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult? Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult? Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult? Function(updateWallet<T> value)? updateWallet,
   }) {
     return chargeWalletFailure?.call(this);
   }
@@ -1193,6 +1240,7 @@ class _$ChargeWalletFailureImpl<T> implements ChargeWalletFailure<T> {
     TResult Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
     TResult Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
     TResult Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult Function(updateWallet<T> value)? updateWallet,
     required TResult orElse(),
   }) {
     if (chargeWalletFailure != null) {
@@ -1213,4 +1261,146 @@ abstract class ChargeWalletFailure<T> implements WalletState<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChargeWalletFailureImplCopyWith<T, _$ChargeWalletFailureImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$updateWalletImplCopyWith<T, $Res> {
+  factory _$$updateWalletImplCopyWith(_$updateWalletImpl<T> value,
+          $Res Function(_$updateWalletImpl<T>) then) =
+      __$$updateWalletImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$updateWalletImplCopyWithImpl<T, $Res>
+    extends _$WalletStateCopyWithImpl<T, $Res, _$updateWalletImpl<T>>
+    implements _$$updateWalletImplCopyWith<T, $Res> {
+  __$$updateWalletImplCopyWithImpl(
+      _$updateWalletImpl<T> _value, $Res Function(_$updateWalletImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of WalletState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$updateWalletImpl<T> implements updateWallet<T> {
+  const _$updateWalletImpl();
+
+  @override
+  String toString() {
+    return 'WalletState<$T>.updateWallet()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$updateWalletImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getWalletLoading,
+    required TResult Function(T data) getWalletSuccess,
+    required TResult Function(String errorMessage) getWalletFailure,
+    required TResult Function() chargeWalletLoading,
+    required TResult Function(T data) chargeWalletSuccess,
+    required TResult Function(String errorMessage) chargeWalletFailure,
+    required TResult Function() updateWallet,
+  }) {
+    return updateWallet();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getWalletLoading,
+    TResult? Function(T data)? getWalletSuccess,
+    TResult? Function(String errorMessage)? getWalletFailure,
+    TResult? Function()? chargeWalletLoading,
+    TResult? Function(T data)? chargeWalletSuccess,
+    TResult? Function(String errorMessage)? chargeWalletFailure,
+    TResult? Function()? updateWallet,
+  }) {
+    return updateWallet?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getWalletLoading,
+    TResult Function(T data)? getWalletSuccess,
+    TResult Function(String errorMessage)? getWalletFailure,
+    TResult Function()? chargeWalletLoading,
+    TResult Function(T data)? chargeWalletSuccess,
+    TResult Function(String errorMessage)? chargeWalletFailure,
+    TResult Function()? updateWallet,
+    required TResult orElse(),
+  }) {
+    if (updateWallet != null) {
+      return updateWallet();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(WalletInitial<T> value) initial,
+    required TResult Function(GetWalletLoading<T> value) getWalletLoading,
+    required TResult Function(GetWalletsSuccess<T> value) getWalletSuccess,
+    required TResult Function(GetWalletFailure<T> value) getWalletFailure,
+    required TResult Function(ChargeWalletLoading<T> value) chargeWalletLoading,
+    required TResult Function(ChargeWalletsSuccess<T> value)
+        chargeWalletSuccess,
+    required TResult Function(ChargeWalletFailure<T> value) chargeWalletFailure,
+    required TResult Function(updateWallet<T> value) updateWallet,
+  }) {
+    return updateWallet(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(WalletInitial<T> value)? initial,
+    TResult? Function(GetWalletLoading<T> value)? getWalletLoading,
+    TResult? Function(GetWalletsSuccess<T> value)? getWalletSuccess,
+    TResult? Function(GetWalletFailure<T> value)? getWalletFailure,
+    TResult? Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
+    TResult? Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
+    TResult? Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult? Function(updateWallet<T> value)? updateWallet,
+  }) {
+    return updateWallet?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(WalletInitial<T> value)? initial,
+    TResult Function(GetWalletLoading<T> value)? getWalletLoading,
+    TResult Function(GetWalletsSuccess<T> value)? getWalletSuccess,
+    TResult Function(GetWalletFailure<T> value)? getWalletFailure,
+    TResult Function(ChargeWalletLoading<T> value)? chargeWalletLoading,
+    TResult Function(ChargeWalletsSuccess<T> value)? chargeWalletSuccess,
+    TResult Function(ChargeWalletFailure<T> value)? chargeWalletFailure,
+    TResult Function(updateWallet<T> value)? updateWallet,
+    required TResult orElse(),
+  }) {
+    if (updateWallet != null) {
+      return updateWallet(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class updateWallet<T> implements WalletState<T> {
+  const factory updateWallet() = _$updateWalletImpl<T>;
 }
