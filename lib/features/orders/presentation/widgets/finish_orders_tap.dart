@@ -7,6 +7,7 @@ import 'package:thimar/features/orders/data/models/get_finish_orders_response_mo
 import 'package:thimar/features/orders/logic/orders_state.dart';
 
 import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/app_loading_indicator_widget.dart';
 import '../../data/models/show_order_model.dart';
 import '../../logic/orders_cubit.dart';
@@ -50,7 +51,13 @@ class _FinishOrdersTapState extends State<FinishOrdersTap> {
   }
 
   Widget setupSuccess(GetFinishOrdersResponseModel data) {
-    return ListView.builder(
+    return data.data.isNullOrEmpty()
+        ? Center(
+      child: Text(
+        "لا يوجد طلبات منتهية",
+        style: AppStyles.font16GreenBold,
+      ),
+    ):ListView.builder(
       itemCount: data.data?.length,
       shrinkWrap: true,
       scrollDirection: Axis.vertical,

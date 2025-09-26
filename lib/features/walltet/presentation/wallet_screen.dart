@@ -86,8 +86,12 @@ class _WalletScreenState extends State<WalletScreen> {
               onTap: () {
                 context
                     .pushNamed(Routes.chargeWalletScreen, arguments: cubit)
+
                     .then((_) {
-                  cubit.updateWallet();
+                  // cubit.updateWallet();
+                  setState(() {
+
+                  });
                 });
               },
               child: DottedBorder(
