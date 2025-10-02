@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "856856281307",
+    "project_id": "thimar-7178e",
+    "storage_bucket": "thimar-7178e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856856281307:android:00d995a204691370bc0cfe",
+        "android_client_info": {
+          "package_name": "com.thimar.thimar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyliKfPNOZSXnBjuKOar2AvaYWcXPYHg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

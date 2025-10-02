@@ -9,6 +9,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDzTsJMWYJsNtP31aOvq8GqtEUkG0BarQI" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="padel" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

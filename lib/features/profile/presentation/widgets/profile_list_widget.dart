@@ -15,11 +15,16 @@ import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_styles.dart';
 
-class ProfileListWidget extends StatelessWidget {
+class ProfileListWidget extends StatefulWidget {
   final ProfileCubit profileCubit;
 
   const ProfileListWidget({super.key, required this.profileCubit});
 
+  @override
+  State<ProfileListWidget> createState() => _ProfileListWidgetState();
+}
+
+class _ProfileListWidgetState extends State<ProfileListWidget> {
   @override
   Widget build(BuildContext context) {
     final loginCubit = sl<LoginCubit>();
@@ -33,9 +38,13 @@ class ProfileListWidget extends StatelessWidget {
             iconPath: AppAssets.profileUserImage,
             onTap: () {
               context
-                  .pushNamed(Routes.profileDataScreen, arguments: profileCubit)
+                  .pushNamed(Routes.profileDataScreen, arguments: widget.profileCubit)
                   .then((_) {
-                profileCubit.updateProfile();
+                // widget.profileCubit.updateProfile();
+                setState(() {
+
+                });
+
               });
             },
           ),

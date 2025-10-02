@@ -51,6 +51,7 @@ class AppTextFormField extends StatelessWidget {
       controller: controller,
       enabled: enabled,
       keyboardType: keyboardType,
+      textDirection: TextDirection.rtl,
       focusNode: focusNode,
       onTapOutside: (event) {
         FocusManager.instance.primaryFocus?.unfocus();
