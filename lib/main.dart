@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -7,11 +8,19 @@ import 'package:thimar/features/cart/logic/cart_cubit.dart';
 import 'core/di/dependency_injection.dart';
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
+import 'core/services/local_notifications_service.dart';
 import 'core/theming/app_theme.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await setupGetIt();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  )
+      .then(
+        (FirebaseApp v) => GlobalNotification().setUpFirebase(),
+  );
   runApp(const MyApp());
 }
 
@@ -22,7 +31,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (_) => CartCubit(sl())..getCartData()),
+        BlocProvider(create: (_) =>
+        CartCubit(sl())
+          ..getCartData()),
       ],
       child: ScreenUtilInit(
         designSize: const Size(375, 812),

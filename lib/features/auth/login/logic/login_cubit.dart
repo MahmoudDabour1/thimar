@@ -1,8 +1,11 @@
 import 'dart:io';
 
 import 'package:bloc/bloc.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:thimar/core/extensions/navigation_extension.dart';
+import 'package:thimar/core/routing/router_observer.dart';
+import 'package:thimar/core/services/local_notifications_service.dart';
 
 import '../../../../../core/helpers/helper_methods.dart';
 import '../../../../../core/helpers/shared_pref_helper.dart';
@@ -24,11 +27,12 @@ class LoginCubit extends Cubit<LoginState> {
 
   Future<void> login(BuildContext context) async {
     emit(LoginState.loading());
+
     final response = await loginRepo.login(
       LoginRequestBody(
           phone: phoneController.text,
           password: passwordController.text,
-          deviceToken: "test",
+          deviceToken: await GlobalNotification.getFcmToken(),
           type: Platform.operatingSystem,
           userType: "client"),
     );
